@@ -17,7 +17,6 @@ const StyledAlert = styled.div`
   font-size: ${({ size }) => sizes[size].fontSize};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
-  border-color: transparent;
   background-color: ${({ theme, variant }) =>
     colors[theme.c7__ui.mode].backgroundColor[variant]};
 
