@@ -90,6 +90,7 @@ import POS from './Pos';
 import PosProfile from './PosProfile';
 import Pound from './Pound';
 import Product from './Product';
+import Process from './Process';
 import Print from './Print';
 import Rand from './Rand';
 import Redo from './Redo';
@@ -217,6 +218,7 @@ export {
   PosProfile as posProfile,
   Pound as pound,
   Product as product,
+  Process as process,
   Print as print,
   Rand as rand,
   Redo as redo,
