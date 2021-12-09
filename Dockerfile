@@ -1,0 +1,90 @@
+FROM 137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest
+
+#Install aws cli
+RUN yum -y install aws-cli
+
+#Receive Arguments for aws cli to work
+ARG AWS_ACCESS_KEY_ID
+ARG AWS_SECRET_ACCESS_KEY
+ARG AWS_SESSION_TOKEN 
+
+#Update yum repos
+RUN yum -y update
+
+#Install Curl
+RUN yum -y install curl
+
+#Install SSH
+RUN yum -y install -y openssh-server
+RUN yum -y install openssh-clients
+
+#Install Vim
+RUN yum -y install -y vim
+
+#Install gcc-c++
+RUN yum -y install gcc-c++ make
+
+#Install tar and gzip
+RUN yum -y install tar
+RUN yum -y install gzip
+
+# Install NVM to manage Node
+# NVM environment variables
+ENV NVM_DIR /usr/local/nvm
+ENV NODE_VERSION 12.16.1
+RUN mkdir /usr/local/nvm
+
+# https://github.com/creationix/nvm#install-script
+RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+
+# Install NODE and NPM
+RUN source $NVM_DIR/nvm.sh \
+    && nvm install $NODE_VERSION \
+    && nvm alias default $NODE_VERSION \
+    && nvm use default
+
+# Add node and npm to path so the commands are available
+ENV NODE_PATH $NVM_DIR/v$NODE_VERSION/lib/node_modules
+ENV PATH $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
+
+# Install global NPM packages
+RUN npm install -g nodemon
+RUN npm install -g mocha
+RUN npm install -g lerna
+
+# Add docker-compose-wait tool to support waiting for MYSQL for continuous integration tests
+ENV WAIT_VERSION 2.7.3
+RUN curl -SL -o /wait https://github.com/ufoscout/docker-compose-wait/releases/download/$WAIT_VERSION/wait
+RUN chmod +x /wait
+
+# Set Working Directory
+WORKDIR /var/www/platform
+
+# Copy package.json before runing npm ci to cache this layer.
+COPY lerna.json .
+COPY package.json .
+COPY package-lock.json .
+COPY packages/admin-ui/package.json packages/admin-ui/
+COPY packages/admin-ui/package-lock.json packages/admin-ui/
+
+#Install new modules
+RUN lerna bootstrap
+
+# Copy contents of this folder into WORKDIR for production
+# Docker Compose overrides this when it mounts your local host directory in development
+COPY packages/admin-ui packages/admin-ui/
+
+#Set terminal options
+ENV ENV="/root/.bashrc"
+RUN echo 'alias ll="ls -lhat"' >> /root/.bashrc
+RUN echo 'export PS1="\[\e[0;32m\][COMMERCE7_COMMON_UI] \w\$\[\e[0m\] "' >> /root/.bashrc
+RUN echo 'echo -en "\e]0;api\a"' >> /root/.bashrc
+
+# Run Story Book Docs build and sync to S3
+RUN cd packages/admin-ui && npm run build-storybook
+RUN aws s3 sync packages/admin-ui/storybook-static/ s3://admin-ui-docs.commerce7.com --delete
+RUN aws s3 cp s3://admin-ui-docs.commerce7.com/index.html s3://admin-ui-docs.commerce7.com/index.html --metadata-directive REPLACE --cache-control no-cache,must-revalidate --expires -1 --content-type text/html
+
+
+# //TODO
+# Run NPM Publish and up semver by 1

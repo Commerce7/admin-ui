@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      docker: 18
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Logging in to Amazon ECR as AWS...
+      - aws ecr get-login-password --region us-west-2 | docker login --username AWS --password-stdin 137112412989.dkr.ecr.us-west-2.amazonaws.com
+      - ASSUME_ROLE_ARN="arn:aws:iam::122024267476:role/admin-ui-CodeBuildRole"
+      - TEMP_ROLE=`aws sts assume-role --role-arn $ASSUME_ROLE_ARN --role-session-name admin-ui-codebuild`
+      - export TEMP_ROLE
+      - export AWS_ACCESS_KEY_ID=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.AccessKeyId')
+      - export AWS_SECRET_ACCESS_KEY=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.SecretAccessKey')
+      - export AWS_SESSION_TOKEN=$(echo "${TEMP_ROLE}" | jq -r '.Credentials.SessionToken')
+
+      - echo Building the Docker image...
+      - docker build --build-arg AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID --build-arg AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY --build-arg AWS_SESSION_TOKEN=$AWS_SESSION_TOKEN -t $IMAGE_REPO_NAME:$IMAGE_TAG -f packages/admin-ui/Dockerfile .
+  post_build:
+    commands:
+      - echo Build completed on `date`

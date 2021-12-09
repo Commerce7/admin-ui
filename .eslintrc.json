@@ -1,0 +1,12 @@
+{
+  "extends": ["@commerce7/eslint-config/react"],
+  "rules": {
+    // 'import' overrides
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": [".storybook/**", "**/*.stories.js"]
+      }
+    ]
+  }
+}
