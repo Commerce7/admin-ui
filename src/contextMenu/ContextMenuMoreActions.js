@@ -16,6 +16,7 @@ const ContextMenuMoreActions = (props) => {
 
   const [isValidChildren, setValidChildren] = useState(true);
   const wrapperRef = useRef();
+  const buttonRef = useRef();
   const idRef = useRef(Math.random().toString(36).substr(2, 9));
 
   const dropdownRef = useCallback((node) => {
@@ -26,7 +27,7 @@ const ContextMenuMoreActions = (props) => {
 
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-  useOnClickOutside(wrapperRef, (e) => handleCloseDropdown(e));
+  useOnClickOutside(buttonRef, (e) => handleCloseDropdown(e));
   useEscKeydown((e) => handleCloseDropdown(e));
 
   const handleToggleDropdown = () => {
@@ -56,6 +57,7 @@ const ContextMenuMoreActions = (props) => {
         aria-controls={dropdownId}
         type="button"
         data-testid={dataTestId}
+        ref={buttonRef}
       >
         <StyledContextMenuIcon icon="moreActions" />
         More Actions

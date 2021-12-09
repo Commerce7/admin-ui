@@ -40,6 +40,7 @@ const Button = forwardRef((props, ref) => {
             buttonVariant={variant}
             icon={startIcon}
             position="start"
+            isHidden={loading}
           />
         )}
         {loading && <StyledLoadingIcon icon="loading" />}
@@ -49,6 +50,7 @@ const Button = forwardRef((props, ref) => {
             buttonVariant={variant}
             icon={endIcon}
             position="end"
+            isHidden={loading}
           />
         )}
       </StyledButtonText>
