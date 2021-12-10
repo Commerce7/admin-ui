@@ -8,7 +8,7 @@ const StyledAlert = styled.div`
   padding: ${({ size }) => sizes[size].padding};
   border-radius: 3px;
   border: none;
-  margin-bottom: 1px;
+  margin-bottom: 30px;
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
