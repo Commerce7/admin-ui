@@ -9,6 +9,7 @@ import ButtonMenu from './buttonMenu';
 
 // UI
 import Avatar from './avatar';
+import Alert from './alert';
 import Icon from './icon';
 import Message from './message';
 import Modal from './modal';
@@ -38,6 +39,7 @@ import Text from './text';
 
 export {
   Avatar,
+  Alert,
   Button,
   ButtonMenu,
   Commerce7AdminUI,
