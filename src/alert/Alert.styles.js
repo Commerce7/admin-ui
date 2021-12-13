@@ -34,10 +34,10 @@ const StyledAlert = styled.div`
 
 const StyledIcon = styled(Icon)`
   transform: translateY(2px);
-  margin-right: ${({ size }) => sizes[size].iconMargin};
+  margin-right: ${({ alertSize }) => sizes[alertSize].iconMargin};
 
-  width: ${({ size }) => sizes[size].iconSize};
-  min-width: ${({ size }) => sizes[size].iconSize};
+  width: ${({ alertSize }) => sizes[alertSize].iconSize};
+  min-width: ${({ alertSize }) => sizes[alertSize].iconSize};
   height: auto;
   min-height: auto;
 
