@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { StyledAlert, StyledIcon } from './Alert.styles';
 
-const Alertdasdas = (props) => {
+const Alert = (props) => {
   const { variant, icon, size, children, className, dataTestId } = props;
 
   return (
@@ -59,4 +59,4 @@ Alert.propTypes = {
   dataTestId: PropTypes.string
 };
 
-export default Alert;
+export default Alertss;
