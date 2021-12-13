@@ -12,7 +12,8 @@
     "storybook": "start-storybook -p 6006 -s ./static",
     "build-storybook": "build-storybook -s ./static",
     "clean": "rimraf ./lib",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "**.**.js": [
