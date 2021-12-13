@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 import { StyledAlert, StyledIcon } from './Alert.styles';
 
-const Alertd = (props) => {
+const Alertdasdas = (props) => {
   const { variant, icon, size, children, className, dataTestId } = props;
 
   return (
