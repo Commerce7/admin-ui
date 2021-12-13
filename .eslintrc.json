@@ -8,5 +8,6 @@
         "devDependencies": [".storybook/**", "**/*.stories.js"]
       }
     ]
-  }
+  },
+  "parser": "@babel/eslint-parser"
 }
