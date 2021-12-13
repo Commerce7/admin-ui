@@ -2,9 +2,10 @@ import PropTypes from 'prop-types';
 
 import { StyledAlert, StyledIcon } from './Alert.styles';
 
-const Alertasd = (props) => {
+const Alert = (props) => {
   const { variant, icon, size, children, className, dataTestId } = props;
 
+  console.log(t);
   return (
     <StyledAlert
       className={className}
