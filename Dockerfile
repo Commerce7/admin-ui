@@ -81,4 +81,4 @@ RUN aws s3 cp s3://admin-ui-docs.commerce7.com/index.html s3://admin-ui-docs.com
 
 # Run NPM Publish
 RUN npm run build
-RUN npm run publish
+RUN npm publish
