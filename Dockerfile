@@ -7,6 +7,7 @@ RUN yum -y install aws-cli
 ARG AWS_ACCESS_KEY_ID
 ARG AWS_SECRET_ACCESS_KEY
 ARG AWS_SESSION_TOKEN 
+ARG NPM_TOKEN
 
 #Update yum repos
 RUN yum -y update
@@ -78,5 +79,6 @@ RUN npm run build-storybook
 RUN aws s3 sync storybook-static/ s3://admin-ui-docs.commerce7.com --delete
 RUN aws s3 cp s3://admin-ui-docs.commerce7.com/index.html s3://admin-ui-docs.commerce7.com/index.html --metadata-directive REPLACE --cache-control no-cache,must-revalidate --expires -1 --content-type text/html
 
-# //TODO
-# Run NPM Publish and up semver by 1
+# Run NPM Publish
+RUN npm run build
+RUN npm run publish

@@ -12,29 +12,36 @@
     "storybook": "start-storybook -p 6006 -s ./static",
     "build-storybook": "build-storybook -s ./static",
     "clean": "rimraf ./lib",
-    "pre-commit": "lint-staged"
+    "pre-commit": "lint-staged",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write"
+    ]
   },
   "peerDependencies": {},
   "devDependencies": {
     "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
     "@babel/plugin-proposal-class-properties": "^7.16.0",
     "@babel/plugin-transform-object-assign": "^7.16.0",
     "@babel/preset-env": "^7.16.4",
     "@babel/preset-react": "^7.16.0",
     "@commerce7/eslint-config": "^1.1.2",
-    "@storybook/addon-actions": "^6.4.8",
-    "@storybook/addon-essentials": "^6.4.8",
-    "@storybook/addon-links": "^6.4.8",
+    "@storybook/addon-actions": "^6.4.9",
+    "@storybook/addon-essentials": "^6.4.9",
+    "@storybook/addon-links": "^6.4.9",
     "@storybook/addon-postcss": "^2.0.0",
-    "@storybook/addons": "^6.4.8",
-    "@storybook/builder-webpack5": "^6.4.8",
-    "@storybook/manager-webpack5": "^6.4.8",
-    "@storybook/react": "^6.4.8",
-    "@storybook/theming": "^6.4.8",
-    "babel-eslint": "^10.1.0",
+    "@storybook/addons": "^6.4.9",
+    "@storybook/builder-webpack5": "^6.4.9",
+    "@storybook/manager-webpack5": "^6.4.9",
+    "@storybook/react": "^6.4.9",
+    "@storybook/theming": "^6.4.9",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.5.1",
-    "eslint": "7.32.0",
+    "eslint": "^8.4.1",
     "eslint-config-airbnb": "^19.0.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-webpack": "^0.13.2",
@@ -43,7 +50,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.27.1",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "lint-staged": "^11.2.6",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.2",
     "path": "^0.12.7",
     "prettier": "^2.5.1",
     "style-loader": "^3.3.1",
@@ -57,14 +65,8 @@
     "react": "^17.0.2",
     "react-datetime": "^3.1.1",
     "react-dom": "^17.0.2",
-    "react-focus-lock": "^2.6.0",
+    "react-focus-lock": "^2.7.0",
     "styled-components": "^5.3.3"
-  },
-  "lint-staged": {
-    "*.js": [
-      "eslint",
-      "prettier --write"
-    ]
   },
   "directories": {
     "lib": "lib"
