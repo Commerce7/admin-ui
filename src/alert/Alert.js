@@ -11,7 +11,7 @@ const Alert = (props) => {
       data-testid={dataTestId}
       size={size}
     >
-      <StyledIcon icon={icon} variant={variant} size={size} />
+      <StyledIcon icon={icon} variant={variant} alertSize={size} />
       {children}
     </StyledAlert>
   );
