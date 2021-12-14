@@ -11,7 +11,11 @@ import {
   StyledDescription
 } from '../common/form/styles';
 import { getFormItemIds } from '../common/form/helpers';
-import { StyledInput } from '../input/Input.styles';
+import {
+  StyledInput,
+  StyledIconWrapper,
+  StyledInputIcon
+} from '../input/Input.styles';
 import { StyledDatePicker, StyledClearButton } from './DatePicker.styles';
 
 const DatePicker = forwardRef((props, ref) => {
@@ -77,23 +81,27 @@ const DatePicker = forwardRef((props, ref) => {
           utc
           closeOnSelect
           renderInput={(componentProps) => (
-            <StyledInput
-              aria-describedby={describedById}
-              aria-labelledby={labelId}
-              aria-invalid={hasErrorMessage}
-              aria-required={required}
-              ref={ref}
-              disabled={disabled}
-              placeholder={placeholder}
-              id={id}
-              value={value}
-              onBlur={onBlur}
-              onChange={onChange}
-              onFocus={onFocus}
-              hasErrorMessage={hasErrorMessage}
-              readOnly
-              {...componentProps} // eslint-disable-line
-            />
+            <StyledIconWrapper>
+              <StyledInputIcon icon="reservation" iconPosition="start" />
+              <StyledInput
+                aria-describedby={describedById}
+                aria-labelledby={labelId}
+                aria-invalid={hasErrorMessage}
+                aria-required={required}
+                ref={ref}
+                disabled={disabled}
+                placeholder={placeholder}
+                id={id}
+                value={value}
+                onBlur={onBlur}
+                onChange={onChange}
+                onFocus={onFocus}
+                hasErrorMessage={hasErrorMessage}
+                readOnly
+                startIcon="reservation"
+                {...componentProps} // eslint-disable-line
+              />
+            </StyledIconWrapper>
           )}
         />
         {allowClear && value && (
