@@ -74,11 +74,12 @@ RUN echo 'alias ll="ls -lhat"' >> /root/.bashrc
 RUN echo 'export PS1="\[\e[0;32m\][COMMERCE7_ADMIN_UI] \w\$\[\e[0m\] "' >> /root/.bashrc
 RUN echo 'echo -en "\e]0;api\a"' >> /root/.bashrc
 
+# Run NPM Publish
+RUN npm run build
+RUN npm publish
+
 # Run Story Book Docs build and sync to S3
 RUN npm run build-storybook
 RUN aws s3 sync storybook-static/ s3://admin-ui-docs.commerce7.com --delete
 RUN aws s3 cp s3://admin-ui-docs.commerce7.com/index.html s3://admin-ui-docs.commerce7.com/index.html --metadata-directive REPLACE --cache-control no-cache,must-revalidate --expires -1 --content-type text/html
 
-# Run NPM Publish
-RUN npm run build
-RUN npm publish
