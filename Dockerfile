@@ -78,7 +78,7 @@ RUN echo 'echo -en "\e]0;api\a"' >> /root/.bashrc
 RUN npm run build
 RUN npm publish
 
-# Run Story Book Docs build and sync to S3
+# Run Storybook Docs build and sync to S3
 RUN npm run build-storybook
 RUN aws s3 sync storybook-static/ s3://admin-ui-docs.commerce7.com --delete
 RUN aws s3 cp s3://admin-ui-docs.commerce7.com/index.html s3://admin-ui-docs.commerce7.com/index.html --metadata-directive REPLACE --cache-control no-cache,must-revalidate --expires -1 --content-type text/html
