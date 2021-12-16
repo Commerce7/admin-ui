@@ -4,6 +4,7 @@ import { StyledAlert, StyledIcon } from './Alert.styles';
 
 const Alert = (props) => {
   const { variant, icon, size, children, className, dataTestId } = props;
+
   return (
     <StyledAlert
       className={className}
@@ -11,7 +12,7 @@ const Alert = (props) => {
       data-testid={dataTestId}
       size={size}
     >
-      <StyledIcon icon={icon} variant={variant} alertSize={size} />
+      <StyledIcon icon={icon} alertVariant={variant} alertSize={size} />
       {children}
     </StyledAlert>
   );
