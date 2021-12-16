@@ -23,6 +23,7 @@ const StyledSelectArrow = styled(Icon)`
   height: 12px;
   min-width: 12px;
   min-height: 12px;
+  pointer-events: none;
 `;
 
 const StyledSelectWrapper = styled.div`

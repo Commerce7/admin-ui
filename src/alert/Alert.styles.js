@@ -42,8 +42,8 @@ const StyledIcon = styled(Icon)`
   min-height: auto;
 
   path {
-    fill: ${({ theme, variant }) =>
-      colors[theme.c7__ui.mode].iconColor[variant]};
+    fill: ${({ theme, alertVariant }) =>
+      colors[theme.c7__ui.mode].iconColor[alertVariant]};
   }
 `;
 
