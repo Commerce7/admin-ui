@@ -75,6 +75,7 @@ RUN echo 'export PS1="\[\e[0;32m\][COMMERCE7_ADMIN_UI] \w\$\[\e[0m\] "' >> /root
 RUN echo 'echo -en "\e]0;api\a"' >> /root/.bashrc
 
 # Run NPM Publish
+RUN npm config set '//registry.npmjs.org/:_authToken="${NPM_TOKEN}"'
 RUN npm run build
 RUN npm publish
 
