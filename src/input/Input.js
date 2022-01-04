@@ -35,7 +35,7 @@ const Input = forwardRef((props, ref) => {
     type,
     value,
     dataTestId,
-    mode
+    inputMode
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -63,7 +63,7 @@ const Input = forwardRef((props, ref) => {
           aria-invalid={hasErrorMessage}
           aria-required={required}
           ref={ref}
-          inputMode={mode}
+          inputMode={inputMode}
           disabled={disabled}
           placeholder={placeholder}
           id={id}
@@ -103,7 +103,7 @@ Input.defaultProps = {
   errorMessage: null,
   id: Math.random().toString(36).substr(2, 9),
   label: null,
-  mode: null,
+  inputMode: null,
   onBlur: null,
   onFocus: null,
   placeholder: null,
@@ -166,7 +166,7 @@ Input.propTypes = {
    * Set the inputmode of the element.
    * This allows a browser to display an appropriate virtual keyboard.
    */
-  mode: PropTypes.oneOf([
+  inputMode: PropTypes.oneOf([
     'text',
     'decimal',
     'numeric',
