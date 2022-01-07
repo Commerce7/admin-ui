@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
-import { sizes, fontSizes, colors } from './theme';
+import Icon from '../icon';
+import { sizes, iconSizes, fontSizes, colors } from './theme';
 
 const StyledAvatar = styled.div`
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
@@ -34,4 +35,18 @@ const StyledAvatar = styled.div`
   }
 `;
 
-export { StyledAvatar };
+const StyledAvatarIcon = styled(Icon)`
+  background-color: transparent;
+  ${({ avatarSize }) => `
+    width: ${iconSizes[avatarSize]};
+    min-width: ${iconSizes[avatarSize]};
+    height: ${iconSizes[avatarSize]};
+    min-height: ${iconSizes[avatarSize]};
+    fill: ${({ theme }) => colors[theme.c7__ui.mode].iconColor};
+  `}
+  path {
+    fill: ${({ theme }) => colors[theme.c7__ui.mode].iconColor};
+  }
+`;
+
+export { StyledAvatar, StyledAvatarIcon };
