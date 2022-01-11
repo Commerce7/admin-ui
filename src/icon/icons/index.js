@@ -3,6 +3,7 @@ import AddCart from './AddCart';
 import AddUser from './AddUser';
 import Application from './Application';
 import ApplicationSwitcher from './ApplicationSwitcher';
+import Archive from './Archive';
 import ArrowDivert from './ArrowDivert';
 import ArrowDown from './ArrowDown';
 import ArrowLeft from './ArrowLeft';
@@ -133,6 +134,7 @@ export {
   AddUser as addUser,
   Application as application,
   ApplicationSwitcher as applicationSwitcher,
+  Archive as archive,
   ArrowDivert as arrowDivert,
   ArrowDown as arrowDown,
   ArrowLeft as arrowLeft,
