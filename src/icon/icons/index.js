@@ -3,6 +3,7 @@ import AddCart from './AddCart';
 import AddUser from './AddUser';
 import Application from './Application';
 import ApplicationSwitcher from './ApplicationSwitcher';
+import Archive from './Archive';
 import ArrowDivert from './ArrowDivert';
 import ArrowDown from './ArrowDown';
 import ArrowLeft from './ArrowLeft';
@@ -57,6 +58,7 @@ import Flag from './Flag';
 import Gift from './Gift';
 import GiftCard from './GiftCard';
 import GradHat from './GradHat';
+import Hammer from './Hammer';
 import Hand from './Hand';
 import Heart from './Heart';
 import Image from './Image';
@@ -132,6 +134,7 @@ export {
   AddUser as addUser,
   Application as application,
   ApplicationSwitcher as applicationSwitcher,
+  Archive as archive,
   ArrowDivert as arrowDivert,
   ArrowDown as arrowDown,
   ArrowLeft as arrowLeft,
@@ -186,6 +189,7 @@ export {
   Gift as gift,
   GiftCard as giftCard,
   GradHat as gradHat,
+  Hammer as hammer,
   Hand as hand,
   Heart as heart,
   InfoCircle as infoCircle,
