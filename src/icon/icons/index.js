@@ -17,6 +17,7 @@ import Calendar from './Calendar';
 import Car from './Car';
 import Carrot from './Carrot';
 import Cart from './Cart';
+import Cash from './Cash';
 import Cashier from './Cashier';
 import Chat from './Chat';
 import Check from './Check';
@@ -144,6 +145,7 @@ export {
   Calendar as calendar,
   Car as car,
   Carrot as carrot,
+  Cash as cash,
   Cart as cart,
   Cashier as cashier,
   Chat as chat,
