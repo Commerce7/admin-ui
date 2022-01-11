@@ -57,6 +57,7 @@ import Flag from './Flag';
 import Gift from './Gift';
 import GiftCard from './GiftCard';
 import GradHat from './GradHat';
+import Hammer from './Hammer';
 import Hand from './Hand';
 import Heart from './Heart';
 import Image from './Image';
@@ -186,6 +187,7 @@ export {
   Gift as gift,
   GiftCard as giftCard,
   GradHat as gradHat,
+  Hammer as hammer,
   Hand as hand,
   Heart as heart,
   InfoCircle as infoCircle,
