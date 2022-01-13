@@ -4,12 +4,6 @@ const fontSize = {
   h3: '20px'
 };
 
-const lineHeight = {
-  h1: '32px',
-  h2: '24px',
-  h3: '20px'
-};
-
 const colors = {
   dark: {
     fontColor: 'rgb(255,255,255)'
@@ -19,4 +13,4 @@ const colors = {
   }
 };
 
-export { fontSize, lineHeight, colors };
+export { fontSize, colors };
