@@ -13,7 +13,7 @@ const Alert = (props) => {
       size={size}
     >
       <StyledIcon icon={icon} alertVariant={variant} alertSize={size} />
-      {children}
+      <div>{children}</div>
     </StyledAlert>
   );
 };
