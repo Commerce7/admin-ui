@@ -12,6 +12,8 @@ const StyledAlert = styled.div`
   position: relative;
   overflow: hidden;
   transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
 
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   font-size: ${({ size }) => sizes[size].fontSize};
@@ -33,7 +35,6 @@ const StyledAlert = styled.div`
 `;
 
 const StyledIcon = styled(Icon)`
-  transform: translateY(2px);
   margin-right: ${({ alertSize }) => sizes[alertSize].iconMargin};
 
   width: ${({ alertSize }) => sizes[alertSize].iconSize};
