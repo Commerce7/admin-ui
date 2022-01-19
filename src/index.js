@@ -3,6 +3,7 @@ import Commerce7AdminUI from './ui';
 
 // Button
 import Button from './button';
+import SelectButton from './selectButton';
 import LinkButton from './linkButton';
 import ContextMenu from './contextMenu';
 import ButtonMenu from './buttonMenu';
@@ -41,6 +42,7 @@ export {
   Avatar,
   Alert,
   Button,
+  SelectButton,
   ButtonMenu,
   Commerce7AdminUI,
   Checkbox,
