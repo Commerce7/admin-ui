@@ -15,7 +15,27 @@ Basic.story = {
   name: 'Basic'
 };
 
-export const OptionSelect = () => {
+export const Loading = () => (
+  <Container>
+    <SelectButton loading>Loading</SelectButton>
+  </Container>
+);
+
+Loading.story = {
+  name: 'Loading'
+};
+
+export const Disabled = () => (
+  <Container>
+    <SelectButton disabled>Can&apos;t touch this</SelectButton>
+  </Container>
+);
+
+Disabled.story = {
+  name: 'Disabled'
+};
+
+export const SelectMany = () => {
   const [cheese, setCheese] = useState(true);
   const [bacon, setBacon] = useState(true);
   const [noTomato, setNoTomato] = useState(false);
@@ -40,8 +60,42 @@ export const OptionSelect = () => {
   );
 };
 
-OptionSelect.story = {
-  name: 'OptionSelect'
+SelectMany.story = {
+  name: 'SelectMany'
+};
+
+export const SelectOne = () => {
+  const [tender, setTender] = useState('visa');
+
+  return (
+    <Container>
+      <SelectButton
+        isSelected={tender === 'visa'}
+        onClick={() => setTender('visa')}
+      >
+        Visa
+        <Text>$58.37</Text>
+      </SelectButton>
+      <SelectButton
+        isSelected={tender === 'mastercard'}
+        onClick={() => setTender('mastercard')}
+      >
+        Mastercard
+        <Text>$58.37</Text>
+      </SelectButton>
+      <SelectButton
+        isSelected={tender === 'cash'}
+        onClick={() => setTender('cash')}
+      >
+        Cash
+        <Text>$58.37</Text>
+      </SelectButton>
+    </Container>
+  );
+};
+
+SelectOne.story = {
+  name: 'SelectOne'
 };
 
 const Container = styled.div`

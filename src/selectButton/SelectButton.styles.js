@@ -27,7 +27,7 @@ const StyledSelectButton = styled.button`
     colors[theme.c7__ui.mode].backgroundColor.default};
 
   padding: 20px 10px;
-  height: 80px;
+  min-height: 80px;
   max-width: 320px;
 
   text-decoration: none;
