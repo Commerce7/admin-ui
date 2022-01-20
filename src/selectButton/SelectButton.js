@@ -5,7 +5,7 @@ import { StyledSelectButton, StyledLoadingIcon } from './SelectButton.styles';
 
 const SelectButton = forwardRef((props, ref) => {
   const {
-    isSelected,
+    selected,
     children,
     className,
     disabled,
@@ -21,7 +21,7 @@ const SelectButton = forwardRef((props, ref) => {
       disabled={disabled || loading}
       type={type}
       onClick={onClick}
-      isSelected={isSelected}
+      selected={selected}
       data-testid={dataTestId}
     >
       {loading ? <StyledLoadingIcon icon="loading" /> : children}
@@ -33,6 +33,7 @@ SelectButton.defaultProps = {
   className: '',
   disabled: false,
   loading: false,
+  selected: false,
   onClick: null,
   type: 'button',
   dataTestId: null
@@ -60,6 +61,11 @@ SelectButton.propTypes = {
    * This prop is intended to be used during asynchronous actions, like submitting a form.
    */
   loading: PropTypes.bool,
+
+  /**
+   * Set the button to visually show that its selected.
+   */
+  selected: PropTypes.bool,
 
   /**
    * Callback fired when the component is clicked.

@@ -16,9 +16,9 @@ const StyledSelectButton = styled.button`
   position: relative;
 
   border: 1px solid transparent;
-  border-width: ${({ isSelected }) => (isSelected ? '2px' : '1px')};
-  border-color: ${({ theme, isSelected }) =>
-    isSelected
+  border-width: ${({ selected }) => (selected ? '2px' : '1px')};
+  border-color: ${({ theme, selected }) =>
+    selected
       ? colors[theme.c7__ui.mode].borderColor.default
       : theme.c7__ui.borderColor};
   border-radius: 4px;
@@ -36,6 +36,14 @@ const StyledSelectButton = styled.button`
   font-weight: 400;
   font-size: 16px;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
+
+  &:focus:not(:disabled) {
+    color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.focus};
+    background-color: ${({ theme }) =>
+      colors[theme.c7__ui.mode].backgroundColor.default};
+    border-color: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.focus};
+    box-shadow: ${({ theme }) => shadows[theme.c7__ui.mode].default};
+  }
 
   &:hover:not(:disabled) {
     color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.hover};
@@ -55,14 +63,6 @@ const StyledSelectButton = styled.button`
     box-shadow: ${({ theme }) => shadows[theme.c7__ui.mode].disabled};
   }
 `;
-
-// &:focus:not(:disabled) {
-//     color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.focus};
-//     background-color: ${({ theme }) =>
-//       colors[theme.c7__ui.mode].backgroundColor.default};
-//     border-color: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.focus};
-//     box-shadow: ${({ theme }) => shadows[theme.c7__ui.mode].default};
-//   }
 
 const rotate = keyframes`
   from {

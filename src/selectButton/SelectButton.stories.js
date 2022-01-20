@@ -42,18 +42,15 @@ export const SelectMany = () => {
 
   return (
     <Container>
-      <SelectButton isSelected={cheese} onClick={() => setCheese(!cheese)}>
+      <SelectButton selected={cheese} onClick={() => setCheese(!cheese)}>
         Add Cheese
         <Text>$1.00</Text>
       </SelectButton>
-      <SelectButton isSelected={bacon} onClick={() => setBacon(!bacon)}>
+      <SelectButton selected={bacon} onClick={() => setBacon(!bacon)}>
         Add Bacon
         <Text>$1.50</Text>
       </SelectButton>
-      <SelectButton
-        isSelected={noTomato}
-        onClick={() => setNoTomato(!noTomato)}
-      >
+      <SelectButton selected={noTomato} onClick={() => setNoTomato(!noTomato)}>
         No Tomato
       </SelectButton>
     </Container>
@@ -70,21 +67,21 @@ export const SelectOne = () => {
   return (
     <Container>
       <SelectButton
-        isSelected={tender === 'visa'}
+        selected={tender === 'visa'}
         onClick={() => setTender('visa')}
       >
         Visa
         <Text>$58.37</Text>
       </SelectButton>
       <SelectButton
-        isSelected={tender === 'mastercard'}
+        selected={tender === 'mastercard'}
         onClick={() => setTender('mastercard')}
       >
         Mastercard
         <Text>$58.37</Text>
       </SelectButton>
       <SelectButton
-        isSelected={tender === 'cash'}
+        selected={tender === 'cash'}
         onClick={() => setTender('cash')}
       >
         Cash
