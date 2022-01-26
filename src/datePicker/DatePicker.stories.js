@@ -188,6 +188,28 @@ Clear.story = {
   name: 'Clear Value'
 };
 
+export const Inline = () => {
+  const [value, setValue] = useState('');
+
+  const handleOnChange = (e) => {
+    setValue(e ? e.format('MMM D, YYYY') : '');
+  };
+
+  return (
+    <DatePicker
+      label="Date"
+      id="date"
+      value={value}
+      onChange={handleOnChange}
+      inline
+    />
+  );
+};
+
+Inline.story = {
+  name: 'Inline'
+};
+
 export default {
   title: 'Form/DatePicker',
   component: DatePicker,

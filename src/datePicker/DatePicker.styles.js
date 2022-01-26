@@ -15,12 +15,14 @@ const StyledDatePicker = styled.div`
     display: none;
     top: 100%;
     position: absolute;
-    width: 250px;
+    width: ${({ inline }) => (inline ? 'auto' : '250px')};
+    max-width: 300px;
     padding: 4px;
     margin-top: 1px;
     z-index: 99999 !important;
     background: ${({ theme }) => colors[theme.c7__ui.mode].backgroundColor};
-    border: 1px solid ${({ theme }) => colors[theme.c7__ui.mode].borderColor};
+    border: ${({ theme, inline }) =>
+      inline ? '' : `1px solid ${colors[theme.c7__ui.mode].borderColor}`};
     color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.default};
     box-shadow: rgb(0 0 0 / 15%) 2px 4px 6px;
     border-bottom-right-radius: 4px;

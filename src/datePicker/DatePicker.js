@@ -35,7 +35,8 @@ const DatePicker = forwardRef((props, ref) => {
     placeholder,
     required,
     errorMessage,
-    dataTestId
+    dataTestId,
+    inline
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -50,6 +51,27 @@ const DatePicker = forwardRef((props, ref) => {
     hasDescription,
     hasErrorMessage
   );
+
+  if (inline) {
+    return (
+      <StyledDatePicker inline>
+        <DateTime
+          onChange={onChange}
+          onOpen={onFocus}
+          onBlur={onBlur}
+          autoFocus={autoFocus}
+          value={value}
+          disabled={disabled}
+          timeFormat={false}
+          dateFormat="MMM D, YYYY"
+          initialViewMode="days"
+          isValidDate={isValidDate}
+          utc
+          input={false}
+        />
+      </StyledDatePicker>
+    );
+  }
 
   return (
     <StyledInputWrapper className={className} data-testid={dataTestId}>
@@ -134,6 +156,7 @@ DatePicker.defaultProps = {
   disabled: false,
   errorMessage: null,
   id: Math.random().toString(36).substr(2, 9),
+  inline: false,
   isValidDate: () => true,
   label: null,
   onBlur: () => null,
@@ -179,6 +202,11 @@ DatePicker.propTypes = {
    * The label uses this id to ensure htmlFor is set correctly.
    */
   id: PropTypes.string,
+
+  /**
+   * Show just the calendar picker without an input.
+   */
+  inline: PropTypes.bool,
 
   /**
    * Function to check if a date should be disabled in the datepicker.
