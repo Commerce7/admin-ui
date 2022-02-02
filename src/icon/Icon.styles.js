@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { colors, sizes } from './theme';
+import { colors } from './theme';
 
 const StyledIcon = styled.svg`
   display: inline-block;
-  width: ${({ size }) => sizes[size]};
-  height: ${({ size }) => sizes[size]};
-  min-width: ${({ size }) => sizes[size]};
-  min-height: ${({ size }) => sizes[size]};
+  width: ${({ size }) => `${size}`}px;
+  height: ${({ size }) => `${size}`}px;
+  min-width: ${({ size }) => `${size}`}px;
+  min-height: ${({ size }) => `${size}`}px;
 
   fill: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant]};
 
