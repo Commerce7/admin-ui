@@ -54,7 +54,7 @@ const DatePicker = forwardRef((props, ref) => {
 
   if (inline) {
     return (
-      <StyledDatePicker inline>
+      <StyledDatePicker inline className={className}>
         <DateTime
           onChange={onChange}
           onOpen={onFocus}
