@@ -3,7 +3,6 @@ import { StyledIcon as UIStyledIcon } from '../icon/Icon.styles';
 import { backgroundColors } from '../icon/theme';
 
 const StyledIcon = styled(UIStyledIcon)`
-  display: inline-block;
   width: 28px;
   height: 28px;
   min-width: 28px;
