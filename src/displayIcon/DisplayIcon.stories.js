@@ -24,12 +24,7 @@ variants.story = {
 };
 
 export const onClick = () => (
-  <DisplayIcon
-    icon="add"
-    onClick={action('on-click')}
-    label="Add to cart"
-    dataTestId="testing"
-  />
+  <DisplayIcon icon="add" onClick={action('on-click')} label="Add to cart" />
 );
 
 onClick.story = {
