@@ -96,7 +96,7 @@ List.story = {
 };
 
 export default {
-  title: 'UI/Icon',
+  title: 'Icon/Icon',
   component: Icon,
   parameters: {
     docs: {

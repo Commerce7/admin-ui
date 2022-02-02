@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-import * as Icons from './icons';
-import { StyledIcon, StyledIconButton } from './Icon.styles';
+import * as Icons from '../icon/icons';
 
+import { StyledIcon } from './DisplayIcon.styles';
+import { StyledIconButton } from '../icon/Icon.styles';
 import IconWrapper from './IconWrapper';
 
-const Icon = (props) => {
-  const { className, icon, label, onClick, size, variant, dataTestId } = props;
+const DisplayIcon = (props) => {
+  const { className, icon, label, onClick, variant, dataTestId } = props;
 
   const IconComponent = Icons[icon];
 
@@ -20,12 +21,11 @@ const Icon = (props) => {
         title={label}
         data-testid={dataTestId}
       >
-        <IconWrapper size={size}>
+        <IconWrapper>
           <StyledIcon
             as={IconComponent}
             variant={variant}
             className={className}
-            size={size}
           />
         </IconWrapper>
       </StyledIconButton>
@@ -33,29 +33,26 @@ const Icon = (props) => {
   }
 
   return (
-    <IconWrapper size={size} dataTestId={dataTestId}>
+    <IconWrapper dataTestId={dataTestId}>
       <StyledIcon
         as={IconComponent}
         variant={variant}
         className={className}
-        dataTestId={dataTestId}
         aria-label={label}
-        size={size}
       />
     </IconWrapper>
   );
 };
 
-Icon.defaultProps = {
+DisplayIcon.defaultProps = {
   className: null,
   label: null,
   onClick: null,
-  size: 'default',
   variant: 'default',
   dataTestId: null
 };
 
-Icon.propTypes = {
+DisplayIcon.propTypes = {
   /**
    * Add className to the outermost element.
    */
@@ -78,11 +75,6 @@ Icon.propTypes = {
   onClick: PropTypes.func,
 
   /**
-   * Set the size of the icon.
-   */
-  size: PropTypes.oneOf(['default', 'large']),
-
-  /**
    * Set the visual property of the component.
    */
   variant: PropTypes.oneOf(['default', 'success', 'error']),
@@ -93,4 +85,4 @@ Icon.propTypes = {
   dataTestId: PropTypes.string
 };
 
-export default Icon;
+export default DisplayIcon;
