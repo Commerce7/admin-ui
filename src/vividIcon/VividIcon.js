@@ -1,8 +1,25 @@
 import PropTypes from 'prop-types';
 import { StyledIconContainer, StyledIcon } from './VividIcon.styles';
+import { StyledIconButton } from '../icon/Icon.styles';
 
 const IconVivid = (props) => {
-  const { icon, color, className, dataTestId } = props;
+  const { className, label, onClick, icon, color, dataTestId } = props;
+
+  if (onClick) {
+    return (
+      <StyledIconButton
+        onClick={onClick}
+        type="button"
+        aria-label={label}
+        title={label}
+        data-testid={dataTestId}
+      >
+        <StyledIconContainer color={color} className={className}>
+          <StyledIcon icon={icon} size={20} color={color} />
+        </StyledIconContainer>
+      </StyledIconButton>
+    );
+  }
 
   return (
     <StyledIconContainer
@@ -17,8 +34,10 @@ const IconVivid = (props) => {
 
 IconVivid.defaultProps = {
   className: null,
+  onClick: null,
   dataTestId: null,
-  color: 'pink'
+  color: 'pink',
+  label: null
 };
 
 IconVivid.propTypes = {
@@ -31,6 +50,17 @@ IconVivid.propTypes = {
    * Set the icon to use.
    */
   icon: PropTypes.string.isRequired,
+
+  /**
+   * The label for the component.
+   * This should be used when passing in an onClick prop, for accessibility reasons.
+   */
+  label: PropTypes.string,
+
+  /**
+   * Callback fired when the component is clicked.
+   */
+  onClick: PropTypes.func,
 
   /**
    * Set the visual property of the component.

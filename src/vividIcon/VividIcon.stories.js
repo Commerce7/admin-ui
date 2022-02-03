@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { action } from '@storybook/addon-actions';
+
 import VividIcon from './VividIcon';
 
 export const basic = () => (
@@ -24,6 +26,27 @@ export const colors = () => (
 
 colors.story = {
   name: 'Colors'
+};
+
+export const onClick = () => (
+  <Container>
+    <VividIcon
+      icon="archive"
+      color="pink"
+      onClick={action('archive-click')}
+      label="archive"
+    />
+    <VividIcon
+      icon="car"
+      color="blue"
+      onClick={action('car-click')}
+      label="car"
+    />
+  </Container>
+);
+
+onClick.story = {
+  name: 'Click'
 };
 
 const Container = styled.div`
