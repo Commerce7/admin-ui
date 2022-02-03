@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 import * as Icons from './icons';
 import { StyledIcon, StyledIconButton } from './Icon.styles';
 
-import IconWrapper from './IconWrapper';
-
 const Icon = (props) => {
   const { className, icon, label, onClick, size, variant, dataTestId } = props;
 
@@ -20,29 +18,25 @@ const Icon = (props) => {
         title={label}
         data-testid={dataTestId}
       >
-        <IconWrapper size={size}>
-          <StyledIcon
-            as={IconComponent}
-            variant={variant}
-            className={className}
-            size={size}
-          />
-        </IconWrapper>
+        <StyledIcon
+          as={IconComponent}
+          variant={variant}
+          className={className}
+          size={size}
+        />
       </StyledIconButton>
     );
   }
 
   return (
-    <IconWrapper size={size} dataTestId={dataTestId}>
-      <StyledIcon
-        as={IconComponent}
-        variant={variant}
-        className={className}
-        dataTestId={dataTestId}
-        aria-label={label}
-        size={size}
-      />
-    </IconWrapper>
+    <StyledIcon
+      as={IconComponent}
+      variant={variant}
+      className={className}
+      dataTestId={dataTestId}
+      aria-label={label}
+      size={size}
+    />
   );
 };
 
@@ -50,7 +44,7 @@ Icon.defaultProps = {
   className: null,
   label: null,
   onClick: null,
-  size: 'default',
+  size: 18,
   variant: 'default',
   dataTestId: null
 };
@@ -80,7 +74,7 @@ Icon.propTypes = {
   /**
    * Set the size of the icon.
    */
-  size: PropTypes.oneOf(['default', 'large']),
+  size: PropTypes.number,
 
   /**
    * Set the visual property of the component.
