@@ -11,7 +11,6 @@ import ButtonMenu from './buttonMenu';
 // UI
 import Avatar from './avatar';
 import Alert from './alert';
-import Icon from './icon';
 import Message from './message';
 import Modal from './modal';
 import Tag from './tag';
@@ -34,6 +33,10 @@ import Select from './select';
 import Switch from './switch';
 import Textarea from './textarea';
 
+// Icon
+import Icon from './icon';
+import DisplayIcon from './displayIcon';
+
 // Typography
 import Heading from './heading';
 import Text from './text';
@@ -52,6 +55,7 @@ export {
   DatePicker,
   Heading,
   Icon,
+  DisplayIcon,
   Input,
   LineBreak,
   LinkButton,
