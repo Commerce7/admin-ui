@@ -1,3 +1,4 @@
+import styled from 'styled-components';
 import VividIcon from './VividIcon';
 
 export const basic = () => (
@@ -9,6 +10,26 @@ export const basic = () => (
 basic.story = {
   name: 'Basic'
 };
+
+export const colors = () => (
+  <Container>
+    <VividIcon icon="archive" color="pink" />
+    <VividIcon icon="car" color="blue" />
+    <VividIcon icon="cashier" color="green" />
+    <VividIcon icon="chat" color="teal" />
+    <VividIcon icon="carrot" color="orange" />
+    <VividIcon icon="bag" color="purple" />
+  </Container>
+);
+
+colors.story = {
+  name: 'Colors'
+};
+
+const Container = styled.div`
+  display: flex;
+  gap: 10px;
+`;
 
 export default {
   title: 'Icon/VividIcon',
