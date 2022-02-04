@@ -36,6 +36,7 @@ import Textarea from './textarea';
 // Icon
 import Icon from './icon';
 import DisplayIcon from './displayIcon';
+import VividIcon from './vividIcon';
 
 // Typography
 import Heading from './heading';
@@ -56,6 +57,7 @@ export {
   Heading,
   Icon,
   DisplayIcon,
+  VividIcon,
   Input,
   LineBreak,
   LinkButton,
