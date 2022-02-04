@@ -19,8 +19,8 @@ const trColors = {
   dark: {
     backgroundColor: {
       default: 'rgb(41, 50, 56)',
-      alt: 'rgb(49, 66, 78)',
-      hover: 'rgb(62, 71, 76)'
+      alt: 'rgb(52, 63, 70)',
+      hover: 'rgb(65, 79, 88)'
     },
     borderColor: 'rgb(106, 112, 119)'
   }
