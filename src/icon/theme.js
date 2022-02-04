@@ -16,9 +16,4 @@ const backgroundColors = {
   light: 'rgb(237, 237, 237)'
 };
 
-const sizes = {
-  default: '18px',
-  large: '28px'
-};
-
-export { colors, backgroundColors, sizes };
+export { colors, backgroundColors };

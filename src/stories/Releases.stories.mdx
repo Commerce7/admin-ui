@@ -4,6 +4,17 @@
 
 # Release Notes
 
+#### 1.8.0
+
+##### Breaking changes:
+
+- `Icon` component's `size` prop no longer accepts a string value of either `default` or `large`.
+  This has been replaced with a `size` prop that accepts a positive integer of the width / height value in pixels.
+- For an example click [here](https://admin-ui-docs.commerce7.com/?path=/docs/icon-icon--sizes).
+- If you wish to use the old `Icon` component with `size="large"` instead use the new `DisplayIcon` component added below in `1.7.63`.
+
+---
+
 #### 1.7.63
 
 - Add `DisplayIcon` component. This is the same as the `Icon` `size="large"` component which will be removed in a future update.

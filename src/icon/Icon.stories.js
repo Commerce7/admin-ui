@@ -30,15 +30,19 @@ variants.story = {
 
 export const sizes = () => (
   <>
-    <Icon icon="cart" /> <Icon icon="cart" size="large" />
+    <Icon icon="cart" />
+    <Icon icon="cart" size={24} />
+    <Icon icon="cart" size={48} />
     <br />
     <br />
     <Icon icon="cart" variant="success" />{' '}
-    <Icon icon="cart" size="large" variant="success" />
+    <Icon icon="cart" size={24} variant="success" />
+    <Icon icon="cart" size={48} variant="success" />
     <br />
     <br />
     <Icon icon="cart" variant="error" />{' '}
-    <Icon icon="cart" size="large" variant="error" />
+    <Icon icon="cart" size={24} variant="error" />
+    <Icon icon="cart" size={48} variant="error" />
   </>
 );
 
@@ -47,7 +51,15 @@ sizes.story = {
 };
 
 export const onClick = () => (
-  <Icon icon="add" onClick={action('on-click')} label="Add to cart" />
+  <>
+    <Icon icon="add" onClick={action('on-click-add')} label="Add to cart" />
+    <Icon
+      icon="remove"
+      onClick={action('on-click-remove')}
+      label="Add to cart"
+      size={48}
+    />
+  </>
 );
 
 onClick.story = {
