@@ -2,22 +2,28 @@ import styled from 'styled-components';
 
 import Text from '../text';
 import Button from '../button';
+import { colors } from '../text/theme';
 
-const BreadcrumbWrapperStyles = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  width: 100%;
+const BreadcrumbWrapper = styled.div`
+  &:not(:first-child) {
+    display: flex;
+    align-items: center;
+    &::before {
+      content: '>';
+      margin: 0 5px;
+      font-size: 10px;
+    }
+  }
+  &:not(:last-child) {
+    span {
+      color: ${({ theme }) => colors[theme.c7__ui.mode].secondaryFontColor};
+    }
+  }
 `;
 
 const BreadcrumbLinkStyles = styled.div``;
 
 const BreadcrumbItemStyles = styled(Text)``;
-
-const BreadcrumbDividerStyles = styled.span`
-  margin: 0 5px;
-  font-size: 10px;
-`;
 
 const BreadcrumbButtonStyles = styled(Button).attrs({
   variant: 'text'
@@ -27,8 +33,7 @@ const BreadcrumbButtonStyles = styled(Button).attrs({
 `;
 
 export {
-  BreadcrumbWrapperStyles,
-  BreadcrumbDividerStyles,
+  BreadcrumbWrapper,
   BreadcrumbItemStyles,
   BreadcrumbButtonStyles,
   BreadcrumbLinkStyles

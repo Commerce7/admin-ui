@@ -1,50 +1,78 @@
-import { Fragment } from 'react';
 import PropTypes from 'prop-types';
-import BreadcrumbItem from './BreadcrumbItem';
 import {
-  BreadcrumbWrapperStyles,
-  BreadcrumbDividerStyles
+  BreadcrumbItemStyles,
+  BreadcrumbButtonStyles,
+  BreadcrumbLinkStyles,
+  BreadcrumbWrapper
 } from './Breadcrumb.styles';
 
 const Breadcrumb = (props) => {
-  const { breadcrumbs, component, className, target, rel, dataTestId } = props;
+  const { className, component, href, children, dataTestId, onClick, ...rest } =
+    props;
+
+  let as = 'a';
+  let customComponentProps = {};
+  if (component) {
+    as = component;
+    customComponentProps = { ...rest };
+  }
+
+  if (href) {
+    return (
+      <BreadcrumbWrapper>
+        <BreadcrumbLinkStyles
+          as={as}
+          href={href}
+          className={className}
+          data-testid={dataTestId}
+          {...customComponentProps} // eslint-disable-line
+        >
+          <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
+        </BreadcrumbLinkStyles>
+      </BreadcrumbWrapper>
+    );
+  }
+
+  if (onClick) {
+    return (
+      <BreadcrumbWrapper>
+        <BreadcrumbButtonStyles onClick={onClick} type="button">
+          <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
+        </BreadcrumbButtonStyles>
+      </BreadcrumbWrapper>
+    );
+  }
+
   return (
-    <BreadcrumbWrapperStyles className={className} data-testid={dataTestId}>
-      {breadcrumbs.map((breadcrumb, index) => {
-        const isActive =
-          breadcrumbs.length > 1 && index === breadcrumbs.length - 1;
-        return (
-          <Fragment key={breadcrumb.label}>
-            {index > 0 && (
-              <BreadcrumbDividerStyles>&gt;</BreadcrumbDividerStyles>
-            )}
-            <BreadcrumbItem
-              breadcrumb={breadcrumb}
-              isActive={isActive}
-              component={component}
-              target={target}
-              rel={rel}
-            />
-          </Fragment>
-        );
-      })}
-    </BreadcrumbWrapperStyles>
+    <BreadcrumbWrapper>
+      <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
+    </BreadcrumbWrapper>
   );
 };
 
 Breadcrumb.defaultProps = {
   className: '',
   component: null,
-  target: null,
-  rel: null,
-  dataTestId: null
+  href: null,
+  dataTestId: null,
+  onClick: null
 };
 
 Breadcrumb.propTypes = {
   /**
+   * The content of the component.
+   */
+  children: PropTypes.node.isRequired,
+
+  /**
    * Add className to the outermost element
    */
   className: PropTypes.string,
+
+  /**
+   * Callback fired when the component is clicked.
+   */
+  onClick: PropTypes.func,
 
   /**
    * The component to render as a replacement for `<a/>`.
@@ -54,25 +82,9 @@ Breadcrumb.propTypes = {
   component: PropTypes.any, // eslint-disable-line
 
   /**
-   * Object defining the breadcrumb properties.
+   * The url to link to.
    */
-  breadcrumbs: PropTypes.arrayOf(
-    PropTypes.shape({
-      label: PropTypes.string.isRequired,
-      to: PropTypes.string
-    })
-  ).isRequired,
-
-  /**
-   * Set the window to open the link in.
-   * If this field is set to '_blank', the rel prop should be set to 'noopener noreferrer' for security reasons.
-   */
-  target: PropTypes.string,
-
-  /**
-   * Set the rel property of the link
-   */
-  rel: PropTypes.string,
+  href: PropTypes.string,
 
   /**
    * Add test attribute to the element. Used internally for testing.
