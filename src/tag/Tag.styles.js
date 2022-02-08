@@ -38,7 +38,7 @@ const StyledDeleteButton = styled.button`
   border-radius: 50%;
   border: none;
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   height: 20px;
   width: 20px;
