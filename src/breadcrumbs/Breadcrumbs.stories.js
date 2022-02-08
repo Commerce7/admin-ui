@@ -1,3 +1,5 @@
+import { action } from '@storybook/addon-actions';
+
 import Breadcrumbs from './Breadcrumbs';
 import Breadcrumb from '../breadcrumb';
 
@@ -11,6 +13,20 @@ export const basic = () => (
 
 basic.story = {
   name: 'Basic'
+};
+
+export const onClick = () => (
+  <Breadcrumbs>
+    <Breadcrumb onClick={action('on-click-settings')}>Settings</Breadcrumb>
+    <Breadcrumb onClick={action('on-click-departments')}>
+      Departments
+    </Breadcrumb>
+    <Breadcrumb>Edit</Breadcrumb>
+  </Breadcrumbs>
+);
+
+onClick.story = {
+  name: 'Click'
 };
 
 export default {
