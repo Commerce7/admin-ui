@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
-import { BreadcrumbWrapperStyles } from './Breadcrumbs.styles';
+import { BreadcrumbsWrapperStyles } from './Breadcrumbs.styles';
 
 const Breadcrumbs = (props) => {
   const { className, dataTestId, children } = props;
 
   return (
-    <BreadcrumbWrapperStyles className={className} data-testid={dataTestId}>
+    <BreadcrumbsWrapperStyles className={className} data-testid={dataTestId}>
       {children}
-    </BreadcrumbWrapperStyles>
+    </BreadcrumbsWrapperStyles>
   );
 };
 

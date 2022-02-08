@@ -19,12 +19,10 @@ const Breadcrumb = (props) => {
 
   if (href) {
     return (
-      <BreadcrumbWrapper>
+      <BreadcrumbWrapper className={className} data-testid={dataTestId}>
         <BreadcrumbLinkStyles
           as={as}
           href={href}
-          className={className}
-          data-testid={dataTestId}
           {...customComponentProps} // eslint-disable-line
         >
           <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
@@ -35,7 +33,7 @@ const Breadcrumb = (props) => {
 
   if (onClick) {
     return (
-      <BreadcrumbWrapper>
+      <BreadcrumbWrapper className={className} data-testid={dataTestId}>
         <BreadcrumbButtonStyles onClick={onClick} type="button">
           <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
         </BreadcrumbButtonStyles>
@@ -44,7 +42,7 @@ const Breadcrumb = (props) => {
   }
 
   return (
-    <BreadcrumbWrapper>
+    <BreadcrumbWrapper className={className} data-testid={dataTestId}>
       <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
     </BreadcrumbWrapper>
   );
