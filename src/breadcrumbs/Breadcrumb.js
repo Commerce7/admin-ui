@@ -8,10 +8,12 @@ const Breadcrumb = (props) => {
   const { className, component, href, children, dataTestId, onClick, ...rest } =
     props;
 
-  let as = 'a';
+  let as = '';
   let type = '';
 
-  if (onClick && href) {
+  if (!onClick && href) {
+    as = 'a';
+  } else if (onClick && href) {
     as = 'a';
   } else if (onClick) {
     as = 'button';

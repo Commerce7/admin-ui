@@ -17,10 +17,20 @@ const StyledBreadcrumb = styled.div`
       color: ${({ theme }) => colors[theme.c7__ui.mode].secondaryFontColor};
     }
   }
+
+  button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+  }
+
+  a {
+    cursor: pointer;
+  }
 `;
 
-const BreadcrumbLinkStyles = styled.div`
-  cursor: pointer;
-`;
+const BreadcrumbLinkStyles = styled.div``;
 
 export { StyledBreadcrumb, BreadcrumbLinkStyles };
