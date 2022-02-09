@@ -11,7 +11,7 @@ import ButtonMenu from './buttonMenu';
 // UI
 import Avatar from './avatar';
 import Alert from './alert';
-import { Breadcrumbs, Breadcrumb } from './breadcrumbs';
+import Breadcrumbs from './breadcrumbs';
 import Message from './message';
 import Modal from './modal';
 import Tag from './tag';
@@ -47,7 +47,6 @@ export {
   Avatar,
   Alert,
   Breadcrumbs,
-  Breadcrumb,
   Button,
   SelectButton,
   ButtonMenu,

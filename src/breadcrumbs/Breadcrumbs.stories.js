@@ -36,7 +36,7 @@ export default {
     docs: {
       description: {
         component:
-          "import { Breadcrumbs, Breadcrumb } from '@commerce7/admin-ui'"
+          "import { Breadcrumbs } from '@commerce7/admin-ui'; <br/><br/>const { Breadcrumb } = Breadcrumbs;"
       }
     }
   }
