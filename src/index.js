@@ -11,6 +11,7 @@ import ButtonMenu from './buttonMenu';
 // UI
 import Avatar from './avatar';
 import Alert from './alert';
+import Breadcrumbs from './breadcrumbs';
 import Message from './message';
 import Modal from './modal';
 import Tag from './tag';
@@ -45,6 +46,7 @@ import Text from './text';
 export {
   Avatar,
   Alert,
+  Breadcrumbs,
   Button,
   SelectButton,
   ButtonMenu,
