@@ -1,10 +1,8 @@
 import styled from 'styled-components';
 
-import Text from '../text';
-import Button from '../button';
 import { colors } from '../text/theme';
 
-const BreadcrumbWrapper = styled.div`
+const StyledBreadcrumb = styled.div`
   &:not(:first-child) {
     display: flex;
     align-items: center;
@@ -21,20 +19,8 @@ const BreadcrumbWrapper = styled.div`
   }
 `;
 
-const BreadcrumbLinkStyles = styled.div``;
-
-const BreadcrumbItemStyles = styled(Text)``;
-
-const BreadcrumbButtonStyles = styled(Button).attrs({
-  variant: 'text'
-})`
-  height: auto;
-  padding: 0;
+const BreadcrumbLinkStyles = styled.div`
+  cursor: pointer;
 `;
 
-export {
-  BreadcrumbWrapper,
-  BreadcrumbItemStyles,
-  BreadcrumbButtonStyles,
-  BreadcrumbLinkStyles
-};
+export { StyledBreadcrumb, BreadcrumbLinkStyles };

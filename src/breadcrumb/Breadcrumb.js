@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
-import {
-  BreadcrumbItemStyles,
-  BreadcrumbButtonStyles,
-  BreadcrumbLinkStyles,
-  BreadcrumbWrapper
-} from './Breadcrumb.styles';
+
+import Text from '../text';
+
+import { BreadcrumbLinkStyles, StyledBreadcrumb } from './Breadcrumb.styles';
 
 const Breadcrumb = (props) => {
   const { className, component, href, children, dataTestId, onClick, ...rest } =
@@ -17,34 +15,17 @@ const Breadcrumb = (props) => {
     customComponentProps = { ...rest };
   }
 
-  if (href) {
-    return (
-      <BreadcrumbWrapper className={className} data-testid={dataTestId}>
-        <BreadcrumbLinkStyles
-          as={as}
-          href={href}
-          {...customComponentProps} // eslint-disable-line
-        >
-          <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
-        </BreadcrumbLinkStyles>
-      </BreadcrumbWrapper>
-    );
-  }
-
-  if (onClick) {
-    return (
-      <BreadcrumbWrapper className={className} data-testid={dataTestId}>
-        <BreadcrumbButtonStyles onClick={onClick} type="button">
-          <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
-        </BreadcrumbButtonStyles>
-      </BreadcrumbWrapper>
-    );
-  }
-
   return (
-    <BreadcrumbWrapper className={className} data-testid={dataTestId}>
-      <BreadcrumbItemStyles>{children}</BreadcrumbItemStyles>
-    </BreadcrumbWrapper>
+    <StyledBreadcrumb className={className} data-testid={dataTestId}>
+      <BreadcrumbLinkStyles
+        as={as}
+        onClick={onClick}
+        href={href}
+        {...customComponentProps} // eslint-disable-line
+      >
+        <Text>{children}</Text>
+      </BreadcrumbLinkStyles>
+    </StyledBreadcrumb>
   );
 };
 
