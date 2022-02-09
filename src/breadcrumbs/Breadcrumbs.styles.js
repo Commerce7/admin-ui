@@ -5,6 +5,13 @@ const BreadcrumbsWrapperStyles = styled.nav`
   align-items: center;
   margin-bottom: 15px;
   width: 100%;
+
+  button {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    letter-spacing: 0.03em;
+  }
 `;
 
 export { BreadcrumbsWrapperStyles };

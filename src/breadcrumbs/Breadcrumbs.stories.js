@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions';
 
 import Breadcrumbs from './Breadcrumbs';
-import Breadcrumb from '../breadcrumb';
+import Breadcrumb from './Breadcrumb';
 
 export const basic = () => (
   <Breadcrumbs>

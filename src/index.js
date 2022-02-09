@@ -11,8 +11,7 @@ import ButtonMenu from './buttonMenu';
 // UI
 import Avatar from './avatar';
 import Alert from './alert';
-import Breadcrumbs from './breadcrumbs';
-import Breadcrumb from './breadcrumb';
+import { Breadcrumbs, Breadcrumb } from './breadcrumbs';
 import Message from './message';
 import Modal from './modal';
 import Tag from './tag';

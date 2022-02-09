@@ -9,6 +9,15 @@ const Breadcrumb = (props) => {
     props;
 
   let as = 'a';
+  let type = '';
+
+  if (onClick && href) {
+    as = 'a';
+  } else if (onClick) {
+    as = 'button';
+    type = 'button';
+  }
+
   let customComponentProps = {};
   if (component) {
     as = component;
@@ -21,6 +30,7 @@ const Breadcrumb = (props) => {
         as={as}
         onClick={onClick}
         href={href}
+        type={type}
         {...customComponentProps} // eslint-disable-line
       >
         <Text>{children}</Text>
