@@ -11,11 +11,9 @@ const Breadcrumb = (props) => {
   let as = '';
   let type = '';
 
-  if (!onClick && href) {
+  if (href) {
     as = 'a';
-  } else if (onClick && href) {
-    as = 'a';
-  } else if (onClick) {
+  } else if (!href && onClick) {
     as = 'button';
     type = 'button';
   }
