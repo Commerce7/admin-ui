@@ -75,4 +75,8 @@ export const GlobalStyles = createGlobalStyle`
     font-weight:  ${({ theme }) => theme.c7__ui.fontWeightBase};
     background-color: ${({ theme }) => theme.c7__ui.backgroundColor}; 
   }
+  a {
+    color: ${({ theme }) => theme.c7__ui.linkColor};
+    text-decoration: none;
+  }
 `;
