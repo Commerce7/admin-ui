@@ -30,6 +30,11 @@ const boxShadow = {
   dark: '2px 4px 6px rgba(0,0,0,0.5)'
 };
 
+const linkColors = {
+  light: 'rgb(0, 103, 157)',
+  dark: 'rgb(80, 164, 252)'
+};
+
 export const createTheme = (mode) => ({
   c7__ui: {
     mode,
@@ -40,6 +45,7 @@ export const createTheme = (mode) => ({
     fontWeightStrong: '600',
     fontColor: fontColors[mode],
     secondaryFontColor: secondaryFontColors[mode],
+    linkColor: linkColors[mode],
     backgroundColor: backgroundColors[mode],
     secondaryBackgroundColor: secondaryBackgroundColors[mode],
     borderColor: borderColors[mode],
