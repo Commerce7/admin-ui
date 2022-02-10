@@ -76,7 +76,7 @@ const colors = {
         default: 'rgb(80, 164, 252)',
         hover: 'rgb(80, 164, 252)',
         focus: 'rgb(80, 164, 252)',
-        disabled: 'rgb(80, 164, 252)'
+        disabled: 'rgb(175, 175, 175)'
       },
       backgroundColor: {
         default: 'transparent',
