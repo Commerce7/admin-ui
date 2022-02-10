@@ -73,9 +73,9 @@ const colors = {
     },
     link: {
       fontColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(1, 146, 208)',
-        focus: 'rgb(1, 146, 208)',
+        default: 'rgb(80, 164, 252)',
+        hover: 'rgb(80, 164, 252)',
+        focus: 'rgb(80, 164, 252)',
         disabled: 'rgb(175, 175, 175)'
       },
       backgroundColor: {

@@ -30,6 +30,11 @@ const boxShadow = {
   dark: '2px 4px 6px rgba(0,0,0,0.5)'
 };
 
+const linkColors = {
+  light: 'rgb(0, 103, 157)',
+  dark: 'rgb(80, 164, 252)'
+};
+
 export const createTheme = (mode) => ({
   c7__ui: {
     mode,
@@ -40,6 +45,7 @@ export const createTheme = (mode) => ({
     fontWeightStrong: '600',
     fontColor: fontColors[mode],
     secondaryFontColor: secondaryFontColors[mode],
+    linkColor: linkColors[mode],
     backgroundColor: backgroundColors[mode],
     secondaryBackgroundColor: secondaryBackgroundColors[mode],
     borderColor: borderColors[mode],
@@ -68,5 +74,9 @@ export const GlobalStyles = createGlobalStyle`
     color: ${({ theme }) => theme.c7__ui.fontColor};
     font-weight:  ${({ theme }) => theme.c7__ui.fontWeightBase};
     background-color: ${({ theme }) => theme.c7__ui.backgroundColor}; 
+  }
+  a {
+    color: ${({ theme }) => theme.c7__ui.linkColor};
+    text-decoration: none;
   }
 `;
