@@ -32,6 +32,7 @@ onClick.story = {
 export default {
   title: 'UI/Breadcrumbs',
   component: Breadcrumbs,
+  subcomponents: { Breadcrumb },
   parameters: {
     docs: {
       description: {
