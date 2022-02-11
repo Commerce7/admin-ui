@@ -18,6 +18,7 @@ import Tag from './tag';
 import Card from './card';
 import CardLink from './cardLink';
 import LineBreak from './lineBreak';
+import Menu from './menu';
 
 // Data
 import Table from './table';
@@ -62,6 +63,7 @@ export {
   VividIcon,
   Input,
   LineBreak,
+  Menu,
   LinkButton,
   Message,
   Modal,
