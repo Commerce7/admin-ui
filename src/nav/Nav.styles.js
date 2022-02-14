@@ -6,14 +6,14 @@ import { colors } from './theme';
 
 const baseTransition = `all 0.2s ease-in-out`;
 
-const LinkIconStyles = styled(Icon)`
+const NavLinkIconStyles = styled(Icon)`
   margin-right: 15px;
   path {
     transition: ${baseTransition};
   }
 `;
 
-const LinkStyles = styled.a`
+const NavLinkStyles = styled.a`
   display: flex;
   align-items: center;
   padding: 12px 10px;
@@ -28,26 +28,42 @@ const LinkStyles = styled.a`
   letter-spacing: 0.05em;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
-  ${({ theme }) => `
+  ${({ theme, isActive }) => `
     border-radius: ${theme.c7__ui.borderRadius};
     color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.default};
 
-    ${LinkIconStyles} {
+    ${NavLinkIconStyles} {
       path {
         fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.default};
       }
     }
 
-    &:hover,
-    &:focus {
-      background: ${
-        colors[theme.c7__ui.mode].primaryLink.backgroundColor.hover
-      };
-      ${LinkIconStyles} {
+    &:hover {
+      ${
+        !isActive &&
+        `background: ${
+          colors[theme.c7__ui.mode].primaryLink.backgroundColor.hover
+        };
+      ${NavLinkIconStyles} {
         path {
           fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.hover};
         }
+      }`
       }
+      
+    }
+
+    ${
+      isActive &&
+      `color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.active};
+      background: ${
+        colors[theme.c7__ui.mode].primaryLink.backgroundColor.active
+      };
+      ${NavLinkIconStyles} {
+        path {
+          fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.active};
+        }
+      }`
     }
 
     &.active {
@@ -55,25 +71,12 @@ const LinkStyles = styled.a`
       background: ${
         colors[theme.c7__ui.mode].primaryLink.backgroundColor.active
       };
-      svg {
+      ${NavLinkIconStyles} {
         path {
           fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.active};
         }
       }
     }
-
-    &.active-parent {
-        color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.default};
-        background: ${
-          colors[theme.c7__ui.mode].primaryLink.backgroundColor.hover
-        };
-        svg {
-          path {
-            fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.active};
-          }
-        }
-      }
-
   `}
 `;
 
@@ -122,7 +125,7 @@ const SubLinkWrapperStyles = styled.div`
   }
 `;
 
-const MenuStyles = styled.nav`
+const NavStyles = styled.nav`
   background: ${({ theme }) => colors[theme.c7__ui.mode].backgroundColor};
   width: 260px;
   padding: 10px 10px 5px 10px;
@@ -135,9 +138,9 @@ const MenuStyles = styled.nav`
 `;
 
 export {
-  LinkStyles,
-  LinkIconStyles,
+  NavLinkStyles,
+  NavLinkIconStyles,
   SubLinkStyles,
   SubLinkWrapperStyles,
-  MenuStyles
+  NavStyles
 };
