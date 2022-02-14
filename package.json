@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.8.10",
+  "version": "1.8.11",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -41,7 +41,7 @@
     "@storybook/theming": "^6.4.18",
     "babel-loader": "^8.2.3",
     "css-loader": "^6.6.0",
-    "eslint": "^8.8.0",
+    "eslint": "^8.9.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.3.0",
     "eslint-import-resolver-webpack": "^0.13.2",
@@ -65,7 +65,7 @@
     "react": "^17.0.2",
     "react-datetime": "^3.1.1",
     "react-dom": "^17.0.2",
-    "react-focus-lock": "^2.7.1",
+    "react-focus-lock": "^2.8.1",
     "styled-components": "^5.3.3"
   },
   "directories": {
