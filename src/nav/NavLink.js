@@ -12,6 +12,7 @@ const NavLink = (props) => {
     href,
     isActive,
     dataTestId,
+    isSelected,
     ...rest
   } = props;
 
@@ -41,6 +42,7 @@ const NavLink = (props) => {
       onClick={onClick}
       className={className}
       href={href}
+      isselected={String(isSelected)}
       isActive={isActive}
       data-testid={dataTestId}
       {...customComponentProps} // eslint-disable-line

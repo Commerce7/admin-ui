@@ -28,7 +28,7 @@ const NavLinkStyles = styled.a`
   letter-spacing: 0.05em;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
-  ${({ theme, isActive }) => `
+  ${({ theme, isselected }) => `
     border-radius: ${theme.c7__ui.borderRadius};
     color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.default};
 
@@ -40,7 +40,7 @@ const NavLinkStyles = styled.a`
 
     &:hover {
       ${
-        !isActive &&
+        isselected === 'false' &&
         `background: ${
           colors[theme.c7__ui.mode].primaryLink.backgroundColor.hover
         };
@@ -54,7 +54,7 @@ const NavLinkStyles = styled.a`
     }
 
     ${
-      isActive &&
+      isselected === 'true' &&
       `color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.active};
       background: ${
         colors[theme.c7__ui.mode].primaryLink.backgroundColor.active
