@@ -126,7 +126,7 @@ SubNavigation.story = {
 };
 
 const description =
-  "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { NavLink } = Nav";
+  "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav";
 
 export default {
   title: 'UI/Nav',
