@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 
-import { NavLinkStyles, NavLinkIconStyles } from './Nav.styles';
+import { SubNavLinkStyles } from './Nav.styles';
 
-const NavLink = (props) => {
+const SubNavLink = (props) => {
   const {
     children,
     className,
@@ -35,7 +35,7 @@ const NavLink = (props) => {
   }
 
   return (
-    <NavLinkStyles
+    <SubNavLinkStyles
       as={as}
       onClick={onClick}
       className={className}
@@ -43,24 +43,22 @@ const NavLink = (props) => {
       data-testid={dataTestId}
       {...customComponentProps} // eslint-disable-line
     >
-      {icon && <NavLinkIconStyles icon={icon} size={20} />}
       {children}
-    </NavLinkStyles>
+    </SubNavLinkStyles>
   );
 };
 
-NavLink.defaultProps = {
+SubNavLink.defaultProps = {
   children: null,
   className: '',
   dataTestId: null,
-  icon: null,
   component: null,
   onClick: null,
   href: null,
   active: null
 };
 
-NavLink.propTypes = {
+SubNavLink.propTypes = {
   /**
    * The content of the component.
    */
@@ -75,12 +73,6 @@ NavLink.propTypes = {
    * Add test attribute to the element. Used internally for testing.
    */
   dataTestId: PropTypes.string,
-
-  /**
-   * Icon displayed on the left side of the menu link.
-   * Valid icons include all options from the `<Icon/>` component.
-   */
-  icon: PropTypes.string,
 
   /**
    * The component to render as a replacement for `<a/>`.
@@ -105,4 +97,4 @@ NavLink.propTypes = {
   active: PropTypes.string
 };
 
-export default NavLink;
+export default SubNavLink;
