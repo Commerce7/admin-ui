@@ -47,11 +47,7 @@ const ButtonMenu = (props) => {
         disabled={disabled}
       >
         {label}
-        <StyledButtonIcon
-          icon="chevronDown"
-          buttonVariant={variant}
-          size="default"
-        />
+        <StyledButtonIcon icon="chevronDown" buttonVariant={variant} />
       </StyledButton>
       <DropdownMenu
         isVisible={isDropdownVisible}
