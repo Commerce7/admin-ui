@@ -1,6 +1,6 @@
 const colors = {
   dark: {
-    backgroundColor: '#31424E',
+    backgroundColor: 'rgb(52, 63, 70)',
     borderColor: '#585E64'
   },
   light: {
