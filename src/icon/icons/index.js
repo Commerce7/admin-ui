@@ -124,6 +124,7 @@ import Undo from './Undo';
 import User from './User';
 import Video from './Video';
 import Wallet from './Wallet';
+import Wand from './Wand';
 import Warning from './Warning';
 import Wine from './Wine';
 import Upload from './Upload';
@@ -255,6 +256,7 @@ export {
   User as user,
   Video as video,
   Wallet as wallet,
+  Wand as wand,
   Warning as warning,
   Wine as wine,
   Upload as upload
