@@ -43,6 +43,9 @@ import VividIcon from './vividIcon';
 import Heading from './heading';
 import Text from './text';
 
+// Navigation
+import Tabs from './tabs';
+
 export {
   Avatar,
   Alert,
@@ -74,5 +77,6 @@ export {
   Textarea,
   Card,
   CardLink,
-  Text
+  Text,
+  Tabs
 };
