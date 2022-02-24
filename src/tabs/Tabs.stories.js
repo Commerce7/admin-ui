@@ -15,19 +15,20 @@ export const Basic = () => {
       <Tabs>
         <Tab
           onClick={() => setPath('/summary')}
-          active={String(currentPath === '/summary')}
+          className={currentPath === '/summary' ? 'bananas' : ''}
+          activeClassName="bananas"
         >
           Summary
         </Tab>
         <Tab
           onClick={() => setPath('/customers')}
-          active={String(currentPath === '/customers')}
+          className={currentPath === '/customers' ? 'active' : ''}
         >
           Customers
         </Tab>
         <Tab
           onClick={() => setPath('/products')}
-          active={String(currentPath === '/products')}
+          className={currentPath === '/products' ? 'active' : ''}
         >
           Products
         </Tab>

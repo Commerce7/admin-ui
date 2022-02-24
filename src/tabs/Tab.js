@@ -1,8 +1,16 @@
 import { TabStyles } from './Tabs.styles';
 
 const Tab = (props) => {
-  const { children, className, component, onClick, href, dataTestId, ...rest } =
-    props;
+  const {
+    children,
+    activeClassName = 'active',
+    className,
+    component,
+    onClick,
+    href,
+    dataTestId,
+    ...rest
+  } = props;
 
   let as = '';
   if (href) {
@@ -30,6 +38,7 @@ const Tab = (props) => {
       className={className}
       href={href}
       data-testid={dataTestId}
+      activeClassName={activeClassName}
       {...customComponentProps} // eslint-disable-line
     >
       {children}

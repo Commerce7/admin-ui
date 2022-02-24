@@ -32,7 +32,7 @@ const TabStyles = styled.div`
   white-space: nowrap;
   cursor: pointer;
 
-  ${({ theme, active }) => `
+  ${({ theme, activeClassName }) => `
     font-size: ${theme.c7__ui.fontSizeSmall};
     font-family: ${theme.c7__ui.fontFamily};
     color: ${theme.c7__ui.secondaryFontColor};
@@ -45,20 +45,10 @@ const TabStyles = styled.div`
       font-size: ${theme.c7__ui.fontSizeBase};
     }
     
-    &.active {
+    &.${activeClassName} {
       color: ${theme.c7__ui.fontColor};
       background-color: ${theme.c7__ui.backgroundColor};
       border-bottom: ${theme.c7__ui.backgroundColor};
-    }
-    
-    ${
-      active === 'true'
-        ? `
-    color: ${theme.c7__ui.fontColor};
-    background-color: ${theme.c7__ui.backgroundColor};
-    border-bottom: ${theme.c7__ui.backgroundColor};
-    `
-        : ''
     }
   `}
 `;
