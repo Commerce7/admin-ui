@@ -11,6 +11,7 @@ const NavLink = (props) => {
     onClick,
     href,
     dataTestId,
+    activeClassName,
     ...rest
   } = props;
 
@@ -41,6 +42,7 @@ const NavLink = (props) => {
       className={className}
       href={href}
       data-testid={dataTestId}
+      $activeClassName={activeClassName}
       {...customComponentProps} // eslint-disable-line
     >
       {icon && <NavLinkIconStyles icon={icon} size={20} />}
@@ -57,7 +59,7 @@ NavLink.defaultProps = {
   component: null,
   onClick: null,
   href: null,
-  active: null
+  activeClassName: 'active'
 };
 
 NavLink.propTypes = {
@@ -100,9 +102,9 @@ NavLink.propTypes = {
   href: PropTypes.string,
 
   /**
-   * String set to "true" or "false" to indicate whether the link has active styling.
+   * The active className to mark the component as active. Styling targets this classname.
    */
-  active: PropTypes.string
+  activeClassName: PropTypes.string
 };
 
 export default NavLink;

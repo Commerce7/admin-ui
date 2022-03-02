@@ -11,28 +11,28 @@ export const Basic = () => {
     <Nav>
       <NavLink
         onClick={() => setPath('/dashboard')}
-        active={String(currentPath === '/dashboard')}
+        className={currentPath === '/dashboard' ? 'active' : ''}
         icon="dashboard"
       >
         Dashboard
       </NavLink>
       <NavLink
         onClick={() => setPath('/crm')}
-        active={String(currentPath === '/crm')}
+        className={currentPath === '/crm' ? 'active' : ''}
         icon="customer"
       >
         CRM
       </NavLink>
       <NavLink
         onClick={() => setPath('/store')}
-        active={String(currentPath === '/store')}
+        className={currentPath === '/store' ? 'active' : ''}
         icon="store"
       >
         Store
       </NavLink>
       <NavLink
         onClick={() => setPath('/club')}
-        active={String(currentPath === '/club')}
+        className={currentPath === '/club' ? 'active' : ''}
         icon="club"
       >
         Club
@@ -52,14 +52,17 @@ export const SubNavigation = () => {
     <Nav>
       <NavLink
         onClick={() => setPath('/dashboard')}
-        active={String(currentPath === '/dashboard')}
+        className={currentPath === '/dashboard' ? 'active' : ''}
         icon="dashboard"
       >
         Dashboard
       </NavLink>
+
+      {/* Example using a custom activeClassName: */}
       <NavLink
         onClick={() => setPath('/store/order')}
-        active={String(currentPath.includes('/store'))}
+        className={currentPath.includes('/store') ? 'randomClassName' : ''}
+        activeClassName="randomClassName"
         icon="store"
       >
         Store
@@ -67,32 +70,32 @@ export const SubNavigation = () => {
       <SubNav isOpen={currentPath.includes('/store')}>
         <SubNavLink
           onClick={() => setPath('/store/order')}
-          active={String(currentPath === '/store/order')}
+          className={currentPath === '/store/order' ? 'active' : ''}
         >
           Order
         </SubNavLink>
         <SubNavLink
           onClick={() => setPath('/store/carts')}
-          active={String(currentPath === '/store/carts')}
+          className={currentPath === '/store/carts' ? 'active' : ''}
         >
           Carts
         </SubNavLink>
         <SubNavLink
           onClick={() => setPath('/store/products')}
-          active={String(currentPath === '/store/products')}
+          className={currentPath === '/store/products' ? 'active' : ''}
         >
           Products
         </SubNavLink>
         <SubNavLink
           onClick={() => setPath('/store/inventory')}
-          active={String(currentPath === '/store/inventory')}
+          className={currentPath === '/store/inventory' ? 'active' : ''}
         >
           Inventory
         </SubNavLink>
       </SubNav>
       <NavLink
         onClick={() => setPath('/club/membership')}
-        active={String(currentPath.includes('/club'))}
+        className={currentPath.includes('/club') ? 'active' : ''}
         icon="club"
       >
         Club
@@ -100,19 +103,19 @@ export const SubNavigation = () => {
       <SubNav isOpen={currentPath.includes('/club')}>
         <SubNavLink
           onClick={() => setPath('/club/membership')}
-          active={String(currentPath === '/club/membership')}
+          className={currentPath === '/club/membership' ? 'active' : ''}
         >
           Memberships
         </SubNavLink>
         <SubNavLink
           onClick={() => setPath('/club/subscription')}
-          active={String(currentPath === '/club/subscription')}
+          className={currentPath === '/club/subscription' ? 'active' : ''}
         >
           Subscriptions
         </SubNavLink>
         <SubNavLink
           onClick={() => setPath('/club/package')}
-          active={String(currentPath === '/club/package')}
+          className={currentPath === '/club/package' ? 'active' : ''}
         >
           Packages
         </SubNavLink>
@@ -129,7 +132,7 @@ const description =
   "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav";
 
 export default {
-  title: 'UI/Nav',
+  title: 'Navigation/Nav',
   component: Nav,
   subcomponents: { SubNav, NavLink, SubNavLink },
   parameters: {

@@ -28,7 +28,7 @@ const NavLinkStyles = styled.a`
   letter-spacing: 0.05em;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
-  ${({ theme, active }) => `
+  ${({ theme, $activeClassName }) => `
     border-radius: ${theme.c7__ui.borderRadius};
     color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.default};
 
@@ -39,37 +39,17 @@ const NavLinkStyles = styled.a`
     }
 
     &:hover {
-      ${
-        active !== 'true'
-          ? `background: ${
-              colors[theme.c7__ui.mode].primaryLink.backgroundColor.hover
-            };
+        background: ${
+          colors[theme.c7__ui.mode].primaryLink.backgroundColor.hover
+        };
       ${NavLinkIconStyles} {
         path {
           fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.hover};
         }
-      }`
-          : ''
       }
-      
     }
 
-    ${
-      active === 'true'
-        ? `color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.active};
-      background: ${
-        colors[theme.c7__ui.mode].primaryLink.backgroundColor.active
-      };
-      ${NavLinkIconStyles} {
-        path {
-          fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.active};
-        }
-      }
-      `
-        : ''
-    }
-
-    &.active {
+    &.${$activeClassName} {
       color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.active};
       background: ${
         colors[theme.c7__ui.mode].primaryLink.backgroundColor.active
@@ -96,30 +76,17 @@ const SubNavLinkStyles = styled.a`
   width: 100%;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
-  ${({ theme, active }) => `
+  ${({ theme, $activeClassName }) => `
     border-radius: ${theme.c7__ui.borderRadius};
     color: ${colors[theme.c7__ui.mode].secondaryLink.fontColor.default};
 
     &:hover {
-      ${
-        active !== 'true'
-          ? `background: ${
-              colors[theme.c7__ui.mode].secondaryLink.backgroundColor.hover
-            };`
-          : ''
-      }
+      background: ${
+        colors[theme.c7__ui.mode].secondaryLink.backgroundColor.hover
+      };
     }
 
-    ${
-      active === 'true'
-        ? `background: ${
-            colors[theme.c7__ui.mode].secondaryLink.backgroundColor.active
-          };
-    color: ${colors[theme.c7__ui.mode].secondaryLink.fontColor.active};`
-        : ''
-    }
-
-    &.active {
+    &.${$activeClassName} {
       background: ${
         colors[theme.c7__ui.mode].secondaryLink.backgroundColor.active
       };

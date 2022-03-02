@@ -11,6 +11,7 @@ const SubNavLink = (props) => {
     onClick,
     href,
     dataTestId,
+    activeClassName,
     ...rest
   } = props;
 
@@ -41,6 +42,7 @@ const SubNavLink = (props) => {
       className={className}
       href={href}
       data-testid={dataTestId}
+      $activeClassName={activeClassName}
       {...customComponentProps} // eslint-disable-line
     >
       {children}
@@ -55,7 +57,7 @@ SubNavLink.defaultProps = {
   component: null,
   onClick: null,
   href: null,
-  active: null
+  activeClassName: 'active'
 };
 
 SubNavLink.propTypes = {
@@ -92,9 +94,9 @@ SubNavLink.propTypes = {
   href: PropTypes.string,
 
   /**
-   * String set to "true" or "false" to indicate whether the link has active styling.
+   * The active className to mark the component as active. Styling targets this classname.
    */
-  active: PropTypes.string
+  activeClassName: PropTypes.string
 };
 
 export default SubNavLink;
