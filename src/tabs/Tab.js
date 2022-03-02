@@ -93,7 +93,7 @@ Tab.propTypes = {
   /**
    * The active className to mark the component as active. Styling targets this classname.
    */
-  activeClassName: PropTypes.node
+  activeClassName: PropTypes.string
 };
 
 export default Tab;

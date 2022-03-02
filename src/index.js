@@ -16,7 +16,6 @@ import Message from './message';
 import Modal from './modal';
 import Tag from './tag';
 import Card from './card';
-import CardLink from './cardLink';
 import LineBreak from './lineBreak';
 
 // Data
@@ -45,6 +44,7 @@ import Text from './text';
 
 // Navigation
 import Tabs from './tabs';
+import CardLink from './cardLink';
 
 export {
   Avatar,

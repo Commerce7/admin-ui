@@ -15,8 +15,7 @@ export const Basic = () => {
       <Tabs>
         <Tab
           onClick={() => setPath('/summary')}
-          className={currentPath === '/summary' ? 'bananas' : ''}
-          activeClassName="bananas"
+          className={currentPath === '/summary' ? 'active' : ''}
         >
           Summary
         </Tab>
@@ -28,7 +27,8 @@ export const Basic = () => {
         </Tab>
         <Tab
           onClick={() => setPath('/products')}
-          className={currentPath === '/products' ? 'active' : ''}
+          className={currentPath === '/products' ? 'bananas' : ''}
+          activeClassName="bananas"
         >
           Products
         </Tab>
