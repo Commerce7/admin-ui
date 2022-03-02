@@ -39,7 +39,7 @@ const Tab = (props) => {
       className={className}
       href={href}
       data-testid={dataTestId}
-      activeClassName={activeClassName}
+      $activeClassName={activeClassName}
       {...customComponentProps} // eslint-disable-line
     >
       {children}
