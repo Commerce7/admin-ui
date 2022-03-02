@@ -45,6 +45,8 @@ const StyledCardIcon = styled(Icon)`
   }
   width: 45px;
   height: 45px;
+  min-width: 45px;
+  min-height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
