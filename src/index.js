@@ -17,7 +17,6 @@ import Modal from './modal';
 import Tag from './tag';
 import Card from './card';
 import LineBreak from './lineBreak';
-import Nav from './nav';
 
 // Data
 import Table from './table';
@@ -46,6 +45,7 @@ import Text from './text';
 // Navigation
 import Tabs from './tabs';
 import CardLink from './cardLink';
+import Nav from './nav';
 
 export {
   Avatar,
