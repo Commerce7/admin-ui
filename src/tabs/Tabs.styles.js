@@ -48,7 +48,11 @@ const TabStyles = styled.div`
 
 const TabBodyStyles = styled.section`
   background: ${({ theme }) => theme.c7__ui.backgroundColor};
-  padding: 30px;
+  padding: 20px;
+
+  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
+    padding: 30px;
+  }
 `;
 
 export { TabsStyles, TabStyles, TabBodyStyles };
