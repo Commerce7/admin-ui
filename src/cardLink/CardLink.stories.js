@@ -20,7 +20,7 @@ Basic.story = {
 };
 
 export default {
-  title: 'UI/CardLink',
+  title: 'Navigation/CardLink',
   component: CardLink,
   parameters: {
     docs: {
