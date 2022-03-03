@@ -7,13 +7,6 @@ const TabsStyles = styled.nav`
   padding: 0 2.5px;
   justify-content: flex-start;
   border-bottom: 1px solid ${({ theme }) => theme.c7__ui.borderColor};
-  margin: 0 -20px;
-
-  ${({ theme }) => `
-    @media ${theme.largeUp} {
-      margin: 0 -30px;
-    }
-  `}
 `;
 
 const TabStyles = styled.div`
@@ -55,8 +48,11 @@ const TabStyles = styled.div`
 
 const TabBodyStyles = styled.section`
   background: ${({ theme }) => theme.c7__ui.backgroundColor};
-  padding: 30px;
-  margin: 0 -30px;
+  padding: 20px;
+
+  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
+    padding: 30px;
+  }
 `;
 
 export { TabsStyles, TabStyles, TabBodyStyles };
