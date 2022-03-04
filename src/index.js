@@ -45,6 +45,7 @@ import Text from './text';
 // Navigation
 import Tabs from './tabs';
 import CardLink from './cardLink';
+import Nav from './nav';
 
 export {
   Avatar,
@@ -65,6 +66,7 @@ export {
   VividIcon,
   Input,
   LineBreak,
+  Nav,
   LinkButton,
   Message,
   Modal,
