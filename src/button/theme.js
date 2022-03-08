@@ -18,6 +18,12 @@ const colors = {
         focus: 'white',
         disabled: 'white'
       },
+      iconColor: {
+        default: 'white',
+        hover: 'white',
+        focus: 'white',
+        disabled: 'white'
+      },
       backgroundColor: {
         default: 'rgb(1, 146, 208)',
         hover: 'rgb(63, 178, 238)',
@@ -35,6 +41,12 @@ const colors = {
       fontColor: {
         default: 'rgb(1, 146, 208)',
         hover: 'rgb(63, 178, 238)',
+        focus: 'rgb(63, 178, 238)',
+        disabled: 'rgb(175, 175, 175)'
+      },
+      iconColor: {
+        default: 'rgb(1, 146, 208)',
+        hover: 'rgb(1, 146, 208)',
         focus: 'rgb(63, 178, 238)',
         disabled: 'rgb(175, 175, 175)'
       },
@@ -58,6 +70,12 @@ const colors = {
         focus: 'rgb(175, 175, 175)',
         disabled: 'rgb(175, 175, 175)'
       },
+      iconColor: {
+        default: 'rgb(175, 175, 175)',
+        hover: 'white',
+        focus: 'white',
+        disabled: 'rgb(175, 175, 175)'
+      },
       backgroundColor: {
         default: 'transparent',
         hover: 'transparent',
@@ -73,6 +91,12 @@ const colors = {
     },
     link: {
       fontColor: {
+        default: 'rgb(80, 164, 252)',
+        hover: 'rgb(80, 164, 252)',
+        focus: 'rgb(80, 164, 252)',
+        disabled: 'rgb(175, 175, 175)'
+      },
+      iconColor: {
         default: 'rgb(80, 164, 252)',
         hover: 'rgb(80, 164, 252)',
         focus: 'rgb(80, 164, 252)',
@@ -100,6 +124,12 @@ const colors = {
         focus: 'white',
         disabled: 'white'
       },
+      iconColor: {
+        default: 'white',
+        hover: 'white',
+        focus: 'white',
+        disabled: 'white'
+      },
       backgroundColor: {
         default: 'rgb(1, 146, 208)',
         hover: 'rgb(0, 103, 157)',
@@ -115,6 +145,12 @@ const colors = {
     },
     secondary: {
       fontColor: {
+        default: 'rgb(0, 103, 157)',
+        hover: 'rgb(0, 103, 157)',
+        focus: 'rgb(0, 103, 157)',
+        disabled: 'rgb(175, 175, 175)'
+      },
+      iconColor: {
         default: 'rgb(0, 103, 157)',
         hover: 'rgb(0, 103, 157)',
         focus: 'rgb(0, 103, 157)',
@@ -140,6 +176,12 @@ const colors = {
         focus: 'rgb(45, 48, 62)',
         disabled: 'rgb(175, 175, 175)'
       },
+      iconColor: {
+        default: 'rgb(175, 175, 175)',
+        hover: 'rgb(45, 48, 62)',
+        focus: 'rgb(45, 48, 62)',
+        disabled: 'rgb(175, 175, 175)'
+      },
       backgroundColor: {
         default: 'transparent',
         hover: 'transparent',
@@ -155,6 +197,12 @@ const colors = {
     },
     link: {
       fontColor: {
+        default: 'rgb(0, 103, 157)',
+        hover: 'rgb(0, 103, 157)',
+        focus: 'rgb(0, 103, 157)',
+        disabled: 'rgb(175, 175, 175)'
+      },
+      iconColor: {
         default: 'rgb(0, 103, 157)',
         hover: 'rgb(0, 103, 157)',
         focus: 'rgb(0, 103, 157)',

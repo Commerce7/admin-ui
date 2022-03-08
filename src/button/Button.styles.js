@@ -10,13 +10,6 @@ const StyledButtonIcon = styled(Icon)`
     const iconMargin = buttonVariant === 'link' ? '5px' : '10px';
     return position === 'start' ? `0 ${iconMargin} 0 0` : `0 0 0 ${iconMargin}`;
   }};
-
-  path,
-  polygon {
-    transition: all 0.3s ease-in-out;
-    fill: ${({ buttonVariant, theme }) =>
-      colors[theme.c7__ui.mode][buttonVariant].fontColor.default};
-  }
 `;
 
 const StyledButton = styled.button`
@@ -65,6 +58,15 @@ const StyledButton = styled.button`
   box-shadow: ${({ variant, theme }) =>
     shadows[theme.c7__ui.mode][variant].default};
 
+  ${StyledButtonIcon} {
+    path,
+    polygon {
+      transition: all 0.3s ease-in-out;
+      fill: ${({ variant, theme }) =>
+        colors[theme.c7__ui.mode][variant].iconColor.default};
+    }
+  }
+
   &:hover:not(:disabled) {
     color: ${({ variant, theme }) =>
       colors[theme.c7__ui.mode][variant].fontColor.hover};
@@ -79,7 +81,7 @@ const StyledButton = styled.button`
       path,
       polygon {
         fill: ${({ variant, theme }) =>
-          colors[theme.c7__ui.mode][variant].fontColor.hover};
+          colors[theme.c7__ui.mode][variant].iconColor.hover};
       }
     }
   }
@@ -98,7 +100,7 @@ const StyledButton = styled.button`
       path,
       polygon {
         fill: ${({ variant, theme }) =>
-          colors[theme.c7__ui.mode][variant].fontColor.focus};
+          colors[theme.c7__ui.mode][variant].iconColor.focus};
       }
     }
   }
@@ -118,7 +120,7 @@ const StyledButton = styled.button`
       path,
       polygon {
         fill: ${({ variant, theme }) =>
-          colors[theme.c7__ui.mode][variant].fontColor.disabled};
+          colors[theme.c7__ui.mode][variant].iconColor.disabled};
       }
     }
   }
@@ -131,7 +133,7 @@ const StyledButton = styled.button`
   svg {
     path {
       fill: ${({ variant, theme }) =>
-        colors[theme.c7__ui.mode][variant].fontColor.default};
+        colors[theme.c7__ui.mode][variant].iconColor.default};
     }
   }
 `;
