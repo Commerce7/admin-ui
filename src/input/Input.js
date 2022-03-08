@@ -211,7 +211,7 @@ Input.propTypes = {
   /**
    * Set the element html type of the element.
    */
-  type: PropTypes.oneOf(['text', 'number', 'password', 'email']),
+  type: PropTypes.oneOf(['text', 'number', 'password', 'email', 'color']),
 
   /**
    * The value of the element.
