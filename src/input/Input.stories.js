@@ -214,6 +214,28 @@ Description.story = {
   name: 'Description'
 };
 
+export const Color = () => {
+  const [value, setValue] = useState('#bf0000');
+
+  const handleOnChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <Input
+      type="color"
+      label="Color"
+      id="color"
+      value={value}
+      onChange={handleOnChange}
+    />
+  );
+};
+
+Color.story = {
+  name: 'Color'
+};
+
 export default {
   title: 'Form/Input',
   component: Input,

@@ -20,6 +20,13 @@ const StyledInput = styled(StyledFormItem).attrs({
     `
     padding-left: 35px;
   `}
+
+${({ type }) =>
+    type === 'color' &&
+    `
+    max-width: 100px;
+    padding: 4px;
+  `}
 `;
 
 const StyledIconWrapper = styled.div`
