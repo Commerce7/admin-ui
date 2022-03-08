@@ -129,13 +129,6 @@ const StyledButton = styled.button`
   + a {
     margin-left: 10px;
   }
-
-  svg {
-    path {
-      fill: ${({ variant, theme }) =>
-        colors[theme.c7__ui.mode][variant].iconColor.default};
-    }
-  }
 `;
 
 const rotate = keyframes`
