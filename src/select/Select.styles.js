@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
-import Icon from '../icon';
-
 import { StyledFormItem } from '../common/form/styles';
 import { placeholderColors } from '../common/form/theme';
+import Icon from '../icon';
 
 const StyledSelect = styled(StyledFormItem).attrs({
   as: 'select'

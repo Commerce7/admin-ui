@@ -1,6 +1,7 @@
-import Card from '.';
 import Heading from '../heading/Heading';
 import Text from '../text/Text';
+
+import Card from '.';
 
 export const Basic = () => (
   <>

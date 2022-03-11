@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
+
+import { StyledIconButton } from '../icon/Icon.styles';
 import * as Icons from '../icon/icons';
 
 import { StyledIcon } from './DisplayIcon.styles';
-import { StyledIconButton } from '../icon/Icon.styles';
 import IconWrapper from './IconWrapper';
 
 const DisplayIcon = (props) => {

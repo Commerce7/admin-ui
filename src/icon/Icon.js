@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
-import * as Icons from './icons';
+
 import { StyledIcon, StyledIconButton } from './Icon.styles';
+import * as Icons from './icons';
 
 const Icon = (props) => {
   const { className, icon, label, onClick, size, variant, dataTestId } = props;

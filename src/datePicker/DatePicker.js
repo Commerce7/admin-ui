@@ -1,8 +1,8 @@
-import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 import DateTime from 'react-datetime';
 
-import Icon from '../icon';
+import { getFormItemIds } from '../common/form/helpers';
 import {
   StyledInputWrapper,
   StyledErrorMessage,
@@ -10,12 +10,13 @@ import {
   StyledRequiredLabel,
   StyledDescription
 } from '../common/form/styles';
-import { getFormItemIds } from '../common/form/helpers';
+import Icon from '../icon';
 import {
   StyledInput,
   StyledIconWrapper,
   StyledInputIcon
 } from '../input/Input.styles';
+
 import { StyledDatePicker, StyledClearButton } from './DatePicker.styles';
 
 const DatePicker = forwardRef((props, ref) => {

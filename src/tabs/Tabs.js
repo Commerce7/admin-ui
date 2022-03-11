@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { TabsStyles } from './Tabs.styles';
 
 const Tabs = (props) => {

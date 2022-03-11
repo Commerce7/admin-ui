@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { colors } from './theme';
 
 const StyledCard = styled.div`

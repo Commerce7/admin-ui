@@ -1,11 +1,10 @@
 /* globals document */
-import { useEffect } from 'react';
 import PropTypes from 'prop-types';
+import { useEffect } from 'react';
 import ReactDom from 'react-dom';
 import FocusLock from 'react-focus-lock';
 
 import Icon from '../icon';
-
 import useEscKeydown from '../utils/hooks/useEscKeydown';
 
 import {

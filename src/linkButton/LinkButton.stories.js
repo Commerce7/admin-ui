@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import LinkButton from '.';
+
 import Text from '../text/Text';
+
+import LinkButton from '.';
 
 export const Basic = () => (
   <StyledContainer>

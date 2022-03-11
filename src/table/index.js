@@ -1,11 +1,10 @@
 import Table from './Table';
-
 import Tbody from './Tbody';
-import Thead from './Thead';
 import Td from './Td';
-import Th from './Th';
-import Tr from './Tr';
 import Tfoot from './Tfoot';
+import Th from './Th';
+import Thead from './Thead';
+import Tr from './Tr';
 
 Table.Tbody = Tbody;
 Table.Thead = Thead;

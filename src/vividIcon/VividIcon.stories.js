@@ -1,5 +1,5 @@
-import styled from 'styled-components';
 import { action } from '@storybook/addon-actions';
+import styled from 'styled-components';
 
 import VividIcon from './VividIcon';
 

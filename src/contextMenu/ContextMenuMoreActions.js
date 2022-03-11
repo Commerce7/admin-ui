@@ -1,15 +1,14 @@
-import { useRef, useState, useCallback } from 'react';
 import PropTypes from 'prop-types';
-
-import useOnClickOutside from '../utils/hooks/useOnClickOutside';
-import useEscKeydown from '../utils/hooks/useEscKeydown';
-import DropdownWrapper from '../common/dropdown/DropdownWrapper';
-import DropdownMenu from '../common/dropdown/DropdownMenu';
+import { useRef, useState, useCallback } from 'react';
 
 import {
   StyledContextMenuItem,
   StyledContextMenuIcon
 } from '../common/contextMenu/ContextMenuItem.styles';
+import DropdownMenu from '../common/dropdown/DropdownMenu';
+import DropdownWrapper from '../common/dropdown/DropdownWrapper';
+import useEscKeydown from '../utils/hooks/useEscKeydown';
+import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
 const ContextMenuMoreActions = (props) => {
   const { children, className, disabled, dataTestId } = props;

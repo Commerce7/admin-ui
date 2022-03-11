@@ -1,6 +1,7 @@
-import { forwardRef } from 'react';
 import PropTypes from 'prop-types';
+import { forwardRef } from 'react';
 
+import { getFormItemIds } from '../common/form/helpers';
 import {
   StyledInputWrapper,
   StyledErrorMessage,
@@ -10,7 +11,7 @@ import {
   StyledHiddenInput,
   StyledDescription
 } from '../common/form/styles';
-import { getFormItemIds } from '../common/form/helpers';
+
 import { StyledRadio } from './Radio.styles';
 
 const Radio = forwardRef((props, ref) => {

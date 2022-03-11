@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
-import Icon from '../icon';
 import { StyledFormItem } from '../common/form/styles';
+import Icon from '../icon';
+
 import { svgColors } from './theme';
 
 const StyledInput = styled(StyledFormItem).attrs({

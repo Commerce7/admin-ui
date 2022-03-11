@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Icon from '../icon';
+
 import { sizes, iconSizes, fontSizes, colors } from './theme';
 
 const StyledAvatar = styled.div`
