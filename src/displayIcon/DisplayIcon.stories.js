@@ -1,4 +1,5 @@
 import { action } from '@storybook/addon-actions';
+
 import DisplayIcon from './DisplayIcon';
 
 export const basic = () => (

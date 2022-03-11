@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+import { getFormItemIds } from '../common/form/helpers';
 import {
   StyledInputWrapper,
   StyledErrorMessage,
@@ -7,13 +8,13 @@ import {
   StyledRequiredLabel,
   StyledDescription
 } from '../common/form/styles';
-import { getFormItemIds } from '../common/form/helpers';
+
+import Options from './Options';
 import {
   StyledSelectWrapper,
   StyledSelect,
   StyledSelectArrow
 } from './Select.styles';
-import Options from './Options';
 
 const Select = (props) => {
   const {

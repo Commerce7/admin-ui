@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
-import { dropdownColors, dropdownButtonColors } from './theme';
-
 import { StyledContextMenuItem } from '../contextMenu/ContextMenuItem.styles';
+
+import { dropdownColors, dropdownButtonColors } from './theme';
 
 const StyledDropdown = styled.div`
   overflow: hidden;

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 
-import Tabs from '.';
 import Heading from '../heading';
+
+import Tabs from '.';
 
 const { Tab, TabBody } = Tabs;
 

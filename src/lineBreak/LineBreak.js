@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { LineBreakStyles } from './LineBreak.styles';
 
 const LineBreak = (props) => {

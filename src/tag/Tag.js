@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { StyledTag, StyledTagLabel, StyledDeleteButton } from './Tag.styles';
 
 const Tag = (props) => {

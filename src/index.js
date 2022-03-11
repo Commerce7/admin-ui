@@ -1,51 +1,36 @@
-// Core
-import Commerce7AdminUI from './ui';
-
-// Button
-import Button from './button';
-import SelectButton from './selectButton';
-import LinkButton from './linkButton';
-import ContextMenu from './contextMenu';
-import ButtonMenu from './buttonMenu';
-
-// UI
-import Avatar from './avatar';
 import Alert from './alert';
+import Avatar from './avatar';
 import Breadcrumbs from './breadcrumbs';
-import Message from './message';
-import Modal from './modal';
-import Tag from './tag';
+import Button from './button';
+import ButtonMenu from './buttonMenu';
 import Card from './card';
-import LineBreak from './lineBreak';
-
-// Data
-import Table from './table';
-
-// Form
+import CardLink from './cardLink';
 import Checkbox from './checkbox';
 import CheckboxGroup from './checkboxGroup';
+import ContextMenu from './contextMenu';
 import DataDisplay from './dataDisplay';
 import DatePicker from './datePicker';
+import DisplayIcon from './displayIcon';
+import Heading from './heading';
+import Icon from './icon';
 import Input from './input';
+import LineBreak from './lineBreak';
+import LinkButton from './linkButton';
+import Message from './message';
+import Modal from './modal';
+import Nav from './nav';
 import Radio from './radio';
 import RadioGroup from './radioGroup';
 import Select from './select';
+import SelectButton from './selectButton';
 import Switch from './switch';
-import Textarea from './textarea';
-
-// Icon
-import Icon from './icon';
-import DisplayIcon from './displayIcon';
-import VividIcon from './vividIcon';
-
-// Typography
-import Heading from './heading';
-import Text from './text';
-
-// Navigation
+import Table from './table';
 import Tabs from './tabs';
-import CardLink from './cardLink';
-import Nav from './nav';
+import Tag from './tag';
+import Text from './text';
+import Textarea from './textarea';
+import Commerce7AdminUI from './ui';
+import VividIcon from './vividIcon';
 
 export {
   Avatar,

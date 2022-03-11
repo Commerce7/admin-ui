@@ -1,6 +1,8 @@
 import styled from 'styled-components';
-import Text from '../text';
+
 import Icon from '../icon';
+import Text from '../text';
+
 import { colors } from './theme';
 
 const StyledCardLink = styled.div`

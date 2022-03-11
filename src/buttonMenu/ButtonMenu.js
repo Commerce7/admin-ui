@@ -1,11 +1,11 @@
-import { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
+import { useRef, useState } from 'react';
 
-import useOnClickOutside from '../utils/hooks/useOnClickOutside';
-import useEscKeydown from '../utils/hooks/useEscKeydown';
-import DropdownWrapper from '../common/dropdown/DropdownWrapper';
-import DropdownMenu from '../common/dropdown/DropdownMenu';
 import { StyledButton, StyledButtonIcon } from '../button/Button.styles';
+import DropdownMenu from '../common/dropdown/DropdownMenu';
+import DropdownWrapper from '../common/dropdown/DropdownWrapper';
+import useEscKeydown from '../utils/hooks/useEscKeydown';
+import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
 const ButtonMenu = (props) => {
   const { label, className, disabled, children, variant, size, dataTestId } =

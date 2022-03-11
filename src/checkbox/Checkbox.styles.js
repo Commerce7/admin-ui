@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-import Icon from '../icon';
-
 import { StyledHiddenInput, StyledToggleLabel } from '../common/form/styles';
+import Icon from '../icon';
 
 import { colors } from './theme';
 

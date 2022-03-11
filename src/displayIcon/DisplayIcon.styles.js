@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 import { StyledIcon as UIStyledIcon } from '../icon/Icon.styles';
 import { backgroundColors } from '../icon/theme';
 

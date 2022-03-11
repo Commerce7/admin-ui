@@ -1,6 +1,6 @@
 import Tab from './Tab';
-import Tabs from './Tabs';
 import TabBody from './TabBody';
+import Tabs from './Tabs';
 
 Tabs.Tab = Tab;
 Tabs.TabBody = TabBody;

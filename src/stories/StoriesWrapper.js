@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 
-import Commerce7AdminUI from '../ui';
-import Switch from '../switch';
-import LineBreak from '../lineBreak';
 import Card from '../card';
+import LineBreak from '../lineBreak';
+import Switch from '../switch';
+import Commerce7AdminUI from '../ui';
 
 const StoriesWrapper = (props) => {
   const [isDarkMode, setIsDarkMode] = useState(false);

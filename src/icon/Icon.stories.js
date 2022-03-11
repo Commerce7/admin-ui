@@ -1,8 +1,9 @@
-import { useState } from 'react';
 import { action } from '@storybook/addon-actions';
+import { useState } from 'react';
 import styled from 'styled-components';
 
 import { Input } from '..';
+
 import Icon from './Icon';
 import * as Icons from './icons';
 

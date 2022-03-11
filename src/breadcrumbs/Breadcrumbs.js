@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import { BreadcrumbsWrapperStyles } from './Breadcrumbs.styles';
 
 const Breadcrumbs = (props) => {
