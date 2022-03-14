@@ -88,7 +88,7 @@ const StyledLabel = styled.label`
 `;
 
 const StyledToggleLabel = styled.label`
-  display: flex;
+  display: inline-flex;
   align-items: center;
   margin-bottom: 3px;
   transition: all 0.3s ease-in-out;
