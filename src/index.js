@@ -23,6 +23,7 @@ import Radio from './radio';
 import RadioGroup from './radioGroup';
 import Select from './select';
 import SelectButton from './selectButton';
+import Stepper from './stepper';
 import Switch from './switch';
 import Table from './table';
 import Tabs from './tabs';
@@ -37,7 +38,6 @@ export {
   Alert,
   Breadcrumbs,
   Button,
-  SelectButton,
   ButtonMenu,
   Commerce7AdminUI,
   Checkbox,
@@ -58,6 +58,8 @@ export {
   Radio,
   RadioGroup,
   Select,
+  SelectButton,
+  Stepper,
   Switch,
   Table,
   Tag,
