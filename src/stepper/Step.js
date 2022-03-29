@@ -1,9 +1,12 @@
 import Text from '../text';
 
 import {
+  StepWrapperStyles,
   StepStyles,
-  StepNumberStyles,
-  StepLabelStyles
+  StepCircleStyles,
+  StepLabelWrapper,
+  StepDescriptionStyles,
+  StepIconStyles
 } from './Stepper.styles';
 
 const Step = (props) => {
@@ -41,19 +44,25 @@ const Step = (props) => {
   }
 
   return (
-    <StepStyles
-      as={as}
-      onClick={onClick}
-      className={className}
-      href={href}
-      data-testid={dataTestId}
-      $activeClassName={activeClassName}
-      {...customComponentProps} // eslint-disable-line
-    >
-      <StepNumberStyles>{number}</StepNumberStyles>
-      <StepLabelStyles>Step {number}</StepLabelStyles>
-      <Text>{description}</Text>
-    </StepStyles>
+    <StepWrapperStyles>
+      <StepStyles
+        as={as}
+        onClick={onClick}
+        className={className}
+        href={href}
+        data-testid={dataTestId}
+        $activeClassName={activeClassName}
+        {...customComponentProps} // eslint-disable-line
+      >
+        <StepCircleStyles>
+          <StepIconStyles icon={icon} $activeClassName={activeClassName} />
+        </StepCircleStyles>
+        <StepLabelWrapper>
+          <Text small>Step {number}</Text>
+          <StepDescriptionStyles block>{description}</StepDescriptionStyles>
+        </StepLabelWrapper>
+      </StepStyles>
+    </StepWrapperStyles>
   );
 };
 

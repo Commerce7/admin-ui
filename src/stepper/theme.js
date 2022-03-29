@@ -1,8 +1,12 @@
 export const colors = {
   light: {
     backgroundColor: {
-      default: '#e0e5e8',
-      active: '#0A3F5B'
+      default: '#e0e0e0',
+      active: '#0192D0'
+    },
+    iconColor: {
+      default: '#293238',
+      active: '#fff'
     }
   },
   dark: {
