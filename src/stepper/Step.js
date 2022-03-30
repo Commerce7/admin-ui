@@ -1,15 +1,14 @@
 import PropTypes from 'prop-types';
 
-import Text from '../text';
-
 import {
   StepStyles,
   StepButtonStyles,
   StepCircleStyles,
-  StepLabelWrapper,
+  StyledStepLabelWrapper,
   StepDescriptionStyles,
   StepIconStyles,
-  LineStyles
+  LineStyles,
+  StyledStepText
 } from './Stepper.styles';
 
 const Step = (props) => {
@@ -59,10 +58,10 @@ const Step = (props) => {
         <StepCircleStyles>
           <StepIconStyles icon={icon} />
         </StepCircleStyles>
-        <StepLabelWrapper>
-          <Text small>Step {number}</Text>
+        <StyledStepLabelWrapper>
+          <StyledStepText small>Step {number}</StyledStepText>
           <StepDescriptionStyles block>{description}</StepDescriptionStyles>
-        </StepLabelWrapper>
+        </StyledStepLabelWrapper>
       </StepButtonStyles>
       <LineStyles />
     </StepStyles>

@@ -14,7 +14,9 @@ const StepCircleStyles = styled.div`
   justify-content: center;
   margin: auto;
   width: 50px;
+  min-width: 50px;
   height: 50px;
+  min-height: 50px;
   color: inherit;
 `;
 
@@ -52,8 +54,9 @@ const StepStyles = styled.div`
   justify-content: center;
 
   &:last-of-type {
-    flex: 0;
-
+    @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+      flex: 0;
+    }
     > ${LineStyles} {
       display: none;
       width: 0px;
@@ -72,10 +75,6 @@ const StepButtonStyles = styled.div`
 
   @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
     flex-direction: row;
-    margin: 0 7px;
-  }
-  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
-    flex-direction: row;
     margin: 0 30px;
   }
 
@@ -92,7 +91,7 @@ const StepButtonStyles = styled.div`
   }
 `;
 
-const StepLabelWrapper = styled.div`
+const StyledStepLabelWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -107,6 +106,11 @@ const StepLabelWrapper = styled.div`
 const StepDescriptionStyles = styled(Text)`
   font-size: 18px;
   line-height: 1.2;
+  white-space: nowrap;
+`;
+
+const StyledStepText = styled(Text)`
+  white-space: nowrap;
 `;
 
 export {
@@ -114,8 +118,9 @@ export {
   StepCircleStyles,
   StepStyles,
   StepButtonStyles,
-  StepLabelWrapper,
+  StyledStepLabelWrapper,
   StepIconStyles,
   StepDescriptionStyles,
-  LineStyles
+  LineStyles,
+  StyledStepText
 };
