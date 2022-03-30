@@ -5,60 +5,6 @@ import Text from '../text';
 
 import { colors } from './theme';
 
-const StepperStyles = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  padding: 20px 5px;
-`;
-
-const StepWrapperStyles = styled.div`
-  position: relative;
-  flex: 1;
-  padding: 0 0 0 40px;
-
-  &:not(:first-child):before {
-    content: '';
-    height: 1px;
-    top: 25px;
-    left: -45%;
-    width: 45%;
-    position: absolute;
-    background-color: ${({ theme }) =>
-      colors[theme.c7__ui.mode].backgroundColor.default};
-  }
-`;
-
-const StepStyles = styled.div`
-  text-align: center;
-
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-
-  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
-    flex-direction: row;
-  }
-
-  &.${({ $activeClassName }) => $activeClassName} {
-    > ${StepCircleStyles} {
-      background-color: ${({ theme }) =>
-        colors[theme.c7__ui.mode].backgroundColor.active};
-
-      > ${StepIconStyles} {
-        path {
-          fill: ${({ theme }) => colors[theme.c7__ui.mode].iconColor.active};
-        }
-      }
-    }
-  }
-`;
-
 const StepCircleStyles = styled.div`
   background-color: ${({ theme }) =>
     colors[theme.c7__ui.mode].backgroundColor.default};
@@ -75,6 +21,74 @@ const StepCircleStyles = styled.div`
 const StepIconStyles = styled(Icon).attrs({ size: 20 })`
   path {
     fill: ${({ theme }) => colors[theme.c7__ui.mode].iconColor.default};
+  }
+`;
+
+const StepperStyles = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 20px 5px;
+`;
+
+const LineStyles = styled.div`
+  height: 1px;
+  width: 100%;
+  background-color: ${({ theme }) => theme.c7__ui.borderColor};
+  flex: 1;
+  display: none;
+
+  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+    display: block;
+    flex: 1;
+  }
+`;
+
+const StepStyles = styled.div`
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+
+  &:last-of-type {
+    flex: 0;
+
+    > ${LineStyles} {
+      display: none;
+      width: 0px;
+    }
+  }
+`;
+
+const StepButtonStyles = styled.div`
+  display: flex;
+  margin: 0 5px;
+  padding: 0;
+  flex-direction: column;
+  background-color: ${({ theme }) => theme.c7__ui.backgroundColor};
+  border: none;
+  ${({ as }) => (as !== 'div' ? 'cursor: pointer;' : '')}
+
+  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+    flex-direction: row;
+    margin: 0 7px;
+  }
+  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
+    flex-direction: row;
+    margin: 0 30px;
+  }
+
+  &.${({ $activeClassName }) => $activeClassName} {
+    > ${StepCircleStyles} {
+      background-color: ${({ theme }) =>
+        colors[theme.c7__ui.mode].backgroundColor.active};
+      > ${StepIconStyles} {
+        path {
+          fill: ${({ theme }) => colors[theme.c7__ui.mode].iconColor.active};
+        }
+      }
+    }
   }
 `;
 
@@ -97,10 +111,11 @@ const StepDescriptionStyles = styled(Text)`
 
 export {
   StepperStyles,
-  StepWrapperStyles,
-  StepStyles,
   StepCircleStyles,
+  StepStyles,
+  StepButtonStyles,
   StepLabelWrapper,
   StepIconStyles,
-  StepDescriptionStyles
+  StepDescriptionStyles,
+  LineStyles
 };

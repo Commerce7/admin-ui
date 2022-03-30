@@ -1,12 +1,13 @@
 import Text from '../text';
 
 import {
-  StepWrapperStyles,
   StepStyles,
+  StepButtonStyles,
   StepCircleStyles,
   StepLabelWrapper,
   StepDescriptionStyles,
-  StepIconStyles
+  StepIconStyles,
+  LineStyles
 } from './Stepper.styles';
 
 const Step = (props) => {
@@ -24,7 +25,7 @@ const Step = (props) => {
     ...rest
   } = props;
 
-  let as = '';
+  let as = 'div';
   if (href) {
     as = 'a';
   } else if (!href && onClick) {
@@ -44,25 +45,26 @@ const Step = (props) => {
   }
 
   return (
-    <StepWrapperStyles>
-      <StepStyles
+    <StepStyles>
+      <StepButtonStyles
         as={as}
         onClick={onClick}
-        className={className}
         href={href}
-        data-testid={dataTestId}
         $activeClassName={activeClassName}
+        className={className}
+        data-testid={dataTestId}
         {...customComponentProps} // eslint-disable-line
       >
         <StepCircleStyles>
-          <StepIconStyles icon={icon} $activeClassName={activeClassName} />
+          <StepIconStyles icon={icon} />
         </StepCircleStyles>
         <StepLabelWrapper>
           <Text small>Step {number}</Text>
           <StepDescriptionStyles block>{description}</StepDescriptionStyles>
         </StepLabelWrapper>
-      </StepStyles>
-    </StepWrapperStyles>
+      </StepButtonStyles>
+      <LineStyles />
+    </StepStyles>
   );
 };
 

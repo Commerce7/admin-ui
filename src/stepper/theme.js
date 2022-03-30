@@ -11,8 +11,12 @@ export const colors = {
   },
   dark: {
     backgroundColor: {
-      default: '#3E474C',
-      active: '#4c7f9a'
+      default: '#414F58',
+      active: '#0192D0'
+    },
+    iconColor: {
+      default: '#fff',
+      active: '#fff'
     }
   }
 };
