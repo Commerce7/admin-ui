@@ -1,19 +1,19 @@
 import PropTypes from 'prop-types';
 
 import {
-  StepStyles,
-  StepButtonStyles,
-  StepCircleStyles,
+  StyledStep,
+  StyledStepButton,
+  StyledStepCircle,
+  StyledStepIcon,
   StyledStepLabelWrapper,
-  StepDescriptionStyles,
-  StepIconStyles,
-  LineStyles,
-  StyledStepText
+  StyledStepText,
+  StyledStepDescription,
+  StyledLine
 } from './Stepper.styles';
 
 const Step = (props) => {
   const {
-    number,
+    step,
     description,
     icon,
     activeClassName,
@@ -45,8 +45,8 @@ const Step = (props) => {
   }
 
   return (
-    <StepStyles>
-      <StepButtonStyles
+    <StyledStep>
+      <StyledStepButton
         as={as}
         onClick={onClick}
         href={href}
@@ -55,21 +55,21 @@ const Step = (props) => {
         data-testid={dataTestId}
         {...customComponentProps} // eslint-disable-line
       >
-        <StepCircleStyles>
-          <StepIconStyles icon={icon} />
-        </StepCircleStyles>
+        <StyledStepCircle>
+          <StyledStepIcon icon={icon} />
+        </StyledStepCircle>
         <StyledStepLabelWrapper>
-          <StyledStepText small>Step {number}</StyledStepText>
-          <StepDescriptionStyles block>{description}</StepDescriptionStyles>
+          <StyledStepText small>Step {step}</StyledStepText>
+          <StyledStepDescription block>{description}</StyledStepDescription>
         </StyledStepLabelWrapper>
-      </StepButtonStyles>
-      <LineStyles />
-    </StepStyles>
+      </StyledStepButton>
+      <StyledLine />
+    </StyledStep>
   );
 };
 
 Step.defaultProps = {
-  number: null,
+  step: null,
   description: '',
   activeClassName: 'active',
   className: null,
@@ -83,7 +83,7 @@ Step.propTypes = {
   /**
    * The step number.
    */
-  number: PropTypes.string,
+  step: PropTypes.string,
 
   /**
    * The step label.

@@ -10,28 +10,28 @@ export const Basic = () => {
   return (
     <Stepper>
       <Step
-        number={1}
+        step={1}
         description="Configure"
         onClick={() => setPath('/configure')}
         className={currentPath === '/configure' ? 'active' : ''}
         icon="setting"
       />
       <Step
-        number={2}
+        step={2}
         description="Items"
         onClick={() => setPath('/items')}
         className={currentPath === '/items' ? 'active' : ''}
         icon="wine"
       />
       <Step
-        number={3}
+        step={3}
         description="Members"
         onClick={() => setPath('/members')}
         className={currentPath === '/members' ? 'active' : ''}
         icon="user"
       />
       <Step
-        number={4}
+        step={4}
         description="Inventory"
         onClick={() => setPath('/inventory')}
         className={currentPath === '/inventory' ? 'active' : ''}

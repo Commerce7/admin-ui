@@ -1,17 +1,17 @@
 import PropTypes from 'prop-types';
 
-import { StepperStyles } from './Stepper.styles';
+import { StyledStepper } from './Stepper.styles';
 
 const Stepper = (props) => {
   const { children, dataTestId, className } = props;
   return (
-    <StepperStyles
+    <StyledStepper
       aria-label="Secondary navigation"
       className={className}
       data-testid={dataTestId}
     >
       {children}
-    </StepperStyles>
+    </StyledStepper>
   );
 };
 
