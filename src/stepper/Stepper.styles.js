@@ -41,7 +41,7 @@ const StyledLine = styled.div`
   flex: 1;
   display: none;
 
-  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
     display: block;
     flex: 1;
   }
@@ -54,7 +54,7 @@ const StyledStep = styled.div`
   justify-content: center;
 
   &:last-of-type {
-    @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+    @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
       flex: 0;
     }
     > ${StyledLine} {
@@ -69,13 +69,13 @@ const StyledStepButton = styled.div`
   margin: 0 5px;
   padding: 0;
   flex-direction: column;
-  background-color: ${({ theme }) => theme.c7__ui.backgroundColor};
+  background-color: transparent;
   border: none;
   ${({ as }) => (as !== 'div' ? 'cursor: pointer;' : '')}
 
-  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
     flex-direction: row;
-    margin: 0 30px;
+    margin: 0 10px;
   }
 
   &.${({ $activeClassName }) => $activeClassName} {
@@ -97,7 +97,7 @@ const StyledStepLabelWrapper = styled.div`
   align-items: center;
   margin: 7px 0 0 0;
 
-  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+  @media ${({ theme }) => theme.c7__ui.breakpoints.largeUp} {
     margin: 0 0 0 9px;
     align-items: start;
   }
