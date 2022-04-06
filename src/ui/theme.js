@@ -64,19 +64,32 @@ export const createTheme = (mode) => ({
 });
 
 export const GlobalStyles = createGlobalStyle`
-  * {
+  *,
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  body {
-    letter-spacing: 0.03em;
-    font-family: ${({ theme }) => theme.c7__ui.fontFamily};
+  html, body {
     font-size:  ${({ theme }) => theme.c7__ui.fontSizeBase};
-    color: ${({ theme }) => theme.c7__ui.fontColor};
+    font-family: ${({ theme }) => theme.c7__ui.fontFamily};
     font-weight:  ${({ theme }) => theme.c7__ui.fontWeightBase};
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.03em;
+    color: ${({ theme }) => theme.c7__ui.fontColor};
     background-color: ${({ theme }) => theme.c7__ui.backgroundColor}; 
   }
   a {
     color: ${({ theme }) => theme.c7__ui.linkColor};
     text-decoration: none;
   }
+  img {
+    display: inline-block;
+    max-width: 100%;
+  }
+
 `;
