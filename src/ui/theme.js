@@ -89,7 +89,9 @@ export const GlobalStyles = createGlobalStyle`
   }
   img {
     display: inline-block;
+    height: auto;
     max-width: 100%;
+    vertical-align: middle;
   }
 
 `;
