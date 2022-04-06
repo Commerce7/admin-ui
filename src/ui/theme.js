@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+import styledNormalize from 'styled-normalize';
 
 const fontColors = {
   dark: 'rgb(241, 241, 241)',
@@ -64,6 +65,8 @@ export const createTheme = (mode) => ({
 });
 
 export const GlobalStyles = createGlobalStyle`
+  ${styledNormalize}
+
   *,
   *:before,
   *:after {
