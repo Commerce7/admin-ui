@@ -1,19 +1,21 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
-    default: 'rgb(241, 241, 241)',
-    success: 'rgb(185, 220, 154)',
-    error: 'rgb(188, 69, 69)'
+    default: c7Colors.gray200,
+    success: c7Colors.green300,
+    error: c7Colors.red300
   },
   light: {
-    default: 'rgb(175, 175, 175)',
-    success: 'rgb(185, 220, 154)',
-    error: 'rgb(177, 52, 52)'
+    default: c7Colors.gray500,
+    success: c7Colors.green300,
+    error: c7Colors.red300
   }
 };
 
 const backgroundColors = {
-  dark: 'rgb(67, 75, 80)',
-  light: 'rgb(237, 237, 237)'
+  dark: c7Colors.gray700,
+  light: c7Colors.gray300
 };
 
 export { colors, backgroundColors };

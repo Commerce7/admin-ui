@@ -1,3 +1,5 @@
+import { c7Colors } from '../ui/theme';
+
 const fontSize = {
   h1: '32px',
   h2: '24px',
@@ -6,10 +8,10 @@ const fontSize = {
 
 const colors = {
   dark: {
-    fontColor: 'rgb(255,255,255)'
+    fontColor: c7Colors.white
   },
   light: {
-    fontColor: 'rgb(41, 50, 56)'
+    fontColor: c7Colors.slate300
   }
 };
 

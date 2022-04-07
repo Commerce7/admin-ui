@@ -1,18 +1,20 @@
+import { c7Colors } from '../../ui/theme';
+
 const colors = {
   dark: {
     fontColor: {
-      default: 'rgb(241, 241, 241)',
-      hover: 'rgb(175, 175, 175)',
-      focus: 'rgb(175, 175, 175)',
-      disabled: 'rgb(175, 175, 175)'
+      default: c7Colors.gray200,
+      hover: c7Colors.gray500,
+      focus: c7Colors.gray500,
+      disabled: c7Colors.gray500
     }
   },
   light: {
     fontColor: {
-      default: 'rgb(41, 50, 56)',
-      hover: 'rgb(45, 48, 62)',
-      focus: 'rgb(45, 48, 62)',
-      disabled: 'rgb(175,175,175)'
+      default: c7Colors.slate300,
+      hover: c7Colors.gray700,
+      focus: c7Colors.gray700,
+      disabled: c7Colors.gray400
     }
   }
 };
@@ -20,24 +22,24 @@ const colors = {
 const dropdownColors = {
   dark: {
     backgroundColor: {
-      default: 'rgb(41, 50, 56)'
+      default: c7Colors.slate300
     },
     borderColor: {
-      default: 'rgb(88, 94, 100)'
+      default: c7Colors.gray700
     },
     shadowColor: {
-      default: 'rgb(0 0 0 / 50%)'
+      default: 'rgba(0, 0, 0, .5)'
     }
   },
   light: {
     backgroundColor: {
-      default: 'rgb(255, 255, 255)'
+      default: c7Colors.white
     },
     borderColor: {
-      default: 'rgb(224, 224, 224)'
+      default: c7Colors.gray300
     },
     shadowColor: {
-      default: 'rgb(0 0 0 / 15%)'
+      default: 'rgba(0, 0, 0, .15)'
     }
   }
 };
@@ -46,15 +48,15 @@ const dropdownButtonColors = {
   dark: {
     backgroundColor: {
       default: 'transparent',
-      hover: 'rgb(49, 66, 78)',
-      focus: 'rgb(49, 66, 78)'
+      hover: c7Colors.slate200,
+      focus: c7Colors.slate200
     }
   },
   light: {
     backgroundColor: {
       default: 'transparent',
-      hover: 'rgb(248, 248, 248)',
-      focus: 'rgb(248, 248, 248)'
+      hover: c7Colors.gray100,
+      focus: c7Colors.gray100
     }
   }
 };

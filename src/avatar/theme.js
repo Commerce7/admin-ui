@@ -1,3 +1,5 @@
+import { c7Colors } from '../ui/theme';
+
 const sizes = {
   tiny: '28px',
   small: '40px',
@@ -21,14 +23,14 @@ const iconSizes = {
 
 const colors = {
   light: {
-    background: '#D1D1D1',
-    fontColor: '#0192D0',
-    iconColor: '#0192d0'
+    background: c7Colors.gray400,
+    fontColor: c7Colors.blue400,
+    iconColor: c7Colors.blue400
   },
   dark: {
-    background: '#585E64',
-    fontColor: '#3FB2EE',
-    iconColor: '#0192d0'
+    background: c7Colors.gray700,
+    fontColor: c7Colors.blue300,
+    iconColor: c7Colors.blue400
   }
 };
 

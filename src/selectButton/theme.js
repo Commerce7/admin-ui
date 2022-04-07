@@ -1,42 +1,44 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
     borderColor: {
-      default: 'rgb(0, 103, 157)',
-      hover: 'rgb(63, 178, 238)',
-      focus: 'rgb(63, 178, 238)',
-      disabled: 'rgb(175, 175, 175)'
+      default: c7Colors.blue500,
+      hover: c7Colors.blue300,
+      focus: c7Colors.blue300,
+      disabled: c7Colors.gray500
     },
     backgroundColor: {
-      default: 'rgb(41, 50, 56)',
-      hover: 'rgb(49, 66, 78)',
-      focus: 'rgb(49, 66, 78)',
-      disabled: 'rgb(41, 50, 56)'
+      default: c7Colors.slate300,
+      hover: c7Colors.slate200,
+      focus: c7Colors.slate200,
+      disabled: c7Colors.slate300
     },
     fontColor: {
-      default: 'rgb(1, 146, 208)',
-      hover: 'rgb(63, 178, 238)',
-      focus: 'rgb(63, 178, 238)',
-      disabled: 'rgb(175, 175, 175)'
+      default: c7Colors.blue400,
+      hover: c7Colors.blue300,
+      focus: c7Colors.blue300,
+      disabled: c7Colors.gray500
     }
   },
   light: {
     borderColor: {
-      default: 'rgb(1, 146, 208)',
-      hover: 'rgb(1, 146, 208)',
-      focus: 'rgb(1, 146, 208)',
-      disabled: 'rgb(175, 175, 175)'
+      default: c7Colors.blue400,
+      hover: c7Colors.blue400,
+      focus: c7Colors.blue400,
+      disabled: c7Colors.gray500
     },
     backgroundColor: {
-      default: 'white',
-      hover: 'rgb(224, 224, 224)',
-      focus: 'rgb(224, 224, 224)',
-      disabled: 'white'
+      default: c7Colors.white,
+      hover: c7Colors.gray300,
+      focus: c7Colors.gray300,
+      disabled: c7Colors.white
     },
     fontColor: {
-      default: 'rgb(0, 103, 157)',
-      hover: 'rgb(0, 103, 157)',
-      focus: 'rgb(0, 103, 157)',
-      disabled: 'rgb(175, 175, 175)'
+      default: c7Colors.blue500,
+      hover: c7Colors.blue500,
+      focus: c7Colors.blue500,
+      disabled: c7Colors.gray500
     }
   }
 };

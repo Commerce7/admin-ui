@@ -1,24 +1,26 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
-    borderColor: 'rgb(88, 94, 100)',
-    backgroundColor: 'rgb(41, 50, 56)',
+    borderColor: c7Colors.gray700,
+    backgroundColor: c7Colors.slate300,
     borderBackground: {
-      default: 'rgb(209, 209, 209)',
-      success: 'rgb(185, 220, 154)',
-      error: 'rgb(188, 69, 69)',
-      warning: 'rgb(234, 199, 93)',
-      info: 'rgb(0, 103, 157)'
+      default: c7Colors.gray400,
+      success: c7Colors.green300,
+      error: c7Colors.red300,
+      warning: c7Colors.yellow200,
+      info: c7Colors.blue500
     }
   },
   light: {
-    borderColor: 'rgb(209, 209, 209)',
-    backgroundColor: 'rgb(255, 255, 255)',
+    borderColor: c7Colors.gray400,
+    backgroundColor: c7Colors.white,
     borderBackground: {
-      default: 'rgb(209, 209, 209)',
-      success: 'rgb(185, 220, 154)',
-      error: 'rgb(188, 69, 69)',
-      warning: 'rgb(234, 199, 93)',
-      info: 'rgb(0, 103, 157)'
+      default: c7Colors.gray400,
+      success: c7Colors.green300,
+      error: c7Colors.red300,
+      warning: c7Colors.yellow200,
+      info: c7Colors.blue500
     }
   }
 };

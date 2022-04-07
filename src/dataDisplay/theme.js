@@ -1,9 +1,11 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
-    fontColor: 'rgb(255,255,255)'
+    fontColor: c7Colors.white
   },
   light: {
-    fontColor: 'rgb(41, 50, 56)'
+    fontColor: c7Colors.slate300
   }
 };
 

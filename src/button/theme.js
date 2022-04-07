@@ -1,3 +1,5 @@
+import { c7Colors } from '../ui/theme';
+
 const sizes = {
   small: {
     padding: '8px 12px',
@@ -25,56 +27,56 @@ const colors = {
         disabled: 'white'
       },
       backgroundColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(63, 178, 238)',
-        focus: 'rgb(1, 146, 208)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue300,
+        focus: c7Colors.blue400,
+        disabled: c7Colors.gray500
       },
       borderColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(63, 178, 238)',
-        focus: 'rgb(63, 178, 238)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue300,
+        focus: c7Colors.blue300,
+        disabled: c7Colors.gray500
       }
     },
     secondary: {
       fontColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(63, 178, 238)',
-        focus: 'rgb(63, 178, 238)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue300,
+        focus: c7Colors.blue300,
+        disabled: c7Colors.gray500
       },
       iconColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(1, 146, 208)',
-        focus: 'rgb(63, 178, 238)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue400,
+        focus: c7Colors.blue300,
+        disabled: c7Colors.gray500
       },
       backgroundColor: {
-        default: 'rgb(41, 50, 56)',
-        hover: 'rgb(49, 66, 78)',
-        focus: 'rgb(49, 66, 78)',
-        disabled: 'rgb(41, 50, 56)'
+        default: c7Colors.slate300,
+        hover: c7Colors.slate200,
+        focus: c7Colors.slate200,
+        disabled: c7Colors.slate300
       },
       borderColor: {
-        default: 'rgb(0, 103, 157)',
-        hover: 'rgb(63, 178, 238)',
-        focus: 'rgb(63, 178, 238)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue500,
+        hover: c7Colors.blue300,
+        focus: c7Colors.blue300,
+        disabled: c7Colors.gray500
       }
     },
     text: {
       fontColor: {
-        default: 'rgb(175, 175, 175)',
-        hover: 'rgb(175, 175, 175)',
-        focus: 'rgb(175, 175, 175)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.gray500,
+        hover: c7Colors.gray500,
+        focus: c7Colors.gray500,
+        disabled: c7Colors.gray500
       },
       iconColor: {
-        default: 'rgb(175, 175, 175)',
+        default: c7Colors.gray500,
         hover: 'white',
         focus: 'white',
-        disabled: 'rgb(175, 175, 175)'
+        disabled: c7Colors.gray500
       },
       backgroundColor: {
         default: 'transparent',
@@ -91,16 +93,16 @@ const colors = {
     },
     link: {
       fontColor: {
-        default: 'rgb(80, 164, 252)',
-        hover: 'rgb(80, 164, 252)',
-        focus: 'rgb(80, 164, 252)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue300,
+        hover: c7Colors.blue300,
+        focus: c7Colors.blue300,
+        disabled: c7Colors.gray500
       },
       iconColor: {
-        default: 'rgb(80, 164, 252)',
-        hover: 'rgb(80, 164, 252)',
-        focus: 'rgb(80, 164, 252)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue300,
+        hover: c7Colors.blue300,
+        focus: c7Colors.blue300,
+        disabled: c7Colors.gray500
       },
       backgroundColor: {
         default: 'transparent',
@@ -131,56 +133,56 @@ const colors = {
         disabled: 'white'
       },
       backgroundColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(0, 103, 157)',
-        focus: 'rgb(1, 146, 208)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue500,
+        focus: c7Colors.blue400,
+        disabled: c7Colors.gray500
       },
       borderColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(0, 103, 157)',
-        focus: 'rgb(0, 103, 157)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue500,
+        focus: c7Colors.blue500,
+        disabled: c7Colors.gray500
       }
     },
     secondary: {
       fontColor: {
-        default: 'rgb(0, 103, 157)',
-        hover: 'rgb(0, 103, 157)',
-        focus: 'rgb(0, 103, 157)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue500,
+        hover: c7Colors.blue500,
+        focus: c7Colors.blue500,
+        disabled: c7Colors.gray500
       },
       iconColor: {
-        default: 'rgb(0, 103, 157)',
-        hover: 'rgb(0, 103, 157)',
-        focus: 'rgb(0, 103, 157)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue500,
+        hover: c7Colors.blue500,
+        focus: c7Colors.blue500,
+        disabled: c7Colors.gray500
       },
       backgroundColor: {
         default: 'white',
-        hover: 'rgb(224, 224, 224)',
-        focus: 'rgb(224, 224, 224)',
+        hover: c7Colors.gray300,
+        focus: c7Colors.gray300,
         disabled: 'white'
       },
       borderColor: {
-        default: 'rgb(1, 146, 208)',
-        hover: 'rgb(1, 146, 208)',
-        focus: 'rgb(1, 146, 208)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue400,
+        hover: c7Colors.blue400,
+        focus: c7Colors.blue400,
+        disabled: c7Colors.gray500
       }
     },
     text: {
       fontColor: {
-        default: 'rgb(45, 48, 62)',
-        hover: 'rgb(45, 48, 62)',
-        focus: 'rgb(45, 48, 62)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.gray700,
+        hover: c7Colors.gray700,
+        focus: c7Colors.gray700,
+        disabled: c7Colors.gray500
       },
       iconColor: {
-        default: 'rgb(175, 175, 175)',
-        hover: 'rgb(45, 48, 62)',
-        focus: 'rgb(45, 48, 62)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.gray500,
+        hover: c7Colors.gray700,
+        focus: c7Colors.gray700,
+        disabled: c7Colors.gray500
       },
       backgroundColor: {
         default: 'transparent',
@@ -197,16 +199,16 @@ const colors = {
     },
     link: {
       fontColor: {
-        default: 'rgb(0, 103, 157)',
-        hover: 'rgb(0, 103, 157)',
-        focus: 'rgb(0, 103, 157)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue500,
+        hover: c7Colors.blue500,
+        focus: c7Colors.blue500,
+        disabled: c7Colors.gray500
       },
       iconColor: {
-        default: 'rgb(0, 103, 157)',
-        hover: 'rgb(0, 103, 157)',
-        focus: 'rgb(0, 103, 157)',
-        disabled: 'rgb(175, 175, 175)'
+        default: c7Colors.blue500,
+        hover: c7Colors.blue500,
+        focus: c7Colors.blue500,
+        disabled: c7Colors.gray500
       },
       backgroundColor: {
         default: 'transparent',

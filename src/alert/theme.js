@@ -1,42 +1,44 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
     backgroundColor: {
-      error: '#BC4545',
-      info: '#0A3F5B',
-      warning: '#BF9D36',
-      default: '#3E474C'
+      error: c7Colors.red200,
+      info: c7Colors.blue600,
+      warning: c7Colors.yellow300,
+      default: c7Colors.gray800
     },
     borderBackground: {
-      error: '#DF5F5F',
-      info: '#00679D',
-      warning: '#EAC75D',
-      default: '#585E64'
+      error: c7Colors.red200,
+      info: c7Colors.blue500,
+      warning: c7Colors.yellow200,
+      default: c7Colors.gray700
     },
     iconColor: {
-      error: '#FFF',
-      info: '#FFF',
-      warning: '#FFF',
-      default: '#FFF'
+      error: c7Colors.white,
+      info: c7Colors.white,
+      warning: c7Colors.white,
+      default: c7Colors.white
     }
   },
   light: {
     backgroundColor: {
-      error: '#FCEFF0',
-      info: '#E6F4FA',
+      error: c7Colors.red100,
+      info: c7Colors.blue100,
       warning: '#FCF7E8',
-      default: '#F8F8F8'
+      default: c7Colors.gray100
     },
     borderBackground: {
-      error: '#B13434',
-      info: '#00679D',
-      warning: '#EAC75D',
-      default: '#D1D1D1'
+      error: c7Colors.red300,
+      info: c7Colors.blue500,
+      warning: c7Colors.yellow200,
+      default: c7Colors.gray400
     },
     iconColor: {
-      error: '#B13434',
-      info: '#00679D',
+      error: c7Colors.red300,
+      info: c7Colors.blue500,
       warning: '#BC8C45',
-      default: '#989EA4'
+      default: c7Colors.gray500
     }
   }
 };

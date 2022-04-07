@@ -1,34 +1,36 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
     backgroundColor: {
-      default: 'rgb(41, 50, 56)',
-      checked: 'rgb(41, 50, 56)'
+      default: c7Colors.slate300,
+      checked: c7Colors.slate300
     },
     borderColor: {
-      default: 'rgb(88, 94, 100)',
-      disabled: 'rgb(175, 175, 175)',
-      hover: 'rgb(1, 146, 208)',
-      focus: 'rgb(1, 146, 208)',
-      checked: 'rgb(1, 146, 208)'
+      default: c7Colors.gray700,
+      disabled: c7Colors.gray500,
+      hover: c7Colors.blue400,
+      focus: c7Colors.blue400,
+      checked: c7Colors.blue400
     },
     boxShadow: {
-      focus: 'rgb(88, 94, 100)'
+      focus: c7Colors.gray700
     }
   },
   light: {
     backgroundColor: {
-      default: 'rgb(255, 255, 255)',
-      checked: 'rgb(255, 255, 255)'
+      default: c7Colors.white,
+      checked: c7Colors.white
     },
     borderColor: {
-      default: 'rgb(175, 175, 175)',
-      disabled: 'rgb(175, 175, 175)',
-      hover: 'rgb(1, 146, 208)',
-      focus: 'rgb(1, 146, 208)',
-      checked: 'rgb(1, 146, 208)'
+      default: c7Colors.gray500,
+      disabled: c7Colors.gray500,
+      hover: c7Colors.blue400,
+      focus: c7Colors.blue400,
+      checked: c7Colors.blue400
     },
     boxShadow: {
-      focus: 'rgb(208, 228, 243)'
+      focus: c7Colors.blue200
     }
   }
 };

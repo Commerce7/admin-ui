@@ -4,6 +4,8 @@ export const Basic = () => (
   <>
     <Text>Wine</Text>
     <br />
+    <Text secondary>Secondary text</Text>
+    <br />
     <Text italic small>
       Italic small Wine
     </Text>

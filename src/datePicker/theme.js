@@ -1,24 +1,26 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   light: {
-    backgroundColor: 'rgb(255, 255, 255)',
-    borderColor: 'rgb(209,209,209)',
+    backgroundColor: c7Colors.white,
+    borderColor: c7Colors.gray400,
     fontColor: {
-      default: 'rgb(41,50,56)',
-      active: 'rgb(255, 255, 255)',
-      inactive: 'rgb(153, 153, 153)',
-      hover: 'rgb(255,255,255)',
-      disabled: 'rgb(209,209,209)'
+      default: c7Colors.slate300,
+      active: c7Colors.white,
+      inactive: c7Colors.gray500,
+      hover: c7Colors.white,
+      disabled: c7Colors.gray400
     }
   },
   dark: {
-    backgroundColor: 'rgb(41,50,55)',
-    borderColor: 'rgb(49,66,78)',
+    backgroundColor: c7Colors.gray700,
+    borderColor: c7Colors.slate200,
     fontColor: {
-      default: 'rgb(241,241,241)',
-      active: 'rgb(255, 255, 255)',
-      inactive: 'rgb(152 158 164)',
-      hover: 'rgb(255,255,255)',
-      disabled: 'rgb(88,94,100)'
+      default: c7Colors.gray200,
+      active: c7Colors.white,
+      inactive: c7Colors.gray500,
+      hover: c7Colors.white,
+      disabled: c7Colors.gray700
     }
   }
 };
@@ -27,17 +29,17 @@ const dayColors = {
   light: {
     backgroundColor: {
       default: 'transparent',
-      hover: 'rgb(1,146,208)',
-      active: 'rgb(0,103,157)',
-      today: 'rgb(208,228,243)'
+      hover: c7Colors.blue400,
+      active: c7Colors.blue500,
+      today: c7Colors.blue200
     }
   },
   dark: {
     backgroundColor: {
       default: 'transparent',
-      hover: 'rgb(49,66,78)',
-      active: 'rgb(1,146,208)',
-      today: 'rgb(62,71,76)'
+      hover: c7Colors.slate200,
+      active: c7Colors.blue400,
+      today: c7Colors.gray800
     }
   }
 };

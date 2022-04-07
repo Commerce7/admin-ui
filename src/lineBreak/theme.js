@@ -1,8 +1,10 @@
+import { c7Colors } from '../ui/theme';
+
 export const colors = {
   dark: {
-    borderColor: 'rgb(88, 94, 100)'
+    borderColor: c7Colors.gray700
   },
   light: {
-    borderColor: 'rgb(224, 224, 224)'
+    borderColor: c7Colors.gray300
   }
 };

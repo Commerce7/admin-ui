@@ -1,11 +1,13 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   dark: {
-    backgroundColor: 'rgb(52, 63, 70)',
-    borderColor: '#585E64'
+    backgroundColor: c7Colors.slate200,
+    borderColor: c7Colors.gray700
   },
   light: {
-    backgroundColor: '#F8F8F8',
-    borderColor: '#D1D1D1'
+    backgroundColor: c7Colors.gray100,
+    borderColor: c7Colors.gray400
   }
 };
 
