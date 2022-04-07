@@ -1,18 +1,20 @@
+import { c7Colors } from '../../ui/theme';
+
 const colors = {
   dark: {
     fontColor: {
-      default: 'rgb(241, 241, 241)',
-      hover: 'rgb(175, 175, 175)',
-      focus: 'rgb(175, 175, 175)',
-      disabled: 'rgb(175, 175, 175)'
+      default: c7Colors.gray200,
+      hover: c7Colors.gray500,
+      focus: c7Colors.gray500,
+      disabled: c7Colors.gray500
     }
   },
   light: {
     fontColor: {
-      default: 'rgb(41, 50, 56)',
-      hover: 'rgb(45, 48, 62)',
-      focus: 'rgb(45, 48, 62)',
-      disabled: 'rgb(175,175,175)'
+      default: c7Colors.slate300,
+      hover: c7Colors.gray700,
+      focus: c7Colors.gray700,
+      disabled: c7Colors.gray400
     }
   }
 };

@@ -1,46 +1,48 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   light: {
-    backgroundColor: '#F8F8F8', //
-    borderColor: '#E0E0E0', //
+    backgroundColor: c7Colors.gray100, //
+    borderColor: c7Colors.gray300, //
     primaryLink: {
       fontColor: {
-        default: '#293238', //
-        active: '#00679D', //
-        hover: '#E0E0E0'
+        default: c7Colors.slate300, //
+        active: c7Colors.blue500, //
+        hover: c7Colors.gray300
       },
       backgroundColor: {
         default: 'transparent',
-        active: '#D0E4F3', //
-        hover: '#E0E0E0' //
+        active: c7Colors.blue200, //
+        hover: c7Colors.gray300 //
       },
       svgColor: {
         //
-        default: '#AFAFAF', //
-        active: '#0192D0', //
-        hover: '#0192D0' //
+        default: c7Colors.gray500, //
+        active: c7Colors.blue400, //
+        hover: c7Colors.blue400 //
       }
     },
     secondaryLink: {
       fontColor: {
-        default: '#293238', //
-        active: '#00679D', //
-        hover: '#00679D'
+        default: c7Colors.slate300, //
+        active: c7Colors.blue500, //
+        hover: c7Colors.blue500
       },
       backgroundColor: {
         default: 'transparent',
-        active: '#D0E4F3', //
-        hover: '#E0E0E0' //
+        active: c7Colors.blue200, //
+        hover: c7Colors.gray300 //
       }
     }
   },
   dark: {
-    backgroundColor: 'rgb(32, 39, 43)',
-    borderColor: 'rgb(62, 71, 76)',
+    backgroundColor: c7Colors.gray900,
+    borderColor: c7Colors.gray800,
     primaryLink: {
       fontColor: {
-        default: '#F1F1F1',
-        active: '#F1F1F1',
-        hover: '#F1F1F1'
+        default: c7Colors.gray200,
+        active: c7Colors.gray200,
+        hover: c7Colors.gray200
       },
       backgroundColor: {
         default: 'transparent',
@@ -48,16 +50,16 @@ const colors = {
         hover: 'rgba(255,255,255,0.08)'
       },
       svgColor: {
-        default: 'rgb(106, 112, 119)',
-        active: 'rgb(106, 112, 119)',
-        hover: 'rgb(106, 112, 119)'
+        default: c7Colors.gray600,
+        active: c7Colors.gray600,
+        hover: c7Colors.gray600
       }
     },
     secondaryLink: {
       fontColor: {
-        default: '#F1F1F1',
-        active: '#F1F1F1',
-        hover: '#F1F1F1'
+        default: c7Colors.gray200,
+        active: c7Colors.gray200,
+        hover: c7Colors.gray200
       },
       backgroundColor: {
         default: 'transparent',

@@ -1,46 +1,48 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   light: {
     default: {
-      color: 'rgb(41,50,56)',
-      backgroundColor: 'rgb(224, 224, 224)'
+      color: c7Colors.slate300,
+      backgroundColor: c7Colors.gray300
     },
     info: {
-      color: 'rgb(255, 255, 255)',
-      backgroundColor: 'rgb(0, 103, 157)'
+      color: c7Colors.white,
+      backgroundColor: c7Colors.blue500
     },
     warning: {
-      color: 'rgb(41,50,56)',
-      backgroundColor: 'rgb(234, 199, 93)'
+      color: c7Colors.slate300,
+      backgroundColor: c7Colors.yellow200
     },
     error: {
-      color: 'rgb(255, 255, 255)',
-      backgroundColor: 'rgb(177, 52, 52)'
+      color: c7Colors.white,
+      backgroundColor: c7Colors.red300
     },
     success: {
-      color: 'rgb(41,50,56)',
-      backgroundColor: 'rgb(185, 220, 154)'
+      color: c7Colors.slate300,
+      backgroundColor: c7Colors.green300
     }
   },
   dark: {
     default: {
-      color: 'rgb(255, 255, 255)',
-      backgroundColor: 'rgb(88, 94, 100)'
+      color: c7Colors.white,
+      backgroundColor: c7Colors.gray700
     },
     info: {
-      color: 'rgb(255, 255, 255)',
-      backgroundColor: 'rgb(0, 103, 157)'
+      color: c7Colors.white,
+      backgroundColor: c7Colors.blue500
     },
     warning: {
-      color: 'rgb(41,50,56)',
-      backgroundColor: 'rgb(234, 199, 93)'
+      color: c7Colors.slate300,
+      backgroundColor: c7Colors.yellow200
     },
     error: {
-      color: 'rgb(255, 255, 255)',
-      backgroundColor: 'rgb(188, 69, 69)'
+      color: c7Colors.white,
+      backgroundColor: c7Colors.red300
     },
     success: {
-      color: 'rgb(41,50,56)',
-      backgroundColor: 'rgb(185, 220, 154)'
+      color: c7Colors.slate300,
+      backgroundColor: c7Colors.green300
     }
   }
 };

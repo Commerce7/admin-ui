@@ -1,11 +1,13 @@
+import { c7Colors } from '../ui/theme';
+
 const svgColors = {
   dark: {
-    stroke: 'rgb(241, 241, 241)',
-    fill: 'rgb(241, 241, 241)'
+    stroke: c7Colors.gray200,
+    fill: c7Colors.gray200
   },
   light: {
-    stroke: 'rgb(153, 153, 153)',
-    fill: 'rgb(153, 153, 153)'
+    stroke: c7Colors.gray500,
+    fill: c7Colors.gray500
   }
 };
 export { svgColors };

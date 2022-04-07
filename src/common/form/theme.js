@@ -1,73 +1,75 @@
+import { c7Colors } from '../../ui/theme';
+
 const colors = {
   dark: {
     color: {
-      default: 'rgb(241, 241, 241)'
+      default: c7Colors.gray200
     },
     borderColor: {
-      default: 'rgb(88 94 100)',
-      focus: 'rgb(63, 178, 238)',
-      error: 'rgb(188, 69, 69)'
+      default: c7Colors.gray700,
+      focus: c7Colors.blue300,
+      error: c7Colors.red200
     },
     backgroundColor: {
-      default: 'rgb(41, 50, 56)'
+      default: c7Colors.slate300
     },
     boxShadow: {
       default: 'transparent',
-      focus: 'rgb(49, 66, 78)'
+      focus: c7Colors.slate200
     }
   },
   light: {
     color: {
-      default: 'rgb(41, 50, 56)'
+      default: c7Colors.slate300
     },
     borderColor: {
-      default: 'rgb(209, 209, 209)',
-      focus: 'rgb(1, 146, 208)',
-      error: 'rgb(177, 52, 52)'
+      default: c7Colors.gray400,
+      focus: c7Colors.blue400,
+      error: c7Colors.red300
     },
     backgroundColor: {
-      default: 'rgb(255, 255, 255)'
+      default: c7Colors.white
     },
     boxShadow: {
       default: 'transparent',
-      focus: 'rgb(248, 248, 248)'
+      focus: c7Colors.gray100
     }
   }
 };
 
 const labelColors = {
   dark: {
-    color: 'rgb(241, 241, 241)'
+    color: c7Colors.gray200
   },
   light: {
-    color: 'rgb(41, 50, 56)'
+    color: c7Colors.slate300
   }
 };
 
 const requiredColors = {
   dark: {
-    color: 'rgb(188, 69, 69)'
+    color: c7Colors.red300
   },
   light: {
-    color: 'rgb(177, 52, 52)'
+    color: c7Colors.red300
   }
 };
 
 const errorColors = {
   dark: {
-    color: 'rgb(188, 69, 69)'
+    color: c7Colors.red200
   },
   light: {
-    color: 'rgb(177, 52, 52)'
+    color: c7Colors.red300
   }
 };
 
 const placeholderColors = {
   dark: {
-    color: 'rgb(106, 112, 119)'
+    color: c7Colors.gray600
   },
   light: {
-    color: 'rgb(153, 153, 153) '
+    color: c7Colors.gray500
   }
 };
 

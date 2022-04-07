@@ -1,22 +1,24 @@
+import { c7Colors } from '../ui/theme';
+
 export const colors = {
   light: {
     backgroundColor: {
-      default: '#e0e0e0',
-      active: '#0192D0'
+      default: c7Colors.gray300,
+      active: c7Colors.blue300
     },
     iconColor: {
-      default: '#293238',
-      active: '#fff'
+      default: c7Colors.slate300,
+      active: c7Colors.white
     }
   },
   dark: {
     backgroundColor: {
-      default: '#414F58',
-      active: '#0192D0'
+      default: c7Colors.slate100,
+      active: c7Colors.blue300
     },
     iconColor: {
-      default: '#fff',
-      active: '#fff'
+      default: c7Colors.white,
+      active: c7Colors.white
     }
   }
 };

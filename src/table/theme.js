@@ -1,57 +1,59 @@
+import { c7Colors } from '../ui/theme';
+
 const tableColors = {
   light: {
-    borderColor: 'rgb(224, 224, 224)'
+    borderColor: c7Colors.gray300
   },
   dark: {
-    borderColor: 'rgb(106, 112, 119)'
+    borderColor: c7Colors.gray600
   }
 };
 
 const trColors = {
   light: {
     backgroundColor: {
-      default: 'rgb(255, 255, 255)',
-      alt: 'rgb(248, 248, 248)',
-      hover: 'rgb(230, 244, 250)'
+      default: c7Colors.white,
+      alt: c7Colors.gray100,
+      hover: c7Colors.blue100
     },
-    borderColor: 'rgb(224, 224, 224)'
+    borderColor: c7Colors.gray300
   },
   dark: {
     backgroundColor: {
-      default: 'rgb(41, 50, 56)',
-      alt: 'rgb(52, 63, 70)',
-      hover: 'rgb(65, 79, 88)'
+      default: c7Colors.slate300,
+      alt: c7Colors.slate200,
+      hover: c7Colors.slate100
     },
-    borderColor: 'rgb(106, 112, 119)'
+    borderColor: c7Colors.gray600
   }
 };
 
 const theadColors = {
   light: {
-    backgroundColor: 'rgb(255, 255, 255)'
+    backgroundColor: c7Colors.white
   },
   dark: {
-    backgroundColor: 'rgb(41, 50, 56)'
+    backgroundColor: c7Colors.slate300
   }
 };
 
 const thColors = {
   light: {
-    color: 'rgb(41, 50, 56)',
-    borderColor: 'rgb(224, 224, 224)'
+    color: c7Colors.slate300,
+    borderColor: c7Colors.gray300
   },
   dark: {
-    color: 'rgb(255, 255, 255)',
-    borderColor: 'rgb(106, 112, 119)'
+    color: c7Colors.white,
+    borderColor: c7Colors.gray600
   }
 };
 
 const tfootColors = {
   light: {
-    backgroundColor: 'rgb(195, 195, 195)'
+    backgroundColor: c7Colors.gray400
   },
   dark: {
-    backgroundColor: 'rgb(9, 18, 23)'
+    backgroundColor: c7Colors.gray900
   }
 };
 

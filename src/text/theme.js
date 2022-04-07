@@ -1,10 +1,12 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
-  error: '#b13434',
+  error: c7Colors.red300,
   light: {
-    secondaryFontColor: '#737387'
+    secondaryFontColor: c7Colors.gray600
   },
   dark: {
-    secondaryFontColor: '#989EA4'
+    secondaryFontColor: c7Colors.gray500
   }
 };
 

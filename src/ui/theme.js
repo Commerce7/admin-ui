@@ -1,39 +1,77 @@
 import { createGlobalStyle } from 'styled-components';
 import styledNormalize from 'styled-normalize';
 
+export const c7Colors = {
+  white: '#FFFFFF',
+  black: '#000000',
+
+  yellow100: '#FFF9E6',
+  yellow200: '#FED861',
+  yellow300: '#BF9D36',
+
+  green100: '#E4F2EF',
+  green200: '#239C82',
+  green300: '#7EB79D',
+
+  red100: '#FCEFF0',
+  red200: '#DF5F5F',
+  red300: '#B13434',
+
+  blue100: '#EBF7FF',
+  blue200: '#D8ECF8',
+  blue300: '#3FB2EE',
+  blue400: '#0192D0',
+  blue500: '#00679D',
+  blue600: '#054D7D',
+
+  slate100: '#414F58',
+  slate200: '#343F46',
+  slate300: '#293238',
+
+  gray100: '#F8F8F8',
+  gray200: '#F1F1F1',
+  gray300: '#E0E0E0',
+  gray400: '#D1D1D1',
+  gray500: '#989EA4',
+  gray600: '#71767D',
+  gray700: '#585E64',
+  gray800: '#3E474C',
+  gray900: '#20272B'
+};
+
 const fontColors = {
-  dark: 'rgb(241, 241, 241)',
-  light: 'rgb(41, 50, 56)'
+  dark: c7Colors.gray200,
+  light: c7Colors.slate300
 };
 
 const secondaryFontColors = {
-  dark: 'rgb(152, 158, 164)',
-  light: 'rgb(115, 115, 135)'
+  dark: c7Colors.gray500,
+  light: c7Colors.gray600
 };
 
 const backgroundColors = {
-  dark: 'rgb(41, 50, 56)',
-  light: 'rgb(255, 255, 255)'
+  dark: c7Colors.slate300,
+  light: c7Colors.white
 };
 
 const secondaryBackgroundColors = {
-  dark: 'rgb(42, 45, 47)',
-  light: 'rgb(248, 248, 248)'
+  dark: c7Colors.gray900,
+  light: c7Colors.gray100
 };
 
 const borderColors = {
-  dark: 'rgb(88 94 100)',
-  light: 'rgb(224 224 224)'
+  dark: c7Colors.gray700,
+  light: c7Colors.gray300
 };
 
 const boxShadow = {
-  light: '2px 4px 6px rgba(0,0,0,0.15)',
-  dark: '2px 4px 6px rgba(0,0,0,0.5)'
+  light: '2px 4px 6px rgba(0, 0, 0, 0.15)',
+  dark: '2px 4px 6px rgba(0, 0, 0, 0.5)'
 };
 
 const linkColors = {
-  light: 'rgb(0, 103, 157)',
-  dark: 'rgb(80, 164, 252)'
+  light: c7Colors.blue500,
+  dark: c7Colors.blue300
 };
 
 export const createTheme = (mode) => ({
@@ -52,6 +90,7 @@ export const createTheme = (mode) => ({
     borderColor: borderColors[mode],
     borderRadius: '3px',
     boxShadow: boxShadow[mode],
+    colors: c7Colors,
     breakpoints: {
       smallUp: `only screen`,
       smallOnly: `only screen and (max-width: 39.9375em)`,

@@ -1,3 +1,5 @@
+import { c7Colors } from '../ui/theme';
+
 const colors = {
   light: {
     pink: {
@@ -14,7 +16,7 @@ const colors = {
     },
     teal: {
       backgroundColor: 'rgba(0,103,157, 0.1)',
-      fillColor: '#00679D'
+      fillColor: c7Colors.blue500
     },
     orange: {
       backgroundColor: 'rgba(240,142,50, 0.1)',
@@ -40,7 +42,7 @@ const colors = {
     },
     teal: {
       backgroundColor: 'rgba(0,103,157, 0.1)',
-      fillColor: '#00679D'
+      fillColor: c7Colors.blue500
     },
     orange: {
       backgroundColor: 'rgba(240,142,50, 0.1)',
