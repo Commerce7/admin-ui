@@ -80,7 +80,7 @@ export const createTheme = (mode) => ({
     fontFamily: '"Nunito", sans-serif',
     fontSizeBase: '15px',
     fontSizeSmall: '14px',
-    fontWeightBase: '300',
+    fontWeightBase: '400',
     fontWeightStrong: '600',
     fontColor: fontColors[mode],
     secondaryFontColor: secondaryFontColors[mode],
@@ -117,11 +117,11 @@ export const GlobalStyles = createGlobalStyle`
     font-size:  ${({ theme }) => theme.c7__ui.fontSizeBase};
     font-family: ${({ theme }) => theme.c7__ui.fontFamily};
     font-weight:  ${({ theme }) => theme.c7__ui.fontWeightBase};
+    -webkit-font-smoothing: antialiased;
   }
   body {
     margin: 0;
     padding: 0;
-    letter-spacing: 0.03em;
     color: ${({ theme }) => theme.c7__ui.fontColor};
     background-color: ${({ theme }) => theme.c7__ui.backgroundColor}; 
   }
