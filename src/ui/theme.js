@@ -74,6 +74,11 @@ const linkColors = {
   dark: c7Colors.blue300
 };
 
+const errorColors = {
+  light: c7Colors.red300,
+  dark: c7Colors.red300
+};
+
 export const createTheme = (mode) => ({
   c7__ui: {
     mode,
@@ -88,6 +93,7 @@ export const createTheme = (mode) => ({
     backgroundColor: backgroundColors[mode],
     secondaryBackgroundColor: secondaryBackgroundColors[mode],
     borderColor: borderColors[mode],
+    errorColor: errorColors[mode],
     borderRadius: '3px',
     boxShadow: boxShadow[mode],
     colors: c7Colors,

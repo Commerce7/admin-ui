@@ -31,6 +31,7 @@ import Tag from './tag';
 import Text from './text';
 import Textarea from './textarea';
 import Commerce7AdminUI from './ui';
+import { c7Colors } from './ui/theme';
 import VividIcon from './vividIcon';
 
 export {
@@ -39,6 +40,7 @@ export {
   Breadcrumbs,
   Button,
   ButtonMenu,
+  c7Colors,
   Commerce7AdminUI,
   Checkbox,
   CheckboxGroup,
