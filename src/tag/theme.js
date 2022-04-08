@@ -19,8 +19,8 @@ const colors = {
       backgroundColor: c7Colors.red300
     },
     success: {
-      color: c7Colors.slate300,
-      backgroundColor: c7Colors.green300
+      color: c7Colors.white,
+      backgroundColor: c7Colors.green200
     }
   },
   dark: {
@@ -41,8 +41,8 @@ const colors = {
       backgroundColor: c7Colors.red300
     },
     success: {
-      color: c7Colors.slate300,
-      backgroundColor: c7Colors.green300
+      color: c7Colors.white,
+      backgroundColor: c7Colors.green200
     }
   }
 };
