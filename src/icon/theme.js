@@ -3,12 +3,12 @@ import { c7Colors } from '../ui/theme';
 const colors = {
   dark: {
     default: c7Colors.gray200,
-    success: c7Colors.green300,
+    success: c7Colors.green200,
     error: c7Colors.red300
   },
   light: {
     default: c7Colors.gray500,
-    success: c7Colors.green300,
+    success: c7Colors.green200,
     error: c7Colors.red300
   }
 };

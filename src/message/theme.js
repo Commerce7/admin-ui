@@ -6,7 +6,7 @@ const colors = {
     backgroundColor: c7Colors.slate300,
     borderBackground: {
       default: c7Colors.gray400,
-      success: c7Colors.green300,
+      success: c7Colors.green200,
       error: c7Colors.red300,
       warning: c7Colors.yellow200,
       info: c7Colors.blue500
@@ -17,7 +17,7 @@ const colors = {
     backgroundColor: c7Colors.white,
     borderBackground: {
       default: c7Colors.gray400,
-      success: c7Colors.green300,
+      success: c7Colors.green200,
       error: c7Colors.red300,
       warning: c7Colors.yellow200,
       info: c7Colors.blue500

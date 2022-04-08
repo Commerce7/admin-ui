@@ -10,9 +10,9 @@ const StyledTag = styled.span`
   border-radius: 30px;
   border: none;
   margin: 0 5px 5px 0;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 16px;
-  letter-spacing: 0.8px;
+  letter-spacing: 0.2px;
   max-width: 100%;
   transition: all 0.3s ease-in-out;
 
