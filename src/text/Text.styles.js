@@ -6,7 +6,7 @@ const StyledText = styled.span`
   margin: 0;
   color: ${({ theme, error, secondary }) => {
     if (error) {
-      return colors.error;
+      return colors[theme.c7__ui.mode].errorFontColor;
     }
 
     if (secondary) {
