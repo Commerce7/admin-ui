@@ -5,7 +5,7 @@ const tableColors = {
     borderColor: c7Colors.gray300
   },
   dark: {
-    borderColor: c7Colors.gray600
+    borderColor: c7Colors.gray800
   }
 };
 
@@ -24,7 +24,7 @@ const trColors = {
       alt: c7Colors.slate200,
       hover: c7Colors.slate100
     },
-    borderColor: c7Colors.gray600
+    borderColor: c7Colors.gray800
   }
 };
 
@@ -44,7 +44,7 @@ const thColors = {
   },
   dark: {
     color: c7Colors.white,
-    borderColor: c7Colors.gray600
+    borderColor: c7Colors.gray800
   }
 };
 

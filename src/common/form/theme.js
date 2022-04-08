@@ -6,7 +6,7 @@ const colors = {
       default: c7Colors.gray200
     },
     borderColor: {
-      default: c7Colors.gray700,
+      default: c7Colors.gray600,
       focus: c7Colors.blue300,
       error: c7Colors.red200
     },
