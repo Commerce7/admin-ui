@@ -95,6 +95,7 @@ import Pound from './Pound';
 import Print from './Print';
 import Process from './Process';
 import Product from './Product';
+import QuestionCircle from './QuestionCircle';
 import Rand from './Rand';
 import Redo from './Redo';
 import Reload from './Reload';
@@ -225,6 +226,7 @@ export {
   PosProfile as posProfile,
   Pound as pound,
   Product as product,
+  QuestionCircle as questionCircle,
   Process as process,
   Print as print,
   Rand as rand,
