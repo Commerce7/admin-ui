@@ -60,7 +60,7 @@ const secondaryBackgroundColors = {
 };
 
 const borderColors = {
-  dark: c7Colors.gray700,
+  dark: c7Colors.gray800,
   light: c7Colors.gray300
 };
 
