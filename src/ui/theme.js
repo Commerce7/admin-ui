@@ -25,7 +25,7 @@ export const c7Colors = {
   blue600: '#054D7D',
 
   slate100: '#414F58',
-  slate200: '#343F46',
+  slate200: '#2F3940',
   slate300: '#293238',
 
   gray100: '#F8F8F8',
