@@ -78,7 +78,7 @@ Disabled.story = {
 };
 
 const description = `
-import { ButtonMenu } from '@commerce7/admin-ui'<br/><br/>const { ButtonMenuItem } = ContextMenu
+import { ButtonMenu } from '@commerce7/admin-ui'<br/><br/>const { ButtonMenuItem } = ButtonMenu
 `;
 
 export default {
