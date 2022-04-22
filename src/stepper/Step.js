@@ -83,7 +83,7 @@ Step.propTypes = {
   /**
    * The step number.
    */
-  step: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  step: PropTypes.number,
 
   /**
    * The step label.
