@@ -14,6 +14,7 @@ export const Variants = () => (
       This is a yellow warning alert
     </Alert>
     <Alert variant="default">This is a grey default alert</Alert>
+    <Alert variant="success">This is a green success alert</Alert>
   </>
 );
 
