@@ -24,6 +24,7 @@ import RadioGroup from './radioGroup';
 import Select from './select';
 import SelectButton from './selectButton';
 import Stepper from './stepper';
+import SubMenu from './subMenu';
 import Switch from './switch';
 import Table from './table';
 import Tabs from './tabs';
@@ -62,6 +63,7 @@ export {
   Select,
   SelectButton,
   Stepper,
+  SubMenu,
   Switch,
   Table,
   Tag,
