@@ -34,4 +34,25 @@ const StyledSubMenu = styled.div`
   }
 `;
 
-export { StyledSubMenu };
+const StyledSubMenuItem = styled.div`
+  margin-right: 15px;
+  font-size: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+
+  ${({ theme, $activeClassName }) => `
+  color: ${theme.c7__ui.fontColor};
+  border-bottom: 2px solid transparent;
+  &:hover:not(.${$activeClassName}), &:focus:not(.${$activeClassName}) {
+    border-color: ${theme.c7__ui.colors.blue400};
+  }
+  &.${$activeClassName} {
+    color: ${theme.c7__ui.colors.blue400};
+    border-color: ${theme.c7__ui.colors.blue400};
+  }
+`}
+`;
+
+export { StyledSubMenu, StyledSubMenuItem };

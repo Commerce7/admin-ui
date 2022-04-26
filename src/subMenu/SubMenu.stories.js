@@ -4,37 +4,31 @@ import { useState } from 'react';
 
 import SubMenu from '.';
 
+const { SubMenuItem } = SubMenu;
+
 export const Basic = () => {
   const [path, setPath] = useState('/customer');
 
   return (
     <SubMenu borderBottom>
-      {/* eslint-disable */}
-      <a
+      <SubMenuItem
         onClick={() => setPath('/customer')}
         className={path === '/customer' ? 'active' : ''}
       >
         Customer
-      </a>
-      <a
+      </SubMenuItem>
+      <SubMenuItem
         onClick={() => setPath('/order')}
         className={path === '/order' ? 'active' : ''}
       >
         Order
-      </a>
-      <a
-        onClick={() => setPath('/club-membership')}
-        className={path === '/club-membership' ? 'active' : ''}
-      >
-        Club Membership
-      </a>
-      <a
+      </SubMenuItem>
+      <SubMenuItem
         onClick={() => setPath('/reservation')}
         className={path === '/reservation' ? 'active' : ''}
       >
         Reservation
-      </a>
-      {/* eslint-enable */}
+      </SubMenuItem>
     </SubMenu>
   );
 };
