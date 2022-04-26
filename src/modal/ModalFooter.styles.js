@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { colors } from './theme';
 
 const StyledModalFooter = styled.div`
-  padding: 20px;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
@@ -22,6 +22,12 @@ const StyledModalFooter = styled.div`
       }
     `}
   }
+
+  ${({ theme }) => `
+      @media ${theme.c7__ui.breakpoints.mediumUp} {
+        padding: 20px;
+      }
+    `}
 `;
 
 export { StyledModalFooter };
