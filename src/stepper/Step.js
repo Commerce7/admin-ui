@@ -83,7 +83,7 @@ Step.propTypes = {
   /**
    * The step number.
    */
-  step: PropTypes.string,
+  step: PropTypes.number,
 
   /**
    * The step label.
