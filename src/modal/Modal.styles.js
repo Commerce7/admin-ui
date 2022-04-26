@@ -33,10 +33,16 @@ const StyledModalContent = styled.div`
 
 const StyledModalHeader = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 15px;
   align-items: center;
   border-bottom: 1px solid
     ${({ theme }) => colors[theme.c7__ui.mode].borderColor};
+
+  ${({ theme }) => `
+      @media ${theme.c7__ui.breakpoints.mediumUp} {
+        padding: 20px;
+      }
+    `}
 `;
 
 const StyledModalTitle = styled.h2`
