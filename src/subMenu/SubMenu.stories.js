@@ -37,13 +37,17 @@ Basic.story = {
   name: 'Basic'
 };
 
+const description =
+  "import { SubMenu } from '@commerce7/admin-ui'<br/><br/>const { SubMenuItem } = SubMenu";
+
 export default {
   title: 'Navigation/SubMenu',
   component: SubMenu,
+  subcomponents: { SubMenuItem },
   parameters: {
     docs: {
       description: {
-        component: `import { SubMenu } from '@commerce7/admin-ui'`
+        component: description
       }
     }
   }
