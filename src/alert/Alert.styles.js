@@ -7,7 +7,7 @@ import { colors, sizes } from './theme';
 const StyledAlert = styled.div`
   padding: ${({ size }) => sizes[size].padding};
   border-radius: 3px;
-  border: none;
+  border: 1px solid ${({ theme }) => theme.c7__ui.backgroundColor};
   margin-bottom: 30px;
   position: relative;
   overflow: hidden;
