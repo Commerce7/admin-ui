@@ -17,7 +17,6 @@ import InfoCard from './infoCard';
 import Input from './input';
 import LineBreak from './lineBreak';
 import LinkButton from './linkButton';
-import Message from './message';
 import Modal from './modal';
 import Nav from './nav';
 import Radio from './radio';
@@ -58,7 +57,6 @@ export {
   LineBreak,
   Nav,
   LinkButton,
-  Message,
   Modal,
   Radio,
   RadioGroup,
