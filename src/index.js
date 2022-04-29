@@ -13,6 +13,7 @@ import DatePicker from './datePicker';
 import DisplayIcon from './displayIcon';
 import Heading from './heading';
 import Icon from './icon';
+import InfoCard from './infoCard';
 import Input from './input';
 import LineBreak from './lineBreak';
 import LinkButton from './linkButton';
@@ -49,6 +50,7 @@ export {
   DatePicker,
   Heading,
   Icon,
+  InfoCard,
   DisplayIcon,
   VividIcon,
   Input,
