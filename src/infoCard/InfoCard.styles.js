@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 import { colors } from './theme';
 
-const InfoCardGridStyles = styled.div`
+const StyledInfoCardGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
   gap: 20px;
@@ -10,7 +10,7 @@ const InfoCardGridStyles = styled.div`
   margin-bottom: 20px;
 `;
 
-const InfoCardStyles = styled.div`
+const StyledInfoCard = styled.div`
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@ const InfoCardStyles = styled.div`
     colors[theme.c7__ui.mode].backgroundColor[variant]};
 `;
 
-const IconStyles = styled.div`
+const StyledIcon = styled.div`
   ${({ theme, variant }) => `
     background: ${colors[theme.c7__ui.mode].iconBackgroundColor[variant]};
     border-radius: 50%;
@@ -43,7 +43,7 @@ const IconStyles = styled.div`
   `}
 `;
 
-const LabelStyles = styled.span`
+const StyledLabel = styled.span`
   color: rgba(0, 0, 0, 0.5);
   font-size: 13px;
   font-weight: 700;
@@ -55,7 +55,7 @@ const LabelStyles = styled.span`
   `}
 `;
 
-const TitleStyles = styled.span`
+const StyledTitle = styled.span`
   font-size: 20px;
   font-weight: 400;
   display: block;
@@ -70,7 +70,7 @@ const TitleStyles = styled.span`
   `}
 `;
 
-const SubtitleStyles = styled.span`
+const StyledSubtitle = styled.span`
   font-size: 14px;
   font-weight: 400;
   display: block;
@@ -79,7 +79,7 @@ const SubtitleStyles = styled.span`
   `}
 `;
 
-const ImageStyles = styled.img`
+const StyledImage = styled.img`
   height: 100%;
   width: 100%;
   max-width: 50px;
@@ -88,11 +88,11 @@ const ImageStyles = styled.img`
 `;
 
 export {
-  InfoCardGridStyles,
-  InfoCardStyles,
-  IconStyles,
-  LabelStyles,
-  TitleStyles,
-  SubtitleStyles,
-  ImageStyles
+  StyledInfoCardGrid,
+  StyledInfoCard,
+  StyledIcon,
+  StyledLabel,
+  StyledTitle,
+  StyledSubtitle,
+  StyledImage
 };

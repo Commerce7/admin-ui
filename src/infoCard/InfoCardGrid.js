@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-import { InfoCardGridStyles } from './InfoCard.styles';
+import { StyledInfoCardGrid } from './InfoCard.styles';
 
 const InfoCardGrid = (props) => {
   const { children, dataTestId, className } = props;
   return (
-    <InfoCardGridStyles data-testid={dataTestId} className={className}>
+    <StyledInfoCardGrid data-testid={dataTestId} className={className}>
       {children}
-    </InfoCardGridStyles>
+    </StyledInfoCardGrid>
   );
 };
 

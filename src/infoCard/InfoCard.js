@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import Icon from '../icon';
 
 import {
-  InfoCardStyles,
-  IconStyles,
-  LabelStyles,
-  TitleStyles,
-  SubtitleStyles,
-  ImageStyles
+  StyledInfoCard,
+  StyledIcon,
+  StyledLabel,
+  StyledTitle,
+  StyledSubtitle,
+  StyledImage
 } from './InfoCard.styles';
 
 const InfoCard = (props) => {
@@ -33,24 +33,24 @@ const InfoCard = (props) => {
   }
 
   return (
-    <InfoCardStyles
+    <StyledInfoCard
       variant={variant}
       className={className}
       data-testid={dataTestId}
     >
       {icon && (
-        <IconStyles variant={variant}>
+        <StyledIcon variant={variant}>
           <Icon icon={icon} variant={iconVariant} />
-        </IconStyles>
+        </StyledIcon>
       )}
-      {img && <ImageStyles src={img} alt={title} />}
-      <LabelStyles variant={variant}>{label}</LabelStyles>
-      <TitleStyles variant={variant}>{title}</TitleStyles>
+      {img && <StyledImage src={img} alt={title} />}
+      <StyledLabel variant={variant}>{label}</StyledLabel>
+      <StyledTitle variant={variant}>{title}</StyledTitle>
       {subtitle && (
-        <SubtitleStyles variant={variant}>{subtitle}</SubtitleStyles>
+        <StyledSubtitle variant={variant}>{subtitle}</StyledSubtitle>
       )}
       {children}
-    </InfoCardStyles>
+    </StyledInfoCard>
   );
 };
 
