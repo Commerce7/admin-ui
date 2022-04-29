@@ -68,7 +68,7 @@ InfoCard.defaultProps = {
 
 InfoCard.propTypes = {
   /**
-   * The content of the component. If specified, will show up below subtitle.
+   * The content of the component. If specified, will render below subtitle.
    */
   children: PropTypes.node,
 
