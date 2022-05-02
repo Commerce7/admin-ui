@@ -48,6 +48,7 @@ const StyledLabel = styled.span`
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
+  text-align: center;
   margin-bottom: 5px;
   display: block;
   ${({ theme, variant }) => `
@@ -74,6 +75,7 @@ const StyledSubtitle = styled.span`
   font-size: 14px;
   font-weight: 400;
   display: block;
+  text-align: center;
   ${({ theme, variant }) => `
     color: ${colors[theme.c7__ui.mode].fontColor[variant]};
   `}
