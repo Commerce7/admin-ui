@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.10.1",
+  "version": "1.10.2",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -23,11 +23,11 @@
   },
   "peerDependencies": {},
   "devDependencies": {
-    "@babel/core": "^7.17.9",
+    "@babel/core": "^7.17.10",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/plugin-proposal-class-properties": "^7.16.7",
     "@babel/plugin-transform-object-assign": "^7.16.7",
-    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-env": "^7.17.10",
     "@babel/preset-react": "^7.16.7",
     "@commerce7/eslint-config": "^1.1.4",
     "@storybook/addon-actions": "^6.4.22",
@@ -49,9 +49,9 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.4",
-    "eslint-plugin-react-hooks": "^4.4.0",
+    "eslint-plugin-react-hooks": "^4.5.0",
     "husky": "^7.0.4",
-    "lint-staged": "^12.4.0",
+    "lint-staged": "^12.4.1",
     "path": "^0.12.7",
     "prettier": "^2.6.2",
     "style-loader": "^3.3.1",
@@ -62,10 +62,10 @@
   "dependencies": {
     "moment": "^2.29.3",
     "prop-types": "^15.8.1",
-    "react": "^18.0.0",
+    "react": "^18.1.0",
     "react-datetime": "^3.1.1",
-    "react-dom": "^18.0.0",
-    "react-focus-lock": "^2.8.1",
+    "react-dom": "^18.1.0",
+    "react-focus-lock": "^2.9.0",
     "styled-components": "^5.3.5",
     "styled-normalize": "^8.0.7"
   },
