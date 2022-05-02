@@ -90,17 +90,17 @@ InfoCard.propTypes = {
   /**
    * The label for the component.
    */
-  label: PropTypes.string,
+  label: PropTypes.node,
 
   /**
    * The title for the component.
    */
-  title: PropTypes.string,
+  title: PropTypes.node,
 
   /**
    * The subtitle for the component.
    */
-  subtitle: PropTypes.string,
+  subtitle: PropTypes.node,
 
   /**
    * Set the visual property of the component.

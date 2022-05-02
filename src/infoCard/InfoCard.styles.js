@@ -4,7 +4,7 @@ import { colors } from './theme';
 
 const StyledInfoCardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
   gap: 20px;
   align-items: stretch;
   margin-bottom: 20px;
