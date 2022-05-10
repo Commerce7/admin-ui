@@ -41,7 +41,7 @@ Alert.propTypes = {
   /**
    * Set the visual property of the component.
    */
-  variant: PropTypes.oneOf(['default', 'info', 'error', 'warning']),
+  variant: PropTypes.oneOf(['default', 'info', 'error', 'warning', 'success']),
 
   /**
    * Set the size fo the component.
