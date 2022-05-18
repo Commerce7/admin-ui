@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useRef, useState, useCallback } from 'react';
+import { useRef, useState, useCallback, useId } from 'react';
 
 import {
   StyledContextMenuItem,
@@ -16,7 +16,7 @@ const ContextMenuMoreActions = (props) => {
   const [isValidChildren, setValidChildren] = useState(true);
   const wrapperRef = useRef();
   const buttonRef = useRef();
-  const idRef = useRef(Math.random().toString(36).substr(2, 9));
+  const id = useId();
 
   const dropdownRef = useCallback((node) => {
     if (node && !node.firstChild) {
@@ -43,8 +43,8 @@ const ContextMenuMoreActions = (props) => {
     return null;
   }
 
-  const dropdownId = `contextMenu-${idRef.current}-dropdown`;
-  const buttonId = `contextMenu-${idRef.current}-button`;
+  const dropdownId = `contextMenu-${id}-dropdown`;
+  const buttonId = `contextMenu-${id}-button`;
 
   return (
     <DropdownWrapper ref={wrapperRef} className={className}>
