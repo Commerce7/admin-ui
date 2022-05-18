@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useRef, useState } from 'react';
+import { useRef, useState, useId } from 'react';
 
 import { StyledButton, StyledButtonIcon } from '../button/Button.styles';
 import DropdownMenu from '../common/dropdown/DropdownMenu';
@@ -12,7 +12,7 @@ const ButtonMenu = (props) => {
     props;
 
   const wrapperRef = useRef();
-  const idRef = useRef(Math.random().toString(36).substr(2, 9));
+  const id = useId();
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
   useOnClickOutside(wrapperRef, (e) => handleCloseDropdown(e));
@@ -28,8 +28,8 @@ const ButtonMenu = (props) => {
     }
   };
 
-  const dropdownId = `buttonMenu-${idRef.current}-dropdown`;
-  const buttonId = `buttonMenu-${idRef.current}-button`;
+  const dropdownId = `buttonMenu-${id}-dropdown`;
+  const buttonId = `buttonMenu-${id}-button`;
 
   return (
     <DropdownWrapper
