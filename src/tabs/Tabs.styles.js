@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 const TabsStyles = styled.nav`
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   column-gap: 4px;
   padding: 0 2.5px;
@@ -15,18 +16,20 @@ const TabStyles = styled.div`
   justify-content: center;
   text-align: center;
   height: 48px;
-  max-width: 225px;
-  flex: 1;
-  padding: 0 5px;
+  padding: 0 10px;
   margin-bottom: -1px;
   position: relative;
-  overflow-x: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   cursor: pointer;
+  flex-basis: auto;
+  flex-grow: 1;
+
+  @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
+    max-width: 225px;
+    flex-grow: 0;
+    padding: 0 15px;
+  }
 
   ${({ theme, $activeClassName }) => `
-    font-size: ${theme.c7__ui.fontSizeSmall};
     font-family: ${theme.c7__ui.fontFamily};
     color: ${theme.c7__ui.secondaryFontColor};
     background-color: ${theme.c7__ui.secondaryBackgroundColor};
@@ -34,9 +37,6 @@ const TabStyles = styled.div`
     border-top-left-radius: ${theme.c7__ui.borderRadius};
     border-top-right-radius: ${theme.c7__ui.borderRadius};
 
-    @media ${theme.c7__ui.breakpoints.largeUp} {
-      font-size: ${theme.c7__ui.fontSizeBase};
-    }
     
     &.${$activeClassName} {
       color: ${theme.c7__ui.fontColor};
