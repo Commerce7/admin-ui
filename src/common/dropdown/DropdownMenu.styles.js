@@ -12,11 +12,11 @@ const StyledDropdown = styled.div`
   border: 1px solid;
   position: absolute;
   top: 100%;
-  left: ${({ align }) => (align === 'left' ? '0' : 'auto')};
-  right: ${({ align }) => (align === 'right' ? '0' : 'auto')};
+  left: ${({ align }) => (align === 'left' ? '0px' : 'auto')};
+  right: ${({ align }) => (align === 'right' ? '0px' : 'auto')};
   padding: 5px;
   z-index: 999;
-  transition: all 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
   max-width: 80vw;
 
   background: ${({ theme }) =>

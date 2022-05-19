@@ -1,4 +1,4 @@
-/* globals window, document */
+/* globals document */
 
 import { forwardRef, useEffect } from 'react';
 
@@ -9,7 +9,7 @@ import { StyledDropdown } from './DropdownMenu.styles';
 const DropdownMenu = forwardRef((props, ref) => {
   const { align, children, id, labelledbyId, isVisible } = props;
 
-  useViewportContainment(id, align);
+  useViewportContainment(id, align, isVisible);
 
   return (
     <StyledDropdown
@@ -25,19 +25,27 @@ const DropdownMenu = forwardRef((props, ref) => {
   );
 });
 
-const useViewportContainment = (id, align) => {
+const useViewportContainment = (id, align, isVisible) => {
   const { width } = useWindowSize();
 
   useEffect(() => {
     const node = document.getElementById(id);
     if (node) {
+      // Reset back to default values for proper calculation
+      if (align === 'left') {
+        node.style.left = `0px`;
+      }
+      if (align === 'right') {
+        node.style.right = `0px`;
+      }
+
       const rect = node.getBoundingClientRect();
       const { right, left } = rect;
       const offset = 10;
 
       if (align === 'left') {
-        if (right > window.innerWidth) {
-          const diff = right - window.innerWidth + offset;
+        if (right > width) {
+          const diff = right - width + offset;
           node.style.left = `-${diff}px`;
         }
       }
@@ -48,7 +56,7 @@ const useViewportContainment = (id, align) => {
         }
       }
     }
-  }, [id, width, align]);
+  }, [id, width, align, isVisible]);
 };
 
 export default DropdownMenu;
