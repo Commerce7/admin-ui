@@ -88,8 +88,10 @@ export const List = () => {
     setSearchText(value);
   };
 
-  const filteredIcons = Object.keys(Icons).filter((iconKey) =>
-    iconKey.toLowerCase().includes(searchText.toLowerCase())
+  const filteredIcons = Object.keys(Icons).filter(
+    (iconKey) =>
+      iconKey !== '__namedExportsOrder' &&
+      iconKey.toLowerCase().includes(searchText.toLowerCase())
   );
 
   return (
