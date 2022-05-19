@@ -17,6 +17,7 @@ const StyledDropdown = styled.div`
   padding: 5px;
   z-index: 999;
   transition: all 0.2s ease-in-out;
+  max-width: 80vw;
 
   background: ${({ theme }) =>
     dropdownColors[theme.c7__ui.mode].backgroundColor.default};
