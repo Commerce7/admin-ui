@@ -18,7 +18,9 @@ const Tag = (props) => {
         data-testid={dataTestId}
       >
         <StyledTagLabel>{children}</StyledTagLabel>
-        <StyledDeleteButton onClick={handleDelete}>x</StyledDeleteButton>
+        <StyledDeleteButton onClick={handleDelete} type="button">
+          x
+        </StyledDeleteButton>
       </StyledTag>
     );
   }
