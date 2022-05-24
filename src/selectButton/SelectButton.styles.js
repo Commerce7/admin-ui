@@ -61,6 +61,9 @@ const StyledSelectButton = styled.button`
     border-color: ${({ theme }) =>
       colors[theme.c7__ui.mode].borderColor.disabled};
     box-shadow: ${({ theme }) => shadows[theme.c7__ui.mode].disabled};
+    * {
+      color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.disabled};
+    }
   }
 `;
 
