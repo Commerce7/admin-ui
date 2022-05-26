@@ -23,6 +23,7 @@ import Radio from './radio';
 import RadioGroup from './radioGroup';
 import Select from './select';
 import SelectButton from './selectButton';
+import Spinner from './spinner';
 import Stepper from './stepper';
 import SubMenu from './subMenu';
 import Switch from './switch';
@@ -62,6 +63,7 @@ export {
   RadioGroup,
   Select,
   SelectButton,
+  Spinner,
   Stepper,
   SubMenu,
   Switch,
