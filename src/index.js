@@ -19,6 +19,7 @@ import LineBreak from './lineBreak';
 import LinkButton from './linkButton';
 import Modal from './modal';
 import Nav from './nav';
+import NoRecords from './noRecords';
 import Radio from './radio';
 import RadioGroup from './radioGroup';
 import Select from './select';
@@ -57,6 +58,7 @@ export {
   Input,
   LineBreak,
   Nav,
+  NoRecords,
   LinkButton,
   Modal,
   Radio,
