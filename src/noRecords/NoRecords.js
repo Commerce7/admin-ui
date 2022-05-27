@@ -1,17 +1,16 @@
 import PropTypes from 'prop-types';
 
 import DisplayIcon from '../displayIcon';
-import Heading from '../heading';
 import Text from '../text';
 
-import { StyledEmptyMessage } from './NoRecords.styles';
+import { StyledEmptyMessage, StyledHeading } from './NoRecords.styles';
 
 const NoRecords = (props) => {
   const { className, dataTestId, title, description, icon } = props;
   return (
     <StyledEmptyMessage data-testid={dataTestId} className={className}>
       <DisplayIcon icon={icon} />
-      <Heading>{title}</Heading>
+      <StyledHeading>{title}</StyledHeading>
       {description && <Text secondary>{description}</Text>}
     </StyledEmptyMessage>
   );
