@@ -7,6 +7,7 @@ import Card from './card';
 import CardLink from './cardLink';
 import Checkbox from './checkbox';
 import CheckboxGroup from './checkboxGroup';
+import Columns from './columns';
 import ContextMenu from './contextMenu';
 import DataDisplay from './dataDisplay';
 import DatePicker from './datePicker';
@@ -47,6 +48,7 @@ export {
   Commerce7AdminUI,
   Checkbox,
   CheckboxGroup,
+  Columns,
   ContextMenu,
   DataDisplay,
   DatePicker,
