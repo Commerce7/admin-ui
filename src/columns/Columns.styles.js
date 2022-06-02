@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 
 const StyledColumns = styled.div`
-  justify-content: ${({ justify }) => justify};
-  align-items: ${({ align }) => align};
-  flex-wrap: ${({ isWrap }) => (isWrap ? 'wrap' : 'initial')};
+  justify-content: ${({ $justify }) => $justify};
+  align-items: ${({ $align }) => $align};
+  flex-wrap: ${({ $isWrap }) => ($isWrap ? 'wrap' : 'initial')};
 
   @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
     display: flex;
@@ -45,7 +45,7 @@ const StyledColumn = styled.div.withConfig({
 })`
   @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
     padding: 0 10px;
-    ${({ span }) => getColumnSpan(span)}
+    ${({ $span }) => getColumnSpan($span)}
   }
 `;
 

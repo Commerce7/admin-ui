@@ -4,7 +4,7 @@ import { StyledColumn } from './Columns.styles';
 
 const Column = (props) => {
   const { children, span } = props;
-  return <StyledColumn span={span}>{children}</StyledColumn>;
+  return <StyledColumn $span={span}>{children}</StyledColumn>;
 };
 
 Column.defaultProps = {

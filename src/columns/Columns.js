@@ -6,9 +6,9 @@ const Columns = (props) => {
   const { children, justify, align, wrap, className, dataTestId } = props;
   return (
     <StyledColumns
-      justify={justify}
-      align={align}
-      isWrap={wrap}
+      $justify={justify}
+      $align={align}
+      $isWrap={wrap}
       className={className}
       data-testid={dataTestId}
     >

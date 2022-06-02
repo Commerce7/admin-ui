@@ -22,10 +22,10 @@ Basic.story = {
 
 export const DifferentSpans = () => (
   <Columns align="center">
-    <Column span={3}>
+    <Column span={4}>
       <Input label="Product Title" />
     </Column>
-    <Column span={3}>
+    <Column span={2}>
       <Input label="SKU" />
     </Column>
     <Column span={6}>
