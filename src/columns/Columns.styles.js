@@ -39,10 +39,7 @@ const getColumnSpan = (span) => {
   `;
 };
 
-const StyledColumn = styled.div.withConfig({
-  shouldForwardProp: (prop, defaultValidatorFn) =>
-    !['span'].includes(prop) && defaultValidatorFn(prop)
-})`
+const StyledColumn = styled.div`
   @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
     padding: 0 10px;
     ${({ $span }) => getColumnSpan($span)}
