@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react';
 import { StyledRegion } from './Region.styles';
 
 const Region = (props) => {
-  const { children, borderBottom, style, className, dataTestId } = props;
+  const { children, borderBottom, className, dataTestId } = props;
   const [isAnimated, setAnimated] = useState(false);
   const regionRef = useRef();
 
@@ -25,7 +25,6 @@ const Region = (props) => {
   return (
     <StyledRegion
       borderBottom={borderBottom}
-      style={style}
       isAnimated={isAnimated}
       ref={regionRef}
       className={className}
