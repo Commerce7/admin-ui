@@ -23,6 +23,7 @@ import Nav from './nav';
 import NoRecords from './noRecords';
 import Radio from './radio';
 import RadioGroup from './radioGroup';
+import Region from './region';
 import Select from './select';
 import SelectButton from './selectButton';
 import Spinner from './spinner';
@@ -65,6 +66,7 @@ export {
   Modal,
   Radio,
   RadioGroup,
+  Region,
   Select,
   SelectButton,
   Spinner,
