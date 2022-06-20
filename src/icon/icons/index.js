@@ -98,6 +98,7 @@ import Product from './Product';
 import QuestionCircle from './QuestionCircle';
 import Rand from './Rand';
 import Redo from './Redo';
+import RedoLarge from './RedoLarge';
 import Reload from './Reload';
 import Remove from './Remove';
 import Report from './Report';
@@ -122,6 +123,7 @@ import Transfer from './Transfer';
 import Trash from './Trash';
 import Truck from './Truck';
 import Undo from './Undo';
+import UndoLarge from './UndoLarge';
 import Upload from './Upload';
 import User from './User';
 import Video from './Video';
@@ -231,6 +233,7 @@ export {
   Print as print,
   Rand as rand,
   Redo as redo,
+  RedoLarge as redoLarge,
   Reload as reload,
   Remove as remove,
   Report as report,
@@ -255,6 +258,7 @@ export {
   Transfer as transfer,
   Truck as truck,
   Undo as undo,
+  UndoLarge as undoLarge,
   User as user,
   Video as video,
   Wallet as wallet,
