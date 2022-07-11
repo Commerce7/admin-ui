@@ -62,6 +62,7 @@ import Hammer from './Hammer';
 import Hand from './Hand';
 import Heart from './Heart';
 import Image from './Image';
+import ImagePlaceholder from './ImagePlaceholder';
 import InfoCircle from './InfoCircle';
 import Inventory from './Inventory';
 import Launch from './Launch';
@@ -202,6 +203,7 @@ export {
   LightBulb as lightBulb,
   Link as link,
   Image as image,
+  ImagePlaceholder as imagePlaceholder,
   Loading as loading,
   Location as location,
   LocationBottom as locationBottom,
