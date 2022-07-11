@@ -21,7 +21,6 @@ const ImagePlaceholder = (props) => {
         <g
           id="App---Listing"
           transform="translate(-435.000000, -681.000000)"
-          fill="#000000"
           fillRule="nonzero"
         >
           <g id="picture2" transform="translate(435.000000, 681.000000)">
