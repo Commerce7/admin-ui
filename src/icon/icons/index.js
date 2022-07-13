@@ -88,6 +88,7 @@ import Notification from './Notification';
 import Onboarding from './Onboarding';
 import PaperPlane from './PaperPlane';
 import Percent from './Percent';
+import Phone from './Phone';
 import PlayCircle from './PlayCircle';
 import Pointer from './Pointer';
 import POS from './Pos';
@@ -224,6 +225,7 @@ export {
   Onboarding as onboarding,
   PaperPlane as paperPlane,
   Percent as percent,
+  Phone as phone,
   PlayCircle as playCircle,
   Pointer as pointer,
   POS as pos,
