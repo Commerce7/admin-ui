@@ -132,6 +132,7 @@ const DatePicker = forwardRef((props, ref) => {
             onClick={handleClearValue}
             type="button"
             aria-label="Clear value"
+            title="Clear value"
           >
             <Icon icon="close" />
           </StyledClearButton>

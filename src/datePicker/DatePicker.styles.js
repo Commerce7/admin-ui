@@ -229,7 +229,7 @@ const StyledDatePicker = styled.div`
 const StyledClearButton = styled.button`
   position: absolute;
   right: 10px;
-  top: 38px;
+  top: 36px;
   appearance: none;
   border: none;
   background: none;
