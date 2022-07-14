@@ -3,7 +3,15 @@ import PropTypes from 'prop-types';
 import ModalContent from './ModalContent';
 
 const Modal = (props) => {
-  const { children, className, onClose, title, visible, dataTestId } = props;
+  const {
+    children,
+    className,
+    onClose,
+    title,
+    visible,
+    dataTestId,
+    disableBodyScroll
+  } = props;
 
   if (!visible) {
     return null;
@@ -15,6 +23,7 @@ const Modal = (props) => {
       onClose={onClose}
       className={className}
       dataTestId={dataTestId}
+      disableBodyScroll={disableBodyScroll}
     >
       {children}
     </ModalContent>
@@ -24,6 +33,7 @@ const Modal = (props) => {
 Modal.defaultProps = {
   children: null,
   className: '',
+  disableBodyScroll: true,
   onClose: null,
   visible: false,
   title: null,
@@ -41,6 +51,12 @@ Modal.propTypes = {
    * Add className to the outermost element.
    */
   className: PropTypes.string,
+
+  /**
+   * Disable scrolling on document.body while the modal is open.
+   * Setting disableBodyScroll to false should rarely be used.
+   */
+  disableBodyScroll: PropTypes.bool,
 
   /**
    * Callback fired when the modal is closed.
