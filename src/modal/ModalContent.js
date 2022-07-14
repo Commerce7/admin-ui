@@ -15,16 +15,19 @@ import {
 } from './Modal.styles';
 
 const ModalContent = (props) => {
-  const { children, className, onClose, title, dataTestId } = props;
+  const { children, className, onClose, title, dataTestId, disableBodyScroll } =
+    props;
 
   useEscKeydown((e) => handleClose(e));
 
   useEffect(() => {
-    document.body.style.overflow = 'hidden';
+    if (disableBodyScroll) {
+      document.body.style.overflow = 'hidden';
+    }
     return () => {
       document.body.style.overflow = 'visible';
     };
-  }, []);
+  }, [disableBodyScroll]);
 
   const handleBackgroundClick = (e) => {
     e.stopPropagation();
@@ -62,6 +65,7 @@ const ModalContent = (props) => {
 
 ModalContent.defaultProps = {
   children: null,
+  disableBodyScroll: true,
   title: null,
   onClose: null,
   dataTestId: null
@@ -72,6 +76,12 @@ ModalContent.propTypes = {
    * The content of the component.
    */
   children: PropTypes.node,
+
+  /**
+   * Disable scrolling on document.body while the modal is open.
+   * Setting disableBodyScroll to false should rarely be used.
+   */
+  disableBodyScroll: PropTypes.bool,
 
   /**
    * Callback fired when the modal is closed.
