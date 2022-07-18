@@ -13,7 +13,7 @@ const StyledAlert = styled.div`
   overflow: hidden;
   transition: all 0.3s ease-in-out;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   font-size: ${({ size }) => sizes[size].fontSize};
