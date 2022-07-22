@@ -1,4 +1,6 @@
 const path = require('path');
+
+const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
 const nodeExternals = require('webpack-node-externals'); // eslint-disable-line import/no-extraneous-dependencies
 
 module.exports = {
@@ -9,7 +11,16 @@ module.exports = {
     filename: 'build.js',
     libraryTarget: 'commonjs2'
   },
-  externals: [nodeExternals()],
+  optimization: {
+    concatenateModules: false
+  },
+  externals: [
+    nodeExternals(),
+    nodeExternals({
+      modulesDir: path.resolve('node_modules')
+    })
+  ],
+  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
       {
