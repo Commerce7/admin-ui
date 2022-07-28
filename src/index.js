@@ -21,6 +21,7 @@ import LinkButton from './linkButton';
 import Modal from './modal';
 import Nav from './nav';
 import NoRecords from './noRecords';
+import Picture from './picture';
 import Radio from './radio';
 import RadioGroup from './radioGroup';
 import Region from './region';
@@ -62,6 +63,7 @@ export {
   LineBreak,
   Nav,
   NoRecords,
+  Picture,
   LinkButton,
   Modal,
   Radio,
