@@ -1,0 +1,5 @@
+name: "Check For Labels"
+description: "This action errors out if a pull request contains any labels"
+runs:
+  using: "node12"
+  main: "index.js"

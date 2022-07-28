@@ -1,0 +1,9 @@
+name: "Update PRs"
+description: "This action auto updates all branches if main is updated"
+inputs:
+  action_bot_token:
+    description: "The ACTIONSBOT_TOKEN secret"
+    required: true
+runs:
+  using: "node12"
+  main: "index.js"

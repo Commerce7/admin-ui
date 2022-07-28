@@ -1,0 +1,15 @@
+name: Mocktest
+on:
+  pull_request:
+    paths-ignore:
+      - "packages/**"
+
+jobs:
+  Mocktest:
+    name: AWS CodeBuild us-west-2 (api-testing)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Exit with success
+        run: exit 0
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"

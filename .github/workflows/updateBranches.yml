@@ -1,0 +1,21 @@
+name: auto_update_branches
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  auto_update_branches:
+    runs-on: ubuntu-latest
+    name: auto_update_branches
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Install Packages
+        run: npm install
+
+      - name: Update PRs
+        uses: ./.github/actions/updateBranches
+        with:
+          action_bot_token: ${{ secrets.ACTIONSBOT_TOKEN }}
