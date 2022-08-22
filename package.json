@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.10.40",
+  "version": "1.10.41",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -23,7 +23,7 @@
   "devDependencies": {
     "@actions/core": "^1.9.1",
     "@actions/github": "^5.0.0",
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.18.13",
     "@babel/eslint-parser": "^7.18.9",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-transform-object-assign": "^7.18.6",
