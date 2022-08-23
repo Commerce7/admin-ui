@@ -61,6 +61,7 @@ import GradHat from './GradHat';
 import Hammer from './Hammer';
 import Hand from './Hand';
 import Heart from './Heart';
+import HeartFilled from './HeartFilled';
 import Image from './Image';
 import ImagePlaceholder from './ImagePlaceholder';
 import InfoCircle from './InfoCircle';
@@ -198,6 +199,7 @@ export {
   Hammer as hammer,
   Hand as hand,
   Heart as heart,
+  HeartFilled as heartFilled,
   InfoCircle as infoCircle,
   Inventory as inventory,
   Launch as launch,
