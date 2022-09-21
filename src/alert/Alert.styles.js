@@ -32,15 +32,10 @@ const StyledAlert = styled.div`
     background-color: ${({ theme, variant }) =>
       colors[theme.c7__ui.mode].borderBackground[variant]};
   }
-
-  div {
-    line-height: 1.643;
-  }
 `;
 
 const StyledIcon = styled(Icon)`
   margin-right: ${({ alertSize }) => sizes[alertSize].iconMargin};
-  margin-top: 4.5px;
 
   width: ${({ alertSize }) => sizes[alertSize].iconSize};
   min-width: ${({ alertSize }) => sizes[alertSize].iconSize};
