@@ -68,3 +68,61 @@ function SaveButton() {
     return <Button>Hello World</Button>;
 }
 ```
+
+<br />
+
+## Linking and Unlinking for Local Packages
+
+At times it may be required to link an external pacakge to a local version of the admin ui for testing. To do this have 2 terminals open. One terminal should be in the root of your local folder of the admin ui package and the other should be in the root to the project you would like to use the local package in. VS code should also be open.
+
+Examples used here are admin and admin-ui.
+
+### Linking
+
+```
+In admin-ui terminal
+    1. npm build
+    2. npm link
+```
+
+```
+In admin terminal
+    3. npm build
+```
+
+```
+In VS code -> admin repo
+    4. Go to node modules, @commerce7, admin-ui and delete this folder
+```
+
+```
+In admin terminal
+    5. npm link @commerce7/admin-ui
+```
+
+```
+In VS code
+    6. Restart VS code
+```
+
+After rebooting VS code the @commerce7 admin-ui folder should have an arrow icon beside it. This shows it is properly linked.
+
+### Unlinking
+
+```
+In admin terminal
+    1. npm unlink
+```
+
+```
+In admin terminal
+    2. npm unlink
+```
+
+```
+In VS code in admin project
+    1. Delete @commerce7 admin ui
+    2. Restart vs code
+```
+
+After restarting the arrow icon should be removed. This means the project has successfully be unlinked from the local version of admin ui.
