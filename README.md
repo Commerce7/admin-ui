@@ -73,7 +73,7 @@ function SaveButton() {
 
 ## Linking and Unlinking for Local Packages
 
-At times it may be required to link an external pacakge to a local version of the admin ui for testing. To do this have 2 terminals open. One terminal should be in the root of your local folder of the admin ui package and the other should be in the root to the project you would like to use the local package in. VS code should also be open.
+At times in may be required to link a project to admin-ui locally for development testing purposes. To do this have 2 terminals open. One terminal should be in the root of your local folder of the admin ui package and the other should be in the root to the project you would like to use the local package in. VS code should also be open.
 
 Examples used here are admin and admin-ui.
 
@@ -87,7 +87,7 @@ In admin-ui terminal
 
 ```
 In admin terminal
-    3. npm build
+    3. npm install
 ```
 
 ```
