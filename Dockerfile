@@ -1,4 +1,4 @@
-FROM 137112412989.dkr.ecr.us-west-2.amazonaws.com/amazonlinux:latest
+FROM public.ecr.aws/amazonlinux/amazonlinux:latest
 
 #Install aws cli
 RUN yum -y install aws-cli
@@ -32,11 +32,11 @@ RUN yum -y install gzip
 # Install NVM to manage Node
 # NVM environment variables
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 14.16.0
+ENV NODE_VERSION 16.17.1
 RUN mkdir /usr/local/nvm
 
 # https://github.com/creationix/nvm#install-script
-RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.1/install.sh | bash
+RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 
 # Install NODE and NPM
 RUN source $NVM_DIR/nvm.sh \
