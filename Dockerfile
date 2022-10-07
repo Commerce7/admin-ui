@@ -77,7 +77,7 @@ RUN echo 'echo -en "\e]0;api\a"' >> /root/.bashrc
 # Run NPM Publish
 RUN npm config set '//registry.npmjs.org/:_authToken="${NPM_TOKEN}"'
 RUN npm run build
-RUN npm publish
+RUN npm publish --access public
 
 # Run Storybook Docs build and sync to S3
 RUN npm run build-storybook
