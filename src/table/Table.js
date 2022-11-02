@@ -4,9 +4,9 @@ import React from 'react';
 import { StyledTableWrapper, StyledTable } from './Table.styles';
 
 const Table = React.forwardRef((props, ref) => {
-  const { children, dataTestId } = props;
+  const { children, dataTestId, className } = props;
   return (
-    <StyledTableWrapper>
+    <StyledTableWrapper className={className}>
       <StyledTable data-testid={dataTestId} ref={ref}>
         {children}
       </StyledTable>
@@ -16,7 +16,8 @@ const Table = React.forwardRef((props, ref) => {
 
 Table.defaultProps = {
   children: null,
-  dataTestId: null
+  dataTestId: null,
+  className: ''
 };
 
 Table.propTypes = {
@@ -28,7 +29,12 @@ Table.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Add className for custom styling of the top div element containing the table
+   */
+  className: PropTypes.string
 };
 
 export default Table;
