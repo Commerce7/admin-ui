@@ -79,7 +79,7 @@ ButtonMenu.defaultProps = {
   variant: 'secondary',
   size: 'default',
   dataTestId: null,
-  onClick: ''
+  onClick: null
 };
 
 ButtonMenu.propTypes = {
