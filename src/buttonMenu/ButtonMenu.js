@@ -8,8 +8,16 @@ import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
 const ButtonMenu = (props) => {
-  const { label, className, disabled, children, variant, size, dataTestId } =
-    props;
+  const {
+    label,
+    className,
+    disabled,
+    children,
+    variant,
+    size,
+    dataTestId,
+    onClick
+  } = props;
 
   const wrapperRef = useRef();
   const id = useId();
@@ -18,7 +26,10 @@ const ButtonMenu = (props) => {
   useOnClickOutside(wrapperRef, (e) => handleCloseDropdown(e));
   useEscKeydown((e) => handleCloseDropdown(e));
 
-  const handleToggleDropdown = () => {
+  const handleToggleDropdown = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
     setDropdownVisible(!isDropdownVisible);
   };
 
@@ -67,7 +78,8 @@ ButtonMenu.defaultProps = {
   label: 'Actions',
   variant: 'secondary',
   size: 'default',
-  dataTestId: null
+  dataTestId: null,
+  onClick: null
 };
 
 ButtonMenu.propTypes = {
@@ -104,7 +116,12 @@ ButtonMenu.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Allows passing in a onClick function to be executed when the ButtonMenu is clicked.
+   */
+  onClick: PropTypes.func
 };
 
 export default ButtonMenu;
