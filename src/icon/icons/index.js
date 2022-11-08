@@ -52,7 +52,10 @@ import Edit from './Edit';
 import Email from './Email';
 import EmailOpen from './EmailOpen';
 import Euro from './Euro';
+import Exclamation from './Exclamation';
 import Export from './Export';
+import Eye from './Eye';
+import EyeCrossed from './EyeCrossed';
 import Filter from './Filter';
 import Flag from './Flag';
 import Gift from './Gift';
@@ -191,7 +194,10 @@ export {
   Email as email,
   EmailOpen as emailOpen,
   Euro as euro,
+  Exclamation as exclamation,
   Export as export,
+  Eye as eye,
+  EyeCrossed as eyeCrossed,
   Filter as filter,
   Flag as flag,
   Gift as gift,
