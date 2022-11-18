@@ -17,6 +17,10 @@ export const c7Colors = {
   red200: '#DF5F5F',
   red300: '#B13434',
 
+  orange100: '#FFEEDB',
+  orange200: '#F6963C',
+  orange300: '#C96B13',
+
   blue100: '#EBF7FF',
   blue200: '#D8ECF8',
   blue300: '#3FB2EE',
