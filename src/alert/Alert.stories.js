@@ -11,7 +11,7 @@ export const Variants = () => (
     <Alert variant="error">This is a red error alert</Alert>
     <Alert variant="info">This is a blue info alert</Alert>
     <Alert variant="warning" icon="warning">
-      This is a yellow warning alert
+      This is an orange warning alert
     </Alert>
     <Alert variant="default">This is a grey default alert</Alert>
     <Alert variant="success">This is a green success alert</Alert>
@@ -31,7 +31,7 @@ export const Small = () => (
       This is a blue info alert
     </Alert>
     <Alert variant="warning" size="small" icon="warning">
-      This is a yellow warning alert
+      This is an orange warning alert
     </Alert>
     <Alert variant="default" size="small">
       This is a grey default alert
