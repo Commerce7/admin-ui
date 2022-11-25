@@ -7,7 +7,8 @@ import useWindowSize from '../../utils/hooks/useWindowSize';
 import { StyledDropdown } from './DropdownMenu.styles';
 
 const DropdownMenu = forwardRef((props, ref) => {
-  const { align, children, id, labelledbyId, isVisible } = props;
+  const { align, children, id, labelledbyId, isVisible, handleSelectedItem } =
+    props;
 
   useViewportContainment(id, align, isVisible);
 
@@ -19,6 +20,7 @@ const DropdownMenu = forwardRef((props, ref) => {
       id={id}
       aria-labelledby={labelledbyId}
       role="menu"
+      onClick={() => handleSelectedItem()}
     >
       {children}
     </StyledDropdown>
