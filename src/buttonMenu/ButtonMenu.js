@@ -26,6 +26,8 @@ const ButtonMenu = (props) => {
   useOnClickOutside(wrapperRef, (e) => handleCloseDropdown(e));
   useEscKeydown((e) => handleCloseDropdown(e));
 
+  const handleSelectedItem = () => setDropdownVisible(false);
+
   const handleToggleDropdown = (e) => {
     if (onClick) {
       onClick(e);
@@ -65,6 +67,7 @@ const ButtonMenu = (props) => {
         id={dropdownId}
         labelledbyId={buttonId}
         align="right"
+        handleSelectedItem={handleSelectedItem}
       >
         {children}
       </DropdownMenu>
