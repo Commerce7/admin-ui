@@ -12,6 +12,12 @@ const DropdownMenu = forwardRef((props, ref) => {
 
   useViewportContainment(id, align, isVisible);
 
+  const handleOnClick = () => {
+    if (handleSelectedItem) {
+      handleSelectedItem();
+    }
+  };
+
   return (
     <StyledDropdown
       ref={ref}
@@ -20,7 +26,7 @@ const DropdownMenu = forwardRef((props, ref) => {
       id={id}
       aria-labelledby={labelledbyId}
       role="menu"
-      onClick={() => handleSelectedItem()}
+      onClick={handleOnClick}
     >
       {children}
     </StyledDropdown>
