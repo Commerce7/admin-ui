@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.10.65",
+  "version": "1.10.66",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -54,10 +54,10 @@
     "husky": "^8.0.2",
     "lint-staged": "^13.1.0",
     "path": "^0.12.7",
-    "prettier": "^2.8.0",
+    "prettier": "^2.8.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.75.0",
-    "webpack-cli": "^5.0.0",
+    "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^3.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
