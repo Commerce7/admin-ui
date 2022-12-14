@@ -1,6 +1,9 @@
 import Add from './Add';
 import AddCart from './AddCart';
 import AddUser from './AddUser';
+import AlignCenter from './AlignCenter';
+import AlignLeft from './AlignLeft';
+import AlignRight from './AlignRight';
 import Application from './Application';
 import ApplicationSwitcher from './ApplicationSwitcher';
 import Archive from './Archive';
@@ -8,12 +11,16 @@ import ArrowDivert from './ArrowDivert';
 import ArrowDown from './ArrowDown';
 import ArrowLeft from './ArrowLeft';
 import ArrowRight from './ArrowRight';
+import ArrowSpace from './ArrowSpace';
 import ArrowUp from './ArrowUp';
 import Availability from './Availability';
 import Bag from './Bag';
+import Bell from './Bell';
 import Book from './Book';
+import Brush from './Brush';
 import Bundle from './Bundle';
 import Button from './Button';
+import ButtonLine from './ButtonLine';
 import Calendar from './Calendar';
 import Car from './Car';
 import Carrot from './Carrot';
@@ -43,6 +50,7 @@ import Department from './Department';
 import Developer from './Developer';
 import Discount from './Discount';
 import Document from './Document';
+import DocumentImage from './DocumentImage';
 import Dollar from './Dollar';
 import Dolly from './Dolly';
 import Download from './Download';
@@ -91,6 +99,7 @@ import NewTab from './NewTab';
 import Note from './Note';
 import Notification from './Notification';
 import Onboarding from './Onboarding';
+import Package from './Package';
 import PaperPlane from './PaperPlane';
 import Percent from './Percent';
 import Phone from './Phone';
@@ -124,7 +133,12 @@ import Sync from './Sync';
 import Tag from './Tag';
 import Tasting from './Tasting';
 import TextAlignCenter from './TextAlignCenter';
+import TextAlignLeft from './TextAlignLeft';
+import TextAlignRight from './TextAlignRight';
+import TextBold from './TextBold';
+import TextItalic from './TextItalic';
 import Ticket from './Ticket';
+import Time from './Time';
 import Title from './Title';
 import Transfer from './Transfer';
 import Trash from './Trash';
@@ -143,6 +157,9 @@ export {
   Add as add,
   AddCart as addCart,
   AddUser as addUser,
+  AlignCenter as alignCenter,
+  AlignLeft as alignLeft,
+  AlignRight as alignRight,
   Application as application,
   ApplicationSwitcher as applicationSwitcher,
   Archive as archive,
@@ -151,11 +168,15 @@ export {
   ArrowLeft as arrowLeft,
   ArrowUp as arrowUp,
   ArrowRight as arrowRight,
+  ArrowSpace as arrowSpace,
   Availability as availability,
   Bag as bag,
+  Bell as bell,
   Book as book,
+  Brush as brush,
   Bundle as bundle,
   Button as button,
+  ButtonLine as buttonLine,
   Calendar as calendar,
   Car as car,
   Carrot as carrot,
@@ -184,6 +205,7 @@ export {
   Department as department,
   Developer as developer,
   Document as document,
+  DocumentImage as documentImage,
   Dolly as dolly,
   Dollar as dollar,
   Download as download,
@@ -233,6 +255,7 @@ export {
   Note as note,
   Notification as notification,
   Onboarding as onboarding,
+  Package as package,
   PaperPlane as paperPlane,
   Percent as percent,
   Phone as phone,
@@ -266,7 +289,12 @@ export {
   Tag as tag,
   Tasting as tasting,
   TextAlignCenter as textAlignCenter,
+  TextAlignLeft as textAlignLeft,
+  TextAlignRight as textAlignRight,
+  TextBold as textBold,
+  TextItalic as textItalic,
   Ticket as ticket,
+  Time as time,
   Title as title,
   Trash as trash,
   Transfer as transfer,
