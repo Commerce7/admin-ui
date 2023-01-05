@@ -15,6 +15,37 @@ Basic.story = {
   name: 'Basic'
 };
 
+export const SmallIcon = () => (
+  <Container>
+    <SelectButton variant="small" icon="alignLeft" disabled />
+    <SelectButton variant="small" icon="alignCenter" selected />
+    <SelectButton variant="small" icon="alignRight" loading />
+    <SelectButton variant="small" icon="wine" />
+  </Container>
+);
+
+SmallIcon.story = {
+  name: 'SmallIcon'
+};
+
+export const SmallText = () => (
+  <Container>
+    <SelectButton variant="small" disabled>
+      Small
+    </SelectButton>
+    <SelectButton variant="small" selected>
+      Medium
+    </SelectButton>
+    <SelectButton variant="small" loading>
+      Large
+    </SelectButton>
+  </Container>
+);
+
+SmallText.story = {
+  name: 'SmallText'
+};
+
 export const Loading = () => (
   <Container>
     <SelectButton loading>Loading</SelectButton>

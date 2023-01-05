@@ -1,7 +1,13 @@
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
-import { StyledSelectButton, StyledLoadingIcon } from './SelectButton.styles';
+import Icon from '../icon';
+
+import {
+  StyledSelectButton,
+  StyledLoadingIcon,
+  StyledSmallSelectButton
+} from './SelectButton.styles';
 
 const SelectButton = forwardRef((props, ref) => {
   const {
@@ -12,8 +18,35 @@ const SelectButton = forwardRef((props, ref) => {
     loading,
     onClick,
     type,
-    dataTestId
+    dataTestId,
+    variant,
+    icon
   } = props;
+
+  if (variant === 'small') {
+    return (
+      <StyledSmallSelectButton
+        ref={ref}
+        className={className}
+        disabled={disabled || loading}
+        type={type}
+        onClick={onClick}
+        selected={selected}
+        data-testid={dataTestId}
+        hasIcon={!!icon}
+      >
+        {loading ? (
+          <StyledLoadingIcon icon="loading" />
+        ) : (
+          <>
+            {icon && <Icon icon={icon} />}
+            {children}
+          </>
+        )}
+      </StyledSmallSelectButton>
+    );
+  }
+
   return (
     <StyledSelectButton
       ref={ref}
@@ -36,7 +69,9 @@ SelectButton.defaultProps = {
   selected: false,
   onClick: null,
   type: 'button',
-  dataTestId: null
+  dataTestId: null,
+  variant: 'default',
+  icon: null
 };
 
 SelectButton.propTypes = {
@@ -80,7 +115,17 @@ SelectButton.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Select Button Variant.
+   */
+  variant: PropTypes.oneOf(['small', 'default']),
+
+  /**
+   * Icon for display on small variant only.
+   */
+  icon: PropTypes.string
 };
 
 export default SelectButton;
