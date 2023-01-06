@@ -99,6 +99,48 @@ Required.story = {
   name: 'Required'
 };
 
+export const RadioButtonGroup = () => {
+  const [checked, setChecked] = useState('right');
+
+  const handleOnChange = (e) => {
+    setChecked(e.target.value);
+  };
+
+  return (
+    <RadioGroup label="Account Type">
+      <Radio
+        id="left"
+        value="left"
+        checked={checked === 'left'}
+        onChange={handleOnChange}
+        variant="button"
+        icon="alignLeft"
+      />
+      <Radio
+        id="center"
+        value="center"
+        checked={checked === 'center'}
+        onChange={handleOnChange}
+        variant="button"
+        icon="alignCenter"
+      />
+      <Radio
+        id="right"
+        value="right"
+        checked={checked === 'right'}
+        onChange={handleOnChange}
+        variant="button"
+        icon="alignRight"
+        label="(if necessary)"
+      />
+    </RadioGroup>
+  );
+};
+
+RadioButtonGroup.story = {
+  name: 'Radio Button Group'
+};
+
 export default {
   title: 'Form/Radio/RadioGroup',
   component: Radio,

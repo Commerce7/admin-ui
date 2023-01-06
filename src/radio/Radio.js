@@ -70,6 +70,7 @@ const Radio = forwardRef((props, ref) => {
             icon={icon}
             onClick={onChange}
             disabled={disabled}
+            as="span"
           />
         ) : (
           <StyledRadio />

@@ -20,7 +20,8 @@ const SelectButton = forwardRef((props, ref) => {
     type,
     dataTestId,
     variant,
-    icon
+    icon,
+    as
   } = props;
 
   if (variant === 'small') {
@@ -34,6 +35,7 @@ const SelectButton = forwardRef((props, ref) => {
         selected={selected}
         data-testid={dataTestId}
         hasIcon={!!icon}
+        as={as}
       >
         {loading ? (
           <StyledLoadingIcon icon="loading" />
