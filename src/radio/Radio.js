@@ -29,7 +29,8 @@ const Radio = forwardRef((props, ref) => {
     value,
     dataTestId,
     variant,
-    icon
+    icon,
+    children
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -71,7 +72,9 @@ const Radio = forwardRef((props, ref) => {
             onClick={onChange}
             disabled={disabled}
             as="span"
-          />
+          >
+            {children}
+          </SelectButton>
         ) : (
           <StyledRadio />
         )}

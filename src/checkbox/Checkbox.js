@@ -29,7 +29,8 @@ const Checkbox = forwardRef((props, ref) => {
     value,
     dataTestId,
     variant,
-    icon
+    icon,
+    children
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -71,7 +72,9 @@ const Checkbox = forwardRef((props, ref) => {
               icon={icon}
               disabled={disabled}
               as="span"
-            />
+            >
+              {children}
+            </SelectButton>
           ) : (
             <StyledCheckbox hasError={hasErrorMessage}>
               <StyledCheckboxIcon icon="check" />

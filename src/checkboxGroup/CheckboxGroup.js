@@ -8,12 +8,14 @@ import {
 } from '../common/form/styles';
 
 const CheckboxGroup = (props) => {
-  const { children, errorMessage, label, required, dataTestId } = props;
+  const { children, errorMessage, label, required, dataTestId, variant } =
+    props;
 
   const hasErrorMessage = !!errorMessage;
+  const isButtonVariant = variant === 'button';
 
   return (
-    <StyledFieldset data-testid={dataTestId}>
+    <StyledFieldset data-testid={dataTestId} isButtonVariant={isButtonVariant}>
       {label && (
         <StyledFieldsetLabel>
           {label} {required && <StyledRequiredLabel />}
