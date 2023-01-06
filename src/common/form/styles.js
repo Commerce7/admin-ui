@@ -12,6 +12,8 @@ const StyledInputWrapper = styled.div.attrs({
   'data-c7-form-item-wrapper': 'true'
 })`
   margin-bottom: 30px;
+
+  ${({ isButtonVariant }) => (isButtonVariant ? 'margin-bottom: 10px;' : '')}
 `;
 
 const StyledFormItem = styled.input`
@@ -119,7 +121,10 @@ const StyledRequiredLabel = styled.span`
 const StyledErrorMessage = styled.span`
   display: block;
   margin-top: 5px;
-  padding-left: ${({ isToggle, isSwitch }) => {
+  padding-left: ${({ isToggle, isSwitch, isButton }) => {
+    if (isButton) {
+      return '56px';
+    }
     if (isToggle) {
       return '30px';
     }
@@ -128,6 +133,8 @@ const StyledErrorMessage = styled.span`
     }
     return '0px';
   }};
+
+  ${({ isButton }) => (isButton ? 'margin-top: -12px;' : '')}
 
   color: ${({ theme }) => errorColors[theme.c7__ui.mode].color};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
@@ -159,6 +166,13 @@ const StyledFieldset = styled.fieldset`
       margin-bottom: 0px;
     }
   }
+
+  ${({ isButtonVariant }) =>
+    isButtonVariant
+      ? `
+    display: flex;
+  `
+      : ''}
 `;
 
 const StyledFieldsetLabel = styled(StyledLabel).attrs({
@@ -173,7 +187,10 @@ const StyledDescription = styled.p`
   display: block;
   margin-top: 5px;
   margin-bottom: 0;
-  padding-left: ${({ isToggle, isSwitch }) => {
+  padding-left: ${({ isToggle, isSwitch, isButton }) => {
+    if (isButton) {
+      return '56px';
+    }
     if (isToggle) {
       return '30px';
     }
@@ -182,6 +199,8 @@ const StyledDescription = styled.p`
     }
     return '0px';
   }};
+
+  ${({ isButton }) => (isButton ? 'margin-top: -12px;' : '')}
 
   color: ${({ theme }) => theme.c7__ui.secondaryFontColor};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};

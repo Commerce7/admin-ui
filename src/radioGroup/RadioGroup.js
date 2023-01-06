@@ -8,12 +8,14 @@ import {
 } from '../common/form/styles';
 
 const RadioGroup = (props) => {
-  const { children, errorMessage, label, required, dataTestId } = props;
+  const { children, errorMessage, label, required, dataTestId, variant } =
+    props;
 
   const hasErrorMessage = !!errorMessage;
+  const isButtonVariant = variant === 'button';
 
   return (
-    <StyledFieldset data-testid={dataTestId}>
+    <StyledFieldset data-testid={dataTestId} isButtonVariant={isButtonVariant}>
       {label && (
         <StyledFieldsetLabel>
           {label} {required && <StyledRequiredLabel />}
@@ -31,7 +33,8 @@ RadioGroup.defaultProps = {
   errorMessage: null,
   label: null,
   required: false,
-  dataTestId: null
+  dataTestId: null,
+  variant: 'default'
 };
 
 RadioGroup.propTypes = {
@@ -59,7 +62,12 @@ RadioGroup.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Radio Variant.
+   */
+  variant: PropTypes.oneOf(['button', 'default'])
 };
 
 export default RadioGroup;

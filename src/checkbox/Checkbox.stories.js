@@ -114,6 +114,46 @@ Description.story = {
   name: 'Description'
 };
 
+export const ButtonVariant = () => {
+  const [checked1, setChecked1] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+
+  const handleOnChange1 = () => {
+    setChecked1(!checked1);
+  };
+
+  const handleOnChange2 = () => {
+    setChecked2(!checked2);
+  };
+
+  return (
+    <>
+      <Checkbox
+        label="Subscribe"
+        id="subscribe"
+        checked={checked1}
+        onChange={handleOnChange1}
+        variant="button"
+        icon="carrot"
+        description="Subscription can be cancelled at any time."
+      />
+      <Checkbox
+        label="I agree"
+        id="subscribe"
+        checked={checked2}
+        onChange={handleOnChange2}
+        variant="button"
+        icon="clipboardText"
+        errorMessage="Required."
+      />
+    </>
+  );
+};
+
+ButtonVariant.story = {
+  name: 'Button Variant'
+};
+
 export default {
   title: 'Form/Checkbox/Checkbox',
   component: Checkbox,

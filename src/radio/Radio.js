@@ -4,13 +4,14 @@ import { forwardRef } from 'react';
 import { getFormItemIds } from '../common/form/helpers';
 import {
   StyledInputWrapper,
-  StyledErrorMessage,
   StyledToggleLabel,
   StyledToggleText,
   StyledRequiredLabel,
   StyledHiddenInput,
-  StyledDescription
+  StyledDescription,
+  StyledErrorMessage
 } from '../common/form/styles';
+import SelectButton from '../selectButton';
 
 import { StyledRadio } from './Radio.styles';
 
@@ -26,11 +27,15 @@ const Radio = forwardRef((props, ref) => {
     onChange,
     required,
     value,
-    dataTestId
+    dataTestId,
+    variant,
+    icon,
+    children
   } = props;
 
   const hasErrorMessage = !!errorMessage;
   const hasDescription = !!description;
+  const isButtonVariant = variant === 'button';
 
   const { descriptionId, describedById, errorId, labelId } = getFormItemIds(
     id,
@@ -39,7 +44,11 @@ const Radio = forwardRef((props, ref) => {
   );
 
   return (
-    <StyledInputWrapper className={className} data-testid={dataTestId}>
+    <StyledInputWrapper
+      className={className}
+      data-testid={dataTestId}
+      isButtonVariant={isButtonVariant}
+    >
       <StyledToggleLabel id={labelId}>
         <StyledHiddenInput
           aria-describedby={describedById}
@@ -55,19 +64,41 @@ const Radio = forwardRef((props, ref) => {
           required={required}
           value={value}
         />
-        <StyledRadio />
+        {isButtonVariant ? (
+          <SelectButton
+            selected={checked}
+            variant="small"
+            icon={icon}
+            onClick={onChange}
+            disabled={disabled}
+            as="span"
+          >
+            {children}
+          </SelectButton>
+        ) : (
+          <StyledRadio />
+        )}
         <StyledToggleText disabled={disabled}>
           {label}
           {required && <StyledRequiredLabel />}
         </StyledToggleText>
       </StyledToggleLabel>
       {hasDescription && (
-        <StyledDescription id={descriptionId} isToggle>
+        <StyledDescription
+          id={descriptionId}
+          isToggle
+          isButton={isButtonVariant}
+        >
           {description}
         </StyledDescription>
       )}
       {hasErrorMessage && (
-        <StyledErrorMessage id={errorId} role="alert" isToggle>
+        <StyledErrorMessage
+          id={errorId}
+          role="alert"
+          isToggle
+          isButton={isButtonVariant}
+        >
           {errorMessage}
         </StyledErrorMessage>
       )}
@@ -83,7 +114,9 @@ Radio.defaultProps = {
   id: Math.random().toString(36).substr(2, 9),
   label: '',
   required: false,
-  dataTestId: null
+  dataTestId: null,
+  variant: 'default',
+  icon: null
 };
 
 Radio.propTypes = {
@@ -141,7 +174,17 @@ Radio.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Radio Variant.
+   */
+  variant: PropTypes.oneOf(['button', 'default']),
+
+  /**
+   * Icon for button variant only.
+   */
+  icon: PropTypes.string
 };
 
 export default Radio;

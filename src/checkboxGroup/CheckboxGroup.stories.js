@@ -117,6 +117,83 @@ Required.story = {
   name: 'Required'
 };
 
+export const CheckboxButtonGroup = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    if (checked.includes(value)) {
+      setChecked(checked.filter((v) => v !== value));
+    } else {
+      setChecked([...checked, value]);
+    }
+  };
+
+  return (
+    <CheckboxGroup label="Heading Styles" variant="button">
+      <Checkbox
+        id="bold"
+        value="bold"
+        checked={checked.includes('bold')}
+        onChange={handleOnChange}
+        variant="button"
+        icon="textBold"
+      />
+      <Checkbox
+        id="italic"
+        value="italic"
+        checked={checked.includes('italic')}
+        onChange={handleOnChange}
+        variant="button"
+        icon="textItalic"
+      />
+    </CheckboxGroup>
+  );
+};
+
+CheckboxButtonGroup.story = {
+  name: 'Checkbox Button Group'
+};
+export const CheckboxButtonGroupText = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    if (checked.includes(value)) {
+      setChecked(checked.filter((v) => v !== value));
+    } else {
+      setChecked([...checked, value]);
+    }
+  };
+
+  return (
+    <CheckboxGroup label="Heading Styles" variant="button">
+      <Checkbox
+        id="cheese"
+        value="cheese"
+        checked={checked.includes('cheese')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Cheese
+      </Checkbox>
+      <Checkbox
+        id="pickles"
+        value="pickles"
+        checked={checked.includes('pickles')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Pickles
+      </Checkbox>
+    </CheckboxGroup>
+  );
+};
+
+CheckboxButtonGroupText.story = {
+  name: 'Checkbox Button Group Text'
+};
+
 export default {
   title: 'Form/Checkbox/CheckboxGroup',
   component: CheckboxGroup,

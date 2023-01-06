@@ -83,4 +83,28 @@ const StyledLoadingIcon = styled(Icon)`
   animation: ${rotate} 0.5s linear infinite;
 `;
 
-export { StyledSelectButton, StyledLoadingIcon };
+const StyledSmallSelectButton = styled(StyledSelectButton)`
+  min-height: 46px;
+  min-width: 46px;
+  height: 46px;
+  max-height: 46px;
+  padding: 12px;
+  border-radius: 2px;
+  color: ${({ theme }) => theme.c7__ui.fontColor};
+
+  ${({ hasIcon }) =>
+    hasIcon
+      ? `
+    width: 46px;
+    max-width: 46px;
+  `
+      : ''}
+
+  ${Icon} {
+    path {
+      fill: ${({ theme }) => theme.c7__ui.fontColor};
+    }
+  }
+`;
+
+export { StyledSelectButton, StyledLoadingIcon, StyledSmallSelectButton };
