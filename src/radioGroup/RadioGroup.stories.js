@@ -107,7 +107,7 @@ export const RadioButtonGroup = () => {
   };
 
   return (
-    <RadioGroup label="Account Type">
+    <RadioGroup label="Logo Alignment" variant="button">
       <Radio
         id="left"
         value="left"
@@ -131,7 +131,6 @@ export const RadioButtonGroup = () => {
         onChange={handleOnChange}
         variant="button"
         icon="alignRight"
-        label="(if necessary)"
       />
     </RadioGroup>
   );

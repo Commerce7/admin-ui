@@ -166,6 +166,13 @@ const StyledFieldset = styled.fieldset`
       margin-bottom: 0px;
     }
   }
+
+  ${({ isButtonVariant }) =>
+    isButtonVariant
+      ? `
+    display: flex;
+  `
+      : ''}
 `;
 
 const StyledFieldsetLabel = styled(StyledLabel).attrs({
