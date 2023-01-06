@@ -118,6 +118,56 @@ Description.story = {
   name: 'Description'
 };
 
+export const ButtonVariant = () => {
+  const [checked1, setChecked1] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+  const [checked3, setChecked3] = useState(false);
+
+  const handleOnChange1 = () => {
+    setChecked1(!checked1);
+  };
+  const handleOnChange2 = () => {
+    setChecked2(!checked2);
+  };
+  const handleOnChange3 = () => {
+    setChecked3(!checked3);
+  };
+
+  return (
+    <>
+      <Radio
+        id="wine"
+        checked={checked1}
+        onChange={handleOnChange1}
+        variant="button"
+        icon="wine"
+      />
+      <Radio
+        id="wine"
+        label="Buy this Wine"
+        description="This is the description"
+        checked={checked2}
+        onChange={handleOnChange2}
+        variant="button"
+        icon="bag"
+      />
+      <Radio
+        id="wine"
+        label="Error Wine Radio"
+        checked={checked3}
+        onChange={handleOnChange3}
+        variant="button"
+        icon="application"
+        errorMessage="Required."
+      />
+    </>
+  );
+};
+
+ButtonVariant.story = {
+  name: 'Button Variant'
+};
+
 export default {
   title: 'Form/Radio/Radio',
   component: Radio,
