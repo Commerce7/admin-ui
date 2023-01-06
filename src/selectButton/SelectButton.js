@@ -73,14 +73,15 @@ SelectButton.defaultProps = {
   type: 'button',
   dataTestId: null,
   variant: 'default',
-  icon: null
+  icon: null,
+  children: null
 };
 
 SelectButton.propTypes = {
   /**
    * The content of the component.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   /**
    * Add className to the outermost element.

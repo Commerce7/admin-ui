@@ -11,6 +11,7 @@ import {
   StyledHiddenInput,
   StyledDescription
 } from '../common/form/styles';
+import SelectButton from '../selectButton';
 
 import { StyledCheckbox, StyledCheckboxIcon } from './Checkbox.styles';
 
@@ -26,11 +27,14 @@ const Checkbox = forwardRef((props, ref) => {
     onChange,
     required,
     value,
-    dataTestId
+    dataTestId,
+    variant,
+    icon
   } = props;
 
   const hasErrorMessage = !!errorMessage;
   const hasDescription = !!description;
+  const isButtonVariant = variant === 'button';
 
   const { descriptionId, describedById, errorId, labelId } = getFormItemIds(
     id,
@@ -39,7 +43,11 @@ const Checkbox = forwardRef((props, ref) => {
   );
 
   return (
-    <StyledInputWrapper className={className} data-testid={dataTestId}>
+    <StyledInputWrapper
+      className={className}
+      data-testid={dataTestId}
+      isButtonVariant={isButtonVariant}
+    >
       <StyledToggleLabel id={labelId}>
         <StyledHiddenInput
           aria-describedby={describedById}
@@ -55,21 +63,42 @@ const Checkbox = forwardRef((props, ref) => {
           required={required}
           value={value}
         />
-        <StyledCheckbox hasError={hasErrorMessage}>
-          <StyledCheckboxIcon icon="check" />
-        </StyledCheckbox>
+        <>
+          {isButtonVariant ? (
+            <SelectButton
+              selected={checked}
+              variant="small"
+              icon={icon}
+              disabled={disabled}
+              as="span"
+            />
+          ) : (
+            <StyledCheckbox hasError={hasErrorMessage}>
+              <StyledCheckboxIcon icon="check" />
+            </StyledCheckbox>
+          )}
+        </>
         <StyledToggleText disabled={disabled}>
           {label}
           {required && <StyledRequiredLabel />}
         </StyledToggleText>
       </StyledToggleLabel>
       {hasDescription && (
-        <StyledDescription id={descriptionId} isToggle>
+        <StyledDescription
+          id={descriptionId}
+          isToggle
+          isButton={isButtonVariant}
+        >
           {description}
         </StyledDescription>
       )}
       {hasErrorMessage && (
-        <StyledErrorMessage id={errorId} role="alert" isToggle>
+        <StyledErrorMessage
+          id={errorId}
+          role="alert"
+          isToggle
+          isButton={isButtonVariant}
+        >
           {errorMessage}
         </StyledErrorMessage>
       )}
@@ -86,7 +115,9 @@ Checkbox.defaultProps = {
   label: '',
   required: false,
   value: '',
-  dataTestId: null
+  dataTestId: null,
+  variant: 'default',
+  icon: null
 };
 
 Checkbox.propTypes = {
@@ -145,7 +176,17 @@ Checkbox.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Radio Variant.
+   */
+  variant: PropTypes.oneOf(['button', 'default']),
+
+  /**
+   * Icon for button variant only.
+   */
+  icon: PropTypes.string
 };
 
 export default Checkbox;
