@@ -1,4 +1,5 @@
 import { action } from '@storybook/addon-actions';
+import styled from 'styled-components';
 
 import ButtonMenu from '.';
 
@@ -20,7 +21,7 @@ Basic.story = {
 };
 
 export const Variants = () => (
-  <>
+  <StyledButtonMenuContainer>
     <ButtonMenu>
       <ButtonMenuItem icon="export" onClick={action('clicked')}>
         Export
@@ -34,7 +35,7 @@ export const Variants = () => (
         Delete
       </ButtonMenuItem>
     </ButtonMenu>
-  </>
+  </StyledButtonMenuContainer>
 );
 
 Variants.story = {
@@ -42,7 +43,7 @@ Variants.story = {
 };
 
 export const Size = () => (
-  <>
+  <StyledButtonMenuContainer>
     <ButtonMenu>
       <ButtonMenuItem icon="export" onClick={action('clicked')}>
         Export
@@ -56,7 +57,7 @@ export const Size = () => (
         Delete
       </ButtonMenuItem>
     </ButtonMenu>
-  </>
+  </StyledButtonMenuContainer>
 );
 
 Size.story = {
@@ -93,3 +94,9 @@ export default {
     }
   }
 };
+
+const StyledButtonMenuContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+`;

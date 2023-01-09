@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-static-element-interactions */
 import PropTypes from 'prop-types';
 import { useRef, useState, useId } from 'react';
 
@@ -41,37 +42,44 @@ const ButtonMenu = (props) => {
     }
   };
 
+  const stopPropagation = (e) => {
+    e.stopPropagation();
+  };
+
   const dropdownId = `buttonMenu-${id}-dropdown`;
   const buttonId = `buttonMenu-${id}-button`;
 
   return (
-    <DropdownWrapper
-      ref={wrapperRef}
-      className={className}
-      dataTestId={dataTestId}
-    >
-      <StyledButton
-        onClick={handleToggleDropdown}
-        variant={variant}
-        size={size}
-        id={buttonId}
-        aria-haspopup="true"
-        aria-controls={dropdownId}
-        disabled={disabled}
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    <div onClick={stopPropagation}>
+      <DropdownWrapper
+        ref={wrapperRef}
+        className={className}
+        dataTestId={dataTestId}
       >
-        {label}
-        <StyledButtonIcon icon="chevronDown" buttonVariant={variant} />
-      </StyledButton>
-      <DropdownMenu
-        isVisible={isDropdownVisible}
-        id={dropdownId}
-        labelledbyId={buttonId}
-        align="right"
-        handleSelectedItem={handleSelectedItem}
-      >
-        {children}
-      </DropdownMenu>
-    </DropdownWrapper>
+        <StyledButton
+          onClick={handleToggleDropdown}
+          variant={variant}
+          size={size}
+          id={buttonId}
+          aria-haspopup="true"
+          aria-controls={dropdownId}
+          disabled={disabled}
+        >
+          {label}
+          <StyledButtonIcon icon="chevronDown" buttonVariant={variant} />
+        </StyledButton>
+        <DropdownMenu
+          isVisible={isDropdownVisible}
+          id={dropdownId}
+          labelledbyId={buttonId}
+          align="right"
+          handleSelectedItem={handleSelectedItem}
+        >
+          {children}
+        </DropdownMenu>
+      </DropdownWrapper>
+    </div>
   );
 };
 
