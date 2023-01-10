@@ -73,6 +73,7 @@ import Hammer from './Hammer';
 import Hand from './Hand';
 import Heart from './Heart';
 import HeartFilled from './HeartFilled';
+import History from './History';
 import Image from './Image';
 import ImagePlaceholder from './ImagePlaceholder';
 import InfoCircle from './InfoCircle';
@@ -229,6 +230,7 @@ export {
   Hand as hand,
   Heart as heart,
   HeartFilled as heartFilled,
+  History as history,
   InfoCircle as infoCircle,
   Inventory as inventory,
   Launch as launch,
