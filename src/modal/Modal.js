@@ -10,7 +10,8 @@ const Modal = (props) => {
     title,
     visible,
     dataTestId,
-    disableBodyScroll
+    disableBodyScroll,
+    disableFocusLock
   } = props;
 
   if (!visible) {
@@ -24,6 +25,7 @@ const Modal = (props) => {
       className={className}
       dataTestId={dataTestId}
       disableBodyScroll={disableBodyScroll}
+      disableFocusLock={disableFocusLock}
     >
       {children}
     </ModalContent>
