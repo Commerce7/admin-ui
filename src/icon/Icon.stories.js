@@ -22,6 +22,7 @@ export const variants = () => (
     <Icon icon="cart" variant="default" />
     <Icon icon="cart" variant="success" />
     <Icon icon="cart" variant="error" />
+    <Icon icon="cart" variant="text" />
   </>
 );
 
@@ -44,6 +45,11 @@ export const sizes = () => (
     <Icon icon="cart" variant="error" />{' '}
     <Icon icon="cart" size={24} variant="error" />
     <Icon icon="cart" size={48} variant="error" />
+    <br />
+    <br />
+    <Icon icon="cart" variant="text" />{' '}
+    <Icon icon="cart" size={24} variant="text" />
+    <Icon icon="cart" size={48} variant="text" />
   </>
 );
 
