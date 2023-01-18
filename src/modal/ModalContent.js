@@ -15,8 +15,15 @@ import {
 } from './Modal.styles';
 
 const ModalContent = (props) => {
-  const { children, className, onClose, title, dataTestId, disableBodyScroll } =
-    props;
+  const {
+    children,
+    className,
+    onClose,
+    title,
+    dataTestId,
+    disableBodyScroll,
+    disableFocusLock
+  } = props;
 
   useEscKeydown((e) => handleClose(e));
 
@@ -39,6 +46,28 @@ const ModalContent = (props) => {
       onClose(e);
     }
   };
+
+  if (disableFocusLock) {
+    return ReactDom.createPortal(
+      <StyledModalBackground
+        onClick={handleBackgroundClick}
+        className={className}
+      >
+        <StyledModalContent data-testid={dataTestId}>
+          {title && (
+            <StyledModalHeader>
+              <StyledModalTitle>{title}</StyledModalTitle>
+              {onClose && (
+                <Icon icon="close" onClick={handleClose} label="Close modal" />
+              )}
+            </StyledModalHeader>
+          )}
+          {children}
+        </StyledModalContent>
+      </StyledModalBackground>,
+      document.body
+    );
+  }
 
   return ReactDom.createPortal(
     <FocusLock autoFocus={false}>
