@@ -80,7 +80,7 @@ Icon.propTypes = {
   /**
    * Set the visual property of the component.
    */
-  variant: PropTypes.oneOf(['default', 'success', 'error']),
+  variant: PropTypes.oneOf(['default', 'success', 'error', 'text']),
 
   /**
    * Add test attribute to the element. Used internally for testing.

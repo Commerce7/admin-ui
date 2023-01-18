@@ -43,7 +43,7 @@ export const c7Colors = {
   gray900: '#20272B'
 };
 
-const fontColors = {
+export const fontColors = {
   dark: c7Colors.gray200,
   light: c7Colors.slate300
 };
