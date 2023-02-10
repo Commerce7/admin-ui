@@ -125,6 +125,7 @@ import Search from './Search';
 import Security from './Security';
 import Setting from './Setting';
 import Shuffle from './Shuffle';
+import Smartphone from './Smartphone';
 import Split from './Split';
 import Star from './Star';
 import Store from './Store';
@@ -278,6 +279,7 @@ export {
   Report as report,
   Reservation as reservation,
   Rocket as rocket,
+  Smartphone as smartphone,
   Search as search,
   Security as security,
   Setting as setting,
