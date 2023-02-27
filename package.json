@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.10.80",
+  "version": "1.10.81",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -42,7 +42,7 @@
     "@storybook/theming": "^6.5.16",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
-    "eslint": "^8.34.0",
+    "eslint": "^8.35.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.6.0",
     "eslint-import-resolver-webpack": "^0.13.2",
