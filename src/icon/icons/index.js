@@ -57,6 +57,7 @@ import Download from './Download';
 import Drag from './Drag';
 import Duplicate from './Duplicate';
 import Edit from './Edit';
+import Ellipsis from './Ellipsis';
 import Email from './Email';
 import EmailOpen from './EmailOpen';
 import Euro from './Euro';
@@ -215,6 +216,7 @@ export {
   Drag as drag,
   Duplicate as duplicate,
   Edit as edit,
+  Ellipsis as ellipsis,
   Email as email,
   EmailOpen as emailOpen,
   Euro as euro,
