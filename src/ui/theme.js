@@ -22,11 +22,11 @@ export const c7Colors = {
   orange300: '#C96B13',
 
   blue100: '#EBF7FF',
-  blue200: '#D8ECF8',
-  blue300: '#3FB2EE',
-  blue400: '#0192D0',
-  blue500: '#00679D',
-  blue600: '#054D7D',
+  blue200: '#D7EFFE',
+  blue300: '#42ACF0',
+  blue400: '#2490D6',
+  blue500: '#0363A6',
+  blue600: '#024F83',
 
   slate100: '#414F58',
   slate200: '#2F3940',
