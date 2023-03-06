@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.10.83",
+  "version": "1.10.84",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -67,7 +67,7 @@
     "prop-types": "^15.8.1",
     "react-datetime": "^3.2.0",
     "react-focus-lock": "^2.9.4",
-    "styled-components": "^5.3.6",
+    "styled-components": "^5.3.8",
     "styled-normalize": "^8.0.7"
   },
   "peerDependencies": {
