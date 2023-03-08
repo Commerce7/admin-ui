@@ -30,7 +30,7 @@ const StyledFormItem = styled.input`
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
-  box-shadow: 0 0 1px 1px
+  box-shadow: 0 0 0 4px
     ${({ theme }) => colors[theme.c7__ui.mode].boxShadow.default};
   border-color: ${({ theme, hasErrorMessage }) =>
     hasErrorMessage
@@ -67,13 +67,13 @@ const StyledFormItem = styled.input`
   &:focus,
   &:-webkit-autofill:focus {
     outline: none;
-    box-shadow: 0 0 1px 1px
+    box-shadow: 0 0 0 4px
       ${({ theme }) => colors[theme.c7__ui.mode].boxShadow.focus};
     border-color: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.focus};
   }
 
   &:disabled {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
   }
 `;

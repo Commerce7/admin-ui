@@ -15,7 +15,7 @@ const colors = {
     },
     boxShadow: {
       default: 'transparent',
-      focus: c7Colors.slate200
+      focus: c7Colors.slate100
     }
   },
   light: {
@@ -32,7 +32,7 @@ const colors = {
     },
     boxShadow: {
       default: 'transparent',
-      focus: c7Colors.gray100
+      focus: c7Colors.blue100
     }
   }
 };

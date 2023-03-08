@@ -41,7 +41,7 @@ const StyledCheckbox = styled.span`
   }
 
   ${StyledHiddenInput}:disabled + & {
-    opacity: 0.4;
+    opacity: 0.5;
     cursor: not-allowed;
     border-color: ${({ theme }) =>
       colors[theme.c7__ui.mode].borderColor.disabled};
@@ -49,7 +49,7 @@ const StyledCheckbox = styled.span`
 
   ${StyledHiddenInput}:focus + & {
     border-color: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.focus};
-    box-shadow: 0px 0px 1px 3px
+    box-shadow: 0 0 0 3px
       ${({ theme }) => colors[theme.c7__ui.mode].boxShadow.focus};
   }
 
