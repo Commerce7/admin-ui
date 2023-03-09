@@ -8,30 +8,30 @@ const colors = {
       fontColor: {
         default: c7Colors.slate300, //
         active: c7Colors.blue500, //
-        hover: c7Colors.gray300
+        hover: c7Colors.slate300
       },
       backgroundColor: {
         default: 'transparent',
         active: c7Colors.blue200, //
-        hover: c7Colors.gray300 //
+        hover: c7Colors.blue200 //
       },
       svgColor: {
         //
         default: c7Colors.gray500, //
-        active: c7Colors.blue400, //
-        hover: c7Colors.blue400 //
+        active: c7Colors.blue500, //
+        hover: c7Colors.blue500 //
       }
     },
     secondaryLink: {
       fontColor: {
         default: c7Colors.slate300, //
         active: c7Colors.blue500, //
-        hover: c7Colors.blue500
+        hover: c7Colors.slate300
       },
       backgroundColor: {
         default: 'transparent',
         active: c7Colors.blue200, //
-        hover: c7Colors.gray300 //
+        hover: c7Colors.blue200 //
       }
     }
   },

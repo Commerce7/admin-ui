@@ -231,13 +231,13 @@ const shadows = {
     primary: {
       default: '',
       hover: '',
-      focus: '0 0 0 4px rgba(5, 127, 206, 0.2)',
+      focus: `0 0 0 5px ${c7Colors.slate100}`,
       disabled: ''
     },
     secondary: {
       default: '',
       hover: '',
-      focus: '0 0 0 4px rgba(5, 127, 206, 0.2)',
+      focus: `0 0 0 5px ${c7Colors.slate100}`,
       disabled: ''
     },
     text: {
@@ -257,13 +257,13 @@ const shadows = {
     primary: {
       default: '',
       hover: '',
-      focus: '0 0 0 4px rgba(5, 127, 206, 0.2)',
+      focus: `0 0 0 5px ${c7Colors.blue200}`,
       disabled: ''
     },
     secondary: {
       default: '',
       hover: '',
-      focus: '0 0 0 4px rgba(5, 127, 206, 0.2)',
+      focus: `0 0 0 5px ${c7Colors.blue200}`,
       disabled: ''
     },
     text: {

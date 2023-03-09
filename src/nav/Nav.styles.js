@@ -18,7 +18,7 @@ const NavLinkStyles = styled.a`
   align-items: center;
   padding: 12px 10px;
 
-  margin-bottom: 5px;
+  margin-bottom: 2px;
   transition: ${baseTransition};
   border: none;
   background: transparent;
@@ -33,6 +33,7 @@ const NavLinkStyles = styled.a`
     color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.default};
 
     ${NavLinkIconStyles} {
+      margin: 0 10px 0 5px;
       path {
         fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.default};
       }
@@ -67,7 +68,7 @@ const SubNavLinkStyles = styled.a`
   display: flex;
   align-items: center;
   padding: 8px 10px;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   transition: ${baseTransition};
   border: none;

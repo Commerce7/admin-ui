@@ -14,7 +14,7 @@ const colors = {
       checked: c7Colors.blue400
     },
     boxShadow: {
-      focus: c7Colors.gray700
+      focus: c7Colors.slate100
     }
   },
   light: {
@@ -30,7 +30,7 @@ const colors = {
       checked: c7Colors.blue400
     },
     boxShadow: {
-      focus: c7Colors.blue200
+      focus: c7Colors.blue100
     }
   }
 };
