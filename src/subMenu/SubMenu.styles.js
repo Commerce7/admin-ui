@@ -5,7 +5,7 @@ const StyledSubMenu = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
   ${({ theme, $borderBottom }) => {
     if ($borderBottom) {
@@ -15,10 +15,11 @@ const StyledSubMenu = styled.div`
   }}
 
   a {
-    margin-right: 15px;
+    margin-right: 20px;
     font-size: 16px;
-    padding: 10px 0;
+    padding: 10px 0 15px;
     cursor: pointer;
+    transition: all 0.15s ease;
 
     ${({ theme, $activeClassName }) => `
       color: ${theme.c7__ui.fontColor};
@@ -27,7 +28,7 @@ const StyledSubMenu = styled.div`
         border-color: ${theme.c7__ui.colors.blue400};
       }
       &.${$activeClassName} {
-        color: ${theme.c7__ui.colors.blue400};
+        color: ${theme.c7__ui.linkColor};
         border-color: ${theme.c7__ui.colors.blue400};
       }
     `}
@@ -35,12 +36,13 @@ const StyledSubMenu = styled.div`
 `;
 
 const StyledSubMenuItem = styled.div`
-  margin-right: 15px;
+  margin-right: 20px;
   font-size: 16px;
-  padding: 10px 0;
+  padding: 10px 0 15px;
   cursor: pointer;
   border: none;
   background-color: transparent;
+  transition: all 0.15s ease;
 
   ${({ theme, $activeClassName }) => `
   color: ${theme.c7__ui.fontColor};
@@ -49,7 +51,7 @@ const StyledSubMenuItem = styled.div`
     border-color: ${theme.c7__ui.colors.blue400};
   }
   &.${$activeClassName} {
-    color: ${theme.c7__ui.colors.blue400};
+    color: ${theme.c7__ui.linkColor};
     border-color: ${theme.c7__ui.colors.blue400};
   }
 `}
