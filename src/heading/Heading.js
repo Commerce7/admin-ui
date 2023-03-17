@@ -8,6 +8,7 @@ const Heading = (props) => {
   let as = 'h2';
   if (level === 1) as = 'h1';
   else if (level === 3) as = 'h3';
+  else if (level === 4) as = 'h4';
 
   return (
     <StyledHeading as={as} className={className} data-testid={dataTestId}>
@@ -26,7 +27,7 @@ Heading.propTypes = {
   /**
    * Select what size heading.
    */
-  level: PropTypes.oneOf([1, 2, 3]),
+  level: PropTypes.oneOf([1, 2, 3, 4]),
 
   /**
    * The content of the component.
