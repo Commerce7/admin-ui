@@ -8,6 +8,7 @@ const LinkButton = forwardRef((props, ref) => {
     children,
     className,
     component,
+    disabled,
     download,
     href,
     rel,
@@ -30,9 +31,10 @@ const LinkButton = forwardRef((props, ref) => {
 
   return (
     <StyledButton
-      as={as}
+      as={disabled ? null : as}
       ref={ref}
       className={className}
+      disabled={disabled}
       href={href}
       target={target}
       rel={rel}
@@ -64,6 +66,7 @@ const LinkButton = forwardRef((props, ref) => {
 LinkButton.defaultProps = {
   className: '',
   component: null,
+  disabled: false,
   download: null,
   href: null,
   rel: null,
@@ -91,6 +94,11 @@ LinkButton.propTypes = {
    * If this property is set, all other props will be passed to the component.
    */
   component: PropTypes.any, // eslint-disable-line
+
+  /**
+   * Set the element to disabled.
+   */
+  disabled: PropTypes.bool,
 
   /**
    * Add download to the dom element
