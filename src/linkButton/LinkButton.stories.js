@@ -35,6 +35,23 @@ Variants.story = {
   name: 'Variants'
 };
 
+export const Disabled = () => (
+  <StyledContainer>
+    <LinkButton variant="primary" disabled>
+      Primary Button
+    </LinkButton>
+    <LinkButton variant="secondary" disabled>
+      Secondary Button
+    </LinkButton>
+    <LinkButton variant="text" disabled>
+      Text Button
+    </LinkButton>
+    <LinkButton variant="link" disabled>
+      Link Button
+    </LinkButton>
+  </StyledContainer>
+);
+
 export const Size = () => (
   <StyledContainer>
     <LinkButton size="small" href="https://commerce7.com">
