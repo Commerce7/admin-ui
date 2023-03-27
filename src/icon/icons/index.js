@@ -22,6 +22,7 @@ import Bundle from './Bundle';
 import Button from './Button';
 import ButtonLine from './ButtonLine';
 import Calendar from './Calendar';
+import CalenderCross from './CalenderCross';
 import Car from './Car';
 import Carrot from './Carrot';
 import Cart from './Cart';
@@ -60,8 +61,10 @@ import Edit from './Edit';
 import Ellipsis from './Ellipsis';
 import Email from './Email';
 import EmailOpen from './EmailOpen';
+import Enter from './Enter';
 import Euro from './Euro';
 import Exclamation from './Exclamation';
+import Exit from './Exit';
 import Export from './Export';
 import Eye from './Eye';
 import EyeCrossed from './EyeCrossed';
@@ -105,6 +108,7 @@ import Package from './Package';
 import PaperPlane from './PaperPlane';
 import Percent from './Percent';
 import Phone from './Phone';
+import Platter from './Platter';
 import PlayCircle from './PlayCircle';
 import Pointer from './Pointer';
 import POS from './Pos';
@@ -181,6 +185,7 @@ export {
   Button as button,
   ButtonLine as buttonLine,
   Calendar as calendar,
+  CalenderCross as calenderCross,
   Car as car,
   Carrot as carrot,
   Cash as cash,
@@ -219,8 +224,10 @@ export {
   Ellipsis as ellipsis,
   Email as email,
   EmailOpen as emailOpen,
+  Enter as enter,
   Euro as euro,
   Exclamation as exclamation,
+  Exit as exit,
   Export as export,
   Eye as eye,
   EyeCrossed as eyeCrossed,
@@ -264,6 +271,7 @@ export {
   PaperPlane as paperPlane,
   Percent as percent,
   Phone as phone,
+  Platter as platter,
   PlayCircle as playCircle,
   Pointer as pointer,
   POS as pos,
