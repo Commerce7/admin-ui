@@ -58,6 +58,7 @@ const SelectButton = forwardRef((props, ref) => {
       onClick={onClick}
       selected={selected}
       data-testid={dataTestId}
+      as={as}
     >
       {loading ? <StyledLoadingIcon icon="loading" /> : children}
     </StyledSelectButton>

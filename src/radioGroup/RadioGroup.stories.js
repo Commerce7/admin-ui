@@ -184,6 +184,53 @@ RadioButtonGroupText.story = {
   name: 'Radio Button Group Text'
 };
 
+export const RadioButtonGroupLarge = () => {
+  const [checked, setChecked] = useState('right');
+
+  const handleOnChange = (e) => {
+    setChecked(e.target.value);
+  };
+
+  return (
+    <RadioGroup label="" variant="button">
+      <Radio
+        id="small"
+        value="small"
+        checked={checked === 'small'}
+        onChange={handleOnChange}
+        variant="button"
+        size="default"
+      >
+        Card on File
+      </Radio>
+      <Radio
+        id="center"
+        value="center"
+        checked={checked === 'center'}
+        onChange={handleOnChange}
+        variant="button"
+        size="default"
+      >
+        Cash
+      </Radio>
+      <Radio
+        id="right"
+        value="right"
+        checked={checked === 'right'}
+        onChange={handleOnChange}
+        variant="button"
+        size="default"
+      >
+        Pay Externally
+      </Radio>
+    </RadioGroup>
+  );
+};
+
+RadioButtonGroupLarge.story = {
+  name: 'Radio Button Group Large'
+};
+
 export default {
   title: 'Form/Radio/RadioGroup',
   component: Radio,
