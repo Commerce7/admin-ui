@@ -29,6 +29,7 @@ const Checkbox = forwardRef((props, ref) => {
     value,
     dataTestId,
     variant,
+    size,
     icon,
     children
   } = props;
@@ -68,7 +69,7 @@ const Checkbox = forwardRef((props, ref) => {
           {isButtonVariant ? (
             <SelectButton
               selected={checked}
-              variant="small"
+              variant={size}
               icon={icon}
               disabled={disabled}
               as="span"
@@ -120,6 +121,7 @@ Checkbox.defaultProps = {
   value: '',
   dataTestId: null,
   variant: 'default',
+  size: 'small',
   icon: null
 };
 
@@ -185,6 +187,11 @@ Checkbox.propTypes = {
    * Radio Variant.
    */
   variant: PropTypes.oneOf(['button', 'default']),
+
+  /**
+   * Checkbox Size - only used for button variant.
+   */
+  size: PropTypes.oneOf(['small', 'default']),
 
   /**
    * Icon for button variant only.

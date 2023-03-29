@@ -29,6 +29,7 @@ const Radio = forwardRef((props, ref) => {
     value,
     dataTestId,
     variant,
+    size,
     icon,
     children
   } = props;
@@ -67,7 +68,7 @@ const Radio = forwardRef((props, ref) => {
         {isButtonVariant ? (
           <SelectButton
             selected={checked}
-            variant="small"
+            variant={size}
             icon={icon}
             onClick={onChange}
             disabled={disabled}
@@ -116,6 +117,7 @@ Radio.defaultProps = {
   required: false,
   dataTestId: null,
   variant: 'default',
+  size: 'small',
   icon: null
 };
 
@@ -180,6 +182,11 @@ Radio.propTypes = {
    * Radio Variant.
    */
   variant: PropTypes.oneOf(['button', 'default']),
+
+  /**
+   * Radio Size - only used for button variant.
+   */
+  size: PropTypes.oneOf(['small', 'default']),
 
   /**
    * Icon for button variant only.

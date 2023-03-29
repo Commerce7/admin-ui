@@ -154,6 +154,7 @@ export const CheckboxButtonGroup = () => {
 CheckboxButtonGroup.story = {
   name: 'Checkbox Button Group'
 };
+
 export const CheckboxButtonGroupText = () => {
   const [checked, setChecked] = useState([]);
 
@@ -192,6 +193,48 @@ export const CheckboxButtonGroupText = () => {
 
 CheckboxButtonGroupText.story = {
   name: 'Checkbox Button Group Text'
+};
+
+export const CheckboxButtonGroupLarge = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    if (checked.includes(value)) {
+      setChecked(checked.filter((v) => v !== value));
+    } else {
+      setChecked([...checked, value]);
+    }
+  };
+
+  return (
+    <CheckboxGroup label="Heading Styles" variant="button">
+      <Checkbox
+        id="cheese"
+        value="cheese"
+        checked={checked.includes('cheese')}
+        onChange={handleOnChange}
+        variant="button"
+        size="default"
+      >
+        Cheese
+      </Checkbox>
+      <Checkbox
+        id="pickles"
+        value="pickles"
+        checked={checked.includes('pickles')}
+        onChange={handleOnChange}
+        variant="button"
+        size="default"
+      >
+        Pickles
+      </Checkbox>
+    </CheckboxGroup>
+  );
+};
+
+CheckboxButtonGroupLarge.story = {
+  name: 'Checkbox Button Group Large'
 };
 
 export default {
