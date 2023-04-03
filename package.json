@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.10.92",
+  "version": "1.10.93",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -23,11 +23,11 @@
   "devDependencies": {
     "@actions/core": "^1.10.0",
     "@actions/github": "^5.1.1",
-    "@babel/core": "^7.21.3",
+    "@babel/core": "^7.21.4",
     "@babel/eslint-parser": "^7.21.3",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@babel/plugin-transform-object-assign": "^7.18.6",
-    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-env": "^7.21.4",
     "@babel/preset-react": "^7.18.6",
     "clean-webpack-plugin": "^4.0.0",
     "@commerce7/eslint-config": "^1.1.6",
@@ -42,7 +42,7 @@
     "@storybook/theming": "^6.5.16",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
-    "eslint": "^8.36.0",
+    "eslint": "^8.37.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-webpack": "^0.13.2",
@@ -56,7 +56,7 @@
     "path": "^0.12.7",
     "prettier": "^2.8.7",
     "style-loader": "^3.3.2",
-    "webpack": "^5.76.3",
+    "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
     "webpack-node-externals": "^3.0.0",
     "react": "^18.2.0",
