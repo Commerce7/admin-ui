@@ -134,6 +134,7 @@ export const ButtonVariant = () => {
         checked={checked1}
         onChange={handleOnChange1}
         variant="button"
+        size="small"
         icon="carrot"
         description="Subscription can be cancelled at any time."
       />
@@ -143,6 +144,7 @@ export const ButtonVariant = () => {
         checked={checked2}
         onChange={handleOnChange2}
         variant="button"
+        size="small"
         icon="clipboardText"
         errorMessage="Required."
       />
@@ -152,6 +154,88 @@ export const ButtonVariant = () => {
 
 ButtonVariant.story = {
   name: 'Button Variant'
+};
+
+export const MediumButtonVariant = () => {
+  const [checked1, setChecked1] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+
+  const handleOnChange1 = () => {
+    setChecked1(!checked1);
+  };
+
+  const handleOnChange2 = () => {
+    setChecked2(!checked2);
+  };
+
+  return (
+    <>
+      <Checkbox
+        id="subscribe"
+        checked={checked1}
+        onChange={handleOnChange1}
+        variant="button"
+        size="medium"
+        description="Subscription can be cancelled at any time."
+      >
+        Subscribe
+      </Checkbox>
+      <Checkbox
+        id="agree"
+        checked={checked2}
+        onChange={handleOnChange2}
+        variant="button"
+        size="medium"
+        errorMessage="Required."
+      >
+        I agree
+      </Checkbox>
+    </>
+  );
+};
+
+MediumButtonVariant.story = {
+  name: 'Medium Button Variant'
+};
+
+export const LargeButtonVariant = () => {
+  const [checked1, setChecked1] = useState(false);
+  const [checked2, setChecked2] = useState(false);
+
+  const handleOnChange1 = () => {
+    setChecked1(!checked1);
+  };
+
+  const handleOnChange2 = () => {
+    setChecked2(!checked2);
+  };
+
+  return (
+    <>
+      <Checkbox
+        id="subscribe"
+        checked={checked1}
+        onChange={handleOnChange1}
+        variant="button"
+        description="Subscription can be cancelled at any time."
+      >
+        Subscribe
+      </Checkbox>
+      <Checkbox
+        id="agree"
+        checked={checked2}
+        onChange={handleOnChange2}
+        variant="button"
+        errorMessage="Required."
+      >
+        I agree
+      </Checkbox>
+    </>
+  );
+};
+
+LargeButtonVariant.story = {
+  name: 'Large Button Variant'
 };
 
 export default {

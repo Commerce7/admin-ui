@@ -119,44 +119,42 @@ Description.story = {
 };
 
 export const ButtonVariant = () => {
-  const [checked1, setChecked1] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  const [checked3, setChecked3] = useState(false);
+  const [selected, setSelected] = useState(false);
 
-  const handleOnChange1 = () => {
-    setChecked1(!checked1);
-  };
-  const handleOnChange2 = () => {
-    setChecked2(!checked2);
-  };
-  const handleOnChange3 = () => {
-    setChecked3(!checked3);
+  const handleSelect = (e) => {
+    setSelected(e.target.value);
   };
 
   return (
     <>
       <Radio
         id="wine"
-        checked={checked1}
-        onChange={handleOnChange1}
+        value="wine"
+        checked={selected === 'wine'}
+        onChange={handleSelect}
         variant="button"
+        size="small"
         icon="wine"
       />
       <Radio
-        id="wine"
+        id="bag"
+        value="bag"
         label="Buy this Wine"
         description="This is the description"
-        checked={checked2}
-        onChange={handleOnChange2}
+        checked={selected === 'bag'}
+        onChange={handleSelect}
         variant="button"
+        size="small"
         icon="bag"
       />
       <Radio
-        id="wine"
+        id="application"
+        value="application"
         label="Error Wine Radio"
-        checked={checked3}
-        onChange={handleOnChange3}
+        checked={selected === 'application'}
+        onChange={handleSelect}
         variant="button"
+        size="small"
         icon="application"
         errorMessage="Required."
       />
@@ -166,6 +164,101 @@ export const ButtonVariant = () => {
 
 ButtonVariant.story = {
   name: 'Button Variant'
+};
+
+export const MediumButtonVariant = () => {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = (e) => {
+    setSelected(e.target.value);
+  };
+
+  return (
+    <>
+      <Radio
+        id="wine"
+        value="wine"
+        checked={selected === 'wine'}
+        onChange={handleSelect}
+        variant="button"
+        size="medium"
+      >
+        Wine
+      </Radio>
+      <Radio
+        id="bag"
+        value="bag"
+        description="This is the description"
+        checked={selected === 'bag'}
+        onChange={handleSelect}
+        variant="button"
+        size="medium"
+      >
+        Bag
+      </Radio>
+      <Radio
+        id="application"
+        value="application"
+        checked={selected === 'application'}
+        onChange={handleSelect}
+        variant="button"
+        size="medium"
+        errorMessage="Required."
+      >
+        Application
+      </Radio>
+    </>
+  );
+};
+
+MediumButtonVariant.story = {
+  name: 'Medium Button Variant'
+};
+
+export const LargeButtonVariant = () => {
+  const [selected, setSelected] = useState(false);
+
+  const handleSelect = (e) => {
+    setSelected(e.target.value);
+  };
+
+  return (
+    <>
+      <Radio
+        id="wine"
+        value="wine"
+        checked={selected === 'wine'}
+        onChange={handleSelect}
+        variant="button"
+      >
+        Wine
+      </Radio>
+      <Radio
+        id="bag"
+        value="bag"
+        description="This is the description"
+        checked={selected === 'bag'}
+        onChange={handleSelect}
+        variant="button"
+      >
+        Bag
+      </Radio>
+      <Radio
+        id="application"
+        value="application"
+        checked={selected === 'application'}
+        onChange={handleSelect}
+        variant="button"
+        errorMessage="Required."
+      >
+        Application
+      </Radio>
+    </>
+  );
+};
+
+LargeButtonVariant.story = {
+  name: 'Large Button Variant'
 };
 
 export default {

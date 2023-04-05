@@ -117,7 +117,7 @@ Required.story = {
   name: 'Required'
 };
 
-export const CheckboxButtonGroup = () => {
+export const CheckboxSmallButtonGroup = () => {
   const [checked, setChecked] = useState([]);
 
   const handleOnChange = (e) => {
@@ -137,6 +137,7 @@ export const CheckboxButtonGroup = () => {
         checked={checked.includes('bold')}
         onChange={handleOnChange}
         variant="button"
+        size="small"
         icon="textBold"
       />
       <Checkbox
@@ -145,17 +146,18 @@ export const CheckboxButtonGroup = () => {
         checked={checked.includes('italic')}
         onChange={handleOnChange}
         variant="button"
+        size="small"
         icon="textItalic"
       />
     </CheckboxGroup>
   );
 };
 
-CheckboxButtonGroup.story = {
-  name: 'Checkbox Button Group'
+CheckboxSmallButtonGroup.story = {
+  name: 'Checkbox Small Button Group'
 };
 
-export const CheckboxButtonGroupText = () => {
+export const CheckboxSmallButtonGroupError = () => {
   const [checked, setChecked] = useState([]);
 
   const handleOnChange = (e) => {
@@ -168,34 +170,38 @@ export const CheckboxButtonGroupText = () => {
   };
 
   return (
-    <CheckboxGroup label="Heading Styles" variant="button">
+    <CheckboxGroup
+      label="Heading Styles"
+      variant="button"
+      errorMessage="Please select one"
+    >
       <Checkbox
-        id="cheese"
-        value="cheese"
-        checked={checked.includes('cheese')}
+        id="bold"
+        value="bold"
+        checked={checked.includes('bold')}
         onChange={handleOnChange}
         variant="button"
-      >
-        Cheese
-      </Checkbox>
+        size="small"
+        icon="textBold"
+      />
       <Checkbox
-        id="pickles"
-        value="pickles"
-        checked={checked.includes('pickles')}
+        id="italic"
+        value="italic"
+        checked={checked.includes('italic')}
         onChange={handleOnChange}
         variant="button"
-      >
-        Pickles
-      </Checkbox>
+        size="small"
+        icon="textItalic"
+      />
     </CheckboxGroup>
   );
 };
 
-CheckboxButtonGroupText.story = {
-  name: 'Checkbox Button Group Text'
+CheckboxSmallButtonGroupError.story = {
+  name: 'Checkbox Small Button Group Error'
 };
 
-export const CheckboxButtonGroupLarge = () => {
+export const CheckboxMediumButtonGroup = () => {
   const [checked, setChecked] = useState([]);
 
   const handleOnChange = (e) => {
@@ -208,33 +214,241 @@ export const CheckboxButtonGroupLarge = () => {
   };
 
   return (
-    <CheckboxGroup label="Heading Styles" variant="button">
+    <CheckboxGroup label="Toppings" variant="button" size="medium">
       <Checkbox
-        id="cheese"
-        value="cheese"
-        checked={checked.includes('cheese')}
+        id="add"
+        value="add"
+        checked={checked.includes('add')}
         onChange={handleOnChange}
         variant="button"
-        size="default"
+        size="medium"
       >
-        Cheese
+        Add
       </Checkbox>
       <Checkbox
-        id="pickles"
-        value="pickles"
-        checked={checked.includes('pickles')}
+        id="no"
+        value="no"
+        checked={checked.includes('no')}
         onChange={handleOnChange}
         variant="button"
-        size="default"
+        size="medium"
       >
-        Pickles
+        No
+      </Checkbox>
+      <Checkbox
+        id="extra"
+        value="extra"
+        checked={checked.includes('extra')}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Extra
+      </Checkbox>
+      <Checkbox
+        id="side"
+        value="side"
+        checked={checked.includes('side')}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Side
       </Checkbox>
     </CheckboxGroup>
   );
 };
 
-CheckboxButtonGroupLarge.story = {
-  name: 'Checkbox Button Group Large'
+CheckboxMediumButtonGroup.story = {
+  name: 'Checkbox Medium Button Group'
+};
+
+export const CheckboxMediumButtonGroupError = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    if (checked.includes(value)) {
+      setChecked(checked.filter((v) => v !== value));
+    } else {
+      setChecked([...checked, value]);
+    }
+  };
+
+  return (
+    <CheckboxGroup
+      label="Toppings"
+      variant="button"
+      errorMessage="One selection is required"
+      size="medium"
+    >
+      <Checkbox
+        id="add"
+        value="add"
+        checked={checked.includes('add')}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Add
+      </Checkbox>
+      <Checkbox
+        id="no"
+        value="no"
+        checked={checked.includes('no')}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        No
+      </Checkbox>
+      <Checkbox
+        id="extra"
+        value="extra"
+        checked={checked.includes('extra')}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Extra
+      </Checkbox>
+      <Checkbox
+        id="side"
+        value="side"
+        checked={checked.includes('side')}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Side
+      </Checkbox>
+    </CheckboxGroup>
+  );
+};
+
+CheckboxMediumButtonGroupError.story = {
+  name: 'Checkbox Medium Button Group Error'
+};
+
+export const CheckboxLargeButtonGroup = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    if (checked.includes(value)) {
+      setChecked(checked.filter((v) => v !== value));
+    } else {
+      setChecked([...checked, value]);
+    }
+  };
+
+  return (
+    <CheckboxGroup label="Toppings" variant="button" size="large">
+      <Checkbox
+        id="add"
+        value="add"
+        checked={checked.includes('add')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Add
+      </Checkbox>
+      <Checkbox
+        id="no"
+        value="no"
+        checked={checked.includes('no')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        No
+      </Checkbox>
+      <Checkbox
+        id="extra"
+        value="extra"
+        checked={checked.includes('extra')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Extra
+      </Checkbox>
+      <Checkbox
+        id="side"
+        value="side"
+        checked={checked.includes('side')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Side
+      </Checkbox>
+    </CheckboxGroup>
+  );
+};
+
+CheckboxLargeButtonGroup.story = {
+  name: 'Checkbox Large Button Group'
+};
+
+export const CheckboxLargeButtonGroupError = () => {
+  const [checked, setChecked] = useState([]);
+
+  const handleOnChange = (e) => {
+    const { value } = e.target;
+    if (checked.includes(value)) {
+      setChecked(checked.filter((v) => v !== value));
+    } else {
+      setChecked([...checked, value]);
+    }
+  };
+
+  return (
+    <CheckboxGroup
+      label="Toppings"
+      variant="button"
+      errorMessage="Please select one"
+      size="large"
+    >
+      <Checkbox
+        id="add"
+        value="add"
+        checked={checked.includes('add')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Add
+      </Checkbox>
+      <Checkbox
+        id="no"
+        value="no"
+        checked={checked.includes('no')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        No
+      </Checkbox>
+      <Checkbox
+        id="extra"
+        value="extra"
+        checked={checked.includes('extra')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Extra
+      </Checkbox>
+      <Checkbox
+        id="side"
+        value="side"
+        checked={checked.includes('side')}
+        onChange={handleOnChange}
+        variant="button"
+      >
+        Side
+      </Checkbox>
+    </CheckboxGroup>
+  );
+};
+
+CheckboxLargeButtonGroupError.story = {
+  name: 'Checkbox Large Button Group Error'
 };
 
 export default {
