@@ -237,6 +237,28 @@ Color.story = {
   name: 'Color'
 };
 
+export const Suffix = () => {
+  const [value, setValue] = useState('');
+
+  const handleOnChange = (e) => {
+    setValue(e.target.value);
+  };
+
+  return (
+    <Input
+      label="First Name"
+      id="first-name"
+      value={value}
+      onChange={handleOnChange}
+      suffix="hours"
+    />
+  );
+};
+
+Suffix.story = {
+  name: 'Suffix'
+};
+
 export default {
   title: 'Form/Input',
   component: Input,

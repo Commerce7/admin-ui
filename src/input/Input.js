@@ -13,7 +13,8 @@ import {
 import {
   StyledInput,
   StyledIconWrapper,
-  StyledInputIcon
+  StyledInputIcon,
+  StyledInputSuffix
 } from './Input.styles';
 
 const Input = forwardRef((props, ref) => {
@@ -36,7 +37,8 @@ const Input = forwardRef((props, ref) => {
     type,
     value,
     dataTestId,
-    inputMode
+    inputMode,
+    suffix
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -81,6 +83,9 @@ const Input = forwardRef((props, ref) => {
           endIcon={endIcon}
         />
         {endIcon && <StyledInputIcon icon={endIcon} iconPosition="end" />}
+        {suffix && !endIcon && (
+          <StyledInputSuffix secondary>{suffix}</StyledInputSuffix>
+        )}
       </StyledIconWrapper>
       {hasDescription && (
         <StyledDescription id={descriptionId}>{description}</StyledDescription>
