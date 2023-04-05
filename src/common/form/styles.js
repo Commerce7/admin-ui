@@ -13,7 +13,7 @@ const StyledInputWrapper = styled.div.attrs({
 })`
   margin-bottom: 30px;
 
-  ${({ isButtonVariant }) => (isButtonVariant ? 'margin-bottom: 10px;' : '')}
+  ${({ isButtonVariant }) => (isButtonVariant ? 'margin-bottom: 0px;' : '')}
 `;
 
 const StyledFormItem = styled.input`
@@ -121,8 +121,8 @@ const StyledRequiredLabel = styled.span`
 const StyledErrorMessage = styled.span`
   display: block;
   margin-top: 5px;
-  padding-left: ${({ isToggle, isSwitch, isButton }) => {
-    if (isButton) {
+  padding-left: ${({ isToggle, isSwitch, isButton, buttonSize }) => {
+    if (isButton && buttonSize === 'small') {
       return '56px';
     }
     if (isToggle) {
@@ -134,7 +134,8 @@ const StyledErrorMessage = styled.span`
     return '0px';
   }};
 
-  ${({ isButton }) => (isButton ? 'margin-top: -12px;' : '')}
+  ${({ isButton, buttonSize }) =>
+    isButton && buttonSize === 'small' ? 'margin-top: -12px;' : ''}
 
   color: ${({ theme }) => errorColors[theme.c7__ui.mode].color};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
@@ -166,11 +167,26 @@ const StyledFieldset = styled.fieldset`
       margin-bottom: 0px;
     }
   }
+`;
 
-  ${({ isButtonVariant }) =>
-    isButtonVariant
+const StyledHorizontalFieldset = styled.fieldset`
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  ${({ size }) =>
+    size !== 'small'
       ? `
-    display: flex;
+  width: 100%;
+
+  > div {
+    flex: 1;
+
+    > label {
+      width: 100%;
+    }
+  }
   `
       : ''}
 `;
@@ -187,8 +203,8 @@ const StyledDescription = styled.p`
   display: block;
   margin-top: 5px;
   margin-bottom: 0;
-  padding-left: ${({ isToggle, isSwitch, isButton }) => {
-    if (isButton) {
+  padding-left: ${({ isToggle, isSwitch, isButton, buttonSize }) => {
+    if (isButton && buttonSize === 'small') {
       return '56px';
     }
     if (isToggle) {
@@ -200,7 +216,8 @@ const StyledDescription = styled.p`
     return '0px';
   }};
 
-  ${({ isButton }) => (isButton ? 'margin-top: -12px;' : '')}
+  ${({ isButton, buttonSize }) =>
+    isButton && buttonSize === 'small' ? 'margin-top: -12px;' : ''}
 
   color: ${({ theme }) => theme.c7__ui.secondaryFontColor};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
@@ -218,6 +235,7 @@ export {
   StyledInputWrapper,
   StyledHiddenInput,
   StyledFieldset,
+  StyledHorizontalFieldset,
   StyledFieldsetLabel,
   StyledDescription
 };

@@ -8,6 +8,8 @@ import SelectButton from '.';
 export const Basic = () => (
   <Container>
     <SelectButton>Basic</SelectButton>
+    <SelectButton loading>Loading</SelectButton>
+    <SelectButton disabled>Can&apos;t touch this</SelectButton>
   </Container>
 );
 
@@ -17,10 +19,10 @@ Basic.story = {
 
 export const SmallIcon = () => (
   <Container>
-    <SelectButton variant="small" icon="alignLeft" disabled />
-    <SelectButton variant="small" icon="alignCenter" selected />
-    <SelectButton variant="small" icon="alignRight" loading />
-    <SelectButton variant="small" icon="wine" />
+    <SelectButton size="small" icon="alignLeft" disabled />
+    <SelectButton size="small" icon="alignCenter" selected />
+    <SelectButton size="small" icon="alignRight" loading />
+    <SelectButton size="small" icon="wine" />
   </Container>
 );
 
@@ -30,13 +32,13 @@ SmallIcon.story = {
 
 export const SmallText = () => (
   <Container>
-    <SelectButton variant="small" disabled>
+    <SelectButton size="small" disabled>
       Small
     </SelectButton>
-    <SelectButton variant="small" selected>
+    <SelectButton size="small" selected>
       Medium
     </SelectButton>
-    <SelectButton variant="small" loading>
+    <SelectButton size="small" loading>
       Large
     </SelectButton>
   </Container>
@@ -44,26 +46,6 @@ export const SmallText = () => (
 
 SmallText.story = {
   name: 'SmallText'
-};
-
-export const Loading = () => (
-  <Container>
-    <SelectButton loading>Loading</SelectButton>
-  </Container>
-);
-
-Loading.story = {
-  name: 'Loading'
-};
-
-export const Disabled = () => (
-  <Container>
-    <SelectButton disabled>Can&apos;t touch this</SelectButton>
-  </Container>
-);
-
-Disabled.story = {
-  name: 'Disabled'
 };
 
 export const SelectMany = () => {
@@ -124,6 +106,22 @@ export const SelectOne = () => {
 
 SelectOne.story = {
   name: 'SelectOne'
+};
+
+export const Medium = () => (
+  <Container>
+    <SelectButton size="medium">Basic</SelectButton>
+    <SelectButton size="medium" loading>
+      Loading
+    </SelectButton>
+    <SelectButton size="medium" disabled>
+      Can&apos;t touch this
+    </SelectButton>
+  </Container>
+);
+
+Medium.story = {
+  name: 'Medium'
 };
 
 const Container = styled.div`

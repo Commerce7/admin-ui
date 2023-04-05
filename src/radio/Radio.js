@@ -68,7 +68,7 @@ const Radio = forwardRef((props, ref) => {
         {isButtonVariant ? (
           <SelectButton
             selected={checked}
-            variant={size}
+            size={size}
             icon={icon}
             onClick={onChange}
             disabled={disabled}
@@ -87,8 +87,9 @@ const Radio = forwardRef((props, ref) => {
       {hasDescription && (
         <StyledDescription
           id={descriptionId}
-          isToggle
+          isToggle={!isButtonVariant}
           isButton={isButtonVariant}
+          buttonSize={size}
         >
           {description}
         </StyledDescription>
@@ -97,8 +98,9 @@ const Radio = forwardRef((props, ref) => {
         <StyledErrorMessage
           id={errorId}
           role="alert"
-          isToggle
+          isToggle={!isButtonVariant}
           isButton={isButtonVariant}
+          buttonSize={size}
         >
           {errorMessage}
         </StyledErrorMessage>
@@ -117,7 +119,7 @@ Radio.defaultProps = {
   required: false,
   dataTestId: null,
   variant: 'default',
-  size: 'small',
+  size: null,
   icon: null
 };
 

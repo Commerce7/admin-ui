@@ -69,7 +69,7 @@ const Checkbox = forwardRef((props, ref) => {
           {isButtonVariant ? (
             <SelectButton
               selected={checked}
-              variant={size}
+              size={size}
               icon={icon}
               disabled={disabled}
               as="span"
@@ -90,8 +90,9 @@ const Checkbox = forwardRef((props, ref) => {
       {hasDescription && (
         <StyledDescription
           id={descriptionId}
-          isToggle
+          isToggle={!isButtonVariant}
           isButton={isButtonVariant}
+          buttonSize={size}
         >
           {description}
         </StyledDescription>
@@ -100,8 +101,9 @@ const Checkbox = forwardRef((props, ref) => {
         <StyledErrorMessage
           id={errorId}
           role="alert"
-          isToggle
+          isToggle={!isButtonVariant}
           isButton={isButtonVariant}
+          buttonSize={size}
         >
           {errorMessage}
         </StyledErrorMessage>
@@ -121,7 +123,7 @@ Checkbox.defaultProps = {
   value: '',
   dataTestId: null,
   variant: 'default',
-  size: 'small',
+  size: null,
   icon: null
 };
 

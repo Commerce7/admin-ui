@@ -107,4 +107,24 @@ const StyledSmallSelectButton = styled(StyledSelectButton)`
   }
 `;
 
-export { StyledSelectButton, StyledLoadingIcon, StyledSmallSelectButton };
+const StyledMediumSelectButton = styled(StyledSelectButton)`
+  min-height: 56px;
+  min-width: 56px;
+  height: 56px;
+  max-height: 56px;
+  padding: 12px;
+  border-radius: 4px;
+
+  ${Icon} {
+    path {
+      fill: ${({ theme }) => theme.c7__ui.fontColor};
+    }
+  }
+`;
+
+export {
+  StyledSelectButton,
+  StyledLoadingIcon,
+  StyledSmallSelectButton,
+  StyledMediumSelectButton
+};

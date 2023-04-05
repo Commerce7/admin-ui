@@ -6,7 +6,8 @@ import Icon from '../icon';
 import {
   StyledSelectButton,
   StyledLoadingIcon,
-  StyledSmallSelectButton
+  StyledSmallSelectButton,
+  StyledMediumSelectButton
 } from './SelectButton.styles';
 
 const SelectButton = forwardRef((props, ref) => {
@@ -19,12 +20,12 @@ const SelectButton = forwardRef((props, ref) => {
     onClick,
     type,
     dataTestId,
-    variant,
+    size,
     icon,
     as
   } = props;
 
-  if (variant === 'small') {
+  if (size === 'small') {
     return (
       <StyledSmallSelectButton
         ref={ref}
@@ -46,6 +47,23 @@ const SelectButton = forwardRef((props, ref) => {
           </>
         )}
       </StyledSmallSelectButton>
+    );
+  }
+
+  if (size === 'medium') {
+    return (
+      <StyledMediumSelectButton
+        ref={ref}
+        className={className}
+        disabled={disabled || loading}
+        type={type}
+        onClick={onClick}
+        selected={selected}
+        data-testid={dataTestId}
+        as={as}
+      >
+        {loading ? <StyledLoadingIcon icon="loading" /> : children}
+      </StyledMediumSelectButton>
     );
   }
 
@@ -73,7 +91,7 @@ SelectButton.defaultProps = {
   onClick: null,
   type: 'button',
   dataTestId: null,
-  variant: 'default',
+  size: 'large',
   icon: null,
   children: null
 };
@@ -124,7 +142,7 @@ SelectButton.propTypes = {
   /**
    * Select Button Variant.
    */
-  variant: PropTypes.oneOf(['small', 'default']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 
   /**
    * Icon for display on small variant only.

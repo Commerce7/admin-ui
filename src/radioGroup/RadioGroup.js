@@ -4,18 +4,41 @@ import {
   StyledErrorMessage,
   StyledRequiredLabel,
   StyledFieldset,
+  StyledHorizontalFieldset,
   StyledFieldsetLabel
 } from '../common/form/styles';
 
 const RadioGroup = (props) => {
-  const { children, errorMessage, label, required, dataTestId, variant } =
+  const { children, errorMessage, label, required, dataTestId, variant, size } =
     props;
 
   const hasErrorMessage = !!errorMessage;
   const isButtonVariant = variant === 'button';
 
+  if (isButtonVariant) {
+    return (
+      <>
+        <StyledHorizontalFieldset
+          data-testid={dataTestId}
+          isButtonVariant={isButtonVariant}
+          size={size}
+        >
+          {label && (
+            <StyledFieldsetLabel>
+              {label} {required && <StyledRequiredLabel />}
+            </StyledFieldsetLabel>
+          )}
+          {children}
+        </StyledHorizontalFieldset>
+        {hasErrorMessage && (
+          <StyledErrorMessage>{errorMessage}</StyledErrorMessage>
+        )}
+      </>
+    );
+  }
+
   return (
-    <StyledFieldset data-testid={dataTestId} isButtonVariant={isButtonVariant}>
+    <StyledFieldset data-testid={dataTestId}>
       {label && (
         <StyledFieldsetLabel>
           {label} {required && <StyledRequiredLabel />}
@@ -34,7 +57,8 @@ RadioGroup.defaultProps = {
   label: null,
   required: false,
   dataTestId: null,
-  variant: 'default'
+  size: 'small',
+  variant: null
 };
 
 RadioGroup.propTypes = {
@@ -65,9 +89,14 @@ RadioGroup.propTypes = {
   dataTestId: PropTypes.string,
 
   /**
-   * Radio Variant.
+   * RadioGroup Variant
    */
-  variant: PropTypes.oneOf(['button', 'default'])
+  variant: PropTypes.oneOf(['button', null]),
+
+  /**
+   * RadioGroup Size - only used for button variant.
+   */
+  size: PropTypes.oneOf(['small', 'medium', 'large'])
 };
 
 export default RadioGroup;

@@ -107,13 +107,14 @@ export const RadioButtonGroup = () => {
   };
 
   return (
-    <RadioGroup label="Logo Alignment" variant="button">
+    <RadioGroup label="Logo Alignment" variant="button" size="small">
       <Radio
         id="left"
         value="left"
         checked={checked === 'left'}
         onChange={handleOnChange}
         variant="button"
+        size="small"
         icon="alignLeft"
       />
       <Radio
@@ -122,6 +123,7 @@ export const RadioButtonGroup = () => {
         checked={checked === 'center'}
         onChange={handleOnChange}
         variant="button"
+        size="small"
         icon="alignCenter"
       />
       <Radio
@@ -130,6 +132,7 @@ export const RadioButtonGroup = () => {
         checked={checked === 'right'}
         onChange={handleOnChange}
         variant="button"
+        size="small"
         icon="alignRight"
       />
     </RadioGroup>
@@ -140,7 +143,7 @@ RadioButtonGroup.story = {
   name: 'Radio Button Group'
 };
 
-export const RadioButtonGroupText = () => {
+export const RadioButtonGroupMedium = () => {
   const [checked, setChecked] = useState('right');
 
   const handleOnChange = (e) => {
@@ -148,7 +151,106 @@ export const RadioButtonGroupText = () => {
   };
 
   return (
-    <RadioGroup label="Logo Alignment" variant="button">
+    <RadioGroup label="Text Size" variant="button" size="medium">
+      <Radio
+        id="small"
+        value="small"
+        checked={checked === 'small'}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Small
+      </Radio>
+      <Radio
+        id="center"
+        value="center"
+        checked={checked === 'center'}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Medium
+      </Radio>
+      <Radio
+        id="right"
+        value="right"
+        checked={checked === 'right'}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Large
+      </Radio>
+    </RadioGroup>
+  );
+};
+
+RadioButtonGroupMedium.story = {
+  name: 'Radio Button Group Medium'
+};
+
+export const RadioButtonGroupMediumError = () => {
+  const [checked, setChecked] = useState('right');
+
+  const handleOnChange = (e) => {
+    setChecked(e.target.value);
+  };
+
+  return (
+    <RadioGroup
+      label="Text Size"
+      variant="button"
+      size="medium"
+      errorMessage="Please select one"
+    >
+      <Radio
+        id="small"
+        value="small"
+        checked={checked === 'small'}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Small
+      </Radio>
+      <Radio
+        id="center"
+        value="center"
+        checked={checked === 'center'}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Medium
+      </Radio>
+      <Radio
+        id="right"
+        value="right"
+        checked={checked === 'right'}
+        onChange={handleOnChange}
+        variant="button"
+        size="medium"
+      >
+        Large
+      </Radio>
+    </RadioGroup>
+  );
+};
+
+RadioButtonGroupMediumError.story = {
+  name: 'Radio Button Group Medium Error'
+};
+
+export const RadioButtonGroupLarge = () => {
+  const [checked, setChecked] = useState('right');
+
+  const handleOnChange = (e) => {
+    setChecked(e.target.value);
+  };
+
+  return (
+    <RadioGroup label="Text Size" variant="button" size="large">
       <Radio
         id="small"
         value="small"
@@ -180,11 +282,11 @@ export const RadioButtonGroupText = () => {
   );
 };
 
-RadioButtonGroupText.story = {
-  name: 'Radio Button Group Text'
+RadioButtonGroupLarge.story = {
+  name: 'Radio Button Group Large'
 };
 
-export const RadioButtonGroupLarge = () => {
+export const RadioButtonGroupLargeError = () => {
   const [checked, setChecked] = useState('right');
 
   const handleOnChange = (e) => {
@@ -192,16 +294,20 @@ export const RadioButtonGroupLarge = () => {
   };
 
   return (
-    <RadioGroup label="" variant="button">
+    <RadioGroup
+      label="Text Size"
+      variant="button"
+      size="large"
+      errorMessage="Please select one"
+    >
       <Radio
         id="small"
         value="small"
         checked={checked === 'small'}
         onChange={handleOnChange}
         variant="button"
-        size="default"
       >
-        Card on File
+        Small
       </Radio>
       <Radio
         id="center"
@@ -209,9 +315,8 @@ export const RadioButtonGroupLarge = () => {
         checked={checked === 'center'}
         onChange={handleOnChange}
         variant="button"
-        size="default"
       >
-        Cash
+        Medium
       </Radio>
       <Radio
         id="right"
@@ -219,16 +324,15 @@ export const RadioButtonGroupLarge = () => {
         checked={checked === 'right'}
         onChange={handleOnChange}
         variant="button"
-        size="default"
       >
-        Pay Externally
+        Large
       </Radio>
     </RadioGroup>
   );
 };
 
-RadioButtonGroupLarge.story = {
-  name: 'Radio Button Group Large'
+RadioButtonGroupLargeError.story = {
+  name: 'Radio Button Group Large Error'
 };
 
 export default {
