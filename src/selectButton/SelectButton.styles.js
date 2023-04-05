@@ -114,7 +114,6 @@ const StyledMediumSelectButton = styled(StyledSelectButton)`
   max-height: 56px;
   padding: 12px;
   border-radius: 4px;
-  color: ${({ theme }) => theme.c7__ui.fontColor};
 
   ${Icon} {
     path {
