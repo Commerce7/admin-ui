@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 import { StyledFormItem } from '../common/form/styles';
 import Icon from '../icon';
+import Text from '../text';
 
 import { svgColors } from './theme';
 
@@ -55,4 +56,12 @@ const StyledInputIcon = styled(Icon)`
   }
 `;
 
-export { StyledInput, StyledIconWrapper, StyledInputIcon };
+const StyledInputSuffix = styled(Text)`
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  right: 10px;
+`;
+
+export { StyledInput, StyledIconWrapper, StyledInputIcon, StyledInputSuffix };
