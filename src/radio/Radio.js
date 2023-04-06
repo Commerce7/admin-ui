@@ -70,7 +70,6 @@ const Radio = forwardRef((props, ref) => {
             selected={checked}
             size={size}
             icon={icon}
-            onClick={onChange}
             disabled={disabled}
             as="span"
           >
