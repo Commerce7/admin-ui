@@ -9,8 +9,16 @@ import {
 } from '../common/form/styles';
 
 const CheckboxGroup = (props) => {
-  const { children, errorMessage, label, required, dataTestId, variant, size } =
-    props;
+  const {
+    children,
+    errorMessage,
+    label,
+    required,
+    dataTestId,
+    variant,
+    size,
+    className
+  } = props;
 
   const hasErrorMessage = !!errorMessage;
   const isButtonVariant = variant === 'button';
@@ -22,6 +30,7 @@ const CheckboxGroup = (props) => {
           data-testid={dataTestId}
           isButtonVariant={isButtonVariant}
           size={size}
+          className={className}
         >
           {label && (
             <StyledFieldsetLabel>
@@ -38,7 +47,7 @@ const CheckboxGroup = (props) => {
   }
 
   return (
-    <StyledFieldset data-testid={dataTestId}>
+    <StyledFieldset data-testid={dataTestId} className={className}>
       {label && (
         <StyledFieldsetLabel>
           {label} {required && <StyledRequiredLabel />}
