@@ -63,6 +63,7 @@ const RadioGroup = (props) => {
 
 RadioGroup.defaultProps = {
   errorMessage: null,
+  className: '',
   label: null,
   required: false,
   dataTestId: null,
@@ -75,6 +76,11 @@ RadioGroup.propTypes = {
    * The content of the component.
    */
   children: PropTypes.node.isRequired,
+
+  /**
+   * Add className to the outermost element.
+   */
+  className: PropTypes.string,
 
   /**
    * Show an error message and set the component styles to visually show an error
