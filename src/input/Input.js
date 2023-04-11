@@ -116,6 +116,7 @@ Input.defaultProps = {
   type: 'text',
   required: false,
   startIcon: null,
+  suffix: null,
   dataTestId: null
 };
 
@@ -147,10 +148,22 @@ Input.propTypes = {
   disabled: PropTypes.bool,
 
   /**
+   * Add an icon to the start of the element.
+   * Valid icons include all options from the `<Icon/>` component.
+   */
+  startIcon: PropTypes.string,
+
+  /**
    * Add an icon to the end of the element.
    * Valid icons include all options from the `<Icon/>` component.
    */
   endIcon: PropTypes.string,
+
+  /**
+   * Adds a suffix in secondary font styling to end of input.
+   * Cannot be used with endIcon.
+   */
+  suffix: PropTypes.string,
 
   /**
    * Show an error message and set the component styles to visually show an error.
@@ -207,12 +220,6 @@ Input.propTypes = {
    * This will show an asterik in the label and add 'required' to the DOM node.
    */
   required: PropTypes.bool,
-
-  /**
-   * Add an icon to the start of the element.
-   * Valid icons include all options from the `<Icon/>` component.
-   */
-  startIcon: PropTypes.string,
 
   /**
    * Set the element html type of the element.
