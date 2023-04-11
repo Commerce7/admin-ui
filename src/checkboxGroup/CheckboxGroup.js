@@ -9,8 +9,16 @@ import {
 } from '../common/form/styles';
 
 const CheckboxGroup = (props) => {
-  const { children, errorMessage, label, required, dataTestId, variant, size } =
-    props;
+  const {
+    children,
+    errorMessage,
+    label,
+    required,
+    dataTestId,
+    variant,
+    size,
+    className
+  } = props;
 
   const hasErrorMessage = !!errorMessage;
   const isButtonVariant = variant === 'button';
@@ -22,6 +30,7 @@ const CheckboxGroup = (props) => {
           data-testid={dataTestId}
           isButtonVariant={isButtonVariant}
           size={size}
+          className={className}
         >
           {label && (
             <StyledFieldsetLabel>
@@ -38,7 +47,7 @@ const CheckboxGroup = (props) => {
   }
 
   return (
-    <StyledFieldset data-testid={dataTestId}>
+    <StyledFieldset data-testid={dataTestId} className={className}>
       {label && (
         <StyledFieldsetLabel>
           {label} {required && <StyledRequiredLabel />}
@@ -54,6 +63,7 @@ const CheckboxGroup = (props) => {
 
 CheckboxGroup.defaultProps = {
   errorMessage: null,
+  className: '',
   label: null,
   required: false,
   dataTestId: null,
@@ -66,6 +76,11 @@ CheckboxGroup.propTypes = {
    * The content of the component.
    */
   children: PropTypes.node.isRequired,
+
+  /**
+   * Add className to the outermost element.
+   */
+  className: PropTypes.string,
 
   /**
    * Show an error message and set the component styles to visually show an error.
