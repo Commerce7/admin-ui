@@ -193,7 +193,7 @@ Checkbox.propTypes = {
   /**
    * Checkbox Size - only used for button variant.
    */
-  size: PropTypes.oneOf(['small', 'default']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
 
   /**
    * Icon for button variant only.
