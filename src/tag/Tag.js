@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types';
 
-import Icon from '../icon';
-
 import {
   StyledTag,
   StyledTagLabel,
@@ -45,38 +43,6 @@ const Tag = (props) => {
 
   const as = onClick ? 'button' : 'span';
 
-  if (startIcon || endIcon) {
-    return (
-      <StyledTag
-        className={className}
-        as={as}
-        variant={variant}
-        onClick={onClick}
-        data-testid={dataTestId}
-        startIcon={startIcon}
-        endIcon={endIcon}
-      >
-        {startIcon && (
-          <StyledStartIcon
-            className={className}
-            icon={startIcon}
-            size={size}
-            variant={variant}
-          />
-        )}
-        <StyledTagLabel>{children}</StyledTagLabel>
-        {endIcon && (
-          <StyledEndIcon
-            className={className}
-            icon={endIcon}
-            size={size}
-            variant={variant}
-          />
-        )}
-      </StyledTag>
-    );
-  }
-
   return (
     <StyledTag
       className={className}
@@ -84,10 +50,26 @@ const Tag = (props) => {
       variant={variant}
       onClick={onClick}
       data-testid={dataTestId}
+      startIcon={startIcon}
+      endIcon={endIcon}
     >
-      {startIcon && <Icon icon={startIcon} size={size} />}
+      {startIcon && (
+        <StyledStartIcon
+          className={className}
+          icon={startIcon}
+          size={size}
+          variant={variant}
+        />
+      )}
       <StyledTagLabel>{children}</StyledTagLabel>
-      {endIcon && <Icon icon={endIcon} size={size} />}
+      {endIcon && (
+        <StyledEndIcon
+          className={className}
+          icon={endIcon}
+          size={size}
+          variant={variant}
+        />
+      )}
     </StyledTag>
   );
 };
