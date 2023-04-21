@@ -1,7 +1,5 @@
 import { action } from '@storybook/addon-actions';
 
-import { StyledContainer } from './Tag.styles';
-
 import Tag from '.';
 
 export const basic = () => (
@@ -76,24 +74,6 @@ export const icon = () => (
         Success
       </Tag>
     </div>
-    <h5>Different Sizes</h5>
-    <StyledContainer>
-      <Tag variant="default" startIcon="closeCircle" size={12}>
-        Default
-      </Tag>
-      <Tag variant="info" startIcon="infoCircle" size={14}>
-        Info
-      </Tag>
-      <Tag variant="warning" startIcon="warning" size={16}>
-        Warning
-      </Tag>
-      <Tag variant="error" startIcon="warning" size={18}>
-        Error
-      </Tag>
-      <Tag variant="success" startIcon="closeCircle" size={20}>
-        Success
-      </Tag>
-    </StyledContainer>
   </>
 );
 

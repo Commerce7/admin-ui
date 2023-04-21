@@ -17,8 +17,7 @@ const Tag = (props) => {
     variant,
     dataTestId,
     startIcon,
-    endIcon,
-    size
+    endIcon
   } = props;
 
   const handleDelete = (e) => {
@@ -57,7 +56,7 @@ const Tag = (props) => {
         <StyledStartIcon
           className={className}
           icon={startIcon}
-          size={size}
+          size={12}
           variant={variant}
         />
       )}
@@ -66,7 +65,7 @@ const Tag = (props) => {
         <StyledEndIcon
           className={className}
           icon={endIcon}
-          size={size}
+          size={12}
           variant={variant}
         />
       )}
@@ -81,7 +80,6 @@ Tag.defaultProps = {
   onDelete: null,
   startIcon: null,
   endIcon: null,
-  size: 12,
   variant: 'default',
   dataTestId: null
 };
@@ -122,11 +120,6 @@ Tag.propTypes = {
    * Set the icon at the rear of the tag.
    */
   endIcon: PropTypes.string,
-
-  /**
-   * Set the size of the icon.
-   */
-  size: PropTypes.number,
 
   /**
    * Add test attribute to the element. Used internally for testing.

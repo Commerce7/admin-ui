@@ -77,16 +77,10 @@ const StyledDeleteButton = styled.button`
   }
 `;
 
-const StyledContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
 export {
   StyledTag,
   StyledTagLabel,
   StyledDeleteButton,
   StyledStartIcon,
-  StyledEndIcon,
-  StyledContainer
+  StyledEndIcon
 };
