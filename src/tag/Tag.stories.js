@@ -36,6 +36,10 @@ export const withClick = () => (
   </>
 );
 
+withClick.story = {
+  name: 'Click'
+};
+
 export const icon = () => (
   <>
     <h5>Start Icon</h5>
