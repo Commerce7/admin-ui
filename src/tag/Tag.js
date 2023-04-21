@@ -1,9 +1,24 @@
 import PropTypes from 'prop-types';
 
-import { StyledTag, StyledTagLabel, StyledDeleteButton } from './Tag.styles';
+import {
+  StyledTag,
+  StyledTagLabel,
+  StyledDeleteButton,
+  StyledStartIcon,
+  StyledEndIcon
+} from './Tag.styles';
 
 const Tag = (props) => {
-  const { children, className, onClick, onDelete, variant, dataTestId } = props;
+  const {
+    children,
+    className,
+    onClick,
+    onDelete,
+    variant,
+    dataTestId,
+    startIcon,
+    endIcon
+  } = props;
 
   const handleDelete = (e) => {
     e.preventDefault();
@@ -34,8 +49,26 @@ const Tag = (props) => {
       variant={variant}
       onClick={onClick}
       data-testid={dataTestId}
+      startIcon={startIcon}
+      endIcon={endIcon}
     >
+      {startIcon && (
+        <StyledStartIcon
+          className={className}
+          icon={startIcon}
+          size={12}
+          variant={variant}
+        />
+      )}
       <StyledTagLabel>{children}</StyledTagLabel>
+      {endIcon && (
+        <StyledEndIcon
+          className={className}
+          icon={endIcon}
+          size={12}
+          variant={variant}
+        />
+      )}
     </StyledTag>
   );
 };
@@ -45,6 +78,8 @@ Tag.defaultProps = {
   children: null,
   onClick: null,
   onDelete: null,
+  startIcon: null,
+  endIcon: null,
   variant: 'default',
   dataTestId: null
 };
@@ -75,6 +110,16 @@ Tag.propTypes = {
    * Set the visual property of the component.
    */
   variant: PropTypes.oneOf(['default', 'info', 'warning', 'error', 'success']),
+
+  /**
+   * Set the icon at the front of the tag.
+   */
+  startIcon: PropTypes.string,
+
+  /**
+   * Set the icon at the rear of the tag.
+   */
+  endIcon: PropTypes.string,
 
   /**
    * Add test attribute to the element. Used internally for testing.
