@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import Icon from '../icon';
+
 import { colors } from './theme';
 
 const StyledTag = styled.span`
@@ -24,6 +26,22 @@ const StyledTag = styled.span`
   background-color: ${({ theme, variant }) =>
     colors[theme.c7__ui.mode][variant].backgroundColor};
   color: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
+`;
+
+const StyledStartIcon = styled(Icon)`
+  path {
+    fill: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
+  }
+  margin-right: 5px;
+  margin-left: -2px;
+`;
+
+const StyledEndIcon = styled(Icon)`
+  path {
+    fill: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
+  }
+  margin-left: 5px;
+  margin-right: -2px;
 `;
 
 const StyledTagLabel = styled.span`
@@ -59,4 +77,16 @@ const StyledDeleteButton = styled.button`
   }
 `;
 
-export { StyledTag, StyledTagLabel, StyledDeleteButton };
+const StyledContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export {
+  StyledTag,
+  StyledTagLabel,
+  StyledDeleteButton,
+  StyledStartIcon,
+  StyledEndIcon,
+  StyledContainer
+};

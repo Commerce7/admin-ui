@@ -1,5 +1,7 @@
 import { action } from '@storybook/addon-actions';
 
+import { StyledContainer } from './Tag.styles';
+
 import Tag from '.';
 
 export const basic = () => (
@@ -36,8 +38,67 @@ export const withClick = () => (
   </>
 );
 
-withClick.story = {
-  name: 'Click'
+export const icon = () => (
+  <>
+    <h5>Start Icon</h5>
+    <div>
+      <Tag variant="default" startIcon="closeCircle" size={12}>
+        Default
+      </Tag>
+      <Tag variant="info" startIcon="infoCircle" size={12}>
+        Info
+      </Tag>
+      <Tag variant="warning" startIcon="warning" size={12}>
+        Warning
+      </Tag>
+      <Tag variant="error" startIcon="warning" size={12}>
+        Error
+      </Tag>
+      <Tag variant="success" startIcon="closeCircle" size={12}>
+        Success
+      </Tag>
+    </div>
+    <h5>End Icon</h5>
+    <div>
+      <Tag variant="default" endIcon="closeCircle" size={12}>
+        Default
+      </Tag>
+      <Tag variant="info" endIcon="infoCircle" size={12}>
+        Info
+      </Tag>
+      <Tag variant="warning" endIcon="warning" size={12}>
+        Warning
+      </Tag>
+      <Tag variant="error" endIcon="warning" size={12}>
+        Error
+      </Tag>
+      <Tag variant="success" endIcon="closeCircle" size={12}>
+        Success
+      </Tag>
+    </div>
+    <h5>Different Sizes</h5>
+    <StyledContainer>
+      <Tag variant="default" startIcon="closeCircle" size={12}>
+        Default
+      </Tag>
+      <Tag variant="info" startIcon="infoCircle" size={14}>
+        Info
+      </Tag>
+      <Tag variant="warning" startIcon="warning" size={16}>
+        Warning
+      </Tag>
+      <Tag variant="error" startIcon="warning" size={18}>
+        Error
+      </Tag>
+      <Tag variant="success" startIcon="closeCircle" size={20}>
+        Success
+      </Tag>
+    </StyledContainer>
+  </>
+);
+
+icon.story = {
+  name: 'Icon'
 };
 
 export const withDelete = () => (
