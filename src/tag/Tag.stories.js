@@ -40,6 +40,51 @@ withClick.story = {
   name: 'Click'
 };
 
+export const icon = () => (
+  <>
+    <h5>Start Icon</h5>
+    <div>
+      <Tag variant="default" startIcon="closeCircle" size={12}>
+        Default
+      </Tag>
+      <Tag variant="info" startIcon="infoCircle" size={12}>
+        Info
+      </Tag>
+      <Tag variant="warning" startIcon="warning" size={12}>
+        Warning
+      </Tag>
+      <Tag variant="error" startIcon="warning" size={12}>
+        Error
+      </Tag>
+      <Tag variant="success" startIcon="closeCircle" size={12}>
+        Success
+      </Tag>
+    </div>
+    <h5>End Icon</h5>
+    <div>
+      <Tag variant="default" endIcon="closeCircle" size={12}>
+        Default
+      </Tag>
+      <Tag variant="info" endIcon="infoCircle" size={12}>
+        Info
+      </Tag>
+      <Tag variant="warning" endIcon="warning" size={12}>
+        Warning
+      </Tag>
+      <Tag variant="error" endIcon="warning" size={12}>
+        Error
+      </Tag>
+      <Tag variant="success" endIcon="closeCircle" size={12}>
+        Success
+      </Tag>
+    </div>
+  </>
+);
+
+icon.story = {
+  name: 'Icon'
+};
+
 export const withDelete = () => (
   <>
     <Tag variant="default" onDelete={action('delete click')}>
