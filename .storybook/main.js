@@ -4,7 +4,6 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-postcss',
-    '@storybook/addon-mdx-gfm',
     '@storybook/addon-a11y'
   ],
   framework: {

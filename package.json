@@ -33,7 +33,6 @@
     "@storybook/addon-actions": "^7.0.6",
     "@storybook/addon-essentials": "^7.0.6",
     "@storybook/addon-links": "^7.0.6",
-    "@storybook/addon-mdx-gfm": "^7.0.6",
     "@storybook/addon-postcss": "^2.0.0",
     "@storybook/addons": "^7.0.6",
     "@storybook/react": "^7.0.6",
