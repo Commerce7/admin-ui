@@ -10,7 +10,7 @@ module.exports = {
     name: '@storybook/react-webpack5',
     options: {}
   },
-  // {/* we can't use dymaic title in v2 I disabled store v2 to use dynamic title to show  => https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#mdx2-upgrade */}
+  // {/* we can't use dynamic title in v2 I disabled store v2 to use dynamic title to show  => https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#mdx2-upgrade */}
   features: { storyStoreV7: false },
   docs: {
     autodocs: true
