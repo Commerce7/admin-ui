@@ -1,9 +1,13 @@
-import { addDecorator } from '@storybook/react';
-
 import StoriesWrapper from '../src/stories/StoriesWrapper';
-
-addDecorator((story) => <StoriesWrapper>{story()}</StoriesWrapper>);
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' }
 };
+
+export const decorators = [
+  (Story) => (
+    <StoriesWrapper>
+      <Story />
+    </StoriesWrapper>
+  )
+];
