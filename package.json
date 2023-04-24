@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.11.8",
+  "version": "1.11.9",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -64,6 +64,7 @@
     "webpack-node-externals": "^3.0.0"
   },
   "dependencies": {
+    "@storybook/addon-a11y": "^7.0.7",
     "moment": "^2.29.4",
     "prop-types": "^15.8.1",
     "react-datetime": "^3.2.0",
