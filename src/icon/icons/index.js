@@ -82,6 +82,7 @@ import Image from './Image';
 import ImagePlaceholder from './ImagePlaceholder';
 import InfoCircle from './InfoCircle';
 import Inventory from './Inventory';
+import Language from './Language';
 import Launch from './Launch';
 import LightBulb from './LightBulb';
 import Link from './Link';
@@ -243,6 +244,7 @@ export {
   History as history,
   InfoCircle as infoCircle,
   Inventory as inventory,
+  Language as language,
   Launch as launch,
   LightBulb as lightBulb,
   Link as link,
