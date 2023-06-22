@@ -25,6 +25,7 @@ const Radio = forwardRef((props, ref) => {
     id,
     label,
     onChange,
+    onClick,
     required,
     value,
     dataTestId,
@@ -71,6 +72,7 @@ const Radio = forwardRef((props, ref) => {
             size={size}
             icon={icon}
             disabled={disabled}
+            onClick={onClick}
             as="span"
           >
             {children}
@@ -119,7 +121,8 @@ Radio.defaultProps = {
   dataTestId: null,
   variant: 'default',
   size: null,
-  icon: null
+  icon: null,
+  onClick: null
 };
 
 Radio.propTypes = {
@@ -158,10 +161,16 @@ Radio.propTypes = {
    * The label for the component.
    */
   label: PropTypes.string,
+
   /**
    * Callback onChange.
    */
   onChange: PropTypes.func.isRequired,
+
+  /**
+   * Callback onClick, only used for button variant.
+   */
+  onClick: PropTypes.func,
 
   /**
    * Set the element to be required.
