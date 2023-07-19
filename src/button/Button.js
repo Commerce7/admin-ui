@@ -41,6 +41,7 @@ const Button = forwardRef((props, ref) => {
             icon={startIcon}
             position="start"
             isHidden={loading}
+            hasChildren={children !== null}
           />
         )}
         {loading && <StyledLoadingIcon icon="loading" />}
@@ -51,6 +52,7 @@ const Button = forwardRef((props, ref) => {
             icon={endIcon}
             position="end"
             isHidden={loading}
+            hasChildren={children !== null}
           />
         )}
       </StyledButtonText>
@@ -59,6 +61,7 @@ const Button = forwardRef((props, ref) => {
 });
 
 Button.defaultProps = {
+  children: null,
   className: '',
   disabled: false,
   loading: false,
@@ -74,7 +77,7 @@ Button.propTypes = {
   /**
    * The content of the component.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   /**
    * Add className to the outermost element.
