@@ -6,7 +6,8 @@ import { sizes, colors, shadows } from './theme';
 
 const StyledButtonIcon = styled(Icon)`
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
-  margin: ${({ position, buttonVariant }) => {
+  margin: ${({ position, buttonVariant, hasChildren, icon }) => {
+    if (!hasChildren && icon) return '0px';
     const iconMargin = buttonVariant === 'link' ? '5px' : '10px';
     return position === 'start' ? `0 ${iconMargin} 0 0` : `0 0 0 ${iconMargin}`;
   }};

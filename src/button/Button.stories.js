@@ -89,6 +89,7 @@ Size.story = {
 
 export const Icon = () => (
   <StyledContainer>
+    <Button variant="primary" startIcon="add" />
     <Button variant="primary" startIcon="add">
       Add to Cart
     </Button>
