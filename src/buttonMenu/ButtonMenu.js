@@ -70,7 +70,7 @@ const ButtonMenu = (props) => {
           <StyledButtonIcon
             icon="chevronDown"
             buttonVariant={variant}
-            hasChildren={children !== null}
+            hasChildren
           />
         </StyledButton>
         <DropdownMenu
