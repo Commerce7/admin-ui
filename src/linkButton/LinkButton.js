@@ -49,6 +49,7 @@ const LinkButton = forwardRef((props, ref) => {
           buttonVariant={variant}
           icon={startIcon}
           position="start"
+          hasChildren={children !== null}
         />
       )}
       {children}
@@ -57,6 +58,7 @@ const LinkButton = forwardRef((props, ref) => {
           buttonVariant={variant}
           icon={endIcon}
           position="end"
+          hasChildren={children !== null}
         />
       )}
     </StyledButton>
@@ -64,6 +66,7 @@ const LinkButton = forwardRef((props, ref) => {
 });
 
 LinkButton.defaultProps = {
+  children: null,
   className: '',
   component: null,
   disabled: false,
@@ -81,7 +84,7 @@ LinkButton.propTypes = {
   /**
    * The content of the component.
    */
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node,
 
   /**
    * Add className to the outermost element

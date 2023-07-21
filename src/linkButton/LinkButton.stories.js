@@ -16,6 +16,20 @@ Basic.story = {
 
 export const Variants = () => (
   <StyledContainer>
+    <LinkButton
+      variant="primary"
+      startIcon="add"
+      href="https://commerce7.com"
+    />
+    <LinkButton variant="primary" href="https://commerce7.com">
+      Primary Button
+    </LinkButton>
+    <LinkButton variant="primary" startIcon="add" href="https://commerce7.com">
+      Primary Button
+    </LinkButton>
+    <LinkButton variant="primary" endIcon="add" href="https://commerce7.com">
+      Primary Button
+    </LinkButton>
     <LinkButton variant="primary" href="https://commerce7.com">
       Primary Button
     </LinkButton>
