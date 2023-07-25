@@ -50,6 +50,23 @@ Disabled.story = {
   name: 'Disabled'
 };
 
+export const MoreActionsOverride = () => (
+  <ContextMenu>
+    <ContextMenuItem icon="export" onClick={action('clicked')}>
+      Export
+    </ContextMenuItem>
+    <ContextMenuMoreActions label="Actions">
+      <ContextMenuItem icon="trash" onClick={action('clicked')}>
+        Delete
+      </ContextMenuItem>
+    </ContextMenuMoreActions>
+  </ContextMenu>
+);
+
+MoreActionsOverride.story = {
+  name: 'MoreActionsOverride'
+};
+
 const description = `
 import { ContextMenu } from '@commerce7/admin-ui'<br/><br/>const { ContextMenuItem, ContextMenuMoreActions } = ContextMenu
 `;

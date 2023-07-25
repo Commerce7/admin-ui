@@ -11,7 +11,7 @@ import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
 const ContextMenuMoreActions = (props) => {
-  const { children, className, disabled, dataTestId } = props;
+  const { children, className, disabled, dataTestId, label } = props;
 
   const [isValidChildren, setValidChildren] = useState(true);
   const wrapperRef = useRef();
@@ -59,7 +59,7 @@ const ContextMenuMoreActions = (props) => {
         ref={buttonRef}
       >
         <StyledContextMenuIcon icon="moreActions" />
-        More Actions
+        {label}
       </StyledContextMenuItem>
       <DropdownMenu
         ref={dropdownRef}
@@ -77,7 +77,8 @@ const ContextMenuMoreActions = (props) => {
 ContextMenuMoreActions.defaultProps = {
   className: null,
   disabled: false,
-  dataTestId: null
+  dataTestId: null,
+  label: 'More Actions'
 };
 
 ContextMenuMoreActions.propTypes = {
@@ -91,6 +92,11 @@ ContextMenuMoreActions.propTypes = {
    * Add className to the outermost element.
    */
   className: PropTypes.string,
+
+  /**
+   * Override the default label of "More Actions".
+   */
+  label: PropTypes.string,
 
   /**
    * Set the element to disabled.
