@@ -1,7 +1,7 @@
-FROM public.ecr.aws/amazonlinux/amazonlinux:2
+FROM public.ecr.aws/amazonlinux/amazonlinux:2023
 
 #Install aws cli
-RUN yum -y install aws-cli
+RUN dnf -y install aws-cli
 
 #Receive Arguments for aws cli to work
 ARG AWS_ACCESS_KEY_ID
@@ -9,34 +9,31 @@ ARG AWS_SECRET_ACCESS_KEY
 ARG AWS_SESSION_TOKEN 
 ARG NPM_TOKEN
 
-#Update yum repos
-RUN yum -y update
-
-#Install Curl
-RUN yum -y install curl
+#Update dnf repos
+RUN dnf -y update
 
 #Install SSH
-RUN yum -y install -y openssh-server
-RUN yum -y install openssh-clients
+RUN dnf -y install -y openssh-server
+RUN dnf -y install openssh-clients
 
 #Install Vim
-RUN yum -y install -y vim
+RUN dnf -y install -y vim
 
 #Install gcc-c++
-RUN yum -y install gcc-c++ make
+RUN dnf -y install gcc-c++ make
 
 #Install tar and gzip
-RUN yum -y install tar
-RUN yum -y install gzip
+RUN dnf -y install tar
+RUN dnf -y install gzip
 
 # Install NVM to manage Node
 # NVM environment variables
 ENV NVM_DIR /usr/local/nvm
-ENV NODE_VERSION 16.17.1
+ENV NODE_VERSION 18.16.1
 RUN mkdir /usr/local/nvm
 
 # https://github.com/creationix/nvm#install-script
-RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+RUN curl --silent -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
 
 # Install NODE and NPM
 RUN source $NVM_DIR/nvm.sh \
