@@ -22,7 +22,6 @@ const StyledBreadcrumb = styled.div`
     border: none;
     background-color: transparent;
     padding: 0;
-    letter-spacing: 0.03em;
     cursor: pointer;
   }
 

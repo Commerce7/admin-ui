@@ -20,7 +20,6 @@ const StyledButton = styled.button`
   position: relative;
   border: 1px solid transparent;
   cursor: pointer;
-  letter-spacing: 0.28px;
   user-select: none;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;

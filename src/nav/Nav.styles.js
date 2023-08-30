@@ -25,7 +25,6 @@ const NavLinkStyles = styled.a`
   width: 100%;
   cursor: pointer;
   font-size: 16px;
-  letter-spacing: 0.05em;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
   ${({ theme, $activeClassName }) => `
