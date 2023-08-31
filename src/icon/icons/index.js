@@ -1,9 +1,11 @@
 import Add from './Add';
 import AddCart from './AddCart';
 import AddUser from './AddUser';
+import Adjust from './Adjust';
 import AlignCenter from './AlignCenter';
 import AlignLeft from './AlignLeft';
 import AlignRight from './AlignRight';
+import App from './App';
 import Application from './Application';
 import ApplicationSwitcher from './ApplicationSwitcher';
 import Archive from './Archive';
@@ -165,9 +167,11 @@ export {
   Add as add,
   AddCart as addCart,
   AddUser as addUser,
+  Adjust as adjust,
   AlignCenter as alignCenter,
   AlignLeft as alignLeft,
   AlignRight as alignRight,
+  App as app,
   Application as application,
   ApplicationSwitcher as applicationSwitcher,
   Archive as archive,
