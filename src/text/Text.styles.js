@@ -26,7 +26,7 @@ const StyledText = styled.span`
   text-transform: ${({ uppercase }) => (uppercase ? 'uppercase' : '')};
   text-decoration: ${({ strikeThrough }) =>
     strikeThrough ? 'line-through' : ''};
-  line-height: 1.643;
+  line-height: 1.5;
 `;
 
 export { StyledText };

@@ -34,7 +34,7 @@ const StyledAlert = styled.div`
   }
 
   div {
-    line-height: 1.643;
+    line-height: 1.5;
   }
 `;
 
