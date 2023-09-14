@@ -18,19 +18,23 @@ export const c7Colors = {
   red300: '#B13434',
 
   orange100: '#FFEEDB',
-  orange200: '#F6963C',
+  orange200: '#F79448',
   orange300: '#C96B13',
 
-  blue100: '#EBF7FF',
-  blue200: '#D7EFFE',
+  purple100: '#ECE8FF',
+  purple200: '#7764ED',
+  purple300: '#5341B9',
+
+  blue100: '#EBF6FE',
+  blue200: '#DDEFFD',
   blue300: '#42ACF0',
   blue400: '#2490D6',
   blue500: '#0363A6',
-  blue600: '#024F83',
+  blue600: '#054483',
 
   slate100: '#414F58',
-  slate200: '#2F3940',
-  slate300: '#293238',
+  slate200: '#293238',
+  slate300: '#222a30',
 
   gray100: '#F8F8F8',
   gray200: '#F1F1F1',
