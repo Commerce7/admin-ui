@@ -124,8 +124,16 @@ In admin-ui terminal
 
 ```
 
+In VS code
+3. Restart VS code
+
+```
+
+```
+
 In VS code in admin project
-1. Run npm install
+4. Run npm install
+
 ```
 
 After restarting the arrow icon should be removed. This means the project has successfully be unlinked from the local version of admin ui.
