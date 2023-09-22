@@ -33,7 +33,7 @@ export const Basic = (args) => {
       colors={colors}
       label={<Label />}
       width="50%"
-      tooltipContent={<ToolTip />}
+      tooltip={<ToolTip />}
       legendProps={legendProps}
       {...args}
     />
