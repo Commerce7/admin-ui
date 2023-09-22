@@ -16,9 +16,10 @@ const PieChart = (props) => {
     data,
     colors,
     label,
+    legend,
     width,
     height,
-    customTooltip,
+    tooltip,
     hideLegend,
     hideTooltip,
     legendProps,
@@ -62,9 +63,10 @@ const PieChart = (props) => {
               />
             ))}
           </Pie>
-          {!hideTooltip && <Tooltip content={customTooltip} />}
+          {!hideTooltip && <Tooltip content={tooltip} />}
           {!hideLegend && (
             <Legend
+              content={legend}
               iconType="circle"
               {...legendProps}
               wrapperStyle={legendWrapperStyle}
@@ -82,6 +84,8 @@ PieChart.defaultProps = {
   hideLegend: false,
   hideTooltip: false,
   label: '',
+  tooltip: null,
+  legend: null,
   legendWrapperStyle: null,
   legendProps: null,
   innerRadius: 50,
@@ -95,26 +99,32 @@ PieChart.propTypes = {
   data: PropTypes.arrayOf(
     PropTypes.shape({ name: PropTypes.string, value: PropTypes.number })
   ).isRequired,
+
   /**
    *  Set color code for each cell in the pie. Ex: ['#42ACF0', '#DF5F5F', '#BF9D36'];
    */
   colors: PropTypes.arrayOf(PropTypes.string).isRequired,
+
   /**
    * The percentage value of the chart's width or a fixed width.
    */
   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
   /**
    * The percentage value of the chart's height or a fixed height.
    */
   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
   /**
    * The inner radius of the pie's shape
    */
   innerRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
   /**
    * The outer radius of the pie's shape
    */
   outerRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
   /**
    * A component to render custom label in the pie chart
    */
@@ -125,6 +135,11 @@ PieChart.propTypes = {
   legendWrapperStyle: PropTypes.shape({}),
 
   /**
+   * A component to render custom legend in the pie chart
+   */
+  legend: PropTypes.element,
+
+  /**
    * The prop to align legend items
    */
   legendProps: PropTypes.shape({
@@ -133,17 +148,21 @@ PieChart.propTypes = {
     align: PropTypes.oneOf(['left', 'center', 'right']),
     layout: PropTypes.oneOf(['horizontal', 'vertical'])
   }),
+
   /**
    * A component to render custom tooltip component
    */
-  customTooltip: PropTypes.element.isRequired,
+  tooltip: PropTypes.element,
+
   /**
    * Indicates whether the legend component is hidden
    */
   hideLegend: PropTypes.bool,
+
   /**
    * Indicates whether the tooltip component is hidden
    */
   hideTooltip: PropTypes.bool
 };
+
 export default PieChart;
