@@ -18,12 +18,22 @@ export const Basic = (args) => {
     }
   ];
   const colors = ['#42ACF0', '#DF5F5F', '#BF9D36'];
+
+  const legendProps = {
+    width: 210,
+    verticalAlign: 'middle',
+    align: 'right',
+    layout: 'vertical'
+  };
+
   return (
     <PieChart
       data={data}
       colors={colors}
-      label={Label}
-      tooltip={ToolTip}
+      label={<Label />}
+      width="50%"
+      tooltipContent={<ToolTip />}
+      legendProps={legendProps}
       {...args}
     />
   );

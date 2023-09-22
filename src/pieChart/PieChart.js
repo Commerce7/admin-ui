@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import PropTypes from 'prop-types';
 import {
   Legend,
@@ -15,9 +16,12 @@ const PieChart = (props) => {
     data,
     colors,
     label,
-    tooltip,
+    width = '100%',
+    height = '100%',
+    tooltipContent,
     hideLegend = false,
-    hideTooltip = false
+    hideTooltip = false,
+    legendProps
   } = props;
 
   if (!data) {
@@ -29,7 +33,7 @@ const PieChart = (props) => {
 
   return (
     <div style={{ height: 300 }}>
-      <ResponsiveContainer width="100%" height="100%">
+      <ResponsiveContainer width={width} height={height}>
         <RechartPieChart
           margin={{
             right: 30,
@@ -57,8 +61,8 @@ const PieChart = (props) => {
               />
             ))}
           </Pie>
-          {hideTooltip && <Tooltip content={tooltip} />}
-          {hideLegend && <Legend iconType="circle" />}
+          {!hideTooltip && <Tooltip content={tooltipContent} />}
+          {!hideLegend && <Legend iconType="circle" {...legendProps} />}
         </RechartPieChart>
       </ResponsiveContainer>
     </div>
