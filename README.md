@@ -81,48 +81,59 @@ Examples used here are admin and admin-ui.
 
 ```
 In admin-ui terminal
-    1. npm build
-    2. npm link
+1. npm link
 ```
 
 ```
 In admin terminal
-    3. npm install
-```
-
-```
-In VS code -> admin repo
-    4. Go to node modules, @commerce7, admin-ui and delete this folder
-```
-
-```
-In admin terminal
-    5. npm link @commerce7/admin-ui
+2. npm link @commerce7/admin-ui@{version-number}
 ```
 
 ```
 In VS code
-    6. Restart VS code
+3. Restart VS code
+4.After rebooting VS code, the @commerce7/admin-ui folder in the admin/@node_modules should have an arrow icon beside it. This shows it is properly linked.
 ```
 
-After rebooting VS code the @commerce7 admin-ui folder should have an arrow icon beside it. This shows it is properly linked.
+```
+In admin
+5. In order to test locally, add **path.resolve('./node_modules/@commerce7/admin-ui/node_modules')** to webpack.{project-name}.config.js. Ex:  webpack.admin.dev.js
+6. Run npm run frontend-admin
+```
+
+```
+In admin-ui
+5. When you change something in admin-ui and want to see the changes in admin, you need to run  **npm run build** in admin-ui to sync with admin. After you run **npm run build**, when you have symbolic link, the admin page will automatically be refreshed and will get the latest changes.
+```
 
 ### Unlinking
 
 ```
+
 In admin terminal
-    1. npm unlink
+1. npm unlink --no-save @commerce7/admin-ui@{version-number}
+
 ```
 
 ```
-In admin terminal
-    2. npm unlink
+
+In admin-ui terminal
+2. npm unlink @commerce7/admin-ui@{version-number}
+
 ```
 
 ```
+
+In VS code
+3. Restart VS code
+
+```
+
+```
+
 In VS code in admin project
-    1. Delete @commerce7 admin ui
-    2. Restart vs code
+4. Run npm install
+
 ```
 
 After restarting the arrow icon should be removed. This means the project has successfully be unlinked from the local version of admin ui.
