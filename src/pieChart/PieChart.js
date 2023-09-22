@@ -34,47 +34,45 @@ const PieChart = (props) => {
   const value = keys[1];
 
   return (
-    <div style={{ height: 300 }}>
-      <ResponsiveContainer width={width} height={height}>
-        <RechartPieChart
-          margin={{
-            right: 30,
-            left: 20,
-            bottom: 40
-          }}
+    <ResponsiveContainer width={width} height={height}>
+      <RechartPieChart
+        margin={{
+          right: 30,
+          left: 20,
+          bottom: 40
+        }}
+      >
+        <Pie
+          // Passing key to re-render graph animation
+          key={Math.floor(Math.random() * 100)}
+          data={data}
+          cx="50%"
+          cy="50%"
+          cursor="pointer"
+          labelLine={false}
+          label={label}
+          innerRadius={innerRadius}
+          outerRadius={outerRadius}
+          dataKey={value}
         >
-          <Pie
-            // Passing key to re-render graph animation
-            key={Math.floor(Math.random() * 100)}
-            data={data}
-            cx="50%"
-            cy="50%"
-            cursor="pointer"
-            labelLine={false}
-            label={label}
-            innerRadius={innerRadius}
-            outerRadius={outerRadius}
-            dataKey={value}
-          >
-            {data.map((_entry, index) => (
-              <Cell
-                key={String(`cell-${index}`)}
-                fill={colors[index % colors.length]}
-              />
-            ))}
-          </Pie>
-          {!hideTooltip && <Tooltip content={tooltip} />}
-          {!hideLegend && (
-            <Legend
-              content={legend}
-              iconType="circle"
-              {...legendProps}
-              wrapperStyle={legendWrapperStyle}
+          {data.map((_entry, index) => (
+            <Cell
+              key={String(`cell-${index}`)}
+              fill={colors[index % colors.length]}
             />
-          )}
-        </RechartPieChart>
-      </ResponsiveContainer>
-    </div>
+          ))}
+        </Pie>
+        {!hideTooltip && <Tooltip content={tooltip} />}
+        {!hideLegend && (
+          <Legend
+            content={legend}
+            iconType="circle"
+            {...legendProps}
+            wrapperStyle={legendWrapperStyle}
+          />
+        )}
+      </RechartPieChart>
+    </ResponsiveContainer>
   );
 };
 

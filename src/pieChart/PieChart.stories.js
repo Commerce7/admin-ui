@@ -21,13 +21,15 @@ export const Basic = (args) => {
   const colors = ['#42ACF0', '#DF5F5F', '#BF9D36'];
 
   return (
-    <PieChart
-      data={data}
-      colors={colors}
-      label={<Label />}
-      tooltip={<ToolTip />}
-      {...args}
-    />
+    <div style={{ height: 300 }}>
+      <PieChart
+        data={data}
+        colors={colors}
+        label={<Label />}
+        tooltip={<ToolTip />}
+        {...args}
+      />
+    </div>
   );
 };
 
