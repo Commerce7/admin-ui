@@ -130,7 +130,7 @@ PieChart.propTypes = {
    */
   label: PropTypes.element,
   /**
-   * Styling  object for the Legend component.
+   * The prop to add positioning to legend component. Ex: {position:'relative', left:0, bottom:0}
    */
   legendWrapperStyle: PropTypes.shape({}),
 
