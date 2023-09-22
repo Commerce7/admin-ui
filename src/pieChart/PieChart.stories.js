@@ -20,7 +20,7 @@ export const Basic = (args) => {
   const colors = ['#42ACF0', '#DF5F5F', '#BF9D36'];
 
   const legendProps = {
-    width: 210,
+    width: 400,
     verticalAlign: 'middle',
     align: 'right',
     layout: 'vertical'

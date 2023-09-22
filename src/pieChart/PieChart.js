@@ -82,7 +82,7 @@ PieChart.propTypes = {
   /**
    * The content of the Tooltip component.
    */
-  tooltip: PropTypes.element.isRequired,
+  tooltipContent: PropTypes.element.isRequired,
   /**
    * Set the legend to hide
    */
