@@ -17,6 +17,7 @@ export const Basic = (args) => {
       value: 100
     }
   ];
+
   const colors = ['#42ACF0', '#DF5F5F', '#BF9D36'];
 
   const legendProps = {
