@@ -129,7 +129,3 @@ In VS code in admin project
 ```
 
 After restarting the arrow icon should be removed. This means the project has successfully be unlinked from the local version of admin ui.
-
-```
-
-```
