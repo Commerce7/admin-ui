@@ -97,13 +97,13 @@ In VS code
 
 ```
 In admin
-5. In order to test locally, add **path.resolve('./node_modules/@commerce7/admin-ui/node_modules')** to webpack.{projectname}.config.js. Ex: in webpack.admin.dev.js
+5. In order to test locally, add **path.resolve('./node_modules/@commerce7/admin-ui/node_modules')** to webpack.{project-name}.config.js. Ex:  webpack.admin.dev.js
 6. Run npm run frontend-admin
 ```
 
 ```
 In admin-ui
-5. When you change something in admin-ui and want to see the changes in admin, you need to run npm run build in admin-ui to sync with admin. After you run **npm run build**, when you have symbolic link the admin page will automatically be refreshed and got the latest changes.
+5. When you change something in admin-ui and want to see the changes in admin, you need to run  **npm run build** in admin-ui to sync with admin. After you run **npm run build**, when you have symbolic link, the admin page will automatically be refreshed and will get the latest changes.
 ```
 
 ### Unlinking
