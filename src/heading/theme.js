@@ -10,8 +10,8 @@ const fontSize = {
 const marginBottom = {
   h1: '20px',
   h2: '20px',
-  h3: '20px',
-  h4: '15px'
+  h3: '15px',
+  h4: '10px'
 };
 
 const colors = {

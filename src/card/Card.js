@@ -3,10 +3,14 @@ import PropTypes from 'prop-types';
 import { StyledCard } from './Card.styles';
 
 const Card = (props) => {
-  const { children, className, dataTestId } = props;
+  const { children, className, dataTestId, variant } = props;
 
   return (
-    <StyledCard className={className} data-testid={dataTestId}>
+    <StyledCard
+      className={className}
+      data-testid={dataTestId}
+      variant={variant}
+    >
       {children}
     </StyledCard>
   );
@@ -14,7 +18,8 @@ const Card = (props) => {
 
 Card.defaultProps = {
   className: null,
-  dataTestId: null
+  dataTestId: null,
+  variant: 'default'
 };
 
 Card.propTypes = {
@@ -31,7 +36,12 @@ Card.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * Add variant to change the backgroud color
+   */
+  variant: PropTypes.oneOf(['default', 'white'])
 };
 
 export default Card;
