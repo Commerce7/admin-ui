@@ -10,7 +10,7 @@ export const Basic = (args) => {
     { name: 'Group A', value: 400 },
     {
       name: 'Group B',
-      value: 300
+      value: 288
     },
     {
       name: 'Group C',
