@@ -1,5 +1,11 @@
 version: 0.2
 
+env:
+  variables:
+    APOLLO_GRAPH_VARIANT: 'test'
+  secrets-manager:
+    NPM_TOKEN: /admin_ui:npm_token
+
 phases:
   build:
     commands:
