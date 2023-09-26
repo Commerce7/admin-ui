@@ -30,6 +30,7 @@ import Carrot from './Carrot';
 import Cart from './Cart';
 import Cash from './Cash';
 import Cashier from './Cashier';
+import ChartBars from './ChartBars';
 import Chat from './Chat';
 import Check from './Check';
 import CheckCircle from './CheckCircle';
@@ -197,6 +198,7 @@ export {
   Cart as cart,
   Cashier as cashier,
   Chat as chat,
+  ChartBars as chartbars,
   Check as check,
   CheckCircle as checkCircle,
   CheckIn as checkIn,
