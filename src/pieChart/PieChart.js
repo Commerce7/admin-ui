@@ -95,7 +95,10 @@ PieChart.propTypes = {
    *  The source data array to render pie chart
    */
   data: PropTypes.arrayOf(
-    PropTypes.shape({ name: PropTypes.string, value: PropTypes.number })
+    PropTypes.shape({
+      name: PropTypes.string,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+    })
   ).isRequired,
 
   /**
