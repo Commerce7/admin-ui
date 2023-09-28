@@ -16,6 +16,7 @@ import Heading from './heading';
 import Icon from './icon';
 import InfoCard from './infoCard';
 import Input from './input';
+import Legend from './legend';
 import LineBreak from './lineBreak';
 import LinkButton from './linkButton';
 import Modal from './modal';
@@ -66,6 +67,7 @@ export {
   NoRecords,
   Picture,
   PieChart,
+  Legend,
   LinkButton,
   Modal,
   Radio,
