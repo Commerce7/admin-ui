@@ -1,7 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
-import Legend from '../legend';
-
 import Label from './Label';
 import ToolTip from './Tooltip';
 
@@ -21,12 +19,7 @@ export const Basic = (args) => {
   ];
 
   const colors = ['#42ACF0', '#DF5F5F', '#BF9D36'];
-  const legendData = [
-    { title: 'POS', value: 11, color: '#42ACF0' },
-    { title: 'Inbound', value: 20, color: '#DF5F5F' },
-    { title: 'Web', value: 13, color: '#BF9D36' },
-    { title: 'Club', value: 55, color: '#239C82' }
-  ];
+
   return (
     <div style={{ height: 300 }}>
       <PieChart
@@ -34,7 +27,6 @@ export const Basic = (args) => {
         colors={colors}
         label={<Label />}
         tooltip={<ToolTip />}
-        legend={<Legend data={legendData} width="30%" />}
         {...args}
       />
     </div>
