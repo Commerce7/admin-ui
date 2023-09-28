@@ -141,6 +141,7 @@ import Store from './Store';
 import Support from './Support';
 import SwitchUser from './SwitchUser';
 import Sync from './Sync';
+import Table from './Table';
 import Tag from './Tag';
 import Tasting from './Tasting';
 import TextAlignCenter from './TextAlignCenter';
@@ -308,6 +309,7 @@ export {
   Support as support,
   SwitchUser as switchUser,
   Sync as sync,
+  Table as table,
   Tag as tag,
   Tasting as tasting,
   TextAlignCenter as textAlignCenter,
