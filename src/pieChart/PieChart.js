@@ -20,6 +20,7 @@ const PieChart = (props) => {
     width,
     height,
     tooltip,
+    margin,
     hideLegend,
     hideTooltip,
     legendProps,
@@ -35,13 +36,7 @@ const PieChart = (props) => {
 
   return (
     <ResponsiveContainer width={width} height={height}>
-      <RechartPieChart
-        margin={{
-          right: 30,
-          left: 20,
-          bottom: 40
-        }}
-      >
+      <RechartPieChart margin={margin}>
         <Pie
           // Passing key to re-render graph animation
           key={Math.floor(Math.random() * 100)}
@@ -79,6 +74,11 @@ const PieChart = (props) => {
 PieChart.defaultProps = {
   width: '100%',
   height: '100%',
+  margin: {
+    right: 30,
+    left: 20,
+    bottom: 40
+  },
   hideLegend: false,
   hideTooltip: false,
   label: '',
@@ -125,6 +125,11 @@ PieChart.propTypes = {
    * The outer radius of the pie's shape
    */
   outerRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+
+  /**
+   *The prop to add positioning to PieChart.
+   */
+  margin: PropTypes.shape({}),
 
   /**
    * A component to render custom label in the pie chart
