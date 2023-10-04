@@ -81,7 +81,7 @@ PieChart.defaultProps = {
   },
   hideLegend: false,
   hideTooltip: false,
-  label: '',
+  label: null,
   tooltip: null,
   legend: null,
   legendWrapperStyle: null,
