@@ -33,7 +33,7 @@ const StyleContentWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  margin-top: 5px;
+  margin-top: 10px;
 `;
 
 const StyleContent = styled.div`

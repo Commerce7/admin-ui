@@ -8,13 +8,13 @@ export const Basic = (args) => (
 );
 
 export const Labelled = (args) => (
-  <>
+  <div style={{ height: 50 }}>
     <ProgressBar
       progress={50}
       content={{ text: 'Open Rate', progress: 50, color: '#42ACF0' }}
       {...args}
     />
-  </>
+  </div>
 );
 export default {
   title: 'UI/ProgressBar',
