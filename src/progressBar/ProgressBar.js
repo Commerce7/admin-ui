@@ -4,31 +4,56 @@ import { c7Colors } from '../ui/theme';
 
 import {
   StyledProgressBarWrapper,
-  StyledProgressBar
+  StyledProgressBar,
+  StyleContent,
+  StyleContentWrapper
 } from './ProgressBar.styles';
 
 const ProgressBar = (props) => {
-  const { progress, className, color, dataTestId } = props;
+  const { progress, content, className, color, dataTestId } = props;
 
+  const renderCircle = (circleColor) => (
+    <svg height="14" width="14">
+      <circle cx="7" cy="7" r="6" fill={circleColor} />
+    </svg>
+  );
+
+  const renderContent = (contentObj) => {
+    const hasContent = Object.keys(contentObj);
+    if (!hasContent.length) {
+      return null;
+    }
+    return (
+      <StyleContentWrapper>
+        <StyleContent>
+          {renderCircle(contentObj.color)}
+          <span>{contentObj.text}</span>
+        </StyleContent>
+        <span>{contentObj.progress}%</span>
+      </StyleContentWrapper>
+    );
+  };
   return (
-    <>
+    <div>
       <StyledProgressBarWrapper className={className} data-testid={dataTestId}>
         <StyledProgressBar progress={progress} color={color} />
+        {renderContent(content)}
       </StyledProgressBarWrapper>
-    </>
+    </div>
   );
 };
 
 ProgressBar.defaultProps = {
   progress: 0,
   color: c7Colors.blue300,
+  content: {},
   className: null,
   dataTestId: null
 };
 
 ProgressBar.propTypes = {
   /**
-   * Progress of the bar.
+   * Progress count of the bar.
    */
   progress: PropTypes.number,
 
@@ -38,7 +63,16 @@ ProgressBar.propTypes = {
   className: PropTypes.string,
 
   /**
-   * Color of progressbar
+   * Content data shape.
+   */
+  content: PropTypes.shape({
+    text: PropTypes.string,
+    color: PropTypes.string,
+    progress: PropTypes.number
+  }),
+
+  /**
+   * Color of the bar
    */
   color: PropTypes.string,
 

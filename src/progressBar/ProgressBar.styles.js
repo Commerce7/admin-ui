@@ -29,4 +29,21 @@ const StyledProgressBar = styled.div`
   }
 `;
 
-export { StyledProgressBarWrapper, StyledProgressBar };
+const StyleContentWrapper = styled.div`
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 5px;
+`;
+
+const StyleContent = styled.div`
+  display: flex;
+  gap: 5px;
+`;
+
+export {
+  StyledProgressBarWrapper,
+  StyledProgressBar,
+  StyleContentWrapper,
+  StyleContent
+};
