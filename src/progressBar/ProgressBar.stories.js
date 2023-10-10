@@ -11,7 +11,7 @@ export const Labelled = (args) => (
   <div style={{ height: 50 }}>
     <ProgressBar
       progress={50}
-      content={{ text: 'Open Rate', progress: 50, color: '#42ACF0' }}
+      content={{ text: 'Open Rate', progress: 50, circleColor: '#42ACF0' }}
       {...args}
     />
   </div>

@@ -26,7 +26,7 @@ const ProgressBar = (props) => {
     return (
       <StyleContentWrapper>
         <StyleContent>
-          {renderCircle(contentObj.color)}
+          {renderCircle(contentObj.circleColor)}
           <span>{contentObj.text}</span>
         </StyleContent>
         <span>{contentObj.progress}%</span>
@@ -67,7 +67,7 @@ ProgressBar.propTypes = {
    */
   content: PropTypes.shape({
     text: PropTypes.string,
-    color: PropTypes.string,
+    circleColor: PropTypes.string,
     progress: PropTypes.number
   }),
 
