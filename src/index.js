@@ -24,6 +24,7 @@ import Nav from './nav';
 import NoRecords from './noRecords';
 import Picture from './picture';
 import PieChart from './pieChart';
+import ProgressBar from './progressBar';
 import Radio from './radio';
 import RadioGroup from './radioGroup';
 import Region from './region';
@@ -65,6 +66,7 @@ export {
   LineBreak,
   Nav,
   NoRecords,
+  ProgressBar,
   Picture,
   PieChart,
   Legend,
