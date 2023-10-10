@@ -5,8 +5,8 @@ import { c7Colors } from '../ui/theme';
 import {
   StyledProgressBarWrapper,
   StyledProgressBar,
-  StyleContent,
-  StyleContentWrapper
+  StyledContent,
+  StyledContentWrapper
 } from './ProgressBar.styles';
 
 const ProgressBar = (props) => {
@@ -24,13 +24,13 @@ const ProgressBar = (props) => {
       return null;
     }
     return (
-      <StyleContentWrapper>
-        <StyleContent>
+      <StyledContentWrapper>
+        <StyledContent>
           {renderCircle(contentObj.circleColor)}
           <span>{contentObj.text}</span>
-        </StyleContent>
+        </StyledContent>
         <span>{contentObj.progress}%</span>
-      </StyleContentWrapper>
+      </StyledContentWrapper>
     );
   };
   return (

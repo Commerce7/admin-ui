@@ -29,14 +29,14 @@ const StyledProgressBar = styled.div`
   }
 `;
 
-const StyleContentWrapper = styled.div`
+const StyledContentWrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
   margin-top: 10px;
 `;
 
-const StyleContent = styled.div`
+const StyledContent = styled.div`
   display: flex;
   gap: 5px;
 `;
@@ -44,6 +44,6 @@ const StyleContent = styled.div`
 export {
   StyledProgressBarWrapper,
   StyledProgressBar,
-  StyleContentWrapper,
-  StyleContent
+  StyledContentWrapper,
+  StyledContent
 };
