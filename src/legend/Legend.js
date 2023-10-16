@@ -84,7 +84,7 @@ Legend.propTypes = {
   /**
    *  The width of legend
    */
-  width: PropTypes.string,
+  width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   /**
    *  The header title of legend
    */
