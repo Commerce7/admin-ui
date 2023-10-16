@@ -35,7 +35,7 @@ export const Basic = (args) => {
   );
 };
 
-export const ChartWithCustomLegend = (args) => {
+export const WithCustomLegend = (args) => {
   const data = [
     { name: 'Group A', value: 400 },
     {
