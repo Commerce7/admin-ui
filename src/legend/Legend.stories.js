@@ -37,10 +37,16 @@ export const Vertical = (args) => (
 
 export const GroupedVertical = (args) => (
   <div style={{ display: 'flex', gap: 100 }}>
-    <Legend data={legendData} legendHeader="By Channel" isVertical {...args} />
+    <Legend
+      data={legendData}
+      width="30%"
+      legendHeader="By Channel"
+      isVertical
+      {...args}
+    />
     <Legend
       data={legendData2}
-      width="50%"
+      width="30%"
       legendHeader="By Customer Type"
       isVertical
       {...args}
