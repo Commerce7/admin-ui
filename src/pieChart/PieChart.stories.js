@@ -1,5 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 
+import Legend from '../legend/Legend';
+
 import Label from './Label';
 import ToolTip from './Tooltip';
 
@@ -26,6 +28,41 @@ export const Basic = (args) => {
         data={data}
         colors={colors}
         label={<Label />}
+        tooltip={<ToolTip />}
+        {...args}
+      />
+    </div>
+  );
+};
+
+export const ChartWithCustomLegend = (args) => {
+  const data = [
+    { name: 'Group A', value: 400 },
+    {
+      name: 'Group B',
+      value: 288
+    },
+    {
+      name: 'Group C',
+      value: 100
+    }
+  ];
+
+  const legendData = [
+    { title: 'Group A', color: '#42ACF0' },
+    { title: 'Group B', color: '#DF5F5F' },
+    { title: 'Group C', color: '#BF9D36' }
+  ];
+  const colors = ['#42ACF0', '#DF5F5F', '#BF9D36'];
+
+  return (
+    <div style={{ height: 300 }}>
+      <PieChart
+        data={data}
+        colors={colors}
+        label={<Label />}
+        legendProps={{ layout: 'vertical' }}
+        legend={<Legend data={legendData} />}
         tooltip={<ToolTip />}
         {...args}
       />

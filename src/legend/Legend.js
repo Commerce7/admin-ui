@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Text from '../text';
 
 const Legend = (props) => {
-  const { data, width, legendHeader } = props;
+  const { data, width, legendHeader, isVertical = false } = props;
 
   const renderCircle = (color) => (
     <svg height="14" width="14">
@@ -13,12 +13,12 @@ const Legend = (props) => {
   );
 
   return (
-    <LegendStyledWrapper width={width}>
+    <LegendStyledWrapper width={width} isVertical={isVertical}>
       {legendHeader && <StyledLegendHeader>{legendHeader}</StyledLegendHeader>}
       {data.map((legend) => (
         <StyledLegendItem key={`item-${legend.title}`}>
           <StyledCircle>{renderCircle(legend.color)}</StyledCircle>
-          <Text>{legend.title}</Text>
+          {legend.title && <Text>{legend.title}</Text>}
           <StyledValueText>{legend.value}</StyledValueText>
         </StyledLegendItem>
       ))}
@@ -28,11 +28,13 @@ const Legend = (props) => {
 
 const LegendStyledWrapper = styled.div`
   display: flex;
-  flex-direction: column;
-  row-gap: 8px;
-  ${({ width }) => `
-    width: ${width};
-  `}
+  gap: 8px;
+  flex-direction: row;
+  ${({ isVertical, width }) =>
+    isVertical &&
+    `flex-direction: column; 
+     row-gap: 8px;
+     width: ${width};`};
 `;
 
 const StyledLegendItem = styled.div`
@@ -42,6 +44,8 @@ const StyledLegendItem = styled.div`
 `;
 
 const StyledCircle = styled.div`
+  display: flex;
+  align-items: center;
   margin-right: 5px;
 `;
 
@@ -56,6 +60,7 @@ const StyledLegendHeader = styled(Text)`
 
 Legend.defaultProps = {
   width: '15%',
+  isVertical: false,
   legendHeader: ''
 };
 
@@ -70,6 +75,12 @@ Legend.propTypes = {
       color: PropTypes.string
     })
   ).isRequired,
+
+  /**
+   *  Renders legends vertically if it is true
+   */
+  isVertical: PropTypes.bool,
+
   /**
    *  The width of legend
    */

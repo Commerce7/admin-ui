@@ -16,16 +16,35 @@ const legendData2 = [
   { title: 'Club Member', value: '$78', color: '#239C82' }
 ];
 
-export const Basic = (args) => (
+const legendDataWithoutValue = [
+  { title: 'Guest', color: '#42ACF0' },
+  { title: 'First-time', color: '#DF5F5F' },
+  { title: 'Repeat', color: '#BF9D36' },
+  { title: 'Club Member', color: '#239C82' }
+];
+
+export const Default = (args) => (
   <div>
-    <Legend data={legendData} {...args} />
+    <Legend isVertical={false} data={legendDataWithoutValue} {...args} />
   </div>
 );
 
-export const Grouped = (args) => (
+export const Vertical = (args) => (
+  <div>
+    <Legend data={legendData} isVertical {...args} />
+  </div>
+);
+
+export const GroupedVertical = (args) => (
   <div style={{ display: 'flex', gap: 100 }}>
-    <Legend data={legendData} legendHeader="By Channel" {...args} />
-    <Legend data={legendData2} legendHeader="By Customer Type" {...args} />
+    <Legend data={legendData} legendHeader="By Channel" isVertical {...args} />
+    <Legend
+      data={legendData2}
+      width="50%"
+      legendHeader="By Customer Type"
+      isVertical
+      {...args}
+    />
   </div>
 );
 
