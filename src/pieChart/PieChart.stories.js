@@ -77,7 +77,8 @@ export default {
     controls: { expanded: true },
     docs: {
       description: {
-        component: "import { PieChart } from '@commerce7/admin-ui'"
+        component:
+          "import { PieChart } from '@commerce7/admin-ui' \n\n This chart is implemented using the Recharts library. For more details on how to customize and use Recharts, please refer to the [Recharts documentation](https://recharts.org/)."
       }
     }
   }
