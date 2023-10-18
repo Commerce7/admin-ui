@@ -127,7 +127,7 @@ PieChart.propTypes = {
   outerRadius: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 
   /**
-   *The prop to add positioning to PieChart.
+   *The prop to add positioning to PieChart. Refer: https://recharts.org/en-US/api/PieChart#margin
    */
   margin: PropTypes.shape({}),
 
@@ -136,7 +136,7 @@ PieChart.propTypes = {
    */
   label: PropTypes.element,
   /**
-   * The prop to add positioning to legend component. Ex: {position:'relative', left:0, bottom:0}
+   * The prop to add positioning to legend component. Refer: https://recharts.org/en-US/api/Legend#wrapperStyle
    */
   legendWrapperStyle: PropTypes.shape({}),
 
@@ -146,7 +146,7 @@ PieChart.propTypes = {
   legend: PropTypes.element,
 
   /**
-   * The prop to align legend items
+   * The prop to align legend items. Refer: https://recharts.org/en-US/api/Legend#verticalAlign
    */
   legendProps: PropTypes.shape({
     width: PropTypes.number,
@@ -156,7 +156,7 @@ PieChart.propTypes = {
   }),
 
   /**
-   * A component to render custom tooltip component
+   * A component to render custom tooltip component. Refer: https://recharts.org/en-US/api/Tooltip#content
    */
   tooltip: PropTypes.element,
 
