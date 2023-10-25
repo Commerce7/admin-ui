@@ -21,7 +21,7 @@ const Button = forwardRef((props, ref) => {
     variant,
     size,
     dataTestId,
-    formnovalidate
+    formNoValidate
   } = props;
 
   return (
@@ -34,7 +34,7 @@ const Button = forwardRef((props, ref) => {
       variant={variant}
       size={size}
       data-testid={dataTestId}
-      formNoValidate={formnovalidate}
+      formNoValidate={formNoValidate}
     >
       <StyledButtonText isLoading={loading}>
         {startIcon && (
@@ -73,7 +73,7 @@ Button.defaultProps = {
   variant: 'primary',
   size: 'default',
   dataTestId: null,
-  formnovalidate: false
+  formNoValidate: false
 };
 
 Button.propTypes = {
@@ -134,7 +134,7 @@ Button.propTypes = {
    * When it is true, it specifies that the <input> element should not be validated when submitted.
    * Use this when you have custom validation on your form
    */
-  formnovalidate: PropTypes.bool
+  formNoValidate: PropTypes.bool
 };
 
 export default Button;
