@@ -20,7 +20,8 @@ const Button = forwardRef((props, ref) => {
     type,
     variant,
     size,
-    dataTestId
+    dataTestId,
+    formNoValidate
   } = props;
 
   return (
@@ -33,6 +34,7 @@ const Button = forwardRef((props, ref) => {
       variant={variant}
       size={size}
       data-testid={dataTestId}
+      formNoValidate={formNoValidate}
     >
       <StyledButtonText isLoading={loading}>
         {startIcon && (
@@ -70,7 +72,8 @@ Button.defaultProps = {
   type: 'button',
   variant: 'primary',
   size: 'default',
-  dataTestId: null
+  dataTestId: null,
+  formNoValidate: false
 };
 
 Button.propTypes = {
@@ -125,7 +128,13 @@ Button.propTypes = {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId: PropTypes.string
+  dataTestId: PropTypes.string,
+
+  /**
+   * When it is true, it specifies that the <input> element should not be validated when submitted.
+   * Use this when you have custom validation on your form
+   */
+  formNoValidate: PropTypes.bool
 };
 
 export default Button;
