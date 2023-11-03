@@ -84,7 +84,7 @@ const linkColors = {
 
 const errorColors = {
   light: c7Colors.red300,
-  dark: c7Colors.red300
+  dark: c7Colors.red200
 };
 
 export const createTheme = (mode) => ({
