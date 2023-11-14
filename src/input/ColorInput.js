@@ -105,7 +105,7 @@ const StyledColorBox = styled.input`
   height: 34px;
   width: 34px;
   position: absolute;
-  background-color: white;
+  background-color: ${({ theme }) => theme.c7__ui.backgroundColor};
 `;
 
 export default ColorInput;
