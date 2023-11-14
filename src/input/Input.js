@@ -10,6 +10,7 @@ import {
   StyledDescription
 } from '../common/form/styles';
 
+import ColorInput from './ColorInput';
 import {
   StyledInput,
   StyledIconWrapper,
@@ -60,28 +61,47 @@ const Input = forwardRef((props, ref) => {
       )}
       <StyledIconWrapper>
         {startIcon && <StyledInputIcon icon={startIcon} iconPosition="start" />}
-        <StyledInput
-          aria-describedby={describedById}
-          aria-labelledby={labelId}
-          aria-invalid={hasErrorMessage}
-          aria-required={required}
-          ref={ref}
-          inputMode={inputMode}
-          disabled={disabled}
-          placeholder={placeholder}
-          id={id}
-          value={value}
-          onBlur={onBlur}
-          onChange={onChange}
-          onFocus={onFocus}
-          hasErrorMessage={hasErrorMessage}
-          required={required}
-          type={type}
-          autoFocus={autoFocus}
-          autoComplete={autoComplete}
-          startIcon={startIcon}
-          endIcon={endIcon}
-        />
+        {type === 'color' ? (
+          <ColorInput
+            disabled={disabled}
+            id={id}
+            onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            required={required}
+            autoFocus={autoFocus}
+            value={value}
+            ref={ref}
+            ariaDescribedby={describedById}
+            ariaLabelledby={labelId}
+            ariaInvalid={hasErrorMessage}
+            ariaRequired={required}
+          />
+        ) : (
+          <StyledInput
+            aria-describedby={describedById}
+            aria-labelledby={labelId}
+            aria-invalid={hasErrorMessage}
+            aria-required={required}
+            ref={ref}
+            inputMode={inputMode}
+            disabled={disabled}
+            placeholder={placeholder}
+            id={id}
+            value={value}
+            onBlur={onBlur}
+            onChange={onChange}
+            onFocus={onFocus}
+            hasErrorMessage={hasErrorMessage}
+            required={required}
+            type={type}
+            autoFocus={autoFocus}
+            autoComplete={autoComplete}
+            startIcon={startIcon}
+            endIcon={endIcon}
+          />
+        )}
+
         {endIcon && <StyledInputIcon icon={endIcon} iconPosition="end" />}
         {suffix && !endIcon && (
           <StyledInputSuffix secondary>{suffix}</StyledInputSuffix>
