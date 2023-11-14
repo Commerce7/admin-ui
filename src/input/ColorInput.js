@@ -100,10 +100,10 @@ const StyledInput = styled(StyledFormItem).attrs({
 `;
 
 const StyledColorBox = styled.input`
-  top: 6px;
-  left: 6px;
-  height: 34px;
-  width: 34px;
+  top: 5px;
+  left: 5px;
+  height: 36px;
+  width: 36px;
   position: absolute;
   background-color: ${({ theme }) => theme.c7__ui.backgroundColor};
 `;
