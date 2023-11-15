@@ -229,6 +229,7 @@ export const Color = () => {
       id="color"
       value={value}
       onChange={handleOnChange}
+      description="this is the description"
     />
   );
 };

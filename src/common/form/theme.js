@@ -48,7 +48,7 @@ const labelColors = {
 
 const requiredColors = {
   dark: {
-    color: c7Colors.red300
+    color: c7Colors.red200
   },
   light: {
     color: c7Colors.red300
