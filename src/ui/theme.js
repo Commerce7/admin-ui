@@ -127,9 +127,6 @@ export const GlobalStyles = createGlobalStyle`
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-  .storybook-docs {
-    background-color: red;
-  }
   html, body {
     font-size:  ${({ theme }) => theme.c7__ui.fontSizeBase};
     font-family: ${({ theme }) => theme.c7__ui.fontFamily};
