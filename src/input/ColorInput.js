@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 
 import { StyledFormItem } from '../common/form/styles';
@@ -18,11 +17,7 @@ const ColorInput = ({
   ariaInvalid,
   ariaRequired
 }) => {
-  const [color, setColor] = useState(value);
-
   const handleColorChange = (e) => {
-    setColor(e.target.value);
-
     if (onChange) {
       onChange(e);
     }
@@ -38,7 +33,7 @@ const ColorInput = ({
     <StyledColorInput>
       <StyledColorBox
         type="color"
-        value={color}
+        value={value}
         onChange={handleColorChange}
         onBlur={handleBlur}
         style={{ marginRight: '10px' }}
@@ -50,7 +45,7 @@ const ColorInput = ({
         aria-invalid={ariaInvalid}
         aria-required={ariaRequired}
         type="text"
-        value={color}
+        value={value}
         onChange={handleColorChange}
         onBlur={handleBlur}
         style={{ width: '100px' }}
