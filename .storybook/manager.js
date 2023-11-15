@@ -6,6 +6,7 @@ addons.setConfig({
     base: 'light',
     brandTitle: 'Commerce7 Admin UI',
     brandUrl: 'https://commerce7.com',
-    brandImage: '/logo.png'
+    brandImage: '/logo.png',
+    fontBase: '"Inter", sans-serif'
   })
 });

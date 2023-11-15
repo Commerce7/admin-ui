@@ -90,7 +90,7 @@ const errorColors = {
 export const createTheme = (mode) => ({
   c7__ui: {
     mode,
-    fontFamily: '"Nunito", sans-serif',
+    fontFamily: '"Inter", sans-serif',
     fontSizeBase: '15px',
     fontSizeSmall: '14px',
     fontWeightBase: '400',
@@ -126,6 +126,9 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+  }
+  .storybook-docs {
+    background-color: red;
   }
   html, body {
     font-size:  ${({ theme }) => theme.c7__ui.fontSizeBase};
