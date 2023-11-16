@@ -30,14 +30,14 @@ const ColorInput = ({
   };
 
   return (
-    <StyledColorInput>
+    <StyledColorInput id={id}>
       <StyledColorBox
-        type="color"
-        value={value}
-        onChange={handleColorChange}
-        onBlur={handleBlur}
-        style={{ marginRight: '10px' }}
         disabled={disabled}
+        onBlur={handleBlur}
+        onChange={handleColorChange}
+        value={value}
+        id={`${id}-picker`}
+        type="color"
       />
       <StyledInput
         aria-describedby={ariaDescribedBy}
@@ -46,11 +46,10 @@ const ColorInput = ({
         aria-required={ariaRequired}
         type="text"
         value={value}
+        id={`${id}-input`}
         onChange={handleColorChange}
         onBlur={handleBlur}
-        style={{ width: '100px' }}
         disabled={disabled}
-        id={id}
         onFocus={onFocus}
         required={required}
         autoFocus={autoFocus}
