@@ -32,12 +32,12 @@ const ColorInput = ({
   return (
     <StyledColorInput>
       <StyledColorBox
-        type="color"
-        value={value}
-        onChange={handleColorChange}
-        onBlur={handleBlur}
-        style={{ marginRight: '10px' }}
         disabled={disabled}
+        id={id}
+        onBlur={handleBlur}
+        onChange={handleColorChange}
+        value={value}
+        type="color"
       />
       <StyledInput
         aria-describedby={ariaDescribedBy}
