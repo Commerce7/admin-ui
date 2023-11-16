@@ -90,7 +90,7 @@ const errorColors = {
 export const createTheme = (mode) => ({
   c7__ui: {
     mode,
-    fontFamily: '"Nunito", sans-serif',
+    fontFamily: '"Inter", sans-serif',
     fontSizeBase: '15px',
     fontSizeSmall: '14px',
     fontWeightBase: '400',
