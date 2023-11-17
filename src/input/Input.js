@@ -72,6 +72,7 @@ const Input = forwardRef((props, ref) => {
             autoFocus={autoFocus}
             value={value}
             ref={ref}
+            hasErrorMessage={hasErrorMessage}
             ariaDescribedby={describedById}
             ariaLabelledby={labelId}
             ariaInvalid={hasErrorMessage}
