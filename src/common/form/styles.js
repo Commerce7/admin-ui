@@ -120,7 +120,12 @@ const StyledRequiredLabel = styled.span`
 
 const StyledErrorMessage = styled.span`
   display: block;
-  margin-top: 5px;
+  margin-top: ${({ isToggle }) => {
+    if (isToggle) {
+      return '2px';
+    }
+    return '5px';
+  }};
   padding-left: ${({ isToggle, isSwitch, isButton, buttonSize }) => {
     if (isButton && buttonSize === 'small') {
       return '56px';
@@ -201,7 +206,12 @@ const StyledFieldsetLabel = styled(StyledLabel).attrs({
 
 const StyledDescription = styled.p`
   display: block;
-  margin-top: 5px;
+  margin-top: ${({ isToggle }) => {
+    if (isToggle) {
+      return '2px';
+    }
+    return '5px';
+  }};
   margin-bottom: 0;
   padding-left: ${({ isToggle, isSwitch, isButton, buttonSize }) => {
     if (isButton && buttonSize === 'small') {

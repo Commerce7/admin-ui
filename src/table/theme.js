@@ -50,10 +50,12 @@ const thColors = {
 
 const tfootColors = {
   light: {
-    backgroundColor: c7Colors.gray400
+    backgroundColor: c7Colors.white,
+    borderColor: c7Colors.gray300
   },
   dark: {
-    backgroundColor: c7Colors.gray900
+    backgroundColor: c7Colors.slate300,
+    borderColor: c7Colors.gray800
   }
 };
 
