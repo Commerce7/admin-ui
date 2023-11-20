@@ -95,7 +95,6 @@ export const createTheme = (mode) => ({
     fontSizeSmall: '14px',
     fontWeightBase: '400',
     fontWeightStrong: '600',
-    fontWeightHeading: '500',
     fontColor: fontColors[mode],
     secondaryFontColor: secondaryFontColors[mode],
     linkColor: linkColors[mode],

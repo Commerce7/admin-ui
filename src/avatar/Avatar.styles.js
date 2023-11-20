@@ -5,7 +5,7 @@ import Icon from '../icon';
 import { sizes, iconSizes, fontSizes, colors } from './theme';
 
 const StyledAvatar = styled.div`
-  font-weight: ${({ theme }) => theme.c7__ui.fontWeightStrong};
+  font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 

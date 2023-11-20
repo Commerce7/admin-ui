@@ -81,7 +81,6 @@ const StyledColorInput = styled.div`
     border: 1px solid;
     border-color: ${({ theme }) => theme.c7__ui.borderColor};
     border-radius: 3px;
-    cursor: pointer;
     overflow: hidden;
   }
 `;

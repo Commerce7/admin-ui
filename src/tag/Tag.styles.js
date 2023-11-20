@@ -7,13 +7,13 @@ import { colors } from './theme';
 const StyledTag = styled.span`
   display: inline-flex;
   align-items: center;
-  padding: 6px 10px 7px;
-  min-height: 29px;
+  padding: 5px 10px;
+  min-height: 30px;
   border-radius: 30px;
   border: none;
   margin: 0 5px 5px 0;
   font-size: 13px;
-  line-height: 1;
+  line-height: 16px;
   max-width: 100%;
   transition: all 0.3s ease-in-out;
 

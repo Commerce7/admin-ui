@@ -2,15 +2,15 @@ import { c7Colors } from '../ui/theme';
 
 const sizes = {
   tiny: '28px',
-  small: '44px',
-  default: '48px',
+  small: '40px',
+  default: '50px',
   large: '96px'
 };
 
 const fontSizes = {
   tiny: '13px',
   small: '18px',
-  default: '20px',
+  default: '22px',
   large: '42px'
 };
 
@@ -30,7 +30,7 @@ const colors = {
   dark: {
     background: c7Colors.gray700,
     fontColor: c7Colors.blue300,
-    iconColor: c7Colors.blue300
+    iconColor: c7Colors.blue400
   }
 };
 
