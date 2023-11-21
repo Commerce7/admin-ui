@@ -28,7 +28,7 @@ const Legend = (props) => {
 
 const LegendStyledWrapper = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 12px;
   flex-direction: row;
   ${({ isVertical, width }) =>
     isVertical &&
@@ -40,13 +40,12 @@ const LegendStyledWrapper = styled.div`
 const StyledLegendItem = styled.div`
   display: flex;
   align-items: center;
-  gap: 5px;
 `;
 
 const StyledCircle = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 5px;
+  margin-right: 8px;
 `;
 
 const StyledValueText = styled(Text)`

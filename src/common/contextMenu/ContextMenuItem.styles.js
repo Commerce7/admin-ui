@@ -12,6 +12,7 @@ const StyledContextMenuItem = styled.button`
 
   height: 46px;
   display: inline-flex;
+  gap: 8px;
   align-items: center;
   white-space: nowrap;
   padding: 0px;
@@ -34,7 +35,7 @@ const StyledContextMenuItem = styled.button`
 `;
 
 const StyledContextMenuIcon = styled(Icon)`
-  margin-right: 5px;
+  // margin-right: 5px;
   * {
     transition: all 0.3s ease-in-out;
   }

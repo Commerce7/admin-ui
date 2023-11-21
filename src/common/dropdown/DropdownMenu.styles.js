@@ -16,7 +16,9 @@ const StyledDropdown = styled.div`
   right: ${({ align }) => (align === 'right' ? '0px' : 'auto')};
   padding: 5px;
   z-index: 999;
-  transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
+  transition:
+    opacity 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
   max-width: 80vw;
 
   background: ${({ theme }) =>
@@ -28,6 +30,7 @@ const StyledDropdown = styled.div`
     padding: 10px 40px 10px 10px;
     margin: 0;
     height: auto;
+    min-width: 180px;
     width: 100%;
     background-color: ${({ theme }) =>
       dropdownButtonColors[theme.c7__ui.mode].backgroundColor.default};

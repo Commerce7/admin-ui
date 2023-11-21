@@ -73,14 +73,14 @@ const StyledFormItem = styled.input`
   }
 
   &:disabled {
-    opacity: 0.5;
+    opacity: 0.6;
     cursor: not-allowed;
   }
 `;
 
 const StyledLabel = styled.label`
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   transition: all 0.3s ease-in-out;
 
   color: ${({ theme }) => labelColors[theme.c7__ui.mode].color};
@@ -122,9 +122,9 @@ const StyledErrorMessage = styled.span`
   display: block;
   margin-top: ${({ isToggle }) => {
     if (isToggle) {
-      return '2px';
+      return '3px';
     }
-    return '5px';
+    return '8px';
   }};
   padding-left: ${({ isToggle, isSwitch, isButton, buttonSize }) => {
     if (isButton && buttonSize === 'small') {
@@ -143,9 +143,7 @@ const StyledErrorMessage = styled.span`
     isButton && buttonSize === 'small' ? 'margin-top: -12px;' : ''}
 
   color: ${({ theme }) => errorColors[theme.c7__ui.mode].color};
-  font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
-  font-family: ${({ theme }) => theme.c7__ui.fontFamily};
-  font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
+  font-size: ${({ theme }) => theme.c7__ui.fontSizeSmall};
 `;
 
 const StyledHiddenInput = styled.input`
@@ -208,9 +206,9 @@ const StyledDescription = styled.p`
   display: block;
   margin-top: ${({ isToggle }) => {
     if (isToggle) {
-      return '2px';
+      return '3px';
     }
-    return '5px';
+    return '8px';
   }};
   margin-bottom: 0;
   padding-left: ${({ isToggle, isSwitch, isButton, buttonSize }) => {
