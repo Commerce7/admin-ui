@@ -34,7 +34,7 @@ export const c7Colors = {
 
   slate100: '#414F58',
   slate200: '#293238',
-  slate300: '#222a30',
+  slate300: '#1e252a',
 
   gray100: '#F8F8F8',
   gray200: '#F1F1F1',
@@ -91,8 +91,9 @@ export const createTheme = (mode) => ({
   c7__ui: {
     mode,
     fontFamily: '"Inter", sans-serif',
-    fontSizeBase: '15px',
-    fontSizeSmall: '14px',
+    fontSizeBase: '16px',
+    fontSizeTable: '15px',
+    fontSizeSmall: '14.5px',
     fontWeightBase: '400',
     fontWeightStrong: '600',
     fontWeightHeading: '500',
@@ -133,6 +134,8 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.c7__ui.fontFamily};
     font-weight:  ${({ theme }) => theme.c7__ui.fontWeightBase};
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
   }
   body {
     margin: 0;

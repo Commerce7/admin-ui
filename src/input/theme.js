@@ -6,8 +6,8 @@ const svgColors = {
     fill: c7Colors.gray200
   },
   light: {
-    stroke: c7Colors.gray500,
-    fill: c7Colors.gray500
+    stroke: c7Colors.gray600,
+    fill: c7Colors.gray600
   }
 };
 export { svgColors };

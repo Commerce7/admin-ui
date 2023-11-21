@@ -14,7 +14,7 @@ const colors = {
       default: c7Colors.slate300,
       hover: c7Colors.gray700,
       focus: c7Colors.gray700,
-      disabled: c7Colors.gray400
+      disabled: c7Colors.gray500
     }
   }
 };

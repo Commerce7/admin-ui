@@ -5,6 +5,7 @@ import { thColors } from './theme';
 const StyledTh = styled.th`
   text-transform: uppercase;
   font-size: 13px;
+  font-weight: ${({ theme }) => theme.c7__ui.fontWeightStrong};
   line-height: 1;
   padding: 10px 7px;
   border-bottom: 1px solid;

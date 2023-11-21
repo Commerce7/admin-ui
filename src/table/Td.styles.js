@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 const StyledTd = styled.td`
+  font-size: ${({ theme }) => theme.c7__ui.fontSizeTable};
   text-align: ${({ align }) => align};
   padding: 15px 7px;
 

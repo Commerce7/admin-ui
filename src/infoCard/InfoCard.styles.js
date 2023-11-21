@@ -46,10 +46,10 @@ const StyledIcon = styled.div`
 const StyledLabel = styled.span`
   color: rgba(0, 0, 0, 0.5);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: block;
   ${({ theme, variant }) => `
     color: ${colors[theme.c7__ui.mode].labelColor[variant]};
@@ -57,7 +57,7 @@ const StyledLabel = styled.span`
 `;
 
 const StyledTitle = styled.span`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 400;
   display: block;
   text-align: center;
