@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-import { tfootColors, theadColors } from './theme';
+import { tfootColors } from './theme';
 
 const StyledTfoot = styled.tfoot`
   width: 100%;
 
   tr {
     background-color: ${({ theme }) =>
-      theadColors[theme.c7__ui.mode].backgroundColor} !important;
+      tfootColors[theme.c7__ui.mode].backgroundColor} !important;
     border-top: 1px solid
       ${({ theme }) => tfootColors[theme.c7__ui.mode].borderColor};
   }
