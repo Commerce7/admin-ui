@@ -4,11 +4,11 @@ const StyledTd = styled.td`
   text-align: ${({ align }) => align};
   padding: 15px 7px;
 
-  &:first-of-type {
+  &:first-of-type:not(:only-child) {
     padding-left: 15px;
   }
 
-  &:last-of-type {
+  &:last-of-type:not(:only-child) {
     padding-right: 15px;
   }
 `;

@@ -33,8 +33,12 @@ const Tag = (props) => {
         data-testid={dataTestId}
       >
         <StyledTagLabel>{children}</StyledTagLabel>
-        <StyledDeleteButton onClick={handleDelete} type="button">
-          x
+        <StyledDeleteButton
+          onClick={handleDelete}
+          type="button"
+          variant={variant}
+        >
+          ✕
         </StyledDeleteButton>
       </StyledTag>
     );

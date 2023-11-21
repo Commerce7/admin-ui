@@ -7,13 +7,13 @@ import { colors } from './theme';
 const StyledTag = styled.span`
   display: inline-flex;
   align-items: center;
-  padding: 6px 10px 7px;
+  padding: 6px 10px;
   min-height: 29px;
   border-radius: 30px;
   border: none;
   margin: 0 5px 5px 0;
   font-size: 13px;
-  line-height: 1;
+  line-height: 1.2;
   max-width: 100%;
   transition: all 0.3s ease-in-out;
 
@@ -65,10 +65,10 @@ const StyledDeleteButton = styled.button`
   margin-right: -5px;
   transition: all 0.3s ease-in-out;
   background: rgba(255, 255, 255, 0.4);
-  color: rgb(41, 50, 56);
+  color: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
 
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
-  font-size: 16px;
+  font-size: 12px;
 
   &:hover,
   &:focus {
