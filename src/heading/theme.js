@@ -3,7 +3,7 @@ import { c7Colors } from '../ui/theme';
 const fontSize = {
   h1: '34px',
   h2: '26px',
-  h3: '22px',
+  h3: '20px',
   h4: '18px'
 };
 

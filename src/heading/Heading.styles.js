@@ -11,7 +11,7 @@ const StyledHeading = styled.h2`
   margin: 0 0 ${({ as }) => marginBottom[as]} 0;
   font-size: ${({ as }) => fontSize[as]};
   line-height: 1.4;
-  letter-spacing: -0.15px;
+  letter-spacing: -0.2px;
 `;
 
 export { StyledHeading };

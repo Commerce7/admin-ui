@@ -91,8 +91,7 @@ export const createTheme = (mode) => ({
   c7__ui: {
     mode,
     fontFamily: '"Inter", sans-serif',
-    fontSizeBase: '16px',
-    fontSizeTable: '15px',
+    fontSizeBase: '15.5px',
     fontSizeSmall: '14.5px',
     fontWeightBase: '400',
     fontWeightStrong: '600',
