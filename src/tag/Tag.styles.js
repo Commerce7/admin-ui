@@ -12,7 +12,7 @@ const StyledTag = styled.span`
   border-radius: 30px;
   border: none;
   margin: 0 5px 5px 0;
-  font-size: 13px;
+  font-size: 13.5px;
   line-height: 1.2;
   max-width: 100%;
   transition: all 0.3s ease-in-out;
