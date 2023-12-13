@@ -1,4 +1,4 @@
-const CopyIcon = (props) => {
+const Copy = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const CopyIcon = (props) => {
   );
 };
 
-export default CopyIcon;
+export default Copy;

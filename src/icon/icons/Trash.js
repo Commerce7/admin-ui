@@ -1,4 +1,4 @@
-const TrashIcon = (props) => {
+const Trash = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const TrashIcon = (props) => {
   );
 };
 
-export default TrashIcon;
+export default Trash;

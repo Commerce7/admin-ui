@@ -1,4 +1,4 @@
-const ClubIcon = (props) => {
+const Club = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const ClubIcon = (props) => {
   );
 };
 
-export default ClubIcon;
+export default Club;

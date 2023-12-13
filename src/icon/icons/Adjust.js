@@ -1,4 +1,4 @@
-const AdjustIcon = (props) => {
+const Adjust = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const AdjustIcon = (props) => {
   );
 };
 
-export default AdjustIcon;
+export default Adjust;

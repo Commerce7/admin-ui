@@ -1,4 +1,4 @@
-const InfoCircleIcon = (props) => {
+const InfoCircle = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const InfoCircleIcon = (props) => {
   );
 };
 
-export default InfoCircleIcon;
+export default InfoCircle;

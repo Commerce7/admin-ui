@@ -1,4 +1,4 @@
-const SwitchUserIcon = (props) => {
+const SwitchUser = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -21,4 +21,4 @@ const SwitchUserIcon = (props) => {
   );
 };
 
-export default SwitchUserIcon;
+export default SwitchUser;

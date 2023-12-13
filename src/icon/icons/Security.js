@@ -1,4 +1,4 @@
-const SecurityIcon = (props) => {
+const Security = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -17,4 +17,4 @@ const SecurityIcon = (props) => {
   );
 };
 
-export default SecurityIcon;
+export default Security;

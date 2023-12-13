@@ -1,4 +1,4 @@
-const AddCartIcon = (props) => {
+const AddCart = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const AddCartIcon = (props) => {
   );
 };
 
-export default AddCartIcon;
+export default AddCart;

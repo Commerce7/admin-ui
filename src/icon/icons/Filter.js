@@ -1,4 +1,4 @@
-const FilterIcon = (props) => {
+const Filter = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const FilterIcon = (props) => {
   );
 };
 
-export default FilterIcon;
+export default Filter;

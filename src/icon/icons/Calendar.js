@@ -1,4 +1,4 @@
-const CalendarIcon = (props) => {
+const Calendar = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const CalendarIcon = (props) => {
   );
 };
 
-export default CalendarIcon;
+export default Calendar;

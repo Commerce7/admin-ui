@@ -1,4 +1,4 @@
-const StarIcon = (props) => {
+const Star = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const StarIcon = (props) => {
   );
 };
 
-export default StarIcon;
+export default Star;

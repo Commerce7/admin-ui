@@ -1,4 +1,4 @@
-const AvailabilityIcon = (props) => {
+const Availability = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -17,4 +17,4 @@ const AvailabilityIcon = (props) => {
   );
 };
 
-export default AvailabilityIcon;
+export default Availability;

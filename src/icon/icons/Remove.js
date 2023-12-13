@@ -1,4 +1,4 @@
-const RemoveIcon = (props) => {
+const Remove = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -21,4 +21,4 @@ const RemoveIcon = (props) => {
   );
 };
 
-export default RemoveIcon;
+export default Remove;

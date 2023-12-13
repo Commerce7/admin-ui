@@ -1,4 +1,4 @@
-const EnterIcon = (props) => {
+const Enter = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -39,4 +39,4 @@ const EnterIcon = (props) => {
   );
 };
 
-export default EnterIcon;
+export default Enter;

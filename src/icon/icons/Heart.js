@@ -1,4 +1,4 @@
-const HeartIcon = (props) => {
+const Heart = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const HeartIcon = (props) => {
   );
 };
 
-export default HeartIcon;
+export default Heart;

@@ -1,4 +1,4 @@
-const MoreActionsIcon = (props) => {
+const MoreActions = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const MoreActionsIcon = (props) => {
   );
 };
 
-export default MoreActionsIcon;
+export default MoreActions;

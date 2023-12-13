@@ -1,4 +1,4 @@
-const LoyaltyIcon = (props) => {
+const Loyalty = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const LoyaltyIcon = (props) => {
   );
 };
 
-export default LoyaltyIcon;
+export default Loyalty;

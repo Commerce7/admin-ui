@@ -1,4 +1,4 @@
-const SupportIcon = (props) => {
+const Support = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const SupportIcon = (props) => {
   );
 };
 
-export default SupportIcon;
+export default Support;

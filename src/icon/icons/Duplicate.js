@@ -1,4 +1,4 @@
-const DuplicateIcon = (props) => {
+const Duplicate = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const DuplicateIcon = (props) => {
   );
 };
 
-export default DuplicateIcon;
+export default Duplicate;

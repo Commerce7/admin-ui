@@ -1,4 +1,4 @@
-const TicketIcon = (props) => {
+const Ticket = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const TicketIcon = (props) => {
   );
 };
 
-export default TicketIcon;
+export default Ticket;

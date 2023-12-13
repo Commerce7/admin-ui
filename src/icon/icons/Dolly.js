@@ -1,4 +1,4 @@
-const DollyIcon = (props) => {
+const Dolly = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -20,4 +20,4 @@ const DollyIcon = (props) => {
   );
 };
 
-export default DollyIcon;
+export default Dolly;

@@ -1,4 +1,4 @@
-const PointerIcon = (props) => {
+const Pointer = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const PointerIcon = (props) => {
   );
 };
 
-export default PointerIcon;
+export default Pointer;

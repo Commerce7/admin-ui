@@ -1,4 +1,4 @@
-const EmailIcon = (props) => {
+const Email = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const EmailIcon = (props) => {
   );
 };
 
-export default EmailIcon;
+export default Email;

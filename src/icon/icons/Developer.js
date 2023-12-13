@@ -1,4 +1,4 @@
-const DeveloperIcon = (props) => {
+const Developer = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const DeveloperIcon = (props) => {
   );
 };
 
-export default DeveloperIcon;
+export default Developer;

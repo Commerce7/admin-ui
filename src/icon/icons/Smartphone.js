@@ -1,4 +1,4 @@
-const SmartphoneIcon = (props) => {
+const Smartphone = (props) => {
   const { className, dataTestId } = props;
 
   return (
@@ -26,4 +26,4 @@ const SmartphoneIcon = (props) => {
   );
 };
 
-export default SmartphoneIcon;
+export default Smartphone;

@@ -1,4 +1,4 @@
-const DragIcon = (props) => {
+const Drag = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const DragIcon = (props) => {
   );
 };
 
-export default DragIcon;
+export default Drag;

@@ -6,7 +6,7 @@ import * as Icons from '../icon/icons';
 import { StyledIcon } from './DisplayIcon.styles';
 import IconWrapper from './IconWrapper';
 
-const DisplayIcon = (props) => {
+const Display = (props) => {
   const { className, icon, label, onClick, variant, dataTestId } = props;
 
   const IconComponent = Icons[icon];
@@ -45,7 +45,7 @@ const DisplayIcon = (props) => {
   );
 };
 
-DisplayIcon.defaultProps = {
+Display.defaultProps = {
   className: null,
   label: null,
   onClick: null,
@@ -53,7 +53,7 @@ DisplayIcon.defaultProps = {
   dataTestId: null
 };
 
-DisplayIcon.propTypes = {
+Display.propTypes = {
   /**
    * Add className to the outermost element.
    */
@@ -86,4 +86,4 @@ DisplayIcon.propTypes = {
   dataTestId: PropTypes.string
 };
 
-export default DisplayIcon;
+export default Display;

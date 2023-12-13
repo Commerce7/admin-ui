@@ -1,4 +1,4 @@
-const TruckIcon = (props) => {
+const Truck = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const TruckIcon = (props) => {
   );
 };
 
-export default TruckIcon;
+export default Truck;

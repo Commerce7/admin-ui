@@ -45,7 +45,7 @@ import Club from './Club';
 import Coin from './Coin';
 import Combine from './Combine';
 import Comment from './Comment';
-import ComplicanceCheck from './ComplianceCheck';
+import ComplianceCheck from './ComplianceCheck';
 import Copy from './Copy';
 import Customer from './Customer';
 import Dashboard from './Dashboard';
@@ -115,7 +115,7 @@ import Phone from './Phone';
 import Platter from './Platter';
 import PlayCircle from './PlayCircle';
 import Pointer from './Pointer';
-import POS from './Pos';
+import Pos from './Pos';
 import PosProfile from './PosProfile';
 import Pound from './Pound';
 import Print from './Print';
@@ -214,7 +214,7 @@ export {
   Coin as coin,
   Combine as combine,
   Comment as comment,
-  ComplicanceCheck as complianceCheck,
+  ComplianceCheck as complianceCheck,
   Customer as customer,
   Dashboard as dashboard,
   Database as database,
@@ -283,7 +283,7 @@ export {
   Platter as platter,
   PlayCircle as playCircle,
   Pointer as pointer,
-  POS as pos,
+  Pos as pos,
   PosProfile as posProfile,
   Pound as pound,
   Product as product,

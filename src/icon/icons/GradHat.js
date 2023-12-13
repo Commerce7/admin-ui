@@ -1,4 +1,4 @@
-const GradHatIcon = (props) => {
+const GradHat = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const GradHatIcon = (props) => {
   );
 };
 
-export default GradHatIcon;
+export default GradHat;

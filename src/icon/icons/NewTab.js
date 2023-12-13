@@ -1,4 +1,4 @@
-const NewTabIcon = (props) => {
+const NewTab = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const NewTabIcon = (props) => {
   );
 };
 
-export default NewTabIcon;
+export default NewTab;

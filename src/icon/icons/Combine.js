@@ -1,4 +1,4 @@
-const CombineIcon = (props) => {
+const Combine = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const CombineIcon = (props) => {
   );
 };
 
-export default CombineIcon;
+export default Combine;

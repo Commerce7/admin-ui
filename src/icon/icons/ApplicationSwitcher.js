@@ -1,4 +1,4 @@
-const ApplicationSwitcherIcon = (props) => {
+const ApplicationSwitcher = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -23,4 +23,4 @@ const ApplicationSwitcherIcon = (props) => {
   );
 };
 
-export default ApplicationSwitcherIcon;
+export default ApplicationSwitcher;

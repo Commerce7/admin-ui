@@ -1,4 +1,4 @@
-const ReservationIcon = (props) => {
+const Reservation = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -34,4 +34,4 @@ const ReservationIcon = (props) => {
   );
 };
 
-export default ReservationIcon;
+export default Reservation;

@@ -1,4 +1,4 @@
-const DashboardIcon = (props) => {
+const Dashboard = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const DashboardIcon = (props) => {
   );
 };
 
-export default DashboardIcon;
+export default Dashboard;

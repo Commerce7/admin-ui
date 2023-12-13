@@ -1,4 +1,4 @@
-const EditIcon = (props) => {
+const Edit = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const EditIcon = (props) => {
   );
 };
 
-export default EditIcon;
+export default Edit;

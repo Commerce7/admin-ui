@@ -1,4 +1,4 @@
-const NotificationIcon = (props) => {
+const Notification = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -17,4 +17,4 @@ const NotificationIcon = (props) => {
   );
 };
 
-export default NotificationIcon;
+export default Notification;
