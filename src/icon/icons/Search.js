@@ -1,4 +1,4 @@
-const SearchIcon = (props) => {
+const Search = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const SearchIcon = (props) => {
   );
 };
 
-export default SearchIcon;
+export default Search;

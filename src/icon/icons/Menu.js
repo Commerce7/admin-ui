@@ -1,4 +1,4 @@
-const MenuIcon = (props) => {
+const Menu = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -17,4 +17,4 @@ const MenuIcon = (props) => {
   );
 };
 
-export default MenuIcon;
+export default Menu;

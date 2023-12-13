@@ -1,4 +1,4 @@
-const TransferIcon = (props) => {
+const Transfer = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const TransferIcon = (props) => {
   );
 };
 
-export default TransferIcon;
+export default Transfer;

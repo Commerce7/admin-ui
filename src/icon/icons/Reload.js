@@ -1,4 +1,4 @@
-const ReloadIcon = (props) => {
+const Reload = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const ReloadIcon = (props) => {
   );
 };
 
-export default ReloadIcon;
+export default Reload;

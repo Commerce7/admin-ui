@@ -1,4 +1,4 @@
-const CoinIcon = (props) => {
+const Coin = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const CoinIcon = (props) => {
   );
 };
 
-export default CoinIcon;
+export default Coin;

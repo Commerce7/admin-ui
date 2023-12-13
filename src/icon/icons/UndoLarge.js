@@ -1,4 +1,4 @@
-const UndoLargeIcon = (props) => {
+const UndoLarge = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const UndoLargeIcon = (props) => {
   );
 };
 
-export default UndoLargeIcon;
+export default UndoLarge;

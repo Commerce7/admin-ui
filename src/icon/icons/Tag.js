@@ -1,4 +1,4 @@
-const TagIcon = (props) => {
+const Tag = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const TagIcon = (props) => {
   );
 };
 
-export default TagIcon;
+export default Tag;

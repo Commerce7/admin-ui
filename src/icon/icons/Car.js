@@ -1,4 +1,4 @@
-const CarIcon = (props) => {
+const Car = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const CarIcon = (props) => {
   );
 };
 
-export default CarIcon;
+export default Car;

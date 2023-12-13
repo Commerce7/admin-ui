@@ -1,4 +1,4 @@
-const MapIcon = (props) => {
+const Map = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const MapIcon = (props) => {
   );
 };
 
-export default MapIcon;
+export default Map;

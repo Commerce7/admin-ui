@@ -1,4 +1,4 @@
-const InventoryIcon = (props) => {
+const Inventory = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const InventoryIcon = (props) => {
   );
 };
 
-export default InventoryIcon;
+export default Inventory;

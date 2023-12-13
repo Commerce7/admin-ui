@@ -1,4 +1,4 @@
-const EmailOpenIcon = (props) => {
+const EmailOpen = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const EmailOpenIcon = (props) => {
   );
 };
 
-export default EmailOpenIcon;
+export default EmailOpen;

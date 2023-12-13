@@ -1,4 +1,4 @@
-const ProcessIcon = (props) => {
+const Process = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const ProcessIcon = (props) => {
   );
 };
 
-export default ProcessIcon;
+export default Process;

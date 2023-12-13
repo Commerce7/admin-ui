@@ -1,4 +1,4 @@
-const LanguageIcon = (props) => {
+const Language = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -28,4 +28,4 @@ const LanguageIcon = (props) => {
   );
 };
 
-export default LanguageIcon;
+export default Language;

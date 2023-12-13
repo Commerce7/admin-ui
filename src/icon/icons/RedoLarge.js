@@ -1,4 +1,4 @@
-const RedoLargeIcon = (props) => {
+const RedoLarge = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const RedoLargeIcon = (props) => {
   );
 };
 
-export default RedoLargeIcon;
+export default RedoLarge;

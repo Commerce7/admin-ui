@@ -1,4 +1,4 @@
-const ExclamationIcon = (props) => {
+const Exclamation = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -38,4 +38,4 @@ const ExclamationIcon = (props) => {
   );
 };
 
-export default ExclamationIcon;
+export default Exclamation;

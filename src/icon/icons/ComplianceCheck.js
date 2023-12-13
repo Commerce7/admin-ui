@@ -1,4 +1,4 @@
-const ComplianceCheckIcon = (props) => {
+const ComplianceCheck = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const ComplianceCheckIcon = (props) => {
   );
 };
 
-export default ComplianceCheckIcon;
+export default ComplianceCheck;

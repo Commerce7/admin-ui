@@ -1,4 +1,4 @@
-const EyeIcon = (props) => {
+const Eye = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -36,4 +36,4 @@ const EyeIcon = (props) => {
   );
 };
 
-export default EyeIcon;
+export default Eye;

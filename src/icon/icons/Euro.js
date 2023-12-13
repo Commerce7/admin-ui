@@ -1,4 +1,4 @@
-const EuroIcon = (props) => {
+const Euro = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const EuroIcon = (props) => {
   );
 };
 
-export default EuroIcon;
+export default Euro;

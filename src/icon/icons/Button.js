@@ -1,4 +1,4 @@
-const ButtonIcon = (props) => {
+const Button = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const ButtonIcon = (props) => {
   );
 };
 
-export default ButtonIcon;
+export default Button;

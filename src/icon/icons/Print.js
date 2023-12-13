@@ -1,4 +1,4 @@
-const PrintIcon = (props) => {
+const Print = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -19,4 +19,4 @@ const PrintIcon = (props) => {
   );
 };
 
-export default PrintIcon;
+export default Print;

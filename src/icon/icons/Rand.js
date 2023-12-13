@@ -1,4 +1,4 @@
-const RandIcon = (props) => {
+const Rand = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -20,4 +20,4 @@ const RandIcon = (props) => {
   );
 };
 
-export default RandIcon;
+export default Rand;

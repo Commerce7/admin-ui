@@ -1,4 +1,4 @@
-const AddIcon = (props) => {
+const Add = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -21,4 +21,4 @@ const AddIcon = (props) => {
   );
 };
 
-export default AddIcon;
+export default Add;

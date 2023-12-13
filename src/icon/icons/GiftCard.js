@@ -1,4 +1,4 @@
-const GiftCardIcon = (props) => {
+const GiftCard = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const GiftCardIcon = (props) => {
   );
 };
 
-export default GiftCardIcon;
+export default GiftCard;

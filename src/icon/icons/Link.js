@@ -1,4 +1,4 @@
-const LinkIcon = (props) => {
+const Link = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const LinkIcon = (props) => {
   );
 };
 
-export default LinkIcon;
+export default Link;

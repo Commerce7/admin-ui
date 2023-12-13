@@ -1,4 +1,4 @@
-const EyeCrossedIcon = (props) => {
+const EyeCrossed = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -36,4 +36,4 @@ const EyeCrossedIcon = (props) => {
   );
 };
 
-export default EyeCrossedIcon;
+export default EyeCrossed;

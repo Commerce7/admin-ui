@@ -1,4 +1,4 @@
-const NoteIcon = (props) => {
+const Note = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -21,4 +21,4 @@ const NoteIcon = (props) => {
   );
 };
 
-export default NoteIcon;
+export default Note;

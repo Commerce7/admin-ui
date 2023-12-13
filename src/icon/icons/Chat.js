@@ -1,4 +1,4 @@
-const ChatIcon = (props) => {
+const Chat = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const ChatIcon = (props) => {
   );
 };
 
-export default ChatIcon;
+export default Chat;

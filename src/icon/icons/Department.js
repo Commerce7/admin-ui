@@ -1,4 +1,4 @@
-const DepartmentIcon = (props) => {
+const Department = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const DepartmentIcon = (props) => {
   );
 };
 
-export default DepartmentIcon;
+export default Department;

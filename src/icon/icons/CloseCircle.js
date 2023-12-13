@@ -1,4 +1,4 @@
-const CloseCircleIcon = (props) => {
+const CloseCircle = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const CloseCircleIcon = (props) => {
   );
 };
 
-export default CloseCircleIcon;
+export default CloseCircle;

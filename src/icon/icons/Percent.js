@@ -1,4 +1,4 @@
-const PercentIcon = (props) => {
+const Percent = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -17,4 +17,4 @@ const PercentIcon = (props) => {
   );
 };
 
-export default PercentIcon;
+export default Percent;

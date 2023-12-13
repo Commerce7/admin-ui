@@ -1,4 +1,4 @@
-const SplitIcon = (props) => {
+const Split = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const SplitIcon = (props) => {
   );
 };
 
-export default SplitIcon;
+export default Split;

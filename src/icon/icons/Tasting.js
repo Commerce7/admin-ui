@@ -1,4 +1,4 @@
-const TastingIcon = (props) => {
+const Tasting = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -19,4 +19,4 @@ const TastingIcon = (props) => {
   );
 };
 
-export default TastingIcon;
+export default Tasting;

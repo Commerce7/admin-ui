@@ -1,4 +1,4 @@
-const PoundIcon = (props) => {
+const Pound = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -25,4 +25,4 @@ const PoundIcon = (props) => {
   );
 };
 
-export default PoundIcon;
+export default Pound;

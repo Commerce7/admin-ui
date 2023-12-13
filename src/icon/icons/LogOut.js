@@ -1,4 +1,4 @@
-const LogOutIcon = (props) => {
+const LogOut = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const LogOutIcon = (props) => {
   );
 };
 
-export default LogOutIcon;
+export default LogOut;

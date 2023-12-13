@@ -1,4 +1,4 @@
-const ExitIcon = (props) => {
+const Exit = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -34,4 +34,4 @@ const ExitIcon = (props) => {
   );
 };
 
-export default ExitIcon;
+export default Exit;

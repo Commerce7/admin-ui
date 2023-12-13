@@ -1,4 +1,4 @@
-const PlatterIcon = (props) => {
+const Platter = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -32,4 +32,4 @@ const PlatterIcon = (props) => {
   );
 };
 
-export default PlatterIcon;
+export default Platter;

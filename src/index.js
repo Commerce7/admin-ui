@@ -11,7 +11,7 @@ import Columns from './columns';
 import ContextMenu from './contextMenu';
 import DataDisplay from './dataDisplay';
 import DatePicker from './datePicker';
-import DisplayIcon from './displayIcon';
+import Display from './displayIcon';
 import Heading from './heading';
 import Icon from './icon';
 import InfoCard from './infoCard';
@@ -60,7 +60,7 @@ export {
   Heading,
   Icon,
   InfoCard,
-  DisplayIcon,
+  Display,
   VividIcon,
   Input,
   LineBreak,

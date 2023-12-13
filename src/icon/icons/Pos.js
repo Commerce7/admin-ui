@@ -1,4 +1,4 @@
-const PosIcon = (props) => {
+const Pos = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const PosIcon = (props) => {
   );
 };
 
-export default PosIcon;
+export default Pos;

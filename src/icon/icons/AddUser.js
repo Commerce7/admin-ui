@@ -1,4 +1,4 @@
-const AddUserIcon = (props) => {
+const AddUser = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -20,4 +20,4 @@ const AddUserIcon = (props) => {
   );
 };
 
-export default AddUserIcon;
+export default AddUser;

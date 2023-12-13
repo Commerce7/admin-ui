@@ -1,4 +1,4 @@
-const EllipsisIcon = (props) => {
+const Ellipsis = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -26,4 +26,4 @@ const EllipsisIcon = (props) => {
   );
 };
 
-export default EllipsisIcon;
+export default Ellipsis;

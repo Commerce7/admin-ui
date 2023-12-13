@@ -1,4 +1,4 @@
-const DiscountIcon = (props) => {
+const Discount = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const DiscountIcon = (props) => {
   );
 };
 
-export default DiscountIcon;
+export default Discount;

@@ -4,7 +4,7 @@ import { StyledIconButton } from '../icon/Icon.styles';
 
 import { StyledIconContainer, StyledIcon } from './VividIcon.styles';
 
-const IconVivid = (props) => {
+const VividIcon = (props) => {
   const { className, label, onClick, icon, color, dataTestId } = props;
 
   if (onClick) {
@@ -34,7 +34,7 @@ const IconVivid = (props) => {
   );
 };
 
-IconVivid.defaultProps = {
+VividIcon.defaultProps = {
   className: null,
   onClick: null,
   dataTestId: null,
@@ -42,7 +42,7 @@ IconVivid.defaultProps = {
   label: null
 };
 
-IconVivid.propTypes = {
+VividIcon.propTypes = {
   /**
    * Add className to the outermost element.
    */
@@ -75,4 +75,4 @@ IconVivid.propTypes = {
   dataTestId: PropTypes.string
 };
 
-export default IconVivid;
+export default VividIcon;

@@ -1,4 +1,4 @@
-const VideoIcon = (props) => {
+const Video = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const VideoIcon = (props) => {
   );
 };
 
-export default VideoIcon;
+export default Video;

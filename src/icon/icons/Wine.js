@@ -1,4 +1,4 @@
-const WineIcon = (props) => {
+const Wine = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -19,4 +19,4 @@ const WineIcon = (props) => {
   );
 };
 
-export default WineIcon;
+export default Wine;

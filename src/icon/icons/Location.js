@@ -1,4 +1,4 @@
-const LocationIcon = (props) => {
+const Location = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -15,4 +15,4 @@ const LocationIcon = (props) => {
   );
 };
 
-export default LocationIcon;
+export default Location;

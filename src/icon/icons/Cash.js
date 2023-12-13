@@ -1,4 +1,4 @@
-const CashIcon = (props) => {
+const Cash = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -18,4 +18,4 @@ const CashIcon = (props) => {
   );
 };
 
-export default CashIcon;
+export default Cash;

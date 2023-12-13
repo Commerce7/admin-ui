@@ -1,4 +1,4 @@
-const SyncIcon = (props) => {
+const Sync = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const SyncIcon = (props) => {
   );
 };
 
-export default SyncIcon;
+export default Sync;

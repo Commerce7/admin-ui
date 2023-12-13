@@ -1,4 +1,4 @@
-const CheckCircleIcon = (props) => {
+const CheckCircle = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const CheckCircleIcon = (props) => {
   );
 };
 
-export default CheckCircleIcon;
+export default CheckCircle;

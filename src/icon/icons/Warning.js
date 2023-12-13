@@ -1,4 +1,4 @@
-const WarningIcon = (props) => {
+const Warning = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -17,4 +17,4 @@ const WarningIcon = (props) => {
   );
 };
 
-export default WarningIcon;
+export default Warning;

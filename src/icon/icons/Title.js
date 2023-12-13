@@ -1,4 +1,4 @@
-const TitleIcon = (props) => {
+const Title = (props) => {
   const { className, dataTestId } = props;
   return (
     <svg
@@ -16,4 +16,4 @@ const TitleIcon = (props) => {
   );
 };
 
-export default TitleIcon;
+export default Title;
