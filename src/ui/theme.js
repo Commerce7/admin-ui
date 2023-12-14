@@ -73,8 +73,8 @@ const borderColors = {
 };
 
 const boxShadow = {
-  light: '2px 4px 6px rgba(0, 0, 0, 0.15)',
-  dark: '2px 4px 6px rgba(0, 0, 0, 0.5)'
+  light: '0 1px 4px 0 rgba(0, 0, 0, 0.1)',
+  dark: '0 1px 4px 0 rgba(0, 0, 0, 0.6)'
 };
 
 const linkColors = {
@@ -103,7 +103,8 @@ export const createTheme = (mode) => ({
     secondaryBackgroundColor: secondaryBackgroundColors[mode],
     borderColor: borderColors[mode],
     errorColor: errorColors[mode],
-    borderRadius: '3px',
+    borderRadius: '4px',
+    borderRadiusMedium: '6px',
     boxShadow: boxShadow[mode],
     colors: c7Colors,
     breakpoints: {

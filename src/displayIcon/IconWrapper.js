@@ -1,9 +1,11 @@
 import { StyledDisplayIcon } from './DisplayIcon.styles';
 
 const IconWrapper = (props) => {
-  const { children, dataTestId } = props;
+  const { children, dataTestId, variant } = props;
   return (
-    <StyledDisplayIcon data-testid={dataTestId}>{children}</StyledDisplayIcon>
+    <StyledDisplayIcon data-testid={dataTestId} variant={variant}>
+      {children}
+    </StyledDisplayIcon>
   );
 };
 

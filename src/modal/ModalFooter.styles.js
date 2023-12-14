@@ -8,8 +8,6 @@ const StyledModalFooter = styled.div`
   flex-wrap: wrap;
   justify-content: flex-end;
   gap: 10px;
-
-  background-color: ${({ theme }) => colors[theme.c7__ui.mode].backgroundColor};
   border-top: 1px solid ${({ theme }) => colors[theme.c7__ui.mode].borderColor};
 
   button,

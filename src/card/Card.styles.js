@@ -12,8 +12,8 @@ const StyledCard = styled.div`
   ${({ theme, variant }) => `
     background: ${colors[theme.c7__ui.mode].backgroundColor[variant]};
     border: 1px solid ${colors[theme.c7__ui.mode].borderColor};
-    border-radius: ${theme.c7__ui.borderRadius};
-    box-shadow: ${colors[theme.c7__ui.mode].boxShadow};
+    border-radius: ${theme.c7__ui.borderRadiusMedium};
+    box-shadow: ${theme.c7__ui.boxShadow};
     color: ${theme.c7__ui.fontColor};
   `}
 `;

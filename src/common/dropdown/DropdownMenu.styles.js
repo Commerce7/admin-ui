@@ -8,7 +8,7 @@ const StyledDropdown = styled.div`
   overflow: hidden;
   min-width: 100%;
   box-shadow: rgb(0 0 0 / 15%) 2px 4px 6px;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
   border: 1px solid;
   position: absolute;
   top: 100%;

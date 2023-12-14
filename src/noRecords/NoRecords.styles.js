@@ -4,11 +4,11 @@ import Heading from '../heading';
 
 const StyledEmptyMessage = styled.div`
   text-align: center;
-  padding: 40px 20px;
+  padding: 0 20px 30px;
 `;
 
 const StyledHeading = styled(Heading)`
-  margin: 10px 0;
+  margin: 20px 0 10px;
 `;
 
 export { StyledEmptyMessage, StyledHeading };

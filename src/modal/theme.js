@@ -7,7 +7,7 @@ const colors = {
   },
   dark: {
     backgroundColor: c7Colors.slate300,
-    borderColor: c7Colors.gray700
+    borderColor: c7Colors.gray800
   }
 };
 

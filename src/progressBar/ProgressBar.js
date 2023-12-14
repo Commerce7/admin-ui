@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 
+import Text from '../text';
 import { c7Colors } from '../ui/theme';
 
 import {
@@ -27,9 +28,9 @@ const ProgressBar = (props) => {
       <StyledContentWrapper>
         <StyledContent>
           {renderCircle(contentObj.circleColor)}
-          <span>{contentObj.text}</span>
+          <Text>{contentObj.text}</Text>
         </StyledContent>
-        <span>{contentObj.progress}%</span>
+        <Text>{contentObj.progress}%</Text>
       </StyledContentWrapper>
     );
   };

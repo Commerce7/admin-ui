@@ -22,7 +22,7 @@ const Display = (props) => {
         title={label}
         data-testid={dataTestId}
       >
-        <IconWrapper>
+        <IconWrapper variant={variant}>
           <StyledIcon
             as={IconComponent}
             variant={variant}
@@ -34,7 +34,7 @@ const Display = (props) => {
   }
 
   return (
-    <IconWrapper dataTestId={dataTestId}>
+    <IconWrapper dataTestId={dataTestId} variant={variant}>
       <StyledIcon
         as={IconComponent}
         variant={variant}
@@ -78,7 +78,7 @@ Display.propTypes = {
   /**
    * Set the visual property of the component.
    */
-  variant: PropTypes.oneOf(['default', 'success', 'error']),
+  variant: PropTypes.oneOf(['default', 'success', 'warning', 'error']),
 
   /**
    * Add test attribute to the element. Used internally for testing.

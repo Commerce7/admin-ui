@@ -29,9 +29,10 @@ const StyledCheckbox = styled.span`
   align-items: center;
   justify-content: center;
   border: 1px solid;
-  border-radius: 4px;
-  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
+  transition:
+    border-color 0.3s ease-in-out,
+    box-shadow 0.3s ease-in-out;
   background: ${({ theme }) =>
     colors[theme.c7__ui.mode].backgroundColor.default};
   border-color: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.default};
