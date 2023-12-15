@@ -9,7 +9,7 @@ const StyledCardLink = styled.div`
   width: 100%;
   padding: 20px;
   margin-bottom: 10px;
-  border-radius: 3px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
   display: flex;
   align-items: flex-start;
   &:hover,
@@ -39,7 +39,7 @@ const StyledCardDescription = styled(Text).attrs({
 const StyledCardIcon = styled(Icon)`
   margin-top: 5px;
   padding: 10px;
-  border-radius: 3px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
   background: ${({ theme }) =>
     colors[theme.c7__ui.mode].invertedBackgroundColor};
   ${StyledCardLink}:hover &, ${StyledCardLink}:focus & {

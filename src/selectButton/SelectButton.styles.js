@@ -21,7 +21,7 @@ const StyledSelectButton = styled.button`
     selected
       ? colors[theme.c7__ui.mode].borderColor.default
       : theme.c7__ui.borderColor};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
 
   background-color: ${({ theme }) =>
     colors[theme.c7__ui.mode].backgroundColor.default};
@@ -113,7 +113,7 @@ const StyledMediumSelectButton = styled(StyledSelectButton)`
   height: 56px;
   max-height: 56px;
   padding: 12px;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
 
   ${Icon} {
     path {

@@ -4,6 +4,7 @@ import Icon from '../icon';
 
 import {
   StyledInfoCard,
+  StyledContentWrapper,
   StyledIcon,
   StyledLabel,
   StyledTitle,
@@ -38,18 +39,24 @@ const InfoCard = (props) => {
       className={className}
       data-testid={dataTestId}
     >
-      {icon && (
-        <StyledIcon variant={variant}>
-          <Icon icon={icon} variant={iconVariant} />
-        </StyledIcon>
-      )}
-      {img && <StyledImage src={img} alt={title} />}
-      <StyledLabel variant={variant}>{label}</StyledLabel>
-      <StyledTitle variant={variant}>{title}</StyledTitle>
-      {subtitle && (
-        <StyledSubtitle variant={variant}>{subtitle}</StyledSubtitle>
-      )}
-      {children}
+      <div>
+        {icon && (
+          <StyledIcon variant={variant}>
+            <Icon icon={icon} variant={iconVariant} />
+          </StyledIcon>
+        )}
+        {img && <StyledImage src={img} alt={title} />}
+      </div>
+      <StyledContentWrapper>
+        <StyledLabel variant={variant}>{label}</StyledLabel>
+        <StyledTitle variant={variant}>{title}</StyledTitle>
+        {subtitle && (
+          <StyledSubtitle block small variant={variant}>
+            {subtitle}
+          </StyledSubtitle>
+        )}
+        {children}
+      </StyledContentWrapper>
     </StyledInfoCard>
   );
 };

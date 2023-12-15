@@ -39,6 +39,7 @@ const StyledContentWrapper = styled.div`
 const StyledContent = styled.div`
   display: flex;
   gap: 5px;
+  align-items: center;
 `;
 
 export {

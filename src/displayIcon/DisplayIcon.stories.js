@@ -14,9 +14,10 @@ basic.story = {
 
 export const variants = () => (
   <>
-    <DisplayIcon icon="cart" variant="default" />
-    <DisplayIcon icon="cart" variant="success" />
-    <DisplayIcon icon="cart" variant="error" />
+    <DisplayIcon icon="search" variant="default" />
+    <DisplayIcon icon="checkCircle" variant="success" />
+    <DisplayIcon icon="warning" variant="warning" />
+    <DisplayIcon icon="closeCircle" variant="error" />
   </>
 );
 

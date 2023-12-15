@@ -10,7 +10,7 @@ const NoRecords = (props) => {
   return (
     <StyledEmptyMessage data-testid={dataTestId} className={className}>
       <DisplayIcon icon={icon} />
-      <StyledHeading>{title}</StyledHeading>
+      <StyledHeading level={3}>{title}</StyledHeading>
       {description && <Text secondary>{description}</Text>}
     </StyledEmptyMessage>
   );

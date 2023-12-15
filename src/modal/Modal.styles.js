@@ -17,9 +17,10 @@ const StyledModalBackground = styled.div`
 `;
 
 const StyledModalContent = styled.div`
-  box-shadow: 0 16px 28px 0 rgba(0, 0, 0, 0.22),
+  box-shadow:
+    0 16px 28px 0 rgba(0, 0, 0, 0.22),
     0 25px 55px 0 rgba(0, 0, 0, 0.21);
-  border-radius: 3px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadiusMedium};
   width: 600px;
   max-width: 90vw;
 

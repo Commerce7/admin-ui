@@ -23,7 +23,7 @@ const StyledButton = styled.button`
   user-select: none;
   white-space: nowrap;
   transition: all 0.3s ease-in-out;
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
   appearance: none;
   text-decoration: none;
 

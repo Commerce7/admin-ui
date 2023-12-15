@@ -17,11 +17,11 @@ const colors = {
       success: c7Colors.gray300
     },
     iconBackgroundColor: {
-      default: 'rgba(0, 0, 0, 0.1)',
+      default: 'rgba(0, 0, 0, 0.07)',
       info: 'rgba(255, 255, 255, 0.1)',
       error: 'rgba(255, 255, 255, 0.1)',
-      warning: 'rgba(0, 0, 0, 0.1)',
-      success: 'rgba(0, 0, 0, 0.1)'
+      warning: 'rgba(0, 0, 0, 0.07)',
+      success: 'rgba(255, 255, 255, 0.1)'
     },
     iconFill: {
       default: 'rgba(0, 0, 0, 0.65)',
@@ -32,10 +32,10 @@ const colors = {
     },
     labelColor: {
       default: 'rgba(0, 0, 0, 0.5)',
-      info: 'rgba(255, 255, 255, 0.5)',
-      error: 'rgba(255, 255, 255, 0.5)',
+      info: 'rgba(255, 255, 255, 0.6)',
+      error: 'rgba(255, 255, 255, 0.6)',
       warning: 'rgba(0, 0, 0, 0.5)',
-      success: 'rgba(255, 255, 255, 0.5)'
+      success: 'rgba(255, 255, 255, 0.6)'
     },
     fontColor: {
       default: c7Colors.slate300,
@@ -65,7 +65,7 @@ const colors = {
       info: 'rgba(255, 255, 255, 0.1)',
       error: 'rgba(255, 255, 255, 0.1)',
       warning: 'rgba(0, 0, 0, 0.1)',
-      success: 'rgba(0, 0, 0, 0.1)'
+      success: 'rgba(255, 255, 255, 0.1)'
     },
     iconFill: {
       default: 'rgba(255, 255, 255, 0.65)',
@@ -75,11 +75,11 @@ const colors = {
       success: 'rgba(255, 255, 255, 0.65)'
     },
     labelColor: {
-      default: 'rgba(255, 255, 255, 0.5)',
-      info: 'rgba(255, 255, 255, 0.5)',
-      error: 'rgba(255, 255, 255, 0.5)',
+      default: 'rgba(255, 255, 255, 0.6)',
+      info: 'rgba(255, 255, 255, 0.6)',
+      error: 'rgba(255, 255, 255, 0.6)',
       warning: 'rgba(0, 0, 0, 0.5)',
-      success: 'rgba(255, 255, 255, 0.5)'
+      success: 'rgba(255, 255, 255, 0.6)'
     },
     fontColor: {
       default: c7Colors.white,

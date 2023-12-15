@@ -1,26 +1,31 @@
 import styled from 'styled-components';
 
+import Text from '../text';
+
 import { colors } from './theme';
 
 const StyledInfoCardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 15px;
   align-items: stretch;
-  margin-bottom: 20px;
 `;
 
 const StyledInfoCard = styled.div`
   padding: 20px;
   display: flex;
-  flex-direction: column;
+  gap: 15px;
   align-items: center;
   border: 1px solid
     ${({ theme, variant }) => colors[theme.c7__ui.mode].borderColor[variant]};
-  border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
+  border-radius: ${({ theme }) => theme.c7__ui.borderRadiusMedium};
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 4px;
   background: ${({ theme, variant }) =>
     colors[theme.c7__ui.mode].backgroundColor[variant]};
+`;
+
+const StyledContentWrapper = styled.div`
+  flex: 1;
 `;
 
 const StyledIcon = styled.div`
@@ -32,7 +37,6 @@ const StyledIcon = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 10px;
     svg {
       width: 24px;
       height: 24px;
@@ -44,12 +48,11 @@ const StyledIcon = styled.div`
 `;
 
 const StyledLabel = styled.span`
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.4);
   font-size: 13px;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  text-align: center;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
   display: block;
   ${({ theme, variant }) => `
     color: ${colors[theme.c7__ui.mode].labelColor[variant]};
@@ -60,7 +63,6 @@ const StyledTitle = styled.span`
   font-size: 18px;
   font-weight: 400;
   display: block;
-  text-align: center;
   margin-bottom: 5px;
   ${({ theme, variant }) => `
     color: ${colors[theme.c7__ui.mode].fontColor[variant]};
@@ -71,11 +73,7 @@ const StyledTitle = styled.span`
   `}
 `;
 
-const StyledSubtitle = styled.span`
-  font-size: 14px;
-  font-weight: 400;
-  display: block;
-  text-align: center;
+const StyledSubtitle = styled(Text)`
   ${({ theme, variant }) => `
     color: ${colors[theme.c7__ui.mode].fontColor[variant]};
   `}
@@ -92,6 +90,7 @@ const StyledImage = styled.img`
 export {
   StyledInfoCardGrid,
   StyledInfoCard,
+  StyledContentWrapper,
   StyledIcon,
   StyledLabel,
   StyledTitle,
