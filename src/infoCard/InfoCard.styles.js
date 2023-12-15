@@ -6,7 +6,7 @@ import { colors } from './theme';
 
 const StyledInfoCardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   gap: 15px;
   align-items: stretch;
 `;
