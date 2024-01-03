@@ -1,3 +1,3 @@
-import Display from './DisplayIcon';
+import DisplayIcon from './DisplayIcon';
 
-export default Display;
+export default DisplayIcon;
