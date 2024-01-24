@@ -67,7 +67,6 @@ const DatePicker = forwardRef((props, ref) => {
           dateFormat="MMM D, YYYY"
           initialViewMode="days"
           isValidDate={isValidDate}
-          utc
           input={false}
         />
       </StyledDatePicker>
@@ -101,7 +100,6 @@ const DatePicker = forwardRef((props, ref) => {
             required,
             value
           }}
-          utc
           closeOnSelect
           renderInput={(componentProps) => (
             <StyledIconWrapper>
