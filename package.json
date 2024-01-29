@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.11.82",
+  "version": "1.11.83",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -52,7 +52,7 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
+    "husky": "^9.0.7",
     "lint-staged": "^15.2.0",
     "path": "^0.12.7",
     "prettier": "^3.2.4",
