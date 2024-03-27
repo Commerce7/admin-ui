@@ -11,8 +11,8 @@ const colors = {
       fillColor: '#1030AE'
     },
     green: {
-      backgroundColor: 'rgba(16,48,174, 0.1)',
-      fillColor: '#1030AE'
+      backgroundColor: 'rgba(63,204,175, 0.1)',
+      fillColor: '#3fccaf'
     },
     teal: {
       backgroundColor: 'rgba(0,103,157, 0.1)',
