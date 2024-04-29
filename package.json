@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "1.11.92",
+  "version": "1.11.93",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -51,13 +51,13 @@
     "eslint-plugin-jsx-a11y": "^6.8.0",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.1",
-    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "path": "^0.12.7",
     "prettier": "^3.2.5",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "storybook": "^8.0.8",
     "style-loader": "^3.3.4",
     "webpack": "^5.91.0",
@@ -71,8 +71,8 @@
     "moment": "^2.30.1",
     "prop-types": "^15.8.1",
     "react-datetime": "^3.2.0",
-    "react-focus-lock": "^2.11.3",
-    "recharts": "^2.12.5",
+    "react-focus-lock": "^2.12.1",
+    "recharts": "^2.12.6",
     "styled-components": "^5.3.11",
     "styled-normalize": "^8.1.1"
   },
