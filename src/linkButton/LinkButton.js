@@ -1,7 +1,12 @@
 import PropTypes from 'prop-types';
 import { forwardRef } from 'react';
 
-import { StyledButton, StyledButtonIcon } from '../button/Button.styles';
+import {
+  StyledButton,
+  StyledButtonIcon,
+  StyledButtonText,
+  StyledLoadingIcon
+} from '../button/Button.styles';
 
 const LinkButton = forwardRef((props, ref) => {
   const {
@@ -10,6 +15,7 @@ const LinkButton = forwardRef((props, ref) => {
     component,
     disabled,
     download,
+    loading,
     href,
     rel,
     startIcon,
@@ -31,10 +37,10 @@ const LinkButton = forwardRef((props, ref) => {
 
   return (
     <StyledButton
-      as={disabled ? null : as}
+      as={disabled || loading ? null : as}
       ref={ref}
       className={className}
-      disabled={disabled}
+      disabled={disabled || loading}
       href={href}
       target={target}
       rel={rel}
@@ -44,23 +50,28 @@ const LinkButton = forwardRef((props, ref) => {
       data-testid={dataTestId}
       {...customComponentProps} // eslint-disable-line
     >
-      {startIcon && (
-        <StyledButtonIcon
-          buttonVariant={variant}
-          icon={startIcon}
-          position="start"
-          hasChildren={children !== null}
-        />
-      )}
-      {children}
-      {endIcon && (
-        <StyledButtonIcon
-          buttonVariant={variant}
-          icon={endIcon}
-          position="end"
-          hasChildren={children !== null}
-        />
-      )}
+      <StyledButtonText isLoading={loading}>
+        {startIcon && (
+          <StyledButtonIcon
+            buttonVariant={variant}
+            icon={startIcon}
+            position="start"
+            isHidden={loading}
+            hasChildren={children !== null}
+          />
+        )}
+        {loading && <StyledLoadingIcon icon="loading" />}
+        {children}
+        {endIcon && (
+          <StyledButtonIcon
+            buttonVariant={variant}
+            icon={endIcon}
+            position="end"
+            isHidden={loading}
+            hasChildren={children !== null}
+          />
+        )}
+      </StyledButtonText>
     </StyledButton>
   );
 });
@@ -71,6 +82,7 @@ LinkButton.defaultProps = {
   component: null,
   disabled: false,
   download: null,
+  loading: false,
   href: null,
   rel: null,
   startIcon: null,
@@ -107,6 +119,12 @@ LinkButton.propTypes = {
    * Add download to the dom element
    */
   download: PropTypes.bool,
+
+  /**
+   * Set the button to visually show a loading spinner.
+   * This will also disable the button.
+   */
+  loading: PropTypes.bool,
 
   /**
    * The url to link to.
