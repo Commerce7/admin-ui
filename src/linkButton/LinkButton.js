@@ -24,6 +24,7 @@ const LinkButton = forwardRef((props, ref) => {
     variant,
     size,
     dataTestId,
+    onClick,
     ...rest
   } = props;
 
@@ -48,6 +49,7 @@ const LinkButton = forwardRef((props, ref) => {
       size={size}
       download={download}
       data-testid={dataTestId}
+      onClick={onClick}
       {...customComponentProps} // eslint-disable-line
     >
       <StyledButtonText isLoading={loading}>
