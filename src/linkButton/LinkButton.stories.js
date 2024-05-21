@@ -66,6 +66,23 @@ export const Disabled = () => (
   </StyledContainer>
 );
 
+export const Loading = () => (
+  <StyledContainer>
+    <LinkButton variant="primary" loading>
+      Primary Button
+    </LinkButton>
+    <LinkButton variant="secondary" loading>
+      Secondary Button
+    </LinkButton>
+    <LinkButton variant="text" loading>
+      Text Button
+    </LinkButton>
+    <LinkButton variant="link" loading>
+      Link Button
+    </LinkButton>
+  </StyledContainer>
+);
+
 export const Size = () => (
   <StyledContainer>
     <LinkButton size="small" href="https://commerce7.com">
