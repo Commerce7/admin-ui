@@ -101,6 +101,7 @@ import MapMarker from './MapMarker';
 import Marketing from './Marketing';
 import MegaAdmin from './MegaAdmin';
 import Menu from './Menu';
+import Merge from './Merge';
 import Minus from './Minus';
 import MoreActions from './MoreActions';
 import Move from './Move';
@@ -268,6 +269,7 @@ export {
   MapMarker as mapMarker,
   Marketing as marketing,
   Menu as menu,
+  Merge as merge,
   Minus as minus,
   MegaAdmin as megaAdmin,
   MoreActions as moreActions,
