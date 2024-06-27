@@ -32,19 +32,21 @@ export const c7Colors = {
   blue500: '#0363A6',
   blue600: '#054483',
 
-  slate100: '#414F58',
-  slate200: '#293238',
-  slate300: '#1e252a',
+  slate100: '#292F3D',
+  slate200: '#1D232F',
+  slate300: '#161C27',
+  slate400: '#121721',
 
-  gray100: '#F8F8F8',
-  gray200: '#F1F1F1',
-  gray300: '#E0E0E0',
-  gray400: '#D1D1D1',
-  gray500: '#989EA4',
-  gray600: '#71767D',
-  gray700: '#585E64',
-  gray800: '#484E54',
-  gray900: '#20272B'
+  gray100: '#F6F7F9',
+  gray200: '#EFF1F4',
+  gray300: '#DDDFE4',
+  gray400: '#CDD0D6',
+  gray500: '#9DA3AE',
+  gray600: '#6B7280',
+  gray700: '#4D5361',
+  gray800: '#343946',
+  gray900: '#2A2E37',
+  gray950: '#26272C'
 };
 
 export const fontColors = {
@@ -63,7 +65,7 @@ const backgroundColors = {
 };
 
 const secondaryBackgroundColors = {
-  dark: c7Colors.gray900,
+  dark: c7Colors.slate400,
   light: c7Colors.gray100
 };
 
