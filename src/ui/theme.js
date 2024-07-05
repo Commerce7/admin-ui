@@ -25,12 +25,20 @@ export const c7Colors = {
   purple200: '#7764ED',
   purple300: '#5341B9',
 
+  pink100: '#F7EBFF',
+  pink200: '#A83EF4',
+  pink300: '#883DBF',
+
   blue100: '#EBF6FE',
   blue200: '#DDEFFD',
   blue300: '#42ACF0',
   blue400: '#2490D6',
   blue500: '#0363A6',
   blue600: '#054483',
+
+  blueberry100: '#EBEFFF',
+  blueberry200: '#1030AE',
+  blueberry300: '#072080',
 
   slate100: '#292F3D',
   slate200: '#1D232F',
