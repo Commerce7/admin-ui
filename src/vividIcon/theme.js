@@ -3,54 +3,54 @@ import { c7Colors } from '../ui/theme';
 const colors = {
   light: {
     pink: {
-      backgroundColor: 'rgba(168, 62, 244, 0.1)',
-      fillColor: '#A83EF4'
+      backgroundColor: c7Colors.violet100,
+      fillColor: c7Colors.violet200
     },
     blue: {
-      backgroundColor: 'rgba(16, 48, 174, 0.1)',
-      fillColor: '#1030AE'
+      backgroundColor: c7Colors.blueberry100,
+      fillColor: c7Colors.blueberry200
     },
     green: {
-      backgroundColor: 'rgba(63,204,175, 0.1)',
-      fillColor: '#3fccaf'
+      backgroundColor: c7Colors.green100,
+      fillColor: c7Colors.green200
     },
     teal: {
-      backgroundColor: 'rgba(0,103,157, 0.1)',
+      backgroundColor: c7Colors.blue100,
       fillColor: c7Colors.blue500
     },
     orange: {
-      backgroundColor: 'rgba(240,142,50, 0.1)',
-      fillColor: '#F08E32'
+      backgroundColor: c7Colors.orange100,
+      fillColor: c7Colors.orange200
     },
     purple: {
-      backgroundColor: 'rgba(108,84,255, 0.1)',
-      fillColor: '#6C54FF'
+      backgroundColor: c7Colors.purple100,
+      fillColor: c7Colors.purple200
     }
   },
   dark: {
     pink: {
-      backgroundColor: 'rgba(168, 62, 244, 0.1)',
-      fillColor: '#A83EF4'
+      backgroundColor: c7Colors.violet200,
+      fillColor: c7Colors.white
     },
     blue: {
-      backgroundColor: 'rgba(16, 48, 174, 0.1)',
-      fillColor: '#274CDB'
+      backgroundColor: c7Colors.blue400,
+      fillColor: c7Colors.white
     },
     green: {
-      backgroundColor: 'rgba(63,204,175, 0.1)',
-      fillColor: '#3fccaf'
+      backgroundColor: c7Colors.green200,
+      fillColor: c7Colors.white
     },
     teal: {
-      backgroundColor: 'rgba(0,103,157, 0.1)',
-      fillColor: c7Colors.blue500
+      backgroundColor: c7Colors.blue500,
+      fillColor: c7Colors.white
     },
     orange: {
-      backgroundColor: 'rgba(240,142,50, 0.1)',
-      fillColor: '#F08E32'
+      backgroundColor: c7Colors.orange200,
+      fillColor: c7Colors.white
     },
     purple: {
-      backgroundColor: 'rgba(108,84,255, 0.1)',
-      fillColor: '#6C54FF'
+      backgroundColor: c7Colors.purple200,
+      fillColor: c7Colors.white
     }
   }
 };
