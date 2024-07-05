@@ -25,9 +25,9 @@ export const c7Colors = {
   purple200: '#7764ED',
   purple300: '#5341B9',
 
-  pink100: '#F7EBFF',
-  pink200: '#A83EF4',
-  pink300: '#883DBF',
+  violet100: '#F7EBFF',
+  violet200: '#A83EF4',
+  violet300: '#883DBF',
 
   blue100: '#EBF6FE',
   blue200: '#DDEFFD',

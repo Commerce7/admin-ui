@@ -3,8 +3,8 @@ import { c7Colors } from '../ui/theme';
 const colors = {
   light: {
     pink: {
-      backgroundColor: c7Colors.pink100,
-      fillColor: c7Colors.pink200
+      backgroundColor: c7Colors.violet100,
+      fillColor: c7Colors.violet200
     },
     blue: {
       backgroundColor: c7Colors.blueberry100,
@@ -29,7 +29,7 @@ const colors = {
   },
   dark: {
     pink: {
-      backgroundColor: c7Colors.pink200,
+      backgroundColor: c7Colors.violet200,
       fillColor: c7Colors.white
     },
     blue: {
