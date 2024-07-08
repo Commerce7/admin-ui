@@ -1,14 +1,15 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useState } from 'react';
 
 import Nav from '.';
 
 const { NavLink, SubNav, SubNavLink } = Nav;
 
-export const Basic = () => {
+export const Basic = (args) => {
   const [currentPath, setPath] = useState('/dashboard');
 
   return (
-    <Nav>
+    <Nav {...args}>
       <NavLink
         onClick={() => setPath('/dashboard')}
         className={currentPath === '/dashboard' ? 'active' : ''}
@@ -39,10 +40,6 @@ export const Basic = () => {
       </NavLink>
     </Nav>
   );
-};
-
-Basic.story = {
-  name: 'Basic'
 };
 
 export const SubNavigation = () => {
@@ -124,10 +121,6 @@ export const SubNavigation = () => {
   );
 };
 
-SubNavigation.story = {
-  name: 'Sub Navigation'
-};
-
 const description =
   "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav";
 
@@ -136,6 +129,7 @@ export default {
   component: Nav,
   subcomponents: { SubNav, NavLink, SubNavLink },
   parameters: {
+    controls: { expand: true },
     docs: {
       description: {
         component: description

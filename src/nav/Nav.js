@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import { NavStyles } from './Nav.styles';
 
 const Nav = (props) => {
-  const { children, dataTestId, className } = props;
+  const { children, dataTestId, className, isOpen } = props;
   return (
-    <NavStyles className={className} data-testid={dataTestId}>
+    <NavStyles className={className} data-testid={dataTestId} isOpen={isOpen}>
       {children}
     </NavStyles>
   );
@@ -14,7 +14,8 @@ const Nav = (props) => {
 Nav.defaultProps = {
   children: null,
   dataTestId: null,
-  className: null
+  className: null,
+  isOpen: true
 };
 
 Nav.propTypes = {
@@ -27,6 +28,11 @@ Nav.propTypes = {
    * Add className to the outermost element
    */
   className: PropTypes.string,
+
+  /**
+   * Open or close Navigation menu
+   */
+  isOpen: PropTypes.bool,
 
   /**
    * Add test attribute to the element. Used internally for testing.
