@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import Nav from '.';
 
@@ -9,7 +10,7 @@ export const Basic = (args) => {
   const [currentPath, setPath] = useState('/dashboard');
 
   return (
-    <Nav {...args}>
+    <StyledNav {...args}>
       <NavLink
         onClick={() => setPath('/dashboard')}
         className={currentPath === '/dashboard' ? 'active' : ''}
@@ -38,7 +39,7 @@ export const Basic = (args) => {
       >
         Club
       </NavLink>
-    </Nav>
+    </StyledNav>
   );
 };
 
@@ -46,7 +47,7 @@ export const SubNavigation = () => {
   const [currentPath, setPath] = useState('/store/order');
 
   return (
-    <Nav>
+    <StyledNav>
       <NavLink
         onClick={() => setPath('/dashboard')}
         className={currentPath === '/dashboard' ? 'active' : ''}
@@ -117,12 +118,16 @@ export const SubNavigation = () => {
           Packages
         </SubNavLink>
       </SubNav>
-    </Nav>
+    </StyledNav>
   );
 };
 
 const description =
   "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav";
+
+const StyledNav = styled(Nav)`
+  height: 50vh;
+`;
 
 export default {
   title: 'Navigation/Nav',
