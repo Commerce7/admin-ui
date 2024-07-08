@@ -36,7 +36,7 @@ const colors = {
     }
   },
   dark: {
-    backgroundColor: c7Colors.slate200,
+    backgroundColor: c7Colors.slate400,
     borderColor: c7Colors.gray800,
     primaryLink: {
       fontColor: {

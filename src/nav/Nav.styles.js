@@ -113,6 +113,7 @@ const SubNavStyles = styled.div`
 const NavStyles = styled.nav`
   background: ${({ theme }) => colors[theme.c7__ui.mode].backgroundColor};
   width: 260px;
+  height: 100vh;
   padding: 10px 10px 5px 10px;
   z-index: 1000;
   overflow: auto;
@@ -120,6 +121,13 @@ const NavStyles = styled.nav`
     ${({ theme }) => colors[theme.c7__ui.mode].borderColor};
   display: flex;
   flex-direction: column;
+  transition:
+    left 0.5s ease-in-out,
+    background 0.3s ease-in-out,
+    border 0.3s ease-in-out,
+    visibility 0.5s ease-in-out;
+  left: ${({ isOpen }) => (isOpen ? '0px' : '-260px')};
+  visibility: ${({ isOpen }) => (isOpen ? 'visible' : 'hidden')};
 `;
 
 export {

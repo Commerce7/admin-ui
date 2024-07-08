@@ -1,14 +1,16 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { useState } from 'react';
+import styled from 'styled-components';
 
 import Nav from '.';
 
 const { NavLink, SubNav, SubNavLink } = Nav;
 
-export const Basic = () => {
+export const Basic = (args) => {
   const [currentPath, setPath] = useState('/dashboard');
 
   return (
-    <Nav>
+    <StyledNav {...args}>
       <NavLink
         onClick={() => setPath('/dashboard')}
         className={currentPath === '/dashboard' ? 'active' : ''}
@@ -37,19 +39,15 @@ export const Basic = () => {
       >
         Club
       </NavLink>
-    </Nav>
+    </StyledNav>
   );
-};
-
-Basic.story = {
-  name: 'Basic'
 };
 
 export const SubNavigation = () => {
   const [currentPath, setPath] = useState('/store/order');
 
   return (
-    <Nav>
+    <StyledNav>
       <NavLink
         onClick={() => setPath('/dashboard')}
         className={currentPath === '/dashboard' ? 'active' : ''}
@@ -120,22 +118,23 @@ export const SubNavigation = () => {
           Packages
         </SubNavLink>
       </SubNav>
-    </Nav>
+    </StyledNav>
   );
-};
-
-SubNavigation.story = {
-  name: 'Sub Navigation'
 };
 
 const description =
   "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav";
+
+const StyledNav = styled(Nav)`
+  height: 50vh;
+`;
 
 export default {
   title: 'Navigation/Nav',
   component: Nav,
   subcomponents: { SubNav, NavLink, SubNavLink },
   parameters: {
+    controls: { expand: true },
     docs: {
       description: {
         component: description
