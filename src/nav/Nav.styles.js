@@ -113,6 +113,7 @@ const SubNavStyles = styled.div`
 const NavStyles = styled.nav`
   background: ${({ theme }) => colors[theme.c7__ui.mode].backgroundColor};
   width: 260px;
+  height: 100vh;
   padding: 10px 10px 5px 10px;
   z-index: 1000;
   overflow: auto;
