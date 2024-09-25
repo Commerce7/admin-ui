@@ -47,30 +47,8 @@ const ModalContent = (props) => {
     }
   };
 
-  if (disableFocusLock) {
-    return ReactDom.createPortal(
-      <StyledModalBackground
-        onClick={handleBackgroundClick}
-        className={className}
-      >
-        <StyledModalContent data-testid={dataTestId}>
-          {title && (
-            <StyledModalHeader>
-              <StyledModalTitle>{title}</StyledModalTitle>
-              {onClose && (
-                <Icon icon="close" onClick={handleClose} label="Close modal" />
-              )}
-            </StyledModalHeader>
-          )}
-          {children}
-        </StyledModalContent>
-      </StyledModalBackground>,
-      document.body
-    );
-  }
-
   return ReactDom.createPortal(
-    <FocusLock autoFocus={false}>
+    <FocusLock autoFocus={false} disabled={disableFocusLock}>
       <StyledModalBackground
         onClick={handleBackgroundClick}
         className={className}
