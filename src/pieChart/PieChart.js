@@ -44,6 +44,7 @@ const PieChart = (props) => {
           cx="50%"
           cy="50%"
           cursor="pointer"
+          stroke="0"
           labelLine={false}
           label={label}
           innerRadius={innerRadius}

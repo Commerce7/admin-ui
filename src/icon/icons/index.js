@@ -42,6 +42,7 @@ import ClipboardText from './ClipboardText';
 import Close from './Close';
 import CloseCircle from './CloseCircle';
 import Club from './Club';
+import Code from './Code';
 import Coin from './Coin';
 import Combine from './Combine';
 import Comment from './Comment';
@@ -73,6 +74,7 @@ import Eye from './Eye';
 import EyeCrossed from './EyeCrossed';
 import Filter from './Filter';
 import Flag from './Flag';
+import Form from './Form';
 import Gift from './Gift';
 import GiftCard from './GiftCard';
 import GradHat from './GradHat';
@@ -131,6 +133,7 @@ import Remove from './Remove';
 import Report from './Report';
 import Reservation from './Reservation';
 import Rocket from './Rocket';
+import Screen from './Screen';
 import Search from './Search';
 import Security from './Security';
 import Setting from './Setting';
@@ -212,6 +215,7 @@ export {
   CloseCircle as closeCircle,
   Club as club,
   Copy as copy,
+  Code as code,
   Coin as coin,
   Combine as combine,
   Comment as comment,
@@ -242,6 +246,7 @@ export {
   EyeCrossed as eyeCrossed,
   Filter as filter,
   Flag as flag,
+  Form as form,
   Gift as gift,
   GiftCard as giftCard,
   GradHat as gradHat,
@@ -300,11 +305,12 @@ export {
   Report as report,
   Reservation as reservation,
   Rocket as rocket,
-  Smartphone as smartphone,
+  Screen as screen,
   Search as search,
   Security as security,
   Setting as setting,
   Shuffle as shuffle,
+  Smartphone as smartphone,
   Split as split,
   Star as star,
   Store as store,
