@@ -13,7 +13,8 @@ const StyledProgressBarWrapper = styled.div`
 `;
 
 const StyledProgressBar = styled.div`
-  width: ${({ progress }) => `${progress}%`};
+  width: ${({ progress }) =>
+    `${Math.min(progress, 100)}%`}; /* Cap width at 100% */
   height: 100%;
   animation: progressAnimation 1s ease-in-out;
   background: ${({ color }) => `${color}`};
