@@ -51,7 +51,6 @@ const StyledLabel = styled.span`
   color: rgba(0, 0, 0, 0.4);
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
-  text-transform: uppercase;
   margin-bottom: 10px;
   display: block;
   ${({ theme, variant }) => `
