@@ -43,6 +43,13 @@ const colors = {
       error: c7Colors.white,
       warning: c7Colors.slate300,
       success: c7Colors.white
+    },
+    secondaryFontColor: {
+      default: c7Colors.gray600,
+      info: c7Colors.white,
+      error: c7Colors.white,
+      warning: c7Colors.slate300,
+      success: c7Colors.white
     }
   },
   dark: {
@@ -83,6 +90,13 @@ const colors = {
     },
     fontColor: {
       default: c7Colors.white,
+      info: c7Colors.white,
+      error: c7Colors.white,
+      warning: c7Colors.slate300,
+      success: c7Colors.white
+    },
+    secondaryFontColor: {
+      default: c7Colors.gray500,
       info: c7Colors.white,
       error: c7Colors.white,
       warning: c7Colors.slate300,

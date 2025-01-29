@@ -49,8 +49,8 @@ const StyledIcon = styled.div`
 
 const StyledLabel = styled.span`
   color: rgba(0, 0, 0, 0.4);
-  font-size: 13px;
-  font-weight: 700;
+  font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
+  font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   text-transform: uppercase;
   margin-bottom: 10px;
   display: block;
@@ -60,8 +60,8 @@ const StyledLabel = styled.span`
 `;
 
 const StyledTitle = styled.span`
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   display: block;
   margin-bottom: 5px;
   ${({ theme, variant }) => `
@@ -75,7 +75,7 @@ const StyledTitle = styled.span`
 
 const StyledSubtitle = styled(Text)`
   ${({ theme, variant }) => `
-    color: ${colors[theme.c7__ui.mode].fontColor[variant]};
+    color: ${colors[theme.c7__ui.mode].secondaryFontColor[variant]};
   `}
 `;
 
