@@ -40,7 +40,7 @@ const CheckboxGroup = (props) => {
           {children}
         </StyledHorizontalFieldset>
         {hasErrorMessage && (
-          <StyledErrorMessage id={`${label}-error`}>
+          <StyledErrorMessage id={`${dataTestId}-error`}>
             {errorMessage}
           </StyledErrorMessage>
         )}
