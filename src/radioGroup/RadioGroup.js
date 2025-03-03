@@ -17,7 +17,8 @@ const RadioGroup = (props) => {
     dataTestId,
     variant,
     size,
-    className
+    className,
+    id
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -31,6 +32,7 @@ const RadioGroup = (props) => {
           isButtonVariant={isButtonVariant}
           size={size}
           className={className}
+          id={id}
         >
           {label && (
             <StyledFieldsetLabel>
@@ -47,7 +49,7 @@ const RadioGroup = (props) => {
   }
 
   return (
-    <StyledFieldset data-testid={dataTestId} className={className}>
+    <StyledFieldset data-testid={dataTestId} className={className} id={id}>
       {label && (
         <StyledFieldsetLabel>
           {label} {required && <StyledRequiredLabel />}
