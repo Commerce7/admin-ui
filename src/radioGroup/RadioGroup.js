@@ -14,7 +14,7 @@ const RadioGroup = (props) => {
     errorMessage,
     label,
     required,
-    dataTestId,
+    dataTestId = 'radio-group',
     variant,
     size,
     className
@@ -40,7 +40,9 @@ const RadioGroup = (props) => {
           {children}
         </StyledHorizontalFieldset>
         {hasErrorMessage && (
-          <StyledErrorMessage>{errorMessage}</StyledErrorMessage>
+          <StyledErrorMessage id={`${dataTestId}-error`}>
+            {errorMessage}
+          </StyledErrorMessage>
         )}
       </>
     );
@@ -55,7 +57,9 @@ const RadioGroup = (props) => {
       )}
       {children}
       {hasErrorMessage && (
-        <StyledErrorMessage>{errorMessage}</StyledErrorMessage>
+        <StyledErrorMessage id={`${dataTestId}-error`}>
+          {errorMessage}
+        </StyledErrorMessage>
       )}
     </StyledFieldset>
   );
