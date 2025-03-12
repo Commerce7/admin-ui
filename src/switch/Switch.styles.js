@@ -5,7 +5,7 @@ import { StyledHiddenInput } from '../common/form/styles';
 import { colors } from './theme';
 
 const StyledSwitchIcon = styled.span`
-  width: 32px;
+  min-width: 32px;
   height: 20px;
   position: relative;
   background-color: transparent;
