@@ -26,7 +26,7 @@ const TabStyles = styled.div`
   @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
     max-width: 225px;
     flex-grow: 0;
-    padding: 0 15px;
+    padding: 0 10px;
   }
 
   ${({ theme, $activeClassName }) => `
