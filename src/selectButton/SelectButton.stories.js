@@ -7,9 +7,10 @@ import SelectButton from '.';
 
 export const Basic = () => (
   <Container>
-    <SelectButton>Basic</SelectButton>
+    <SelectButton>Default</SelectButton>
+    <SelectButton selected>Selected</SelectButton>
     <SelectButton loading>Loading</SelectButton>
-    <SelectButton disabled>Can&apos;t touch this</SelectButton>
+    <SelectButton disabled>Disabled</SelectButton>
   </Container>
 );
 
@@ -19,10 +20,10 @@ Basic.story = {
 
 export const SmallIcon = () => (
   <Container>
-    <SelectButton size="small" icon="alignLeft" disabled />
-    <SelectButton size="small" icon="alignCenter" selected />
-    <SelectButton size="small" icon="alignRight" loading />
     <SelectButton size="small" icon="wine" />
+    <SelectButton size="small" icon="tasting" selected />
+    <SelectButton size="small" icon="wine" loading />
+    <SelectButton size="small" icon="product" disabled />
   </Container>
 );
 
@@ -32,14 +33,15 @@ SmallIcon.story = {
 
 export const SmallText = () => (
   <Container>
-    <SelectButton size="small" disabled>
-      Small
-    </SelectButton>
+    <SelectButton size="small">Default</SelectButton>
     <SelectButton size="small" selected>
-      Medium
+      Selected
     </SelectButton>
     <SelectButton size="small" loading>
-      Large
+      Loading
+    </SelectButton>
+    <SelectButton size="small" disabled>
+      Disabled
     </SelectButton>
   </Container>
 );
@@ -110,12 +112,15 @@ SelectOne.story = {
 
 export const Medium = () => (
   <Container>
-    <SelectButton size="medium">Basic</SelectButton>
+    <SelectButton size="medium">Default</SelectButton>
+    <SelectButton size="medium" selected>
+      Selected
+    </SelectButton>
     <SelectButton size="medium" loading>
       Loading
     </SelectButton>
     <SelectButton size="medium" disabled>
-      Can&apos;t touch this
+      Disabled
     </SelectButton>
   </Container>
 );
