@@ -19,10 +19,10 @@ Basic.story = {
 
 export const Icon = () => (
   <Container>
-    <SelectButton size="small" icon="alignLeft" disabled />
-    <SelectButton size="small" icon="alignCenter" selected />
-    <SelectButton size="small" icon="alignRight" loading />
-    <SelectButton size="small" icon="wine" />
+    <SelectButton size="small" icon="alignLeft" disabled isButtonVariant />
+    <SelectButton size="small" icon="alignCenter" selected isButtonVariant />
+    <SelectButton size="small" icon="alignRight" loading isButtonVariant />
+    <SelectButton size="small" icon="wine" isButtonVariant />
   </Container>
 );
 

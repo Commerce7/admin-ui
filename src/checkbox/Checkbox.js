@@ -73,6 +73,7 @@ const Checkbox = forwardRef((props, ref) => {
               icon={icon}
               disabled={disabled}
               as="span"
+              isButtonVariant
             >
               {children}
             </SelectButton>

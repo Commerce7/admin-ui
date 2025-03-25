@@ -74,6 +74,7 @@ const Radio = forwardRef((props, ref) => {
             disabled={disabled}
             onClick={onClick}
             as="span"
+            isButtonVariant
           >
             {children}
           </SelectButton>

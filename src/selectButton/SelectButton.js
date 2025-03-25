@@ -25,11 +25,12 @@ const SelectButton = forwardRef((props, ref) => {
     dataTestId,
     size,
     icon,
-    as
+    as,
+    isButtonVariant
   } = props;
 
   if (size === 'small') {
-    if (!children && icon) {
+    if (isButtonVariant && icon) {
       return (
         <StyledSmallIconSelectButton
           ref={ref}
@@ -139,7 +140,8 @@ SelectButton.defaultProps = {
   dataTestId: null,
   size: 'large',
   icon: null,
-  children: null
+  children: null,
+  isButtonVariant: false
 };
 
 SelectButton.propTypes = {
@@ -164,6 +166,11 @@ SelectButton.propTypes = {
    * This prop is intended to be used during asynchronous actions, like submitting a form.
    */
   loading: PropTypes.bool,
+
+  /**
+   * This will make the button the isButtonVariant if an icon is also passed in.
+   */
+  isButtonVariant: PropTypes.bool,
 
   /**
    * Set the button to visually show that its selected.
