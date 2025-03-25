@@ -91,6 +91,16 @@ const StyledSmallSelectButton = styled(StyledSelectButton)`
   padding: 12px;
   border-radius: 2px;
   color: ${({ theme }) => theme.c7__ui.fontColor};
+`;
+
+const StyledSmallIconSelectButton = styled(StyledSelectButton)`
+  min-height: 46px;
+  min-width: 46px;
+  height: 46px;
+  max-height: 46px;
+  padding: 12px;
+  border-radius: 2px;
+  color: ${({ theme }) => theme.c7__ui.fontColor};
 
   ${({ hasIcon }) =>
     hasIcon
@@ -122,9 +132,29 @@ const StyledMediumSelectButton = styled(StyledSelectButton)`
   }
 `;
 
+const StyledButtonContainer = styled.div`
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border: 1px solid transparent;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+  gap: 10px;
+`;
+
+const StyledChildrenContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
 export {
   StyledSelectButton,
   StyledLoadingIcon,
   StyledSmallSelectButton,
-  StyledMediumSelectButton
+  StyledSmallIconSelectButton,
+  StyledMediumSelectButton,
+  StyledButtonContainer,
+  StyledChildrenContainer
 };

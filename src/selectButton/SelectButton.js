@@ -7,7 +7,10 @@ import {
   StyledSelectButton,
   StyledLoadingIcon,
   StyledSmallSelectButton,
-  StyledMediumSelectButton
+  StyledMediumSelectButton,
+  StyledButtonContainer,
+  StyledSmallIconSelectButton,
+  StyledChildrenContainer
 } from './SelectButton.styles';
 
 const SelectButton = forwardRef((props, ref) => {
@@ -26,6 +29,29 @@ const SelectButton = forwardRef((props, ref) => {
   } = props;
 
   if (size === 'small') {
+    if (!children && icon) {
+      return (
+        <StyledSmallIconSelectButton
+          ref={ref}
+          className={className}
+          disabled={disabled || loading}
+          type={type}
+          onClick={onClick}
+          selected={selected}
+          data-testid={dataTestId}
+          q
+          hasIcon={!!icon}
+          as={as}
+        >
+          {loading ? (
+            <StyledLoadingIcon icon="loading" />
+          ) : (
+            <Icon icon={icon} />
+          )}
+        </StyledSmallIconSelectButton>
+      );
+    }
+
     return (
       <StyledSmallSelectButton
         ref={ref}
@@ -38,14 +64,16 @@ const SelectButton = forwardRef((props, ref) => {
         hasIcon={!!icon}
         as={as}
       >
-        {loading ? (
-          <StyledLoadingIcon icon="loading" />
-        ) : (
-          <>
-            {icon && <Icon icon={icon} />}
-            {children}
-          </>
-        )}
+        <StyledButtonContainer>
+          {loading ? (
+            <StyledLoadingIcon icon="loading" />
+          ) : (
+            <>
+              {icon && <Icon icon={icon} />}
+              <StyledChildrenContainer>{children}</StyledChildrenContainer>
+            </>
+          )}
+        </StyledButtonContainer>
       </StyledSmallSelectButton>
     );
   }
@@ -62,7 +90,16 @@ const SelectButton = forwardRef((props, ref) => {
         data-testid={dataTestId}
         as={as}
       >
-        {loading ? <StyledLoadingIcon icon="loading" /> : children}
+        <StyledButtonContainer>
+          {loading ? (
+            <StyledLoadingIcon icon="loading" />
+          ) : (
+            <>
+              {icon && <Icon icon={icon} />}
+              <StyledChildrenContainer>{children}</StyledChildrenContainer>
+            </>
+          )}
+        </StyledButtonContainer>
       </StyledMediumSelectButton>
     );
   }
@@ -78,7 +115,16 @@ const SelectButton = forwardRef((props, ref) => {
       data-testid={dataTestId}
       as={as}
     >
-      {loading ? <StyledLoadingIcon icon="loading" /> : children}
+      <StyledButtonContainer>
+        {loading ? (
+          <StyledLoadingIcon icon="loading" />
+        ) : (
+          <>
+            {icon && <Icon icon={icon} />}
+            <StyledChildrenContainer>{children}</StyledChildrenContainer>
+          </>
+        )}
+      </StyledButtonContainer>
     </StyledSelectButton>
   );
 });
