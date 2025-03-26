@@ -55,7 +55,13 @@ NoRecords.propTypes = {
   /**
    * Set the visual property of the component.
    */
-  iconVariant: PropTypes.oneOf(['default', 'success', 'warning', 'error'])
+  iconVariant: PropTypes.oneOf([
+    'default',
+    'success',
+    'warning',
+    'error',
+    'info'
+  ])
 };
 
 export default NoRecords;
