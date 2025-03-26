@@ -26,8 +26,7 @@ const InfoCard = (props) => {
     children,
     className,
     dataTestId,
-    iconVariantOverride,
-    iconBackgroundVariantOverride
+    iconVariantOverride
   } = props;
   const theme = useTheme();
 
@@ -44,9 +43,9 @@ const InfoCard = (props) => {
 
   let iconBackgroundVariant =
     colors[theme.c7__ui.mode].iconBackgroundColor[variant];
-  if (iconBackgroundVariantOverride) {
+  if (iconVariantOverride) {
     iconBackgroundVariant =
-      backgroundColors[theme.c7__ui.mode][iconBackgroundVariantOverride];
+      backgroundColors[theme.c7__ui.mode][iconVariantOverride];
   }
 
   return (
@@ -86,7 +85,6 @@ InfoCard.defaultProps = {
   title: null,
   variant: 'default',
   iconVariantOverride: null,
-  iconBackgroundVariantOverride: null,
   subtitle: null,
   img: null
 };
@@ -133,20 +131,9 @@ InfoCard.propTypes = {
   variant: PropTypes.oneOf(['default', 'success', 'error', 'warning', 'info']),
 
   /**
-   * Allows overriding the icon variant.
+   * Allows overriding the icon color and icon background color.
    */
   iconVariantOverride: PropTypes.oneOf([
-    'default',
-    'success',
-    'error',
-    'warning',
-    'info'
-  ]),
-
-  /**
-   * Allows overriding the icon background variant.
-   */
-  iconBackgroundVariantOverride: PropTypes.oneOf([
     'default',
     'success',
     'error',

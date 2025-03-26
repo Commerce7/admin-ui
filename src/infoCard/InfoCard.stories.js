@@ -24,40 +24,8 @@ export const Basic = () => (
     />
     <InfoCard icon="truck" label="Status" title="Shipped" variant="info" />
     <InfoCard icon="coin" label="Payment" title="Received" variant="success" />
-    <InfoCard
-      icon="wine"
-      iconVariantOverride="default"
-      iconBackgroundVariantOverride="default"
-    >
-      children
-    </InfoCard>
-    <InfoCard
-      icon="wine"
-      iconVariantOverride="success"
-      iconBackgroundVariantOverride="success"
-    >
-      children
-    </InfoCard>
-    <InfoCard
-      icon="wine"
-      iconVariantOverride="warning"
-      iconBackgroundVariantOverride="warning"
-    >
-      children
-    </InfoCard>
-    <InfoCard
-      icon="wine"
-      iconVariantOverride="error"
-      iconBackgroundVariantOverride="error"
-    >
-      children
-    </InfoCard>
-    <InfoCard
-      icon="wine"
-      iconVariantOverride="info"
-      iconBackgroundVariantOverride="info"
-    >
-      children
+    <InfoCard icon="wine" iconVariantOverride="success">
+      iconVariantOverride
     </InfoCard>
   </InfoCardGrid>
 );
