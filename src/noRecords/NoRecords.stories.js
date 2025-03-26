@@ -17,6 +17,12 @@ export const Custom = () => (
       description="Try changing your search or click Add Order on the top right"
       icon="bundle"
     />
+    <NoRecords
+      title="No orders found"
+      description="With iconVariant set to warning"
+      icon="bundle"
+      iconVariant="warning"
+    />
   </>
 );
 
