@@ -10,6 +10,7 @@ const StyledSelectButton = styled.button`
   justify-content: center;
   flex: 1;
   flex-direction: column;
+  gap: 3px;
 
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
@@ -19,8 +20,8 @@ const StyledSelectButton = styled.button`
   border-width: ${({ selected }) => (selected ? '2px' : '1px')};
   border-color: ${({ theme, selected }) =>
     selected
-      ? colors[theme.c7__ui.mode].borderColor.default
-      : theme.c7__ui.borderColor};
+      ? colors[theme.c7__ui.mode].borderColor.focus
+      : colors[theme.c7__ui.mode].borderColor.default};
   border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
 
   background-color: ${({ theme }) =>
@@ -34,7 +35,6 @@ const StyledSelectButton = styled.button`
   white-space: break-spaces;
   color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.default};
   font-weight: 400;
-  font-size: 16px;
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
 
   &:focus:not(:disabled) {
@@ -64,6 +64,11 @@ const StyledSelectButton = styled.button`
     * {
       color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.disabled};
     }
+    ${Icon} {
+      path {
+        fill: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.disabled};
+      }
+    }
   }
 `;
 
@@ -90,7 +95,7 @@ const StyledSmallSelectButton = styled(StyledSelectButton)`
   max-height: 46px;
   padding: 12px;
   border-radius: 2px;
-  color: ${({ theme }) => theme.c7__ui.fontColor};
+  color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.defaultSmall};
 
   ${({ hasIcon }) =>
     hasIcon
@@ -102,7 +107,7 @@ const StyledSmallSelectButton = styled(StyledSelectButton)`
 
   ${Icon} {
     path {
-      fill: ${({ theme }) => theme.c7__ui.fontColor};
+      fill: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.defaultSmall};
     }
   }
 `;
