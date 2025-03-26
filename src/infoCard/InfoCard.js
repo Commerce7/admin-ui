@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
+import { useTheme } from 'styled-components';
 
 import Icon from '../icon';
+import { backgroundColors } from '../icon/theme';
 
 import {
   StyledInfoCard,
@@ -11,6 +13,7 @@ import {
   StyledSubtitle,
   StyledImage
 } from './InfoCard.styles';
+import { colors } from './theme';
 
 const InfoCard = (props) => {
   const {
@@ -22,15 +25,28 @@ const InfoCard = (props) => {
     img,
     children,
     className,
-    dataTestId
+    dataTestId,
+    iconVariantOverride,
+    iconBackgroundVariantOverride
   } = props;
+  const theme = useTheme();
 
   let iconVariant = variant;
-  if (variant === 'warning') {
-    iconVariant = 'error';
+  if (['warning', 'default'].includes(variant)) {
+    iconVariant = 'text';
   }
-  if (variant === 'info') {
-    iconVariant = 'default';
+  if (['error', 'success', 'info'].includes(variant)) {
+    iconVariant = 'white';
+  }
+  if (iconVariantOverride) {
+    iconVariant = iconVariantOverride;
+  }
+
+  let iconBackgroundVariant =
+    colors[theme.c7__ui.mode].iconBackgroundColor[variant];
+  if (iconBackgroundVariantOverride) {
+    iconBackgroundVariant =
+      backgroundColors[theme.c7__ui.mode][iconBackgroundVariantOverride];
   }
 
   return (
@@ -41,15 +57,15 @@ const InfoCard = (props) => {
     >
       <div>
         {icon && (
-          <StyledIcon variant={variant}>
-            <Icon icon={icon} variant={iconVariant} />
+          <StyledIcon variant={iconBackgroundVariant}>
+            <Icon size={24} icon={icon} variant={iconVariant} />
           </StyledIcon>
         )}
         {img && <StyledImage src={img} alt={title} />}
       </div>
       <StyledContentWrapper>
-        <StyledLabel variant={variant}>{label}</StyledLabel>
-        <StyledTitle variant={variant}>{title}</StyledTitle>
+        {label && <StyledLabel variant={variant}>{label}</StyledLabel>}
+        {title && <StyledTitle variant={variant}>{title}</StyledTitle>}
         {subtitle && (
           <StyledSubtitle block small variant={variant}>
             {subtitle}
@@ -69,6 +85,8 @@ InfoCard.defaultProps = {
   label: null,
   title: null,
   variant: 'default',
+  iconVariantOverride: null,
+  iconBackgroundVariantOverride: null,
   subtitle: null,
   img: null
 };
@@ -113,6 +131,28 @@ InfoCard.propTypes = {
    * Set the visual property of the component.
    */
   variant: PropTypes.oneOf(['default', 'success', 'error', 'warning', 'info']),
+
+  /**
+   * Allows overriding the icon variant.
+   */
+  iconVariantOverride: PropTypes.oneOf([
+    'default',
+    'success',
+    'error',
+    'warning',
+    'info'
+  ]),
+
+  /**
+   * Allows overriding the icon background variant.
+   */
+  iconBackgroundVariantOverride: PropTypes.oneOf([
+    'default',
+    'success',
+    'error',
+    'warning',
+    'info'
+  ]),
 
   /**
    * Use an image in place of icon, generally you wouldn't want both an img prop and an icon prop.

@@ -29,20 +29,14 @@ const StyledContentWrapper = styled.div`
 `;
 
 const StyledIcon = styled.div`
-  ${({ theme, variant }) => `
-    background: ${colors[theme.c7__ui.mode].iconBackgroundColor[variant]};
+  ${({ variant }) => `
+    background: ${variant};
     border-radius: 50%;
     width: 50px;
     height: 50px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    svg {
-      width: 24px;
-      height: 24px;
-      path {
-        fill: ${colors[theme.c7__ui.mode].iconFill[variant]};
-      }
     }
   `}
 `;
