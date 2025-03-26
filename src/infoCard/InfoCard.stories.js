@@ -24,6 +24,9 @@ export const Basic = () => (
     />
     <InfoCard icon="truck" label="Status" title="Shipped" variant="info" />
     <InfoCard icon="coin" label="Payment" title="Received" variant="success" />
+    <InfoCard icon="wine" iconVariant="success">
+      iconVariant
+    </InfoCard>
   </InfoCardGrid>
 );
 
