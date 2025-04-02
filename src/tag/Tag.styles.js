@@ -47,7 +47,6 @@ const StyledTagLabel = styled.span`
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
-  padding 5px;
 `;
 
 const StyledDeleteButton = styled.button`
