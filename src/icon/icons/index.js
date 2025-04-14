@@ -23,6 +23,7 @@ import Brush from './Brush';
 import Bundle from './Bundle';
 import Button from './Button';
 import ButtonLine from './ButtonLine';
+import Cake from './Cake';
 import Calendar from './Calendar';
 import CalenderCross from './CalenderCross';
 import Car from './Car';
@@ -47,6 +48,7 @@ import Coin from './Coin';
 import Combine from './Combine';
 import Comment from './Comment';
 import ComplianceCheck from './ComplianceCheck';
+import Construction from './Construction';
 import Copy from './Copy';
 import Customer from './Customer';
 import Dashboard from './Dashboard';
@@ -78,6 +80,7 @@ import Form from './Form';
 import Gift from './Gift';
 import GiftCard from './GiftCard';
 import GradHat from './GradHat';
+import Group from './Group';
 import Hammer from './Hammer';
 import Hand from './Hand';
 import Heart from './Heart';
@@ -96,6 +99,7 @@ import Location from './Location';
 import LocationBottom from './LocationBottom';
 import LocationPage from './LocationPage';
 import LocationTop from './LocationTop';
+import Lock from './Lock';
 import LogOut from './LogOut';
 import Loyalty from './Loyalty';
 import Map from './Map';
@@ -126,6 +130,7 @@ import Process from './Process';
 import Product from './Product';
 import QuestionCircle from './QuestionCircle';
 import Rand from './Rand';
+import Receipt from './Receipt';
 import Redo from './Redo';
 import RedoLarge from './RedoLarge';
 import Reload from './Reload';
@@ -152,7 +157,9 @@ import TextAlignCenter from './TextAlignCenter';
 import TextAlignLeft from './TextAlignLeft';
 import TextAlignRight from './TextAlignRight';
 import TextBold from './TextBold';
+import TextCase from './TextCase';
 import TextItalic from './TextItalic';
+import TextSize from './TextSize';
 import Ticket from './Ticket';
 import Time from './Time';
 import Title from './Title';
@@ -197,6 +204,7 @@ export {
   ButtonLine as buttonLine,
   Calendar as calendar,
   CalenderCross as calenderCross,
+  Cake as cake,
   Car as car,
   Carrot as carrot,
   Cash as cash,
@@ -213,6 +221,7 @@ export {
   ClipboardText as clipboardText,
   Close as close,
   CloseCircle as closeCircle,
+  Construction as construction,
   Club as club,
   Copy as copy,
   Code as code,
@@ -250,6 +259,7 @@ export {
   Gift as gift,
   GiftCard as giftCard,
   GradHat as gradHat,
+  Group as group,
   Hammer as hammer,
   Hand as hand,
   Heart as heart,
@@ -261,6 +271,7 @@ export {
   Launch as launch,
   LightBulb as lightBulb,
   Link as link,
+  Lock as lock,
   Image as image,
   ImagePlaceholder as imagePlaceholder,
   Loading as loading,
@@ -298,6 +309,7 @@ export {
   Process as process,
   Print as print,
   Rand as rand,
+  Receipt as receipt,
   Redo as redo,
   RedoLarge as redoLarge,
   Reload as reload,
@@ -324,7 +336,9 @@ export {
   TextAlignLeft as textAlignLeft,
   TextAlignRight as textAlignRight,
   TextBold as textBold,
+  TextCase as textCase,
   TextItalic as textItalic,
+  TextSize as textSize,
   Ticket as ticket,
   Time as time,
   Title as title,
