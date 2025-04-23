@@ -4,13 +4,13 @@ import { StyledSubMenuItem } from './SubMenu.styles';
 
 const SubMenuItem = (props) => {
   const {
-    children,
-    activeClassName,
-    className,
-    component,
-    onClick,
-    href,
-    dataTestId,
+    children = null,
+    activeClassName = 'active',
+    className = null,
+    component = null,
+    onClick = null,
+    href = null,
+    dataTestId = null,
     ...rest
   } = props;
 
@@ -46,16 +46,6 @@ const SubMenuItem = (props) => {
       {children}
     </StyledSubMenuItem>
   );
-};
-
-SubMenuItem.defaultProps = {
-  children: null,
-  activeClassName: 'active',
-  className: null,
-  component: null,
-  onClick: null,
-  href: null,
-  dataTestId: null
 };
 
 SubMenuItem.propTypes = {

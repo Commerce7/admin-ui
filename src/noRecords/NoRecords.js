@@ -6,8 +6,14 @@ import Text from '../text';
 import { StyledEmptyMessage, StyledHeading } from './NoRecords.styles';
 
 const NoRecords = (props) => {
-  const { className, dataTestId, title, description, icon, iconVariant } =
-    props;
+  const {
+    className,
+    dataTestId = 'grid-no-records',
+    title = 'No records found',
+    description = null,
+    icon = 'search',
+    iconVariant = 'default'
+  } = props;
   return (
     <StyledEmptyMessage data-testid={dataTestId} className={className}>
       <DisplayIcon icon={icon} variant={iconVariant} />
@@ -15,15 +21,6 @@ const NoRecords = (props) => {
       {description && <Text secondary>{description}</Text>}
     </StyledEmptyMessage>
   );
-};
-
-NoRecords.defaultProps = {
-  title: 'No records found',
-  description: null,
-  className: null,
-  dataTestId: 'grid-no-records',
-  icon: 'search',
-  iconVariant: 'default'
 };
 
 NoRecords.propTypes = {

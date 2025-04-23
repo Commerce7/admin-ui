@@ -16,12 +16,12 @@ import {
 
 const ModalContent = (props) => {
   const {
-    children,
+    children = null,
     className,
-    onClose,
-    title,
-    dataTestId,
-    disableBodyScroll,
+    onClose = null,
+    title = null,
+    dataTestId = null,
+    disableBodyScroll = true,
     disableFocusLock
   } = props;
 
@@ -68,14 +68,6 @@ const ModalContent = (props) => {
     </FocusLock>,
     document.body
   );
-};
-
-ModalContent.defaultProps = {
-  children: null,
-  disableBodyScroll: true,
-  title: null,
-  onClose: null,
-  dataTestId: null
 };
 
 ModalContent.propTypes = {

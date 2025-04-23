@@ -4,7 +4,15 @@ import { StyledIcon, StyledIconButton } from './Icon.styles';
 import * as Icons from './icons';
 
 const Icon = (props) => {
-  const { className, icon, label, onClick, size, variant, dataTestId } = props;
+  const {
+    className = null,
+    icon,
+    label = null,
+    onClick = null,
+    size = 18,
+    variant = 'default',
+    dataTestId = null
+  } = props;
 
   const IconComponent = Icons[icon];
 
@@ -39,15 +47,6 @@ const Icon = (props) => {
       size={size}
     />
   );
-};
-
-Icon.defaultProps = {
-  className: null,
-  label: null,
-  onClick: null,
-  size: 18,
-  variant: 'default',
-  dataTestId: null
 };
 
 Icon.propTypes = {

@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import { StyledCard } from './Card.styles';
 
 const Card = (props) => {
-  const { children, className, dataTestId, variant } = props;
+  const {
+    children,
+    className = null,
+    dataTestId = null,
+    variant = 'default'
+  } = props;
 
   return (
     <StyledCard
@@ -14,12 +19,6 @@ const Card = (props) => {
       {children}
     </StyledCard>
   );
-};
-
-Card.defaultProps = {
-  className: null,
-  dataTestId: null,
-  variant: 'default'
 };
 
 Card.propTypes = {

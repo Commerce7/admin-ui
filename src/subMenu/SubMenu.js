@@ -3,8 +3,13 @@ import PropTypes from 'prop-types';
 import { StyledSubMenu } from './SubMenu.styles';
 
 const SubMenu = (props) => {
-  const { children, className, dataTestId, borderBottom, activeClassName } =
-    props;
+  const {
+    children = null,
+    className = null,
+    dataTestId = null,
+    borderBottom = false,
+    activeClassName = 'active'
+  } = props;
   return (
     <StyledSubMenu
       className={className}
@@ -15,14 +20,6 @@ const SubMenu = (props) => {
       {children}
     </StyledSubMenu>
   );
-};
-
-SubMenu.defaultProps = {
-  children: null,
-  className: null,
-  dataTestId: null,
-  borderBottom: false,
-  activeClassName: 'active'
 };
 
 SubMenu.propTypes = {

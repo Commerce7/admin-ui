@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import { SubNavStyles } from './Nav.styles';
 
 const SubNav = (props) => {
-  const { isOpen, children, className, dataTestId } = props;
+  const {
+    isOpen = false,
+    children = null,
+    className = null,
+    dataTestId = null
+  } = props;
+
   return (
     <SubNavStyles
       isOpen={isOpen}
@@ -13,13 +19,6 @@ const SubNav = (props) => {
       {children}
     </SubNavStyles>
   );
-};
-
-SubNav.defaultProps = {
-  children: null,
-  isOpen: false,
-  className: null,
-  dataTestId: null
 };
 
 SubNav.propTypes = {

@@ -7,8 +7,16 @@ import {
 } from './ContextMenuItem.styles';
 
 const ContextMenuItem = (props) => {
-  const { onClick, children, className, icon, img, alt, disabled, dataTestId } =
-    props;
+  const {
+    onClick,
+    children,
+    className = null,
+    icon = null,
+    img = null,
+    alt = null,
+    disabled,
+    dataTestId = null
+  } = props;
   return (
     <StyledContextMenuItem
       className={className}
@@ -22,15 +30,6 @@ const ContextMenuItem = (props) => {
       {children}
     </StyledContextMenuItem>
   );
-};
-
-ContextMenuItem.defaultProps = {
-  className: null,
-  disabled: false,
-  icon: null,
-  img: null,
-  alt: null,
-  dataTestId: null
 };
 
 ContextMenuItem.propTypes = {

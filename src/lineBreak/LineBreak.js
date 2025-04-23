@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 import { LineBreakStyles } from './LineBreak.styles';
 
 const LineBreak = (props) => {
-  const { className, dataTestId } = props;
+  const { className = '', dataTestId = null } = props;
   return <LineBreakStyles className={className} data-testid={dataTestId} />;
 };
 
-LineBreak.defaultProps = {
-  className: '',
-  dataTestId: null
-};
 LineBreak.propTypes = {
   /**
    * Add className to the outermost element.

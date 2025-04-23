@@ -4,14 +4,14 @@ import { SubNavLinkStyles } from './Nav.styles';
 
 const SubNavLink = (props) => {
   const {
-    children,
-    className,
-    component,
+    children = null,
+    className = '',
+    component = null,
     icon,
-    onClick,
-    href,
-    dataTestId,
-    activeClassName,
+    onClick = null,
+    href = null,
+    dataTestId = null,
+    activeClassName = 'active',
     ...rest
   } = props;
 
@@ -48,16 +48,6 @@ const SubNavLink = (props) => {
       {children}
     </SubNavLinkStyles>
   );
-};
-
-SubNavLink.defaultProps = {
-  children: null,
-  className: '',
-  dataTestId: null,
-  component: null,
-  onClick: null,
-  href: null,
-  activeClassName: 'active'
 };
 
 SubNavLink.propTypes = {

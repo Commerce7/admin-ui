@@ -3,18 +3,12 @@ import PropTypes from 'prop-types';
 import { StyledInfoCardGrid } from './InfoCard.styles';
 
 const InfoCardGrid = (props) => {
-  const { children, dataTestId, className } = props;
+  const { children = null, dataTestId = null, className = null } = props;
   return (
     <StyledInfoCardGrid data-testid={dataTestId} className={className}>
       {children}
     </StyledInfoCardGrid>
   );
-};
-
-InfoCardGrid.defaultProps = {
-  children: null,
-  dataTestId: null,
-  className: null
 };
 
 InfoCardGrid.propTypes = {

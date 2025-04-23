@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Options = (props) => {
-  const { options, placeholder } = props;
+  const { options, placeholder = null } = props;
 
   return (
     <>
@@ -30,10 +30,6 @@ const Options = (props) => {
       })}
     </>
   );
-};
-
-Options.defaultProps = {
-  placeholder: null
 };
 
 Options.propTypes = {

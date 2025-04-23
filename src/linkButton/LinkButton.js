@@ -10,20 +10,20 @@ import {
 
 const LinkButton = forwardRef((props, ref) => {
   const {
-    children,
-    className,
-    component,
-    disabled,
-    download,
-    loading,
-    href,
-    rel,
-    startIcon,
+    children = null,
+    className = '',
+    component = null,
+    disabled = false,
+    download = null,
+    loading = false,
+    href = null,
+    rel = null,
+    startIcon = null,
     endIcon,
     target,
-    variant,
-    size,
-    dataTestId,
+    variant = 'primary',
+    size = 'default',
+    dataTestId = null,
     onClick,
     ...rest
   } = props;
@@ -77,22 +77,6 @@ const LinkButton = forwardRef((props, ref) => {
     </StyledButton>
   );
 });
-
-LinkButton.defaultProps = {
-  children: null,
-  className: '',
-  component: null,
-  disabled: false,
-  download: null,
-  loading: false,
-  href: null,
-  rel: null,
-  startIcon: null,
-  target: null,
-  variant: 'primary',
-  size: 'default',
-  dataTestId: null
-};
 
 LinkButton.propTypes = {
   /**

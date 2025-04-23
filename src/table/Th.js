@@ -4,7 +4,13 @@ import React from 'react';
 import { StyledTh } from './Th.styles';
 
 const Th = React.forwardRef((props, ref) => {
-  const { children, className, align, colSpan, dataTestId } = props;
+  const {
+    children = null,
+    className = '',
+    align = 'left',
+    colSpan = null,
+    dataTestId = null
+  } = props;
   return (
     <StyledTh
       align={align}
@@ -17,14 +23,6 @@ const Th = React.forwardRef((props, ref) => {
     </StyledTh>
   );
 });
-
-Th.defaultProps = {
-  align: 'left',
-  children: null,
-  className: '',
-  colSpan: null,
-  dataTestId: null
-};
 
 Th.propTypes = {
   /**

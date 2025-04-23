@@ -4,14 +4,14 @@ import ModalContent from './ModalContent';
 
 const Modal = (props) => {
   const {
-    children,
-    className,
-    onClose,
-    title,
-    visible,
-    dataTestId,
-    disableBodyScroll,
-    disableFocusLock
+    children = null,
+    className = '',
+    onClose = null,
+    title = null,
+    visible = false,
+    dataTestId = null,
+    disableBodyScroll = null,
+    disableFocusLock = true
   } = props;
 
   if (!visible) {
@@ -30,16 +30,6 @@ const Modal = (props) => {
       {children}
     </ModalContent>
   );
-};
-
-Modal.defaultProps = {
-  children: null,
-  className: '',
-  disableBodyScroll: true,
-  onClose: null,
-  visible: false,
-  title: null,
-  dataTestId: null
 };
 
 Modal.propTypes = {

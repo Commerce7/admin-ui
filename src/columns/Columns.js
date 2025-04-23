@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import { StyledColumns } from './Columns.styles';
 
 const Columns = (props) => {
-  const { children, justify, align, wrap, className, dataTestId } = props;
+  const {
+    children,
+    justify = null,
+    align = null,
+    wrap = null,
+    className = null,
+    dataTestId = null
+  } = props;
   return (
     <StyledColumns
       $justify={justify}
@@ -15,14 +22,6 @@ const Columns = (props) => {
       {children}
     </StyledColumns>
   );
-};
-
-Columns.defaultProps = {
-  justify: null,
-  align: null,
-  wrap: null,
-  className: null,
-  dataTestId: null
 };
 
 Columns.propTypes = {

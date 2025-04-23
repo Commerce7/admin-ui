@@ -7,7 +7,14 @@ import { StyledIcon } from './DisplayIcon.styles';
 import IconWrapper from './IconWrapper';
 
 const DisplayIcon = (props) => {
-  const { className, icon, label, onClick, variant, dataTestId } = props;
+  const {
+    className = null,
+    icon,
+    label = null,
+    onClick = null,
+    variant = 'default',
+    dataTestId = null
+  } = props;
 
   const IconComponent = Icons[icon];
 
@@ -43,14 +50,6 @@ const DisplayIcon = (props) => {
       />
     </IconWrapper>
   );
-};
-
-DisplayIcon.defaultProps = {
-  className: null,
-  label: null,
-  onClick: null,
-  variant: 'default',
-  dataTestId: null
 };
 
 DisplayIcon.propTypes = {

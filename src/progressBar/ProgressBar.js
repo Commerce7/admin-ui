@@ -11,7 +11,13 @@ import {
 } from './ProgressBar.styles';
 
 const ProgressBar = (props) => {
-  const { progress, content, className, color, dataTestId } = props;
+  const {
+    progress = 0,
+    content = {},
+    className = null,
+    color = c7Colors.blue300,
+    dataTestId = null
+  } = props;
 
   const renderCircle = (circleColor) => (
     <svg height="14" width="14">
@@ -42,14 +48,6 @@ const ProgressBar = (props) => {
       </StyledProgressBarWrapper>
     </div>
   );
-};
-
-ProgressBar.defaultProps = {
-  progress: 0,
-  color: c7Colors.blue300,
-  content: {},
-  className: null,
-  dataTestId: null
 };
 
 ProgressBar.propTypes = {

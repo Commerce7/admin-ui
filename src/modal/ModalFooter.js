@@ -3,14 +3,10 @@ import PropTypes from 'prop-types';
 import { StyledModalFooter } from './ModalFooter.styles';
 
 const ModalFooter = (props) => {
-  const { children, className } = props;
+  const { children, className = '' } = props;
   return (
     <StyledModalFooter className={className}>{children}</StyledModalFooter>
   );
-};
-
-ModalFooter.defaultProps = {
-  className: ''
 };
 
 ModalFooter.propTypes = {

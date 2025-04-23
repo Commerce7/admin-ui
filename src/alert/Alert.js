@@ -3,7 +3,14 @@ import PropTypes from 'prop-types';
 import { StyledAlert, StyledIcon } from './Alert.styles';
 
 const Alert = (props) => {
-  const { variant, icon, size, children, className, dataTestId } = props;
+  const {
+    variant = 'default',
+    icon = 'infoCircle',
+    size = 'default',
+    children = null,
+    className = null,
+    dataTestId = null
+  } = props;
 
   return (
     <StyledAlert
@@ -16,15 +23,6 @@ const Alert = (props) => {
       <div>{children}</div>
     </StyledAlert>
   );
-};
-
-Alert.defaultProps = {
-  children: null,
-  className: null,
-  variant: 'default',
-  icon: 'infoCircle',
-  size: 'default',
-  dataTestId: null
 };
 
 Alert.propTypes = {

@@ -21,23 +21,23 @@ import { StyledDatePicker, StyledClearButton } from './DatePicker.styles';
 
 const DatePicker = forwardRef((props, ref) => {
   const {
-    allowClear,
-    autoFocus,
-    className,
-    description,
+    allowClear = false,
+    autoFocus = false,
+    className = null,
+    description = null,
     value,
     onChange,
     onFocus,
     onBlur,
-    label,
-    id,
+    label = null,
+    id = Math.random().toString(36).substr(2, 9),
     isValidDate,
-    disabled,
-    placeholder,
-    required,
-    errorMessage,
-    dataTestId,
-    inline
+    disabled = false,
+    placeholder = null,
+    required = false,
+    errorMessage = null,
+    dataTestId = null,
+    inline = false
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -147,24 +147,6 @@ const DatePicker = forwardRef((props, ref) => {
     </StyledInputWrapper>
   );
 });
-
-DatePicker.defaultProps = {
-  allowClear: false,
-  autoFocus: false,
-  className: null,
-  description: null,
-  disabled: false,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  inline: false,
-  isValidDate: () => true,
-  label: null,
-  onBlur: () => null,
-  onFocus: () => null,
-  placeholder: null,
-  required: false,
-  dataTestId: null
-};
 
 DatePicker.propTypes = {
   /**

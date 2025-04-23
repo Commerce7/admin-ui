@@ -13,15 +13,15 @@ import {
 
 const Step = (props) => {
   const {
-    step,
-    description,
+    step = null,
+    description = '',
     icon,
-    activeClassName,
-    className,
-    component,
-    onClick,
-    href,
-    dataTestId,
+    activeClassName = 'active',
+    className = null,
+    component = null,
+    onClick = null,
+    href = null,
+    dataTestId = null,
     ...rest
   } = props;
 
@@ -66,17 +66,6 @@ const Step = (props) => {
       <StyledLine />
     </StyledStep>
   );
-};
-
-Step.defaultProps = {
-  step: null,
-  description: '',
-  activeClassName: 'active',
-  className: null,
-  component: null,
-  onClick: null,
-  href: null,
-  dataTestId: null
 };
 
 Step.propTypes = {

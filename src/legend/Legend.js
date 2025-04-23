@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Text from '../text';
 
 const Legend = (props) => {
-  const { data, width, legendHeader, isVertical = false } = props;
+  const { data, width = '15%', legendHeader = '', isVertical = false } = props;
 
   const renderCircle = (color) => (
     <svg height="14" width="14">
@@ -56,12 +56,6 @@ const StyledLegendHeader = styled(Text)`
   font-size: 16px;
   margin-bottom: 10px;
 `;
-
-Legend.defaultProps = {
-  width: '15%',
-  isVertical: false,
-  legendHeader: ''
-};
 
 Legend.propTypes = {
   /**

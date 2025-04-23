@@ -20,26 +20,26 @@ import {
 
 const Input = forwardRef((props, ref) => {
   const {
-    autoComplete,
-    autoFocus,
-    className,
-    disabled,
-    endIcon,
-    errorMessage,
-    id,
-    label,
+    autoComplete = null,
+    autoFocus = false,
+    className = null,
+    disabled = false,
+    endIcon = null,
+    errorMessage = null,
+    id = Math.random().toString(36).substr(2, 9),
+    label = null,
     description,
-    onBlur,
+    onBlur = null,
     onChange,
-    onFocus,
-    placeholder,
-    required,
-    startIcon,
-    type,
+    onFocus = null,
+    placeholder = null,
+    required = false,
+    startIcon = null,
+    type = 'text',
     value,
-    dataTestId,
-    inputMode,
-    suffix
+    dataTestId = null,
+    inputMode = null,
+    suffix = null
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -119,27 +119,6 @@ const Input = forwardRef((props, ref) => {
     </StyledInputWrapper>
   );
 });
-
-Input.defaultProps = {
-  autoComplete: null,
-  autoFocus: false,
-  className: null,
-  description: null,
-  disabled: false,
-  endIcon: null,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  label: null,
-  inputMode: null,
-  onBlur: null,
-  onFocus: null,
-  placeholder: null,
-  type: 'text',
-  required: false,
-  startIcon: null,
-  suffix: null,
-  dataTestId: null
-};
 
 Input.propTypes = {
   /**

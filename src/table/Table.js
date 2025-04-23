@@ -4,7 +4,7 @@ import React from 'react';
 import { StyledTableWrapper, StyledTable } from './Table.styles';
 
 const Table = React.forwardRef((props, ref) => {
-  const { children, dataTestId, className } = props;
+  const { children = null, dataTestId = null, className = '' } = props;
   return (
     <StyledTableWrapper className={className}>
       <StyledTable data-testid={dataTestId} ref={ref}>
@@ -13,12 +13,6 @@ const Table = React.forwardRef((props, ref) => {
     </StyledTableWrapper>
   );
 });
-
-Table.defaultProps = {
-  children: null,
-  dataTestId: null,
-  className: ''
-};
 
 Table.propTypes = {
   /**

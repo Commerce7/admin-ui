@@ -11,20 +11,24 @@ import {
 
 const PieChart = (props) => {
   const {
-    innerRadius,
-    outerRadius,
+    innerRadius = 50,
+    outerRadius = 80,
     data,
     colors,
-    label,
-    legend,
-    width,
-    height,
+    label = null,
+    legend = null,
+    width = '100%',
+    height = '100%',
     tooltip,
-    margin,
-    hideLegend,
-    hideTooltip,
-    legendProps,
-    legendWrapperStyle
+    margin = {
+      right: 30,
+      left: 20,
+      bottom: 40
+    },
+    hideLegend = false,
+    hideTooltip = false,
+    legendProps = null,
+    legendWrapperStyle = null
   } = props;
 
   if (!data) {
@@ -70,25 +74,6 @@ const PieChart = (props) => {
       </RechartPieChart>
     </ResponsiveContainer>
   );
-};
-
-PieChart.defaultProps = {
-  width: '100%',
-  height: '100%',
-  margin: {
-    right: 30,
-    left: 20,
-    bottom: 40
-  },
-  hideLegend: false,
-  hideTooltip: false,
-  label: null,
-  tooltip: null,
-  legend: null,
-  legendWrapperStyle: null,
-  legendProps: null,
-  innerRadius: 50,
-  outerRadius: 80
 };
 
 PieChart.propTypes = {

@@ -4,14 +4,14 @@ import { NavLinkStyles, NavLinkIconStyles } from './Nav.styles';
 
 const NavLink = (props) => {
   const {
-    children,
-    className,
-    component,
-    icon,
-    onClick,
-    href,
-    dataTestId,
-    activeClassName,
+    children = null,
+    className = '',
+    component = null,
+    icon = null,
+    onClick = null,
+    href = null,
+    dataTestId = null,
+    activeClassName = 'active',
     ...rest
   } = props;
 
@@ -49,17 +49,6 @@ const NavLink = (props) => {
       {children}
     </NavLinkStyles>
   );
-};
-
-NavLink.defaultProps = {
-  children: null,
-  className: '',
-  dataTestId: null,
-  icon: null,
-  component: null,
-  onClick: null,
-  href: null,
-  activeClassName: 'active'
 };
 
 NavLink.propTypes = {

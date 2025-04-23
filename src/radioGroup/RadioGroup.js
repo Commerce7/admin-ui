@@ -11,13 +11,13 @@ import {
 const RadioGroup = (props) => {
   const {
     children,
-    errorMessage,
-    label,
-    required,
+    errorMessage = null,
+    label = null,
+    required = false,
     dataTestId = 'radio-group',
-    variant,
-    size,
-    className
+    variant = null,
+    size = 'small',
+    className = ''
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -63,16 +63,6 @@ const RadioGroup = (props) => {
       )}
     </StyledFieldset>
   );
-};
-
-RadioGroup.defaultProps = {
-  errorMessage: null,
-  className: '',
-  label: null,
-  required: false,
-  dataTestId: null,
-  size: 'small',
-  variant: null
 };
 
 RadioGroup.propTypes = {

@@ -11,13 +11,13 @@ import {
 const CheckboxGroup = (props) => {
   const {
     children,
-    errorMessage,
-    label,
-    required,
+    errorMessage = null,
+    label = null,
+    required = false,
     dataTestId = 'checkbox-group',
-    variant,
-    size,
-    className
+    variant = null,
+    size = 'small',
+    className = ''
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -63,16 +63,6 @@ const CheckboxGroup = (props) => {
       )}
     </StyledFieldset>
   );
-};
-
-CheckboxGroup.defaultProps = {
-  errorMessage: null,
-  className: '',
-  label: null,
-  required: false,
-  dataTestId: null,
-  size: 'small',
-  variant: null
 };
 
 CheckboxGroup.propTypes = {

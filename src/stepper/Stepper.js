@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StyledStepper } from './Stepper.styles';
 
 const Stepper = (props) => {
-  const { children, dataTestId, className } = props;
+  const { children = null, dataTestId = null, className = null } = props;
   return (
     <StyledStepper
       aria-label="Secondary navigation"
@@ -13,12 +13,6 @@ const Stepper = (props) => {
       {children}
     </StyledStepper>
   );
-};
-
-Stepper.defaultProps = {
-  children: null,
-  dataTestId: null,
-  className: null
 };
 
 Stepper.propTypes = {

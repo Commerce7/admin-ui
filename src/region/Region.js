@@ -4,7 +4,12 @@ import { useEffect, useState, useRef } from 'react';
 import { StyledRegion } from './Region.styles';
 
 const Region = (props) => {
-  const { children, borderBottom, className, dataTestId } = props;
+  const {
+    children,
+    borderBottom = false,
+    className = null,
+    dataTestId = null
+  } = props;
   const [isAnimated, setAnimated] = useState(false);
   const regionRef = useRef();
 
@@ -33,12 +38,6 @@ const Region = (props) => {
       {children}
     </StyledRegion>
   );
-};
-
-Region.defaultProps = {
-  className: null,
-  borderBottom: false,
-  dataTestId: null
 };
 
 Region.propTypes = {

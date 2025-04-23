@@ -4,19 +4,13 @@ import React from 'react';
 import { StyledTbody } from './Tbody.styles';
 
 const Tbody = React.forwardRef((props, ref) => {
-  const { children, className, dataTestId } = props;
+  const { children = null, className = '', dataTestId = null } = props;
   return (
     <StyledTbody className={className} data-testid={dataTestId} ref={ref}>
       {children}
     </StyledTbody>
   );
 });
-
-Tbody.defaultProps = {
-  children: null,
-  className: '',
-  dataTestId: null
-};
 
 Tbody.propTypes = {
   /**

@@ -4,7 +4,15 @@ import React from 'react';
 import { StyledTd } from './Td.styles';
 
 const Td = React.forwardRef((props, ref) => {
-  const { children, className, onClick, colSpan, align, dataTestId } = props;
+  const {
+    children = null,
+    className = '',
+    onClick = null,
+    colSpan = null,
+    align = 'left',
+    dataTestId = null
+  } = props;
+
   return (
     <StyledTd
       colSpan={colSpan}
@@ -18,15 +26,6 @@ const Td = React.forwardRef((props, ref) => {
     </StyledTd>
   );
 });
-
-Td.defaultProps = {
-  children: null,
-  className: '',
-  colSpan: null,
-  onClick: null,
-  align: 'left',
-  dataTestId: null
-};
 
 Td.propTypes = {
   /**

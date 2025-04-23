@@ -8,7 +8,7 @@ import {
 } from './DataDisplay.styles';
 
 const DataDisplay = (props) => {
-  const { className, label, children, dataTestId } = props;
+  const { className = null, label = null, children = '', dataTestId } = props;
 
   return (
     <StyledInputWrapper className={className} data-testid={dataTestId}>
@@ -16,12 +16,6 @@ const DataDisplay = (props) => {
       <StaticDataDisplayStyles>{children}</StaticDataDisplayStyles>
     </StyledInputWrapper>
   );
-};
-
-DataDisplay.defaultProps = {
-  children: '',
-  className: null,
-  dataTestId: null
 };
 
 DataDisplay.propTypes = {

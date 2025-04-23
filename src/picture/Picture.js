@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import { StyledPicture, StyledPictureWrapper } from './Picture.styles';
 
 const Picture = (props) => {
-  const { src, alt, height, className, dataTestId } = props;
+  const {
+    src = null,
+    alt,
+    height = null,
+    className = null,
+    dataTestId = null
+  } = props;
 
   let avifSrc;
   let webpSrc;
@@ -27,13 +33,6 @@ const Picture = (props) => {
       </StyledPicture>
     </StyledPictureWrapper>
   );
-};
-
-Picture.defaultProps = {
-  className: null,
-  dataTestId: null,
-  height: null,
-  src: null
 };
 
 Picture.propTypes = {

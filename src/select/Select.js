@@ -18,19 +18,19 @@ import {
 
 const Select = (props) => {
   const {
-    autoFocus,
-    className,
-    description,
-    disabled,
-    errorMessage,
-    id,
-    label,
+    autoFocus = false,
+    className = null,
+    description = null,
+    disabled = false,
+    errorMessage = null,
+    id = Math.random().toString(36).substr(2, 9),
+    label = null,
     onChange,
-    options,
-    placeholder,
-    required,
-    value,
-    dataTestId
+    options = [],
+    placeholder = null,
+    required = false,
+    value = '',
+    dataTestId = null
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -78,21 +78,6 @@ const Select = (props) => {
       )}
     </StyledInputWrapper>
   );
-};
-
-Select.defaultProps = {
-  autoFocus: false,
-  className: null,
-  description: null,
-  disabled: false,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  label: null,
-  options: [],
-  placeholder: null,
-  required: false,
-  value: '',
-  dataTestId: null
 };
 
 Select.propTypes = {

@@ -10,14 +10,14 @@ import {
 
 const Tag = (props) => {
   const {
-    children,
-    className,
-    onClick,
-    onDelete,
-    variant,
-    dataTestId,
-    startIcon,
-    endIcon
+    children = null,
+    className = null,
+    onClick = null,
+    onDelete = null,
+    variant = 'default',
+    dataTestId = null,
+    startIcon = null,
+    endIcon = null
   } = props;
 
   const handleDelete = (e) => {
@@ -75,17 +75,6 @@ const Tag = (props) => {
       )}
     </StyledTag>
   );
-};
-
-Tag.defaultProps = {
-  className: null,
-  children: null,
-  onClick: null,
-  onDelete: null,
-  startIcon: null,
-  endIcon: null,
-  variant: 'default',
-  dataTestId: null
 };
 
 Tag.propTypes = {

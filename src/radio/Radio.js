@@ -18,20 +18,20 @@ import { StyledRadio } from './Radio.styles';
 const Radio = forwardRef((props, ref) => {
   const {
     checked,
-    className,
-    description,
-    disabled,
-    errorMessage,
-    id,
-    label,
+    className = null,
+    description = null,
+    disabled = false,
+    errorMessage = null,
+    id = Math.random().toString(36).substr(2, 9),
+    label = '',
     onChange,
     onClick,
-    required,
+    required = false,
     value,
-    dataTestId,
-    variant,
-    size,
-    icon,
+    dataTestId = null,
+    variant = 'default',
+    size = null,
+    icon = null,
     children
   } = props;
 
@@ -109,21 +109,6 @@ const Radio = forwardRef((props, ref) => {
     </StyledInputWrapper>
   );
 });
-
-Radio.defaultProps = {
-  className: null,
-  description: null,
-  disabled: false,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  label: '',
-  required: false,
-  dataTestId: null,
-  variant: 'default',
-  size: null,
-  icon: null,
-  onClick: null
-};
 
 Radio.propTypes = {
   /**

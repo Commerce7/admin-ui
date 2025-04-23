@@ -3,19 +3,13 @@ import PropTypes from 'prop-types';
 import { TabBodyStyles } from './Tabs.styles';
 
 const TabBody = (props) => {
-  const { children, dataTestId, className } = props;
+  const { children = null, dataTestId = null, className = null } = props;
 
   return (
     <TabBodyStyles className={className} data-testid={dataTestId}>
       {children}
     </TabBodyStyles>
   );
-};
-
-TabBody.defaultProps = {
-  children: null,
-  dataTestId: null,
-  className: null
 };
 
 TabBody.propTypes = {

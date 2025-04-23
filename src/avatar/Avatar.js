@@ -5,7 +5,14 @@ import { StyledAvatar, StyledAvatarIcon } from './Avatar.styles';
 
 const Avatar = (props) => {
   const [isImageValid, setImageValid] = useState(true);
-  const { className, imageSrc, imageAlt, label, size, dataTestId } = props;
+  const {
+    className = null,
+    imageSrc = null,
+    imageAlt = '',
+    label = '',
+    size = 'default',
+    dataTestId = null
+  } = props;
 
   const handleImageError = () => {
     setImageValid(false);
@@ -26,15 +33,6 @@ const Avatar = (props) => {
       {content}
     </StyledAvatar>
   );
-};
-
-Avatar.defaultProps = {
-  className: null,
-  imageSrc: null,
-  imageAlt: '',
-  label: '',
-  size: 'default',
-  dataTestId: null
 };
 
 Avatar.propTypes = {

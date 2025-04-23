@@ -4,18 +4,13 @@ import React from 'react';
 import { StyledThead } from './Thead.styles';
 
 const Thead = React.forwardRef((props, ref) => {
-  const { children, className, dataTestId } = props;
+  const { children = '', className, dataTestId = null } = props;
   return (
     <StyledThead className={className} data-testid={dataTestId} ref={ref}>
       {children}
     </StyledThead>
   );
 });
-
-Thead.defaultProps = {
-  className: '',
-  dataTestId: null
-};
 
 Thead.propTypes = {
   /**

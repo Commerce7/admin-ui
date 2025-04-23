@@ -4,7 +4,12 @@ import React from 'react';
 import { StyledTr } from './Tr.styles';
 
 const Tr = React.forwardRef((props, ref) => {
-  const { children, className, onClick, dataTestId } = props;
+  const {
+    children = null,
+    className = '',
+    onClick = null,
+    dataTestId = null
+  } = props;
   return (
     <StyledTr
       onClick={onClick}
@@ -16,13 +21,6 @@ const Tr = React.forwardRef((props, ref) => {
     </StyledTr>
   );
 });
-
-Tr.defaultProps = {
-  children: null,
-  className: '',
-  onClick: null,
-  dataTestId: null
-};
 
 Tr.propTypes = {
   /**

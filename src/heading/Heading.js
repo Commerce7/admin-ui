@@ -3,7 +3,13 @@ import PropTypes from 'prop-types';
 import { StyledHeading } from './Heading.styles';
 
 const Heading = (props) => {
-  const { children, level, marginBottom, className, dataTestId } = props;
+  const {
+    children,
+    level = 2,
+    marginBottom = null,
+    className = null,
+    dataTestId = null
+  } = props;
 
   let as = 'h2';
   if (level === 1) as = 'h1';
@@ -20,13 +26,6 @@ const Heading = (props) => {
       {children}
     </StyledHeading>
   );
-};
-
-Heading.defaultProps = {
-  level: 2,
-  marginBottom: null,
-  className: null,
-  dataTestId: null
 };
 
 Heading.propTypes = {

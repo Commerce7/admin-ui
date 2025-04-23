@@ -18,19 +18,19 @@ import { StyledCheckbox, StyledCheckboxIcon } from './Checkbox.styles';
 const Checkbox = forwardRef((props, ref) => {
   const {
     checked,
-    className,
-    description,
-    disabled,
-    errorMessage,
-    id,
-    label,
+    className = null,
+    description = null,
+    disabled = false,
+    errorMessage = null,
+    id = Math.random().toString(36).substr(2, 9),
+    label = '',
     onChange,
-    required,
-    value,
-    dataTestId,
-    variant,
-    size,
-    icon,
+    required = false,
+    value = '',
+    dataTestId = null,
+    variant = 'default',
+    size = null,
+    icon = null,
     children
   } = props;
 
@@ -111,21 +111,6 @@ const Checkbox = forwardRef((props, ref) => {
     </StyledInputWrapper>
   );
 });
-
-Checkbox.defaultProps = {
-  className: null,
-  description: null,
-  disabled: false,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  label: '',
-  required: false,
-  value: '',
-  dataTestId: null,
-  variant: 'default',
-  size: null,
-  icon: null
-};
 
 Checkbox.propTypes = {
   /**

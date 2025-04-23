@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { TabsStyles } from './Tabs.styles';
 
 const Tabs = (props) => {
-  const { children, dataTestId, className } = props;
+  const { children = null, dataTestId = null, className = null } = props;
   return (
     <TabsStyles
       aria-label="Secondary navigation"
@@ -13,12 +13,6 @@ const Tabs = (props) => {
       {children}
     </TabsStyles>
   );
-};
-
-Tabs.defaultProps = {
-  children: null,
-  dataTestId: null,
-  className: null
 };
 
 Tabs.propTypes = {

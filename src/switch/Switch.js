@@ -17,16 +17,16 @@ import { StyledSwitchIcon } from './Switch.styles';
 const Switch = forwardRef((props, ref) => {
   const {
     checked,
-    className,
-    description,
-    errorMessage,
-    disabled,
-    label,
+    className = null,
+    description = null,
+    errorMessage = null,
+    disabled = false,
+    label = '',
     onChange,
-    required,
-    value,
-    id,
-    dataTestId
+    required = false,
+    value = '',
+    id = Math.random().toString(36).substr(2, 9),
+    dataTestId = null
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -74,18 +74,6 @@ const Switch = forwardRef((props, ref) => {
     </StyledInputWrapper>
   );
 });
-
-Switch.defaultProps = {
-  className: null,
-  disabled: false,
-  description: null,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  label: '',
-  required: false,
-  value: '',
-  dataTestId: null
-};
 
 Switch.propTypes = {
   /**

@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import { StyledContextMenu } from './ContextMenu.styles';
 
 const ContextMenu = (props) => {
-  const { children, className, dataTestId } = props;
+  const { children, className = null, dataTestId = null } = props;
   return (
     <StyledContextMenu className={className} data-testid={dataTestId}>
       {children}
     </StyledContextMenu>
   );
-};
-
-ContextMenu.defaultProps = {
-  className: null,
-  dataTestId: null
 };
 
 ContextMenu.propTypes = {

@@ -10,13 +10,13 @@ import {
 const CardLink = (props) => {
   const {
     children,
-    className,
-    component,
-    icon,
-    href,
-    label,
-    description,
-    dataTestId,
+    className = null,
+    component = null,
+    icon = null,
+    href = null,
+    label = null,
+    // description = null, commented out as not used - to investigate
+    dataTestId = null,
     ...rest
   } = props;
 
@@ -43,16 +43,6 @@ const CardLink = (props) => {
       </StyledCardLabel>
     </StyledCardLink>
   );
-};
-
-CardLink.defaultProps = {
-  className: null,
-  component: null,
-  href: null,
-  icon: null,
-  description: null,
-  label: null,
-  dataTestId: null
 };
 
 CardLink.propTypes = {

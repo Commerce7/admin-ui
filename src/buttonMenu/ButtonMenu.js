@@ -10,14 +10,14 @@ import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
 const ButtonMenu = (props) => {
   const {
-    label,
-    className,
-    disabled,
+    label = 'Actions',
+    className = '',
+    disabled = false,
     children,
-    variant,
-    size,
-    dataTestId,
-    onClick
+    variant = 'secondary',
+    size = 'default',
+    dataTestId = null,
+    onClick = null
   } = props;
 
   const wrapperRef = useRef();
@@ -85,16 +85,6 @@ const ButtonMenu = (props) => {
       </DropdownWrapper>
     </div>
   );
-};
-
-ButtonMenu.defaultProps = {
-  className: '',
-  disabled: false,
-  label: 'Actions',
-  variant: 'secondary',
-  size: 'default',
-  dataTestId: null,
-  onClick: null
 };
 
 ButtonMenu.propTypes = {

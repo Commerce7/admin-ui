@@ -4,18 +4,13 @@ import React from 'react';
 import { StyledTfoot } from './Tfoot.styles';
 
 const Tfoot = React.forwardRef((props, ref) => {
-  const { children, className, dataTestId } = props;
+  const { children = '', className, dataTestId = null } = props;
   return (
     <StyledTfoot className={className} data-testid={dataTestId} ref={ref}>
       {children}
     </StyledTfoot>
   );
 });
-
-Tfoot.defaultProps = {
-  className: '',
-  dataTestId: null
-};
 
 Tfoot.propTypes = {
   /**

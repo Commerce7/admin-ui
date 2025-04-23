@@ -11,7 +11,13 @@ import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
 const ContextMenuMoreActions = (props) => {
-  const { children, className, disabled, dataTestId, label } = props;
+  const {
+    children,
+    className = null,
+    disabled = false,
+    dataTestId = null,
+    label = 'More Actions'
+  } = props;
 
   const [isValidChildren, setValidChildren] = useState(true);
   const wrapperRef = useRef();
@@ -72,13 +78,6 @@ const ContextMenuMoreActions = (props) => {
       </DropdownMenu>
     </DropdownWrapper>
   );
-};
-
-ContextMenuMoreActions.defaultProps = {
-  className: null,
-  disabled: false,
-  dataTestId: null,
-  label: 'More Actions'
 };
 
 ContextMenuMoreActions.propTypes = {

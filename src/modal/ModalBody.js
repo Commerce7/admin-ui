@@ -3,12 +3,8 @@ import PropTypes from 'prop-types';
 import { StyledModalBody } from './ModalBody.styles';
 
 const ModalBody = (props) => {
-  const { children, className } = props;
+  const { children, className = '' } = props;
   return <StyledModalBody className={className}>{children}</StyledModalBody>;
-};
-
-ModalBody.defaultProps = {
-  className: ''
 };
 
 ModalBody.propTypes = {

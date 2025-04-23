@@ -4,13 +4,13 @@ import { TabStyles } from './Tabs.styles';
 
 const Tab = (props) => {
   const {
-    children,
-    activeClassName,
-    className,
-    component,
-    onClick,
-    href,
-    dataTestId,
+    children = null,
+    activeClassName = 'active',
+    className = null,
+    component = null,
+    onClick = null,
+    href = null,
+    dataTestId = null,
     ...rest
   } = props;
 
@@ -46,16 +46,6 @@ const Tab = (props) => {
       {children}
     </TabStyles>
   );
-};
-
-Tab.defaultProps = {
-  children: null,
-  activeClassName: 'active',
-  className: null,
-  component: null,
-  onClick: null,
-  href: null,
-  dataTestId: null
 };
 
 Tab.propTypes = {

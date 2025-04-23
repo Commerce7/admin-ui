@@ -3,19 +3,17 @@ import PropTypes from 'prop-types';
 import { NavStyles } from './Nav.styles';
 
 const Nav = (props) => {
-  const { children, dataTestId, className, isOpen } = props;
+  const {
+    children = null,
+    dataTestId = null,
+    className = null,
+    isOpen = true
+  } = props;
   return (
     <NavStyles className={className} data-testid={dataTestId} isOpen={isOpen}>
       {children}
     </NavStyles>
   );
-};
-
-Nav.defaultProps = {
-  children: null,
-  dataTestId: null,
-  className: null,
-  isOpen: true
 };
 
 Nav.propTypes = {

@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { createTheme, GlobalStyles } from './theme';
 
 const Commerce7AdminUI = (props) => {
-  const { children, mode } = props;
+  const { children, mode = 'light' } = props;
   const theme = createTheme(mode);
   return (
     <ThemeProvider theme={theme}>
@@ -12,10 +12,6 @@ const Commerce7AdminUI = (props) => {
       {children}
     </ThemeProvider>
   );
-};
-
-Commerce7AdminUI.defaultProps = {
-  mode: 'light'
 };
 
 Commerce7AdminUI.propTypes = {

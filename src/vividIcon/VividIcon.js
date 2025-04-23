@@ -5,7 +5,14 @@ import { StyledIconButton } from '../icon/Icon.styles';
 import { StyledIconContainer, StyledIcon } from './VividIcon.styles';
 
 const VividIcon = (props) => {
-  const { className, label, onClick, icon, color, dataTestId } = props;
+  const {
+    className = null,
+    label = null,
+    onClick = null,
+    icon,
+    color = 'pink',
+    dataTestId = null
+  } = props;
 
   if (onClick) {
     return (
@@ -32,14 +39,6 @@ const VividIcon = (props) => {
       <StyledIcon icon={icon} size={20} color={color} />
     </StyledIconContainer>
   );
-};
-
-VividIcon.defaultProps = {
-  className: null,
-  onClick: null,
-  dataTestId: null,
-  color: 'pink',
-  label: null
 };
 
 VividIcon.propTypes = {

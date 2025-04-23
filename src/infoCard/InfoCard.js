@@ -17,16 +17,16 @@ import { colors } from './theme';
 
 const InfoCard = (props) => {
   const {
-    icon,
-    label,
-    title,
-    variant,
-    subtitle,
-    img,
-    children,
-    className,
-    dataTestId,
-    iconVariant
+    icon = null,
+    label = null,
+    title = null,
+    variant = 'default',
+    subtitle = null,
+    img = null,
+    children = null,
+    className = null,
+    dataTestId = null,
+    iconVariant = null
   } = props;
   const theme = useTheme();
 
@@ -73,19 +73,6 @@ const InfoCard = (props) => {
       </StyledContentWrapper>
     </StyledInfoCard>
   );
-};
-
-InfoCard.defaultProps = {
-  children: null,
-  className: null,
-  dataTestId: null,
-  icon: null,
-  label: null,
-  title: null,
-  variant: 'default',
-  iconVariant: null,
-  subtitle: null,
-  img: null
 };
 
 InfoCard.propTypes = {

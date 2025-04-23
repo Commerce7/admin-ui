@@ -14,21 +14,21 @@ import { StyledTextarea } from './Textarea.styles';
 
 const Textarea = forwardRef((props, ref) => {
   const {
-    autoFocus,
-    className,
-    description,
-    disabled,
-    errorMessage,
-    height,
-    id,
-    label,
-    onBlur,
+    autoFocus = false,
+    className = null,
+    description = null,
+    disabled = false,
+    errorMessage = null,
+    height = 250,
+    id = Math.random().toString(36).substr(2, 9),
+    label = null,
+    onBlur = null,
     onChange,
-    onFocus,
-    placeholder,
-    required,
+    onFocus = null,
+    placeholder = null,
+    required = false,
     value,
-    dataTestId
+    dataTestId = null
   } = props;
 
   const hasErrorMessage = !!errorMessage;
@@ -77,22 +77,6 @@ const Textarea = forwardRef((props, ref) => {
     </StyledInputWrapper>
   );
 });
-
-Textarea.defaultProps = {
-  autoFocus: false,
-  className: null,
-  description: null,
-  disabled: false,
-  errorMessage: null,
-  id: Math.random().toString(36).substr(2, 9),
-  label: null,
-  height: 250,
-  onBlur: null,
-  onFocus: null,
-  placeholder: null,
-  required: false,
-  dataTestId: null
-};
 
 Textarea.propTypes = {
   /**

@@ -5,8 +5,15 @@ import Text from '../text';
 import { BreadcrumbLinkStyles, StyledBreadcrumb } from './Breadcrumb.styles';
 
 const Breadcrumb = (props) => {
-  const { className, component, href, children, dataTestId, onClick, ...rest } =
-    props;
+  const {
+    className = '',
+    component = null,
+    href = null,
+    children,
+    dataTestId = null,
+    onClick = null,
+    ...rest
+  } = props;
 
   let as = '';
   if (href) {
@@ -36,14 +43,6 @@ const Breadcrumb = (props) => {
       </BreadcrumbLinkStyles>
     </StyledBreadcrumb>
   );
-};
-
-Breadcrumb.defaultProps = {
-  className: '',
-  component: null,
-  href: null,
-  dataTestId: null,
-  onClick: null
 };
 
 Breadcrumb.propTypes = {

@@ -10,18 +10,18 @@ import {
 
 const Button = forwardRef((props, ref) => {
   const {
-    children,
-    className,
-    disabled,
-    loading,
-    onClick,
-    startIcon,
-    endIcon,
-    type,
-    variant,
-    size,
-    dataTestId,
-    formNoValidate
+    children = null,
+    className = null,
+    disabled = false,
+    loading = false,
+    onClick = null,
+    startIcon = null,
+    endIcon = null,
+    type = 'button',
+    variant = 'primary',
+    size = 'default',
+    dataTestId = null,
+    formNoValidate = false
   } = props;
 
   return (
@@ -61,20 +61,6 @@ const Button = forwardRef((props, ref) => {
     </StyledButton>
   );
 });
-
-Button.defaultProps = {
-  children: null,
-  className: '',
-  disabled: false,
-  loading: false,
-  onClick: null,
-  startIcon: null,
-  type: 'button',
-  variant: 'primary',
-  size: 'default',
-  dataTestId: null,
-  formNoValidate: false
-};
 
 Button.propTypes = {
   /**

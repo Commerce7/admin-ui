@@ -12,16 +12,16 @@ import {
 
 const SelectButton = forwardRef((props, ref) => {
   const {
-    selected,
-    children,
-    className,
-    disabled,
-    loading,
-    onClick,
-    type,
-    dataTestId,
-    size,
-    icon,
+    selected = false,
+    children = null,
+    className = '',
+    disabled = false,
+    loading = false,
+    onClick = null,
+    type = 'button',
+    dataTestId = null,
+    size = 'large',
+    icon = null,
     as
   } = props;
 
@@ -82,19 +82,6 @@ const SelectButton = forwardRef((props, ref) => {
     </StyledSelectButton>
   );
 });
-
-SelectButton.defaultProps = {
-  className: '',
-  disabled: false,
-  loading: false,
-  selected: false,
-  onClick: null,
-  type: 'button',
-  dataTestId: null,
-  size: 'large',
-  icon: null,
-  children: null
-};
 
 SelectButton.propTypes = {
   /**

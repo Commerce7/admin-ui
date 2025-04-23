@@ -3,13 +3,8 @@ import PropTypes from 'prop-types';
 import { StyledColumn } from './Columns.styles';
 
 const Column = (props) => {
-  const { children, span } = props;
+  const { children = '', span = 12 } = props;
   return <StyledColumn $span={span}>{children}</StyledColumn>;
-};
-
-Column.defaultProps = {
-  children: '',
-  span: 12
 };
 
 Column.propTypes = {

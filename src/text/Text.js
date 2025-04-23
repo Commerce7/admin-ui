@@ -4,18 +4,18 @@ import { StyledText } from './Text.styles';
 
 const Text = (props) => {
   const {
-    as,
-    block,
-    children,
-    className,
-    error,
-    strong,
-    italic,
-    small,
-    secondary,
-    uppercase,
-    strikeThrough,
-    dataTestId
+    as = 'span',
+    block = false,
+    children = '',
+    className = null,
+    error = false,
+    strong = false,
+    italic = false,
+    small = false,
+    secondary = false,
+    uppercase = false,
+    strikeThrough = false,
+    dataTestId = null
   } = props;
 
   return (
@@ -35,21 +35,6 @@ const Text = (props) => {
       {children}
     </StyledText>
   );
-};
-
-Text.defaultProps = {
-  as: 'span',
-  block: false,
-  className: null,
-  children: '',
-  error: false,
-  strong: false,
-  italic: false,
-  small: false,
-  uppercase: false,
-  secondary: false,
-  strikeThrough: false,
-  dataTestId: null
 };
 
 Text.propTypes = {

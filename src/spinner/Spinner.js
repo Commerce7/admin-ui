@@ -5,7 +5,7 @@ import Text from '../text';
 import { StyledSpinner, StyledIcon } from './Spinner.styles';
 
 const Spinner = (props) => {
-  const { label, className, dataTestId } = props;
+  const { label = null, className = null, dataTestId = null } = props;
 
   return (
     <StyledSpinner className={className} data-testid={dataTestId}>
@@ -13,12 +13,6 @@ const Spinner = (props) => {
       {label && <Text block>{label}</Text>}
     </StyledSpinner>
   );
-};
-
-Spinner.defaultProps = {
-  label: null,
-  className: null,
-  dataTestId: null
 };
 
 Spinner.propTypes = {
