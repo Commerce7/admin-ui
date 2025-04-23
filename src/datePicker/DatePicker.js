@@ -30,7 +30,7 @@ const DatePicker = forwardRef((props, ref) => {
     onFocus,
     onBlur,
     label = null,
-    id = useRef(Math.random().toString(36).substr(2, 9)).current,
+    id = Math.random().toString(36).substr(2, 9),
     isValidDate,
     disabled = false,
     placeholder = null,
