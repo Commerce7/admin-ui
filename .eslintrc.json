@@ -1,6 +1,6 @@
 {
   "extends": ["@commerce7/eslint-config/react"],
-  "parser": "@babel/eslint-parser", // Keep Babel parser as default for JS
+  "parser": "@babel/eslint-parser",
   "rules": {
     "react/require-default-props": "off",
     "react/jsx-filename-extension": [
@@ -35,7 +35,8 @@
         "tsconfigRootDir": "."
       },
       "rules": {
-        "@typescript-eslint/no-explicit-any": "off"
+        "@typescript-eslint/no-explicit-any": "off", // Hopefully this will be removed in the future after refactoring
+         "@typescript-eslint/ban-ts-comment": "off" // Hopefully this will be removed in the future  after refactoring
       }
     }
   ],

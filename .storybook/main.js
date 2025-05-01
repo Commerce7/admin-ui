@@ -14,7 +14,7 @@ module.exports = {
     options: {}
   },
   docs: {
-    autodocs: true // enables automatic docs from source
+    autodocs: true
   },
   typescript: {
     reactDocgen: 'react-docgen-typescript',

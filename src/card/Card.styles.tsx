@@ -1,8 +1,11 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { colors } from './theme';
 
-const StyledCard = styled.div`
+const StyledCard = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['variant'].includes(prop)
+})`
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};

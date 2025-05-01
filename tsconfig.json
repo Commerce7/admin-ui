@@ -5,7 +5,7 @@
     "module": "ESNext",
     "moduleResolution": "Node",
     "jsx": "react-jsx",
-    "allowJs": true,              // allow existing JS files
+    "allowJs": true,
     "checkJs": false,
     "noEmit": true,
     "strict": true,
