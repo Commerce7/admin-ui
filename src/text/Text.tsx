@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import { StyledText } from './Text.styles';
 
-interface TextProps {
+export interface TextProps {
   /**
    * Override Element Type.
    */
@@ -14,7 +14,7 @@ interface TextProps {
   /**
    * The content of the component.
    */
-  children?: React.ReactNode;
+  children?: React.ReactNode | Node;
   /**
    * Add className to the outermost element.
    */
@@ -80,7 +80,7 @@ const Text: React.FC<TextProps> = ({
     strikeThrough={strikeThrough}
     data-testid={dataTestId}
   >
-    {children || null}
+    {children}
   </StyledText>
 );
 

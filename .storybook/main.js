@@ -6,11 +6,25 @@ module.exports = {
     '@storybook/addon-styling-webpack',
     '@storybook/addon-a11y',
     '@storybook/addon-mdx-gfm',
-    '@storybook/addon-webpack5-compiler-babel'
+    '@storybook/addon-webpack5-compiler-babel',
+    '@storybook/addon-docs'
   ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {}
+  },
+  docs: {
+    autodocs: true // enables automatic docs from source
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+    reactDocgenTypescriptOptions: {
+      shouldExtractLiteralValuesFromEnum: true,
+      shouldRemoveUndefinedFromOptional: true,
+      savePropValueAsString: true,
+      propFilter: (prop) =>
+        prop.parent ? !/node_modules/.test(prop.parent.fileName) : true
+    }
   },
   webpackFinal: async (config) => {
     config.module.rules.push({
