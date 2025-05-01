@@ -16,6 +16,7 @@ module.exports = {
   docs: {
     autodocs: true
   },
+  staticDirs: ['../static'],
   typescript: {
     reactDocgen: 'react-docgen-typescript',
     reactDocgenTypescriptOptions: {
