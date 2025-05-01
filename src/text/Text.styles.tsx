@@ -1,16 +1,41 @@
+import * as React from 'react';
 import styled from 'styled-components';
 
 import { colors } from './theme';
 
-const StyledText = styled.span`
+interface StyledTextProps {
+  as?: keyof React.JSX.IntrinsicElements | React.ComponentType<any>;
+  theme: {
+    c7__ui: {
+      mode: 'light' | 'dark';
+      fontColor: string;
+      fontFamily: string;
+      fontWeightStrong: string;
+      fontWeightBase: string;
+      fontSizeSmall: string;
+      fontSizeBase: string;
+    };
+  };
+  error?: boolean;
+  secondary?: boolean;
+  strong?: boolean;
+  italic?: boolean;
+  small?: boolean;
+  block?: boolean;
+  uppercase?: boolean;
+  strikeThrough?: boolean;
+  children?: React.ReactNode | React.ReactNode[];
+}
+
+const StyledText = styled.span<StyledTextProps>`
   margin: 0;
   color: ${({ theme, error, secondary }) => {
     if (error) {
-      return colors[theme.c7__ui.mode].errorFontColor;
+      return colors[theme.c7__ui.mode as 'light' | 'dark'].errorFontColor;
     }
 
     if (secondary) {
-      return colors[theme.c7__ui.mode].secondaryFontColor;
+      return colors[theme.c7__ui.mode as 'light' | 'dark'].secondaryFontColor;
     }
 
     return theme.c7__ui.fontColor;

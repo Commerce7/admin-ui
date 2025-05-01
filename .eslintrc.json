@@ -1,13 +1,47 @@
 {
   "extends": ["@commerce7/eslint-config/react"],
+  "parser": "@babel/eslint-parser", // Keep Babel parser as default for JS
   "rules": {
-    // 'import' overrides
+    "react/require-default-props": "off",
+    "react/jsx-filename-extension": [
+      "error",
+      { "extensions": [".jsx", ".tsx"] }
+    ],
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [".storybook/**", "**/*.stories.js"]
+        "devDependencies": [".storybook/**", "**/*.stories.js", "**/*.stories.tsx"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
       }
     ]
   },
-  "parser": "@babel/eslint-parser"
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parser": "@typescript-eslint/parser",
+      "plugins": ["@typescript-eslint"],
+      "extends": ["plugin:@typescript-eslint/recommended"],
+      "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "."
+      },
+      "rules": {
+        "@typescript-eslint/no-explicit-any": "off"
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
 }

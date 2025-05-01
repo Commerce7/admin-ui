@@ -1,4 +1,4 @@
-import Text from '.';
+import Text from './Text';
 
 export const Basic = () => (
   <>
