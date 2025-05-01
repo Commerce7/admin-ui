@@ -90,7 +90,9 @@
   },
   "peerDependencies": {
     "react": "^18.1.0-0",
-    "react-dom": "^18.1.0-0"
+    "react-dom": "^18.1.0-0",
+    "styled-components": "^6.1.17",
+    "styled-normalize": "^8.1.1"
   },
   "directories": {
     "lib": "lib"

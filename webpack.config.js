@@ -15,14 +15,24 @@ module.exports = {
     concatenateModules: false
   },
   externals: [
-    nodeExternals(),
     nodeExternals({
-      modulesDir: path.resolve('node_modules')
+      modulesDir: path.resolve('node_modules'),
+      allowlist: [
+        'styled-normalize',
+        /^styled-components/,
+        /.*styled-normalize.*/
+      ]
     })
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: ['src', 'node_modules']
+    modules: ['src', 'node_modules'],
+    alias: {
+      'styled-normalize': path.resolve(
+        __dirname,
+        'node_modules/styled-normalize'
+      )
+    }
   },
   plugins: [new CleanWebpackPlugin()],
   module: {
