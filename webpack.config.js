@@ -5,7 +5,7 @@ const nodeExternals = require('webpack-node-externals'); // eslint-disable-line 
 
 module.exports = {
   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   output: {
     path: path.resolve('lib'),
     filename: 'build.js',
@@ -20,9 +20,29 @@ module.exports = {
       modulesDir: path.resolve('node_modules')
     })
   ],
+  resolve: {
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
+    modules: ['src', 'node_modules']
+  },
   plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react',
+                '@babel/preset-typescript'
+              ]
+            }
+          }
+        ]
+      },
       {
         test: /\.js?$/,
         exclude: /(node_modules)/,
