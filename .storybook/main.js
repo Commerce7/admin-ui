@@ -1,13 +1,10 @@
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
-    '@storybook/addon-styling-webpack',
     '@storybook/addon-a11y',
-    '@storybook/addon-mdx-gfm',
-    '@storybook/addon-webpack5-compiler-babel',
-    '@storybook/addon-docs'
+    '@storybook/addon-mdx-gfm'
   ],
   framework: {
     name: '@storybook/react-webpack5',
@@ -40,6 +37,10 @@ module.exports = {
       ]
     });
     config.resolve.extensions.push('.ts', '.tsx');
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      react: require.resolve('react')
+    };
     return config;
   }
 };

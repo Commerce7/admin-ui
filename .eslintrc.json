@@ -10,7 +10,16 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": [".storybook/**", "**/*.stories.js", "**/*.stories.tsx"]
+        "devDependencies":[
+          ".storybook/**",
+          "**/*.stories.js",
+          "**/*.stories.tsx",
+          "**/*.test.{js,jsx,ts,tsx}",
+          "**/*.spec.{js,jsx,ts,tsx}",
+          "**/*.stories.{js,jsx,ts,tsx}",
+          "**/webpack.config.js",
+          "**/.storybook/**/*.*"
+        ]
       }
     ],
     "import/extensions": [

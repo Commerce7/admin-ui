@@ -1,7 +1,7 @@
 const path = require('path');
 
-const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // eslint-disable-line import/no-extraneous-dependencies
-const nodeExternals = require('webpack-node-externals'); // eslint-disable-line import/no-extraneous-dependencies
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'production',
@@ -9,63 +9,64 @@ module.exports = {
   output: {
     path: path.resolve('lib'),
     filename: 'build.js',
-    libraryTarget: 'commonjs2'
-  },
-  optimization: {
-    concatenateModules: false
+    libraryTarget: 'commonjs2',
+    globalObject: 'this'
   },
   externals: [
-    nodeExternals({
-      modulesDir: path.resolve('node_modules'),
-      allowlist: ['styled-normalize', /^styled-components/]
-    }),
     {
       react: {
-        commonjs: 'react',
+        root: 'React',
         commonjs2: 'react',
-        amd: 'React',
-        root: 'React'
+        commonjs: 'react',
+        amd: 'react'
       },
       'react-dom': {
-        commonjs: 'react-dom',
+        root: 'ReactDOM',
         commonjs2: 'react-dom',
-        amd: 'ReactDOM',
-        root: 'ReactDOM'
+        commonjs: 'react-dom',
+        amd: 'react-dom'
+      },
+      'styled-components': {
+        commonjs: 'styled-components',
+        commonjs2: 'styled-components',
+        amd: 'styled-components'
       }
-    }
+    },
+    nodeExternals({
+      allowlist: ['styled-normalize']
+    })
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    modules: ['src', 'node_modules'],
     alias: {
-      react: path.resolve(__dirname, './node_modules/react'),
+      react: path.resolve(__dirname, 'node_modules/react'),
+      'styled-components': path.resolve(
+        __dirname,
+        'node_modules/styled-components'
+      ),
       'styled-normalize': path.resolve(
         __dirname,
         'node_modules/styled-normalize'
       )
     }
   },
-  plugins: [new CleanWebpackPlugin()],
   module: {
     rules: [
       {
-        test: /\.(js|jsx|ts|tsx)$/,
+        test: /\.(ts|tsx|js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
             presets: [
               '@babel/preset-env',
-              '@babel/preset-react',
+              ['@babel/preset-react', { runtime: 'automatic' }],
               '@babel/preset-typescript'
             ]
           }
         }
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
       }
     ]
-  }
+  },
+  plugins: [new CleanWebpackPlugin()]
 };
