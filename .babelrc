@@ -1,11 +1,21 @@
 {
   "presets": [
-    "@babel/preset-env",
-    ["@babel/preset-react", { "runtime": "automatic" }],
-    "@babel/preset-typescript"
+    ["@babel/preset-env", { 
+      "targets": { "node": "current" },
+      "modules": "commonjs"
+    }],
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+    }],
+    ["@babel/preset-typescript", { 
+      "isTSX": true, 
+      "allExtensions": true 
+    }]
   ],
   "plugins": [
-    "@babel/transform-object-assign",
-    "@babel/plugin-proposal-class-properties"
+    ["@babel/plugin-transform-runtime", {
+      "regenerator": true,
+      "helpers": true
+    }]
   ]
 }

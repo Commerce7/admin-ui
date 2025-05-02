@@ -1,3 +1,5 @@
+const path = require('path');
+
 module.exports = {
   stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
   addons: [
@@ -25,22 +27,37 @@ module.exports = {
     }
   },
   webpackFinal: async (config) => {
+    // Add support for both JS and TS files
     config.module.rules.push({
-      test: /\.(ts|tsx)$/,
+      test: /\.(js|jsx|ts|tsx)$/,
+      exclude: /node_modules/,
       use: [
         {
           loader: require.resolve('babel-loader'),
           options: {
-            presets: [require.resolve('@babel/preset-typescript')]
+            presets: [
+              '@babel/preset-env',
+              ['@babel/preset-react', { runtime: 'automatic' }],
+              '@babel/preset-typescript'
+            ],
+            plugins: ['@babel/plugin-transform-runtime']
           }
         }
       ]
     });
-    config.resolve.extensions.push('.ts', '.tsx');
-    config.resolve.alias = {
-      ...config.resolve.alias,
-      react: require.resolve('react')
+
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve.alias,
+        'react/jsx-runtime': require.resolve('react/jsx-runtime'),
+        'react/jsx-dev-runtime': require.resolve('react/jsx-dev-runtime'),
+        react: path.resolve(__dirname, '../node_modules/react')
+      }
     };
+
+    config.resolve.extensions.push('.js', '.jsx', '.ts', '.tsx');
+
     return config;
   }
 };
