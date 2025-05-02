@@ -1,6 +1,10 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0-beta.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Commerce7/admin-ui.git"
+  },
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
