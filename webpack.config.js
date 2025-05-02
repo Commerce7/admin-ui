@@ -17,17 +17,28 @@ module.exports = {
   externals: [
     nodeExternals({
       modulesDir: path.resolve('node_modules'),
-      allowlist: [
-        'styled-normalize',
-        /^styled-components/,
-        /.*styled-normalize.*/
-      ]
-    })
+      allowlist: ['styled-normalize', /^styled-components/]
+    }),
+    {
+      react: {
+        commonjs: 'react',
+        commonjs2: 'react',
+        amd: 'React',
+        root: 'React'
+      },
+      'react-dom': {
+        commonjs: 'react-dom',
+        commonjs2: 'react-dom',
+        amd: 'ReactDOM',
+        root: 'ReactDOM'
+      }
+    }
   ],
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
     modules: ['src', 'node_modules'],
     alias: {
+      react: path.resolve(__dirname, './node_modules/react'),
       'styled-normalize': path.resolve(
         __dirname,
         'node_modules/styled-normalize'
@@ -38,25 +49,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts|tsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                '@babel/preset-env',
-                '@babel/preset-react',
-                '@babel/preset-typescript'
-              ]
-            }
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript'
+            ]
           }
-        ]
-      },
-      {
-        test: /\.js?$/,
-        exclude: /(node_modules)/,
-        use: 'babel-loader'
+        }
       },
       {
         test: /\.css$/,

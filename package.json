@@ -1,10 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "2.0.0-beta.2",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Commerce7/admin-ui.git"
-  },
+  "version": "2.0.0-beta.3",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -89,14 +85,13 @@
     "react-datetime": "^3.3.1",
     "react-focus-lock": "^2.13.6",
     "recharts": "^2.15.3",
-    "styled-components": "^6.1.17",
+    "styled-components": "^5.3.11",
     "styled-normalize": "^8.1.1"
   },
   "peerDependencies": {
     "react": "^18.1.0-0",
     "react-dom": "^18.1.0-0",
-    "styled-components": "^6.1.17",
-    "styled-normalize": "^8.1.1"
+    "styled-components": "^5.3.11"
   },
   "directories": {
     "lib": "lib"
