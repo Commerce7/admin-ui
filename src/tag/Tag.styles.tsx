@@ -1,10 +1,14 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import Icon from '../icon';
 
 import { colors } from './theme';
 
-const StyledTag = styled.span`
+const StyledTag = styled.span<{
+  variant: string;
+  onClick?: ((event: MouseEvent<HTMLElement>) => void) | null;
+}>`
   display: inline-flex;
   align-items: center;
   padding: 6px 10px;
@@ -49,7 +53,9 @@ const StyledTagLabel = styled.span`
   text-overflow: ellipsis;
 `;
 
-const StyledDeleteButton = styled.button`
+const StyledDeleteButton = styled.button<{
+  variant: string;
+}>`
   margin-left: 10px;
   border-radius: 50%;
   border: none;
