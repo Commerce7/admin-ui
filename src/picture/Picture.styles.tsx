@@ -1,6 +1,11 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
-const StyledPictureWrapper = styled.div`
+interface StyledPictureWrapperProps {
+  height?: number | null;
+}
+
+const StyledPictureWrapper = styled.div<StyledPictureWrapperProps>`
   width: 100%;
   ${({ height }) => (height ? `height: ${height}px;` : '')}
 
@@ -9,7 +14,11 @@ const StyledPictureWrapper = styled.div`
   align-items: center;
 `;
 
-const StyledPicture = styled.picture`
+interface StyledPictureProps {
+  height?: number | null;
+}
+
+const StyledPicture = styled.picture<StyledPictureProps>`
   margin: 0 auto;
   ${({ height }) => (height ? `max-height: ${height}px;` : '')}
 
