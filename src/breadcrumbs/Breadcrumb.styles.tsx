@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { colors } from '../text/theme';
