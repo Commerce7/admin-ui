@@ -10,7 +10,9 @@ interface StyledAlertProps {
   size: 'default' | 'small';
 }
 
-const StyledAlert = styled.div<StyledAlertProps>`
+const StyledAlert = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['variant', 'size'].includes(prop)
+})<StyledAlertProps>`
   padding: ${({ size }) => sizes[size].padding};
   border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
   border: 1px solid ${({ theme }) => theme.c7__ui.backgroundColor};

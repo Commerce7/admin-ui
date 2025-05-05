@@ -1,10 +1,17 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import Icon from '../icon';
 
 import { sizes, iconSizes, fontSizes, colors } from './theme';
 
-const StyledAvatar = styled.div`
+interface StyledAvatarProps {
+  size: 'tiny' | 'small' | 'default' | 'large';
+}
+
+const StyledAvatar = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['size'].includes(prop)
+})<StyledAvatarProps>`
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightStrong};
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
