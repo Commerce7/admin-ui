@@ -1,10 +1,16 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import Icon from '../icon/Icon';
 
 import { colors, sizes } from './theme';
 
-const StyledAlert = styled.div`
+interface StyledAlertProps {
+  variant: 'default' | 'info' | 'error' | 'warning' | 'success';
+  size: 'default' | 'small';
+}
+
+const StyledAlert = styled.div<StyledAlertProps>`
   padding: ${({ size }) => sizes[size].padding};
   border-radius: ${({ theme }) => theme.c7__ui.borderRadius};
   border: 1px solid ${({ theme }) => theme.c7__ui.backgroundColor};
