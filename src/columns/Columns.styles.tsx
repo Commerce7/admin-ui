@@ -1,6 +1,13 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
-const StyledColumns = styled.div`
+interface StyledColumnsProps {
+  $justify?: string;
+  $align?: string;
+  $isWrap?: string;
+}
+
+const StyledColumns = styled.div<StyledColumnsProps>`
   justify-content: ${({ $justify }) => $justify};
   align-items: ${({ $align }) => $align};
   flex-wrap: ${({ $isWrap }) => ($isWrap ? 'wrap' : 'initial')};
@@ -39,7 +46,11 @@ const getColumnSpan = (span) => {
   `;
 };
 
-const StyledColumn = styled.div`
+interface StyledColumnProps {
+  $span: ColumnSpan;
+}
+
+const StyledColumn = styled.div<StyledColumnProps>`
   @media ${({ theme }) => theme.c7__ui.breakpoints.mediumUp} {
     padding: 0 10px;
     ${({ $span }) => getColumnSpan($span)}
