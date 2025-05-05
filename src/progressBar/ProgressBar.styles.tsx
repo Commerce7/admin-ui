@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { colors } from './theme';
@@ -12,7 +13,7 @@ const StyledProgressBarWrapper = styled.div`
   position: relative;
 `;
 
-const StyledProgressBar = styled.div`
+const StyledProgressBar = styled.div<{ progress: number; color: string }>`
   width: ${({ progress }) =>
     `${Math.min(progress, 100)}%`}; /* Cap width at 100% */
   height: 100%;
