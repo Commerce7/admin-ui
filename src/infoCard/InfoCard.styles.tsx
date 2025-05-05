@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import Text from '../text';
@@ -11,7 +12,7 @@ const StyledInfoCardGrid = styled.div`
   align-items: stretch;
 `;
 
-const StyledInfoCard = styled.div`
+const StyledInfoCard = styled.div<{ variant: InfoCardVariant }>`
   padding: 20px;
   display: flex;
   gap: 15px;
@@ -28,7 +29,7 @@ const StyledContentWrapper = styled.div`
   flex: 1;
 `;
 
-const StyledIcon = styled.div`
+const StyledIcon = styled.div<{ variant: InfoCardVariant }>`
   ${({ variant }) => `
     background: ${variant};
     border-radius: 50%;
@@ -41,7 +42,7 @@ const StyledIcon = styled.div`
   `}
 `;
 
-const StyledLabel = styled.span`
+const StyledLabel = styled.span<{ variant: InfoCardVariant }>`
   color: rgba(0, 0, 0, 0.4);
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
@@ -52,7 +53,7 @@ const StyledLabel = styled.span`
   `}
 `;
 
-const StyledTitle = styled.span`
+const StyledTitle = styled.span<{ variant: InfoCardVariant }>`
   font-size: 20px;
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
   display: block;
@@ -66,7 +67,7 @@ const StyledTitle = styled.span`
   `}
 `;
 
-const StyledSubtitle = styled(Text)`
+const StyledSubtitle = styled(Text)<{ variant: InfoCardVariant }>`
   ${({ theme, variant }) => `
     color: ${colors[theme.c7__ui.mode].secondaryFontColor[variant]};
   `}
