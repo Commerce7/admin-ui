@@ -1,19 +1,20 @@
 const path = require('path');
 
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
+  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
     '@storybook/addon-a11y',
-    '@storybook/addon-mdx-gfm'
+    '@storybook/addon-docs'
   ],
   framework: {
     name: '@storybook/react-webpack5',
     options: {}
   },
   docs: {
-    autodocs: true
+    autodocs: true,
+    defaultName: 'Documentation'
   },
   staticDirs: ['../static'],
   typescript: {
@@ -27,6 +28,24 @@ module.exports = {
     }
   },
   webpackFinal: async (config) => {
+    // Remove existing MDX rules
+    config.module.rules = config.module.rules.filter(
+      (rule) => !rule.test?.test?.('.mdx')
+    );
+
+    // Add MDX support first
+    config.module.rules.push({
+      test: /\.mdx?$/,
+      use: [
+        {
+          loader: require.resolve('@storybook/mdx2-csf/loader'),
+          options: {
+            skipCsf: true
+          }
+        }
+      ]
+    });
+
     // Add support for both JS and TS files
     config.module.rules.push({
       test: /\.(js|jsx|ts|tsx)$/,
@@ -56,7 +75,7 @@ module.exports = {
       }
     };
 
-    config.resolve.extensions.push('.js', '.jsx', '.ts', '.tsx');
+    config.resolve.extensions.push('.js', '.jsx', '.ts', '.tsx', '.mdx');
 
     return config;
   }
