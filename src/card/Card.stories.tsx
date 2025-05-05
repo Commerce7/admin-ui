@@ -1,10 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+
 import Heading from '../heading/Heading';
 import Text from '../text/Text';
 
-import Card from '.';
+import Card, { CardProps } from '.';
 
-export const Basic = (args) => (
+export const Basic = (args: React.JSX.IntrinsicAttributes & CardProps) => (
   <>
     <Card className="example-class__wine-joke--lame" {...args}>
       <Heading>John Smith</Heading>
