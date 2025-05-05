@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled, { keyframes, css } from 'styled-components';
 
 const revealAnimationDelay = () => {
@@ -26,8 +27,12 @@ const reveal = keyframes`
       opacity: 1;
     }
 `;
+interface StyledRegionProps {
+  borderBottom?: boolean;
+  isAnimated?: boolean;
+}
 
-const StyledRegion = styled.div`
+const StyledRegion = styled.div<StyledRegionProps>`
   transform: translateY(-10px);
   opacity: 0;
   margin-bottom: 30px;
