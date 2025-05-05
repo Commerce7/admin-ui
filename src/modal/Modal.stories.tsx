@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState } from 'react';
 
 import Button from '../button';
 
@@ -6,7 +7,24 @@ import Modal from '.';
 
 const { ModalBody, ModalFooter } = Modal;
 
-export const Basic = () => {
+const meta: Meta<typeof Modal> = {
+  title: 'UI/Modal',
+  component: Modal,
+  subcomponents: { ModalBody, ModalFooter },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "import { Modal } from '@commerce7/admin-ui'<br/><br/>const { ModalBody, ModalFooter } = Modal"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof Modal>;
+
+const ModalDemo = () => {
   const [visible, setVisible] = useState(false);
 
   const openModal = () => {
@@ -33,22 +51,6 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-const description =
-  "import { Modal } from '@commerce7/admin-ui'<br/><br/>const { ModalBody, ModalFooter } = Modal";
-
-export default {
-  title: 'UI/Modal',
-  component: Modal,
-  subcomponents: { ModalBody, ModalFooter },
-  parameters: {
-    docs: {
-      description: {
-        component: description
-      }
-    }
-  }
+export const Basic: Story = {
+  render: () => <ModalDemo />
 };

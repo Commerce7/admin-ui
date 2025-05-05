@@ -1,6 +1,5 @@
 /* globals document */
-import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import React, { ReactNode, useEffect, MouseEvent } from 'react';
 import ReactDom from 'react-dom';
 import FocusLock from 'react-focus-lock';
 
@@ -14,17 +13,53 @@ import {
   StyledModalTitle
 } from './Modal.styles';
 
-const ModalContent = (props) => {
-  const {
-    children,
-    className,
-    onClose,
-    title,
-    dataTestId,
-    disableBodyScroll,
-    disableFocusLock
-  } = props;
+export interface ModalContentProps {
+  /**
+   * The content of the component.
+   */
+  children?: ReactNode;
 
+  /**
+   * Add className to the outermost element.
+   */
+  className?: string;
+
+  /**
+   * Disable scrolling on document.body while the modal is open.
+   * Setting disableBodyScroll to false should rarely be used.
+   */
+  disableBodyScroll?: boolean;
+
+  /**
+   * Callback fired when the modal is closed.
+   */
+  onClose?: ((e: MouseEvent | KeyboardEvent) => void) | null;
+
+  /**
+   * The title of the modal.
+   */
+  title?: string;
+
+  /**
+   * Add test attribute to the element. Used internally for testing.
+   */
+  dataTestId?: string;
+
+  /**
+   * Disable focus lock on modal
+   */
+  disableFocusLock?: boolean;
+}
+
+const ModalContent = ({
+  children = null,
+  className = '',
+  onClose = null,
+  title = '',
+  dataTestId = '',
+  disableBodyScroll = true,
+  disableFocusLock = false
+}: ModalContentProps) => {
   useEscKeydown((e) => handleClose(e));
 
   useEffect(() => {
@@ -36,11 +71,11 @@ const ModalContent = (props) => {
     };
   }, [disableBodyScroll]);
 
-  const handleBackgroundClick = (e) => {
+  const handleBackgroundClick = (e: MouseEvent) => {
     e.stopPropagation();
   };
 
-  const handleClose = (e) => {
+  const handleClose = (e: MouseEvent | KeyboardEvent) => {
     e.preventDefault();
     if (onClose) {
       onClose(e);
@@ -68,42 +103,6 @@ const ModalContent = (props) => {
     </FocusLock>,
     document.body
   );
-};
-
-ModalContent.defaultProps = {
-  children: null,
-  disableBodyScroll: true,
-  title: null,
-  onClose: null,
-  dataTestId: null
-};
-
-ModalContent.propTypes = {
-  /**
-   * The content of the component.
-   */
-  children: PropTypes.node,
-
-  /**
-   * Disable scrolling on document.body while the modal is open.
-   * Setting disableBodyScroll to false should rarely be used.
-   */
-  disableBodyScroll: PropTypes.bool,
-
-  /**
-   * Callback fired when the modal is closed.
-   */
-  onClose: PropTypes.func,
-
-  /**
-   * The title of the modal.
-   */
-  title: PropTypes.string,
-
-  /**
-   * Add test attribute to the element. Used internally for testing.
-   */
-  dataTestId: PropTypes.string
 };
 
 export default ModalContent;
