@@ -1,24 +1,55 @@
-import PropTypes from 'prop-types';
-import { useRef, useState, useCallback, useId } from 'react';
+import React, { ReactNode, useCallback, useId, useRef, useState } from 'react';
 
 import {
-  StyledContextMenuItem,
-  StyledContextMenuIcon
+  StyledContextMenuIcon,
+  StyledContextMenuItem
 } from '../common/contextMenu/ContextMenuItem.styles';
 import DropdownMenu from '../common/dropdown/DropdownMenu';
 import DropdownWrapper from '../common/dropdown/DropdownWrapper';
 import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
-const ContextMenuMoreActions = (props) => {
-  const { children, className, disabled, dataTestId, label } = props;
+interface ContextMenuMoreActionsProps {
+  /**
+   * The contents of the component.
+   * All children should be a `<ContextMenuItem/>`
+   */
+  children: ReactNode;
 
+  /**
+   * Add className to the outermost element.
+   */
+  className?: string;
+
+  /**
+   * Override the default label of "More Actions".
+   */
+  label?: string;
+
+  /**
+   * Set the element to disabled.
+   */
+  disabled?: boolean;
+
+  /**
+   * Add test attribute to the element. Used internally for testing.
+   */
+  dataTestId?: string;
+}
+
+const ContextMenuMoreActions = ({
+  children,
+  className = '',
+  disabled = false,
+  dataTestId = '',
+  label = 'More Actions'
+}: ContextMenuMoreActionsProps) => {
   const [isValidChildren, setValidChildren] = useState(true);
-  const wrapperRef = useRef();
-  const buttonRef = useRef();
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const id = useId();
 
-  const dropdownRef = useCallback((node) => {
+  const dropdownRef = useCallback((node: HTMLDivElement | null) => {
     if (node && !node.firstChild) {
       setValidChildren(false);
     }
@@ -26,8 +57,8 @@ const ContextMenuMoreActions = (props) => {
 
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-  useOnClickOutside(buttonRef, (e) => handleCloseDropdown(e));
-  useEscKeydown((e) => handleCloseDropdown(e));
+  useOnClickOutside(buttonRef, () => handleCloseDropdown());
+  useEscKeydown(() => handleCloseDropdown());
 
   const handleToggleDropdown = () => {
     setDropdownVisible(!isDropdownVisible);
@@ -72,41 +103,6 @@ const ContextMenuMoreActions = (props) => {
       </DropdownMenu>
     </DropdownWrapper>
   );
-};
-
-ContextMenuMoreActions.defaultProps = {
-  className: null,
-  disabled: false,
-  dataTestId: null,
-  label: 'More Actions'
-};
-
-ContextMenuMoreActions.propTypes = {
-  /**
-   * The contents of the component.
-   * All children should be a `<ContextMenuItem/>`
-   */
-  children: PropTypes.node.isRequired,
-
-  /**
-   * Add className to the outermost element.
-   */
-  className: PropTypes.string,
-
-  /**
-   * Override the default label of "More Actions".
-   */
-  label: PropTypes.string,
-
-  /**
-   * Set the element to disabled.
-   */
-  disabled: PropTypes.bool,
-
-  /**
-   * Add test attribute to the element. Used internally for testing.
-   */
-  dataTestId: PropTypes.string
 };
 
 export default ContextMenuMoreActions;
