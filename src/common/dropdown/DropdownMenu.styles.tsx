@@ -1,10 +1,16 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { StyledContextMenuItem } from '../contextMenu/ContextMenuItem.styles';
 
 import { dropdownColors, dropdownButtonColors } from './theme';
 
-const StyledDropdown = styled.div`
+interface StyledDropdownProps {
+  visible: boolean;
+  align: 'left' | 'right';
+}
+
+const StyledDropdown = styled.div<StyledDropdownProps>`
   overflow: hidden;
   min-width: 100%;
   box-shadow: rgb(0 0 0 / 15%) 2px 4px 6px;

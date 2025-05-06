@@ -1,6 +1,4 @@
-/* eslint-disable jsx-a11y/no-static-element-interactions */
-import PropTypes from 'prop-types';
-import { useRef, useState, useId } from 'react';
+import React, { ReactNode, useRef, useState, useId, MouseEvent } from 'react';
 
 import { StyledButton, StyledButtonIcon } from '../button/Button.styles';
 import DropdownMenu from '../common/dropdown/DropdownMenu';
@@ -8,28 +6,71 @@ import DropdownWrapper from '../common/dropdown/DropdownWrapper';
 import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
-const ButtonMenu = (props) => {
-  const {
-    label,
-    className,
-    disabled,
-    children,
-    variant,
-    size,
-    dataTestId,
-    onClick
-  } = props;
+type ButtonSize = 'default' | 'small';
+type ButtonVariant = 'primary' | 'secondary' | 'text';
 
-  const wrapperRef = useRef();
+export interface ButtonMenuProps {
+  /**
+   * The content of the component.
+   */
+  children: ReactNode;
+
+  /**
+   * Add className to the outermost element.
+   */
+  className?: string;
+
+  /**
+   * Set the element to disabled.
+   */
+  disabled?: boolean;
+
+  /**
+   * Set the label on the button
+   */
+  label?: string;
+
+  /**
+   * Control the size of the button
+   */
+  size?: ButtonSize;
+
+  /**
+   * Set the visual property of the component.
+   */
+  variant?: ButtonVariant;
+
+  /**
+   * Add test attribute to the element. Used internally for testing.
+   */
+  dataTestId?: string;
+
+  /**
+   * Allows passing in a onClick function to be executed when the ButtonMenu is clicked.
+   */
+  onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+}
+
+const ButtonMenu = ({
+  label = 'Actions',
+  className = '',
+  disabled = false,
+  children,
+  variant = 'secondary',
+  size = 'default',
+  dataTestId = '',
+  onClick = undefined
+}: ButtonMenuProps) => {
+  const wrapperRef = useRef<HTMLDivElement>(null);
   const id = useId();
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
-  useOnClickOutside(wrapperRef, (e) => handleCloseDropdown(e));
-  useEscKeydown((e) => handleCloseDropdown(e));
+  useOnClickOutside(wrapperRef, () => handleCloseDropdown());
+  useEscKeydown(() => handleCloseDropdown());
 
   const handleSelectedItem = () => setDropdownVisible(false);
 
-  const handleToggleDropdown = (e) => {
+  const handleToggleDropdown = (e: MouseEvent<HTMLButtonElement>) => {
     if (onClick) {
       onClick(e);
     }
@@ -42,7 +83,7 @@ const ButtonMenu = (props) => {
     }
   };
 
-  const stopPropagation = (e) => {
+  const stopPropagation = (e: MouseEvent) => {
     e.stopPropagation();
   };
 
@@ -50,7 +91,7 @@ const ButtonMenu = (props) => {
   const buttonId = `buttonMenu-${id}-button`;
 
   return (
-    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions, jsx-a11y/click-events-have-key-events
     <div onClick={stopPropagation}>
       <DropdownWrapper
         ref={wrapperRef}
@@ -85,58 +126,6 @@ const ButtonMenu = (props) => {
       </DropdownWrapper>
     </div>
   );
-};
-
-ButtonMenu.defaultProps = {
-  className: '',
-  disabled: false,
-  label: 'Actions',
-  variant: 'secondary',
-  size: 'default',
-  dataTestId: null,
-  onClick: null
-};
-
-ButtonMenu.propTypes = {
-  /**
-   * The content of the component.
-   */
-  children: PropTypes.node.isRequired,
-
-  /**
-   * Add className to the outermost element.
-   */
-  className: PropTypes.string,
-
-  /**
-   * Set the element to disabled.
-   */
-  disabled: PropTypes.bool,
-
-  /**
-   * Set the label on the button
-   */
-  label: PropTypes.string,
-
-  /**
-   * Control the size of the button
-   */
-  size: PropTypes.oneOf(['default', 'small']),
-
-  /**
-   * Set the visual property of the component.
-   */
-  variant: PropTypes.oneOf(['primary', 'secondary', 'text']),
-
-  /**
-   * Add test attribute to the element. Used internally for testing.
-   */
-  dataTestId: PropTypes.string,
-
-  /**
-   * Allows passing in a onClick function to be executed when the ButtonMenu is clicked.
-   */
-  onClick: PropTypes.func
 };
 
 export default ButtonMenu;
