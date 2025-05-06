@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 
 import {
   StyledErrorMessage,
@@ -8,18 +8,62 @@ import {
   StyledFieldsetLabel
 } from '../common/form/styles';
 
-const CheckboxGroup = (props) => {
-  const {
-    children,
-    errorMessage,
-    label,
-    required,
-    dataTestId = 'checkbox-group',
-    variant,
-    size,
-    className
-  } = props;
+type CheckboxGroupVariant = 'button' | null;
+type CheckboxGroupSize = 'small' | 'medium' | 'large';
 
+interface CheckboxGroupProps {
+  /**
+   * The content of the component.
+   */
+  children: ReactNode;
+
+  /**
+   * Add className to the outermost element.
+   */
+  className?: string;
+
+  /**
+   * Show an error message and set the component styles to visually show an error.
+   */
+  errorMessage?: string;
+
+  /**
+   * The label for the component.
+   */
+  label?: string;
+
+  /**
+   * Set the element to be required.
+   * This will show an asterisk in the label and add 'required' to the DOM node.
+   */
+  required?: boolean;
+
+  /**
+   * Add test attribute to the element. Used internally for testing.
+   */
+  dataTestId?: string;
+
+  /**
+   * CheckboxGroup Variant
+   */
+  variant?: CheckboxGroupVariant;
+
+  /**
+   * CheckboxGroup Size - only used for button variant.
+   */
+  size?: CheckboxGroupSize;
+}
+
+const CheckboxGroup = ({
+  children,
+  errorMessage = '',
+  label = '',
+  required = false,
+  dataTestId = 'checkbox-group',
+  variant = null,
+  size = 'small',
+  className = ''
+}: CheckboxGroupProps) => {
   const hasErrorMessage = !!errorMessage;
   const isButtonVariant = variant === 'button';
 
@@ -63,59 +107,6 @@ const CheckboxGroup = (props) => {
       )}
     </StyledFieldset>
   );
-};
-
-CheckboxGroup.defaultProps = {
-  errorMessage: null,
-  className: '',
-  label: null,
-  required: false,
-  dataTestId: null,
-  size: 'small',
-  variant: null
-};
-
-CheckboxGroup.propTypes = {
-  /**
-   * The content of the component.
-   */
-  children: PropTypes.node.isRequired,
-
-  /**
-   * Add className to the outermost element.
-   */
-  className: PropTypes.string,
-
-  /**
-   * Show an error message and set the component styles to visually show an error.
-   */
-  errorMessage: PropTypes.string,
-
-  /**
-   * The label for the component.
-   */
-  label: PropTypes.string,
-
-  /**
-   * Set the element to be required.
-   * This will show an asterik in the label and add 'required' to the DOM node.
-   */
-  required: PropTypes.bool,
-
-  /**
-   * Add test attribute to the element. Used internally for testing.
-   */
-  dataTestId: PropTypes.string,
-
-  /**
-   * CheckboxGroup Variant
-   */
-  variant: PropTypes.oneOf(['button', null]),
-
-  /**
-   * CheckboxGroup Size - only used for button variant.
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
 };
 
 export default CheckboxGroup;
