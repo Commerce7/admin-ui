@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 import { LineBreakStyles } from './LineBreak.styles';
 
@@ -11,12 +11,11 @@ export interface LineBreakProps {
   /**
    * Add test attribute to the element. Used internally for testing.
    */
-  dataTestId?: string | null;
+  dataTestId?: string;
 }
 
-const LineBreak: React.FC<LineBreakProps> = ({
-  className = '',
-  dataTestId = null
-}) => <LineBreakStyles className={className} data-testid={dataTestId} />;
+const LineBreak = ({ className = '', dataTestId = '' }: LineBreakProps) => (
+  <LineBreakStyles className={className} data-testid={dataTestId} />
+);
 
 export default LineBreak;
