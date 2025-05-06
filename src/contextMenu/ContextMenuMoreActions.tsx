@@ -9,7 +9,7 @@ import DropdownWrapper from '../common/dropdown/DropdownWrapper';
 import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
-interface ContextMenuMoreActionsProps {
+export interface ContextMenuMoreActionsProps {
   /**
    * The contents of the component.
    * All children should be a `<ContextMenuItem/>`

@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { StyledContextMenu } from './ContextMenu.styles';
 
-interface ContextMenuProps {
+export interface ContextMenuProps {
   /**
    * The contents of the component.
    */
