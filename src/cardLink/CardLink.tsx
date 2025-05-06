@@ -55,18 +55,16 @@ export interface CardLinkProps {
   [key: string]: any;
 }
 
-const CardLink = (props: CardLinkProps) => {
-  const {
-    children,
-    className = null,
-    component = null,
-    icon = null,
-    href = null,
-    label = null,
-    dataTestId = null,
-    ...rest
-  } = props;
-
+const CardLink = ({
+  children,
+  className = '',
+  component = undefined,
+  icon = '',
+  href = '',
+  label = '',
+  dataTestId = '',
+  ...rest
+}: CardLinkProps) => {
   let as: any = 'a';
   let customComponentProps = {};
 

@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Nav from '.';

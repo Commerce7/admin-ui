@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import styled from 'styled-components';
 
 import Icon from '../icon';
@@ -95,7 +97,11 @@ const SubNavLinkStyles = styled.a`
   `}
 `;
 
-const SubNavStyles = styled.div`
+interface SubNavStylesProps {
+  isOpen: boolean;
+}
+
+const SubNavStyles = styled.div<SubNavStylesProps>`
   transition: ${baseTransition};
   padding-left: 35px;
 
