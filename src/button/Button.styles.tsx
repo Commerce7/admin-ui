@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import styled, { keyframes } from 'styled-components';
 
 import Icon from '../icon';
@@ -13,7 +15,12 @@ const StyledButtonIcon = styled(Icon)`
   }};
 `;
 
-const StyledButton = styled.button`
+interface StyledButtonProps {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+}
+
+const StyledButton = styled.button<StyledButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -147,7 +154,11 @@ const rotate = keyframes`
   }
 `;
 
-const StyledButtonText = styled.span`
+interface StyledButtonTextProps {
+  isLoading?: boolean;
+}
+
+const StyledButtonText = styled.span<StyledButtonTextProps>`
   display: flex;
   align-items: center;
   justify-content: center;

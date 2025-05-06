@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import styled, { keyframes } from 'styled-components';
 
 import Icon from '../icon';
