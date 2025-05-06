@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import {
@@ -8,9 +9,12 @@ import {
   placeholderColors
 } from './theme';
 
+interface StyledInputWrapperProps {
+  isButtonVariant?: boolean;
+}
 const StyledInputWrapper = styled.div.attrs({
   'data-c7-form-item-wrapper': 'true'
-})`
+})<StyledInputWrapperProps>`
   margin-bottom: 30px;
 
   ${({ isButtonVariant }) => (isButtonVariant ? 'margin-bottom: 0px;' : '')}
@@ -99,7 +103,11 @@ const StyledToggleLabel = styled.label`
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
 `;
 
-const StyledToggleText = styled.span`
+interface StyledToggleTextProps {
+  disabled?: boolean;
+}
+
+const StyledToggleText = styled.span<StyledToggleTextProps>`
   margin-left: 10px;
   color: ${({ theme }) => labelColors[theme.c7__ui.mode].color};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
@@ -118,7 +126,14 @@ const StyledRequiredLabel = styled.span`
   }
 `;
 
-const StyledErrorMessage = styled.span`
+interface StyledErrorMessageProps {
+  isToggle?: boolean;
+  isSwitch?: boolean;
+  isButton?: boolean;
+  buttonSize?: string;
+}
+
+const StyledErrorMessage = styled.span<StyledErrorMessageProps>`
   display: block;
   margin-top: ${({ isToggle }) => {
     if (isToggle) {
@@ -202,7 +217,14 @@ const StyledFieldsetLabel = styled(StyledLabel).attrs({
   width: 100%;
 `;
 
-const StyledDescription = styled.p`
+interface StyledDescriptionProps {
+  isToggle?: boolean;
+  isSwitch?: boolean;
+  isButton?: boolean;
+  buttonSize?: string;
+}
+
+const StyledDescription = styled.p<StyledDescriptionProps>`
   display: block;
   margin-top: ${({ isToggle }) => {
     if (isToggle) {

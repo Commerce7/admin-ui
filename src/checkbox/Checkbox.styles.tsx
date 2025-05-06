@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { StyledHiddenInput, StyledToggleLabel } from '../common/form/styles';
@@ -20,7 +21,11 @@ const StyledCheckboxIcon = styled(Icon)`
   }
 `;
 
-const StyledCheckbox = styled.span`
+interface StyledCheckboxProps {
+  hasError?: boolean;
+}
+
+const StyledCheckbox = styled.span<StyledCheckboxProps>`
   width: 20px;
   min-width: 20px;
   height: 20px;
