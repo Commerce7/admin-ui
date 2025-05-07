@@ -1,18 +1,16 @@
 import { action } from '@storybook/addon-actions';
+import React from 'react';
 
 import DisplayIcon from './DisplayIcon';
 
-export const basic = () => (
+export const Basic = () => (
   <>
     <DisplayIcon icon="cart" />
   </>
 );
+Basic.storyName = 'Basic';
 
-basic.story = {
-  name: 'Basic'
-};
-
-export const variants = () => (
+export const Variants = () => (
   <>
     <DisplayIcon icon="search" variant="default" />
     <DisplayIcon icon="checkCircle" variant="success" />
@@ -20,18 +18,12 @@ export const variants = () => (
     <DisplayIcon icon="closeCircle" variant="error" />
   </>
 );
+Variants.storyName = 'Variants';
 
-variants.story = {
-  name: 'Variants'
-};
-
-export const onClick = () => (
+export const Click = () => (
   <DisplayIcon icon="add" onClick={action('on-click')} label="Add to cart" />
 );
-
-onClick.story = {
-  name: 'Click'
-};
+Click.storyName = 'Click';
 
 export default {
   title: 'Icon/DisplayIcon',
