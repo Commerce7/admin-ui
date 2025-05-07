@@ -1,11 +1,28 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState, ChangeEvent } from 'react';
 
 import Input from '.';
 
-export const Basic = () => {
+const meta: Meta<typeof Input> = {
+  title: 'Form/Input',
+  component: Input,
+  parameters: {
+    docs: {
+      description: {
+        component: "import { Input } from '@commerce7/admin-ui'"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof Input>;
+
+// Create separate components for stories with state
+const BasicExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -19,14 +36,10 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-export const Disabled = () => {
+const DisabledExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -41,14 +54,10 @@ export const Disabled = () => {
   );
 };
 
-Disabled.story = {
-  name: 'Disabled'
-};
-
-export const Placeholder = () => {
+const PlaceholderExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -63,14 +72,10 @@ export const Placeholder = () => {
   );
 };
 
-Placeholder.story = {
-  name: 'Placeholder'
-};
-
-export const Error = () => {
+const ErrorExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -87,14 +92,10 @@ export const Error = () => {
   );
 };
 
-Error.story = {
-  name: 'Error'
-};
-
-export const Required = () => {
+const RequiredExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -109,14 +110,10 @@ export const Required = () => {
   );
 };
 
-Required.story = {
-  name: 'Required'
-};
-
-export const Passsword = () => {
+const PasswordExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -131,14 +128,10 @@ export const Passsword = () => {
   );
 };
 
-Passsword.story = {
-  name: 'Passsword'
-};
-
-export const Email = () => {
+const EmailExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -153,19 +146,15 @@ export const Email = () => {
   );
 };
 
-Email.story = {
-  name: 'Email'
-};
-
-export const Icon = () => {
+const IconExample = () => {
   const [tax, setTax] = useState('');
   const [price, setPrice] = useState('');
 
-  const handleTaxChange = (e) => {
+  const handleTaxChange = (e: ChangeEvent<HTMLInputElement>) => {
     setTax(e.target.value);
   };
 
-  const handlePriceChange = (e) => {
+  const handlePriceChange = (e: ChangeEvent<HTMLInputElement>) => {
     setPrice(e.target.value);
   };
 
@@ -189,14 +178,10 @@ export const Icon = () => {
   );
 };
 
-Icon.story = {
-  name: 'Icon'
-};
-
-export const Description = () => {
+const DescriptionExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -211,14 +196,10 @@ export const Description = () => {
   );
 };
 
-Description.story = {
-  name: 'Description'
-};
-
-export const Color = () => {
+const ColorExample = () => {
   const [value, setValue] = useState('#bf0000');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -234,14 +215,10 @@ export const Color = () => {
   );
 };
 
-Color.story = {
-  name: 'Color'
-};
-
-export const Suffix = () => {
+const SuffixExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -256,18 +233,46 @@ export const Suffix = () => {
   );
 };
 
-Suffix.story = {
-  name: 'Suffix'
+export const Basic: Story = {
+  render: () => <BasicExample />
 };
 
-export default {
-  title: 'Form/Input',
-  component: Input,
-  parameters: {
-    docs: {
-      description: {
-        component: "import { Input } from '@commerce7/admin-ui'"
-      }
-    }
-  }
+export const Disabled: Story = {
+  render: () => <DisabledExample />
+};
+
+export const Placeholder: Story = {
+  render: () => <PlaceholderExample />
+};
+
+export const Error: Story = {
+  render: () => <ErrorExample />
+};
+
+export const Required: Story = {
+  render: () => <RequiredExample />
+};
+
+export const Password: Story = {
+  render: () => <PasswordExample />
+};
+
+export const Email: Story = {
+  render: () => <EmailExample />
+};
+
+export const Icon: Story = {
+  render: () => <IconExample />
+};
+
+export const Description: Story = {
+  render: () => <DescriptionExample />
+};
+
+export const Color: Story = {
+  render: () => <ColorExample />
+};
+
+export const Suffix: Story = {
+  render: () => <SuffixExample />
 };
