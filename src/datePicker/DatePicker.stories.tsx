@@ -1,11 +1,29 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Moment } from 'moment';
+import React, { useState } from 'react';
 
 import DatePicker from '.';
 
-export const Basic = () => {
+const meta: Meta<typeof DatePicker> = {
+  title: 'Form/DatePicker',
+  component: DatePicker,
+  parameters: {
+    docs: {
+      description: {
+        component: "import { DatePicker } from '@commerce7/admin-ui'"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof DatePicker>;
+
+// Create separate components for stories with state
+const BasicExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
@@ -19,14 +37,10 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-export const Disabled = () => {
+const DisabledExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
@@ -41,14 +55,10 @@ export const Disabled = () => {
   );
 };
 
-Disabled.story = {
-  name: 'Disabled'
-};
-
-export const Placeholder = () => {
+const PlaceholderExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
@@ -63,14 +73,10 @@ export const Placeholder = () => {
   );
 };
 
-Placeholder.story = {
-  name: 'Placeholder'
-};
-
-export const Error = () => {
+const ErrorExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
@@ -87,14 +93,10 @@ export const Error = () => {
   );
 };
 
-Error.story = {
-  name: 'Error'
-};
-
-export const Required = () => {
+const RequiredExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
@@ -109,25 +111,16 @@ export const Required = () => {
   );
 };
 
-Required.story = {
-  name: 'Required'
-};
-
-export const DisabledDates = () => {
+const DisabledDatesExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
-  const isValidDate = (currentDate) => {
+  const isValidDate = (currentDate: Moment) => {
     const today = new Date();
-
-    if (currentDate.isBefore(today, 'day')) {
-      return false;
-    }
-
-    return true;
+    return !currentDate.isBefore(today, 'day');
   };
 
   return (
@@ -141,14 +134,10 @@ export const DisabledDates = () => {
   );
 };
 
-DisabledDates.story = {
-  name: 'Disabled Dates'
-};
-
-export const Description = () => {
+const DescriptionExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: Moment) => {
     setValue(e.format('MMM D, YYYY'));
   };
 
@@ -163,15 +152,11 @@ export const Description = () => {
   );
 };
 
-Description.story = {
-  name: 'Description'
-};
-
-export const Clear = () => {
+const ClearExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
-    setValue(e ? e.format('MMM D, YYYY') : '');
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (
@@ -185,15 +170,11 @@ export const Clear = () => {
   );
 };
 
-Clear.story = {
-  name: 'Clear Value'
-};
-
-export const Inline = () => {
+const InlineExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
-    setValue(e ? e.format('MMM D, YYYY') : '');
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (
@@ -207,18 +188,38 @@ export const Inline = () => {
   );
 };
 
-Inline.story = {
-  name: 'Inline'
+export const Basic: Story = {
+  render: () => <BasicExample />
 };
 
-export default {
-  title: 'Form/DatePicker',
-  component: DatePicker,
-  parameters: {
-    docs: {
-      description: {
-        component: "import { DatePicker } from '@commerce7/admin-ui'"
-      }
-    }
-  }
+export const Disabled: Story = {
+  render: () => <DisabledExample />
+};
+
+export const Placeholder: Story = {
+  render: () => <PlaceholderExample />
+};
+
+export const Error: Story = {
+  render: () => <ErrorExample />
+};
+
+export const Required: Story = {
+  render: () => <RequiredExample />
+};
+
+export const DisabledDates: Story = {
+  render: () => <DisabledDatesExample />
+};
+
+export const Description: Story = {
+  render: () => <DescriptionExample />
+};
+
+export const Clear: Story = {
+  render: () => <ClearExample />
+};
+
+export const Inline: Story = {
+  render: () => <InlineExample />
 };
