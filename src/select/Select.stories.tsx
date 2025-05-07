@@ -1,18 +1,35 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState, ChangeEvent } from 'react';
 
 import Select from '.';
 
-export const Basic = () => {
+const meta: Meta<typeof Select> = {
+  title: 'Form/Select',
+  component: Select,
+  parameters: {
+    docs: {
+      description: {
+        component: "import { Select } from '@commerce7/admin-ui'"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof Select>;
+
+// Create separate components for stories with state
+const BasicExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
   return (
     <Select
-      label="Favourite Wine"
-      id="favourite-wine"
+      label="Favorite Wine"
+      id="favorite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -23,21 +40,17 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-export const Disabled = () => {
+const DisabledExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
   return (
     <Select
-      label="Favourite Wine"
-      id="favourite-wine"
+      label="Favorite Wine"
+      id="favorite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -49,21 +62,17 @@ export const Disabled = () => {
   );
 };
 
-Disabled.story = {
-  name: 'Disabled'
-};
-
-export const Placeholder = () => {
+const PlaceholderExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
   return (
     <Select
-      label="Favourite Wine"
-      id="favourite-wine"
+      label="Favorite Wine"
+      id="favorite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -76,14 +85,10 @@ export const Placeholder = () => {
   );
 };
 
-Placeholder.story = {
-  name: 'Placeholder'
-};
-
-export const Error = () => {
+const ErrorExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
@@ -91,8 +96,8 @@ export const Error = () => {
 
   return (
     <Select
-      label="Favourite Wine"
-      id="favourite-wine"
+      label="Favorite Wine"
+      id="favorite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -104,21 +109,17 @@ export const Error = () => {
   );
 };
 
-Error.story = {
-  name: 'Error'
-};
-
-export const Required = () => {
+const RequiredExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
   return (
     <Select
-      label="Favourite Wine"
-      id="favourite-wine"
+      label="Favorite Wine"
+      id="favorite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -130,21 +131,17 @@ export const Required = () => {
   );
 };
 
-Required.story = {
-  name: 'Required'
-};
-
-export const Group = () => {
+const GroupExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
   return (
     <Select
-      label="Favourite Drink"
-      id="favourite-drink"
+      label="Favorite Drink"
+      id="favorite-drink"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -168,14 +165,10 @@ export const Group = () => {
   );
 };
 
-Group.story = {
-  name: 'Group'
-};
-
-export const Description = () => {
+const DescriptionExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
     setValue(e.target.value);
   };
 
@@ -194,18 +187,30 @@ export const Description = () => {
   );
 };
 
-Description.story = {
-  name: 'Description'
+export const Basic: Story = {
+  render: () => <BasicExample />
 };
 
-export default {
-  title: 'Form/Select',
-  component: Select,
-  parameters: {
-    docs: {
-      description: {
-        component: "import { Select } from '@commerce7/admin-ui'"
-      }
-    }
-  }
+export const Disabled: Story = {
+  render: () => <DisabledExample />
+};
+
+export const Placeholder: Story = {
+  render: () => <PlaceholderExample />
+};
+
+export const Error: Story = {
+  render: () => <ErrorExample />
+};
+
+export const Required: Story = {
+  render: () => <RequiredExample />
+};
+
+export const Group: Story = {
+  render: () => <GroupExample />
+};
+
+export const Description: Story = {
+  render: () => <DescriptionExample />
 };

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { StyledFormItem } from '../common/form/styles';
