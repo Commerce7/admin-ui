@@ -1,4 +1,4 @@
-/* eslint-disable react/jsx-props-no-spreading */
+import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -6,11 +6,34 @@ import Nav from '.';
 
 const { NavLink, SubNav, SubNavLink } = Nav;
 
-export const Basic = (args) => {
+const meta = {
+  title: 'Navigation/Nav',
+  component: Nav,
+  subcomponents: { SubNav, NavLink, SubNavLink },
+  parameters: {
+    controls: { expand: true },
+    docs: {
+      description: {
+        component:
+          "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav"
+      }
+    }
+  }
+} satisfies Meta<typeof Nav>;
+
+export default meta;
+type Story = StoryObj<typeof Nav>;
+
+const StyledNav = styled(Nav)`
+  height: 50vh;
+`;
+
+// Create separate components for stories with state
+const BasicExample = () => {
   const [currentPath, setPath] = useState('/dashboard');
 
   return (
-    <StyledNav {...args}>
+    <StyledNav>
       <NavLink
         onClick={() => setPath('/dashboard')}
         className={currentPath === '/dashboard' ? 'active' : ''}
@@ -43,7 +66,7 @@ export const Basic = (args) => {
   );
 };
 
-export const SubNavigation = () => {
+const SubNavigationExample = () => {
   const [currentPath, setPath] = useState('/store/order');
 
   return (
@@ -122,22 +145,23 @@ export const SubNavigation = () => {
   );
 };
 
-const description =
-  "import { Nav } from '@commerce7/admin-ui'<br/><br/>const { SubNav, NavLink, SubNavLink } = Nav";
-
-const StyledNav = styled(Nav)`
-  height: 50vh;
-`;
-
-export default {
-  title: 'Navigation/Nav',
-  component: Nav,
-  subcomponents: { SubNav, NavLink, SubNavLink },
+export const Basic: Story = {
+  render: () => <BasicExample />,
   parameters: {
-    controls: { expand: true },
     docs: {
       description: {
-        component: description
+        story: 'Basic navigation with simple links and icons.'
+      }
+    }
+  }
+};
+
+export const SubNavigation: Story = {
+  render: () => <SubNavigationExample />,
+  parameters: {
+    docs: {
+      description: {
+        story: 'Navigation with expandable sub-navigation sections.'
       }
     }
   }

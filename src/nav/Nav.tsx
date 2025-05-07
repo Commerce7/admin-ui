@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { NavStyles } from './Nav.styles';
 
-interface NavProps {
+export interface NavProps {
   /**
    * The content of the component.
    */
@@ -35,5 +35,4 @@ const Nav = ({
   </NavStyles>
 );
 
-export type { NavProps };
 export default Nav;
