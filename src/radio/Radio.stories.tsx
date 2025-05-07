@@ -1,11 +1,28 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState, ChangeEvent } from 'react';
 
 import Radio from '.';
 
-export const Basic = () => {
+const meta: Meta<typeof Radio> = {
+  title: 'Form/Radio/Radio',
+  component: Radio,
+  parameters: {
+    docs: {
+      description: {
+        component: "import { Radio } from '@commerce7/admin-ui'"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof Radio>;
+
+// Create separate components for stories with state
+const BasicExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -20,14 +37,10 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-export const Disabled = () => {
+const DisabledExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -43,14 +56,10 @@ export const Disabled = () => {
   );
 };
 
-Disabled.story = {
-  name: 'Disabled'
-};
-
-export const Error = () => {
+const ErrorExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -68,14 +77,10 @@ export const Error = () => {
   );
 };
 
-Error.story = {
-  name: 'Error'
-};
-
-export const Required = () => {
+const RequiredExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -91,11 +96,7 @@ export const Required = () => {
   );
 };
 
-Required.story = {
-  name: 'Required'
-};
-
-export const Description = () => {
+const DescriptionExample = () => {
   const [checked, setChecked] = useState(false);
 
   const handleOnChange = () => {
@@ -114,14 +115,10 @@ export const Description = () => {
   );
 };
 
-Description.story = {
-  name: 'Description'
-};
+const ButtonVariantExample = () => {
+  const [selected, setSelected] = useState('');
 
-export const ButtonVariant = () => {
-  const [selected, setSelected] = useState(false);
-
-  const handleSelect = (e) => {
+  const handleSelect = (e: ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value);
   };
 
@@ -162,14 +159,10 @@ export const ButtonVariant = () => {
   );
 };
 
-ButtonVariant.story = {
-  name: 'Button Variant'
-};
+const MediumButtonVariantExample = () => {
+  const [selected, setSelected] = useState('');
 
-export const MediumButtonVariant = () => {
-  const [selected, setSelected] = useState(false);
-
-  const handleSelect = (e) => {
+  const handleSelect = (e: ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value);
   };
 
@@ -211,14 +204,10 @@ export const MediumButtonVariant = () => {
   );
 };
 
-MediumButtonVariant.story = {
-  name: 'Medium Button Variant'
-};
+const LargeButtonVariantExample = () => {
+  const [selected, setSelected] = useState('');
 
-export const LargeButtonVariant = () => {
-  const [selected, setSelected] = useState(false);
-
-  const handleSelect = (e) => {
+  const handleSelect = (e: ChangeEvent<HTMLInputElement>) => {
     setSelected(e.target.value);
   };
 
@@ -257,18 +246,34 @@ export const LargeButtonVariant = () => {
   );
 };
 
-LargeButtonVariant.story = {
-  name: 'Large Button Variant'
+export const Basic: Story = {
+  render: () => <BasicExample />
 };
 
-export default {
-  title: 'Form/Radio/Radio',
-  component: Radio,
-  parameters: {
-    docs: {
-      description: {
-        component: "import { Radio } from '@commerce7/admin-ui'"
-      }
-    }
-  }
+export const Disabled: Story = {
+  render: () => <DisabledExample />
+};
+
+export const Error: Story = {
+  render: () => <ErrorExample />
+};
+
+export const Required: Story = {
+  render: () => <RequiredExample />
+};
+
+export const Description: Story = {
+  render: () => <DescriptionExample />
+};
+
+export const ButtonVariant: Story = {
+  render: () => <ButtonVariantExample />
+};
+
+export const MediumButtonVariant: Story = {
+  render: () => <MediumButtonVariantExample />
+};
+
+export const LargeButtonVariant: Story = {
+  render: () => <LargeButtonVariantExample />
 };

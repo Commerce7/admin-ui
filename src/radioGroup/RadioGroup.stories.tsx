@@ -1,13 +1,30 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState, ChangeEvent } from 'react';
 
 import Radio from '../radio';
 
 import RadioGroup from '.';
 
-export const Basic = () => {
+const meta: Meta<typeof RadioGroup> = {
+  title: 'Form/Radio/RadioGroup',
+  component: RadioGroup,
+  parameters: {
+    docs: {
+      description: {
+        component: "import { RadioGroup } from '@commerce7/admin-ui'"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof RadioGroup>;
+
+// Create separate components for stories with state
+const BasicExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -31,14 +48,10 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-export const Error = () => {
+const ErrorExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -64,14 +77,10 @@ export const Error = () => {
   );
 };
 
-Error.story = {
-  name: 'Error'
-};
-
-export const Required = () => {
+const RequiredExample = () => {
   const [checked, setChecked] = useState('');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -95,14 +104,10 @@ export const Required = () => {
   );
 };
 
-Required.story = {
-  name: 'Required'
-};
-
-export const RadioButtonGroup = () => {
+const ButtonGroupExample = () => {
   const [checked, setChecked] = useState('right');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -139,14 +144,10 @@ export const RadioButtonGroup = () => {
   );
 };
 
-RadioButtonGroup.story = {
-  name: 'Radio Button Group'
-};
-
-export const RadioButtonGroupMedium = () => {
+const ButtonGroupMediumExample = () => {
   const [checked, setChecked] = useState('right');
 
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -186,66 +187,10 @@ export const RadioButtonGroupMedium = () => {
   );
 };
 
-RadioButtonGroupMedium.story = {
-  name: 'Radio Button Group Medium'
-};
-
-export const RadioButtonGroupMediumError = () => {
+const ButtonGroupLargeExample = () => {
   const [checked, setChecked] = useState('right');
 
-  const handleOnChange = (e) => {
-    setChecked(e.target.value);
-  };
-
-  return (
-    <RadioGroup
-      label="Text Size"
-      variant="button"
-      size="medium"
-      errorMessage="Please select one"
-    >
-      <Radio
-        id="small"
-        value="small"
-        checked={checked === 'small'}
-        onChange={handleOnChange}
-        variant="button"
-        size="medium"
-      >
-        Small
-      </Radio>
-      <Radio
-        id="center"
-        value="center"
-        checked={checked === 'center'}
-        onChange={handleOnChange}
-        variant="button"
-        size="medium"
-      >
-        Medium
-      </Radio>
-      <Radio
-        id="right"
-        value="right"
-        checked={checked === 'right'}
-        onChange={handleOnChange}
-        variant="button"
-        size="medium"
-      >
-        Large
-      </Radio>
-    </RadioGroup>
-  );
-};
-
-RadioButtonGroupMediumError.story = {
-  name: 'Radio Button Group Medium Error'
-};
-
-export const RadioButtonGroupLarge = () => {
-  const [checked, setChecked] = useState('right');
-
-  const handleOnChange = (e) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setChecked(e.target.value);
   };
 
@@ -282,67 +227,34 @@ export const RadioButtonGroupLarge = () => {
   );
 };
 
-RadioButtonGroupLarge.story = {
-  name: 'Radio Button Group Large'
+export const Basic: Story = {
+  render: () => <BasicExample />
 };
 
-export const RadioButtonGroupLargeError = () => {
-  const [checked, setChecked] = useState('right');
-
-  const handleOnChange = (e) => {
-    setChecked(e.target.value);
-  };
-
-  return (
-    <RadioGroup
-      label="Text Size"
-      variant="button"
-      size="large"
-      errorMessage="Please select one"
-    >
-      <Radio
-        id="small"
-        value="small"
-        checked={checked === 'small'}
-        onChange={handleOnChange}
-        variant="button"
-      >
-        Small
-      </Radio>
-      <Radio
-        id="center"
-        value="center"
-        checked={checked === 'center'}
-        onChange={handleOnChange}
-        variant="button"
-      >
-        Medium
-      </Radio>
-      <Radio
-        id="right"
-        value="right"
-        checked={checked === 'right'}
-        onChange={handleOnChange}
-        variant="button"
-      >
-        Large
-      </Radio>
-    </RadioGroup>
-  );
+export const Error: Story = {
+  render: () => <ErrorExample />
 };
 
-RadioButtonGroupLargeError.story = {
-  name: 'Radio Button Group Large Error'
+export const Required: Story = {
+  render: () => <RequiredExample />
 };
 
-export default {
-  title: 'Form/Radio/RadioGroup',
-  component: Radio,
-  parameters: {
-    docs: {
-      description: {
-        component: "import { RadioGroup } from '@commerce7/admin-ui'"
-      }
-    }
-  }
+export const ButtonGroup: Story = {
+  render: () => <ButtonGroupExample />
+};
+
+export const ButtonGroupMedium: Story = {
+  render: () => <ButtonGroupMediumExample />
+};
+
+export const ButtonGroupLarge: Story = {
+  render: () => <ButtonGroupLargeExample />
+};
+
+export const ButtonGroupError: Story = {
+  render: () => <ButtonGroupMediumExample />
+};
+
+export const ButtonGroupLargeError: Story = {
+  render: () => <ButtonGroupLargeExample />
 };

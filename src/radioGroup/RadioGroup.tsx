@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import React, { ReactNode } from 'react';
 
 import {
   StyledErrorMessage,
@@ -8,18 +8,62 @@ import {
   StyledFieldsetLabel
 } from '../common/form/styles';
 
-const RadioGroup = (props) => {
-  const {
-    children,
-    errorMessage,
-    label,
-    required,
-    dataTestId = 'radio-group',
-    variant,
-    size,
-    className
-  } = props;
+type RadioGroupVariant = 'button' | 'default';
+type RadioGroupSize = 'small' | 'medium' | 'large';
 
+export interface RadioGroupProps {
+  /**
+   * The content of the component.
+   */
+  children: ReactNode;
+
+  /**
+   * Add className to the outermost element.
+   */
+  className?: string;
+
+  /**
+   * Show an error message and set the component styles to visually show an error
+   */
+  errorMessage?: string;
+
+  /**
+   * The label for the component
+   */
+  label?: string;
+
+  /**
+   * Set the element to be required.
+   * This will show an asterik in the label and add 'required' to the DOM node
+   */
+  required?: boolean;
+
+  /**
+   * Add test attribute to the element. Used internally for testing.
+   */
+  dataTestId?: string;
+
+  /**
+   * RadioGroup Variant
+   */
+  variant?: RadioGroupVariant;
+
+  /**
+   * RadioGroup Size - only used for button variant.
+   */
+  size?: RadioGroupSize;
+}
+
+const RadioGroup = ({
+  children,
+  errorMessage = '',
+  label = '',
+  required = false,
+  dataTestId = 'radio-group',
+  variant = 'default',
+  size = 'small',
+  className = ''
+}: RadioGroupProps) => {
   const hasErrorMessage = !!errorMessage;
   const isButtonVariant = variant === 'button';
 
@@ -63,59 +107,6 @@ const RadioGroup = (props) => {
       )}
     </StyledFieldset>
   );
-};
-
-RadioGroup.defaultProps = {
-  errorMessage: null,
-  className: '',
-  label: null,
-  required: false,
-  dataTestId: null,
-  size: 'small',
-  variant: null
-};
-
-RadioGroup.propTypes = {
-  /**
-   * The content of the component.
-   */
-  children: PropTypes.node.isRequired,
-
-  /**
-   * Add className to the outermost element.
-   */
-  className: PropTypes.string,
-
-  /**
-   * Show an error message and set the component styles to visually show an error
-   */
-  errorMessage: PropTypes.string,
-
-  /**
-   * The label for the component
-   */
-  label: PropTypes.string,
-
-  /**
-   * Set the element to be required.
-   * This will show an asterik in the label and add 'required' to the DOM node
-   */
-  required: PropTypes.bool,
-
-  /**
-   * Add test attribute to the element. Used internally for testing.
-   */
-  dataTestId: PropTypes.string,
-
-  /**
-   * RadioGroup Variant
-   */
-  variant: PropTypes.oneOf(['button', null]),
-
-  /**
-   * RadioGroup Size - only used for button variant.
-   */
-  size: PropTypes.oneOf(['small', 'medium', 'large'])
 };
 
 export default RadioGroup;
