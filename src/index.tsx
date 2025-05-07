@@ -33,7 +33,7 @@ import SelectButton from './selectButton';
 import Spinner from './spinner';
 import Stepper from './stepper';
 import SubMenu from './subMenu';
-import Switch from './switch';
+import Switch from './switchComponent';
 import Table from './table';
 import Tabs from './tabs';
 import Tag from './tag';

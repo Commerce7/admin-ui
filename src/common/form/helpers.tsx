@@ -1,4 +1,8 @@
-export const getFormItemIds = (id, hasDescription, hasErrorMessage) => {
+export const getFormItemIds = (
+  id: string,
+  hasDescription: boolean,
+  hasErrorMessage: boolean
+) => {
   let descriptionId = '';
   let describedById = '';
   const errorId = `${id}-error`;

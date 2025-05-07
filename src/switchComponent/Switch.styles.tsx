@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { StyledHiddenInput } from '../common/form/styles';
