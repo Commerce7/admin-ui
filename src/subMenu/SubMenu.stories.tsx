@@ -1,12 +1,31 @@
 // eslint-disable-file jsx-a11y/click-events-have-key-events
 
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState } from 'react';
 
 import SubMenu from '.';
 
 const { SubMenuItem } = SubMenu;
 
-export const Basic = () => {
+const meta: Meta<typeof SubMenu> = {
+  title: 'Navigation/SubMenu',
+  component: SubMenu,
+  subcomponents: { SubMenuItem },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "import { SubMenu } from '@commerce7/admin-ui'<br/><br/>const { SubMenuItem } = SubMenu"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof SubMenu>;
+
+// Create a separate component for the story with state
+const BasicExample = () => {
   const [path, setPath] = useState('/customer');
 
   return (
@@ -33,22 +52,6 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-const description =
-  "import { SubMenu } from '@commerce7/admin-ui'<br/><br/>const { SubMenuItem } = SubMenu";
-
-export default {
-  title: 'Navigation/SubMenu',
-  component: SubMenu,
-  subcomponents: { SubMenuItem },
-  parameters: {
-    docs: {
-      description: {
-        component: description
-      }
-    }
-  }
+export const Basic: Story = {
+  render: () => <BasicExample />
 };

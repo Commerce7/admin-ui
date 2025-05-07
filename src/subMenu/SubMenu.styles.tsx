@@ -1,6 +1,11 @@
 import styled from 'styled-components';
 
-const StyledSubMenu = styled.div`
+interface StyledSubMenuProps {
+  $activeClassName: string;
+  $borderBottom: boolean;
+}
+
+const StyledSubMenu = styled.div<StyledSubMenuProps>`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -35,7 +40,12 @@ const StyledSubMenu = styled.div`
   }
 `;
 
-const StyledSubMenuItem = styled.div`
+interface StyledSubMenuItemProps {
+  $activeClassName: string;
+  $borderBottom: boolean;
+}
+
+const StyledSubMenuItem = styled.div<StyledSubMenuItemProps>`
   margin-right: 20px;
   font-size: 16px;
   padding: 10px 0 15px;
