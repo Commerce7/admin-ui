@@ -138,7 +138,7 @@ const PieChart: FC<PieChartProps> = ({
             />
           ))}
         </Pie>
-        {!hideTooltip && <Tooltip content={tooltip as any} />}
+        {!hideTooltip && <Tooltip content={tooltip} />}
         {!hideLegend && (
           <Legend
             content={legend as any}
