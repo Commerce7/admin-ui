@@ -15,17 +15,6 @@ const meta = {
         component: "import { VividIcon } from '@commerce7/admin-ui'"
       }
     }
-  },
-  argTypes: {
-    color: {
-      control: 'select',
-      options: ['pink', 'blue', 'green', 'teal', 'orange', 'purple'],
-      description: 'Color of the vivid icon'
-    },
-    icon: {
-      control: 'text',
-      description: 'Name of the icon to display'
-    }
   }
 } satisfies Meta<typeof VividIcon>;
 
