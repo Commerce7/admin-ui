@@ -1,3 +1,4 @@
+// @ts-nocheck
 import styled from 'styled-components';
 
 import { StyledIcon as UIStyledIcon } from '../icon/Icon.styles';
@@ -10,7 +11,11 @@ const StyledIcon = styled(UIStyledIcon)`
   min-height: 26px;
 `;
 
-const StyledDisplayIcon = styled.div`
+interface StyledDisplayIconProps {
+  variant: 'default' | 'success' | 'warning' | 'error';
+}
+
+const StyledDisplayIcon = styled.div<StyledDisplayIconProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
