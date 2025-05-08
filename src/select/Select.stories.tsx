@@ -28,8 +28,8 @@ const BasicExample = () => {
 
   return (
     <Select
-      label="Favorite Wine"
-      id="favorite-wine"
+      label="Favourite Wine"
+      id="favourite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -49,8 +49,8 @@ const DisabledExample = () => {
 
   return (
     <Select
-      label="Favorite Wine"
-      id="favorite-wine"
+      label="Favourite Wine"
+      id="favourite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -71,8 +71,8 @@ const PlaceholderExample = () => {
 
   return (
     <Select
-      label="Favorite Wine"
-      id="favorite-wine"
+      label="Favourite Wine"
+      id="favourite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -96,8 +96,8 @@ const ErrorExample = () => {
 
   return (
     <Select
-      label="Favorite Wine"
-      id="favorite-wine"
+      label="Favourite Wine"
+      id="favourite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -118,8 +118,8 @@ const RequiredExample = () => {
 
   return (
     <Select
-      label="Favorite Wine"
-      id="favorite-wine"
+      label="Favourite Wine"
+      id="favourite-wine"
       value={value}
       onChange={handleOnChange}
       options={[
@@ -140,8 +140,8 @@ const GroupExample = () => {
 
   return (
     <Select
-      label="Favorite Drink"
-      id="favorite-drink"
+      label="Favourite Drink"
+      id="favourite-drink"
       value={value}
       onChange={handleOnChange}
       options={[
