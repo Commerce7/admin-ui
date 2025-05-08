@@ -13,7 +13,7 @@ export interface LegendProps {
   /**
    *  The source data to render legend component
    */
-  data: LegendItem[];
+  data: { title?: string; value: string | number; color: string }[];
 
   /**
    *  Renders legends vertically if it is true
