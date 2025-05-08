@@ -4,17 +4,18 @@ import {
   Cell,
   Legend,
   Pie,
-  LegendProps as RechartLegendProps,
+  PieLabel,
   PieChart as RechartPieChart,
   ResponsiveContainer,
   Tooltip
 } from 'recharts';
+import { ContentType } from 'recharts/types/component/DefaultLegendContent';
 
 export interface PieChartProps {
   /**
    *  The source data array to render pie chart
    */
-  data: { name: string; value: string | number; [key: string]: any }[];
+  data: { name: string; value: string | number }[];
 
   /**
    *  Set color code for each cell in the pie. Ex: ['#42ACF0', '#DF5F5F', '#BF9D36'];
@@ -49,7 +50,7 @@ export interface PieChartProps {
   /**
    * A component to render custom label in the pie chart
    */
-  label?: ReactElement;
+  label?: PieLabel<any> | undefined;
 
   /**
    * The prop to add positioning to legend component. Refer: https://recharts.org/en-US/api/Legend#wrapperStyle
@@ -59,7 +60,7 @@ export interface PieChartProps {
   /**
    * A component to render custom legend in the pie chart
    */
-  legend?: ReactElement | null;
+  legend?: ContentType | undefined;
 
   /**
    * The prop to align legend items. Refer: https://recharts.org/en-US/api/Legend#verticalAlign
@@ -74,7 +75,7 @@ export interface PieChartProps {
   /**
    * A component to render custom tooltip component. Refer: https://recharts.org/en-US/api/Tooltip#content
    */
-  tooltip?: ReactElement | null;
+  tooltip?: ReactElement;
 
   /**
    * Indicates whether the legend component is hidden
@@ -92,11 +93,11 @@ const PieChart: FC<PieChartProps> = ({
   outerRadius = 80,
   data,
   colors,
-  label = '',
-  legend = null,
+  label,
+  legend,
   width = '100%',
   height = '100%',
-  tooltip = null,
+  tooltip,
   margin = {
     right: 30,
     left: 20,
@@ -138,12 +139,14 @@ const PieChart: FC<PieChartProps> = ({
             />
           ))}
         </Pie>
-        {!hideTooltip && <Tooltip content={tooltip as any} />}
+        {!hideTooltip && <Tooltip content={tooltip} />}
         {!hideLegend && (
           <Legend
-            content={legend as any}
+            content={legend}
+            type="line"
+            key={value}
             iconType="circle"
-            {...(legendProps as RechartLegendProps)}
+            {...legendProps}
             wrapperStyle={legendWrapperStyle || undefined}
           />
         )}

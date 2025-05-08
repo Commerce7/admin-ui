@@ -1,35 +1,35 @@
 import React, { FC } from 'react';
 
-interface LabelProps {
+export interface LabelProps {
   /**
    * X-coordinate of the center
    */
-  cx?: number;
+  cx: number;
 
   /**
    * Y-coordinate of the center
    */
-  cy?: number;
+  cy: number;
 
   /**
    * Middle angle of the sector in degrees
    */
-  midAngle?: number;
+  midAngle: number;
 
   /**
    * Inner radius of the pie chart
    */
-  innerRadius?: number;
+  innerRadius: number;
 
   /**
    * Outer radius of the pie chart
    */
-  outerRadius?: number;
+  outerRadius: number;
 
   /**
    * Percentage value represented by this sector
    */
-  percent?: number;
+  percent: number;
 }
 
 /**
@@ -37,12 +37,12 @@ interface LabelProps {
  * Displays the percentage value in the middle of each sector
  */
 const Label: FC<LabelProps> = ({
-  cx,
-  cy,
-  midAngle,
-  innerRadius,
-  outerRadius,
-  percent
+  cx = 0,
+  cy = 0,
+  midAngle = 0,
+  innerRadius = 0,
+  outerRadius = 0,
+  percent = 0
 }) => {
   const RADIAN = Math.PI / 180;
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
@@ -65,5 +65,4 @@ const Label: FC<LabelProps> = ({
 
 Label.displayName = 'PieChartLabel';
 
-export type { LabelProps };
 export default Label;
