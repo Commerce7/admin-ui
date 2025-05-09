@@ -3,13 +3,11 @@ import PropTypes from 'prop-types';
 import { StyledSubMenu } from './SubMenu.styles';
 
 const SubMenu = (props) => {
-  const { children, className, dataTestId, borderBottom, activeClassName } =
-    props;
+  const { children, className, dataTestId, borderBottom } = props;
   return (
     <StyledSubMenu
       className={className}
       data-testid={dataTestId}
-      $activeClassName={activeClassName}
       $borderBottom={borderBottom}
     >
       {children}
@@ -21,8 +19,7 @@ SubMenu.defaultProps = {
   children: null,
   className: null,
   dataTestId: null,
-  borderBottom: false,
-  activeClassName: 'active'
+  borderBottom: false
 };
 
 SubMenu.propTypes = {
@@ -44,12 +41,7 @@ SubMenu.propTypes = {
   /**
    * Select whether or not there should be a border below the SubMenu.
    */
-  borderBottom: PropTypes.bool,
-
-  /**
-   * The active className to mark the component as active. Styling targets this classname.
-   */
-  activeClassName: PropTypes.string
+  borderBottom: PropTypes.bool
 };
 
 export default SubMenu;
