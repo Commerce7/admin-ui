@@ -3,11 +3,12 @@ import styled from 'styled-components';
 
 import Icon from '../icon';
 
+import { TagVariant } from './Tag';
 import { colors } from './theme';
 
 const StyledTag = styled.span<{
-  variant: string;
-  onClick?: ((event: MouseEvent<HTMLElement>) => void) | null;
+  variant: TagVariant;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
 }>`
   display: inline-flex;
   align-items: center;
@@ -31,7 +32,11 @@ const StyledTag = styled.span<{
   color: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
 `;
 
-const StyledStartIcon = styled(Icon)`
+interface IconProps {
+  variant: TagVariant;
+}
+
+const StyledStartIcon = styled(Icon)<IconProps>`
   path {
     fill: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
   }
@@ -39,7 +44,7 @@ const StyledStartIcon = styled(Icon)`
   margin-left: -2px;
 `;
 
-const StyledEndIcon = styled(Icon)`
+const StyledEndIcon = styled(Icon)<IconProps>`
   path {
     fill: ${({ theme, variant }) => colors[theme.c7__ui.mode][variant].color};
   }
@@ -53,9 +58,7 @@ const StyledTagLabel = styled.span`
   text-overflow: ellipsis;
 `;
 
-const StyledDeleteButton = styled.button<{
-  variant: string;
-}>`
+const StyledDeleteButton = styled.button<IconProps>`
   margin-left: 10px;
   border-radius: 50%;
   border: none;

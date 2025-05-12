@@ -1,12 +1,12 @@
-import React, { forwardRef, ChangeEvent, FocusEvent } from 'react';
+import React, { ChangeEvent, FocusEvent, forwardRef } from 'react';
 
 import { getFormItemIds } from '../common/form/helpers';
 import {
-  StyledInputWrapper,
+  StyledDescription,
   StyledErrorMessage,
+  StyledInputWrapper,
   StyledLabel,
-  StyledRequiredLabel,
-  StyledDescription
+  StyledRequiredLabel
 } from '../common/form/styles';
 
 import { StyledTextarea } from './Textarea.styles';
@@ -104,7 +104,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
       onBlur,
       onChange,
       onFocus,
-      placeholder = null,
+      placeholder = '',
       required = false,
       value,
       dataTestId = null
@@ -129,6 +129,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
           </StyledLabel>
         )}
         <StyledTextarea
+          as="textarea"
           aria-describedby={describedById}
           aria-labelledby={labelId}
           aria-invalid={hasErrorMessage}
@@ -163,5 +164,4 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
 
 Textarea.displayName = 'Textarea';
 
-export type { TextareaProps };
 export default Textarea;

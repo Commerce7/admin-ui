@@ -72,7 +72,6 @@ const RadioGroup = ({
       <>
         <StyledHorizontalFieldset
           data-testid={dataTestId}
-          isButtonVariant={isButtonVariant}
           size={size}
           className={className}
         >

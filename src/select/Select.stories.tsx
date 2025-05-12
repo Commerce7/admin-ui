@@ -22,7 +22,7 @@ type Story = StoryObj<typeof Select>;
 const BasicExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -43,7 +43,7 @@ const BasicExample = () => {
 const DisabledExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -65,7 +65,7 @@ const DisabledExample = () => {
 const PlaceholderExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -88,7 +88,7 @@ const PlaceholderExample = () => {
 const ErrorExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -112,7 +112,7 @@ const ErrorExample = () => {
 const RequiredExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -134,7 +134,7 @@ const RequiredExample = () => {
 const GroupExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 
@@ -168,7 +168,7 @@ const GroupExample = () => {
 const DescriptionExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: ChangeEvent<HTMLSelectElement>) => {
+  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
   };
 

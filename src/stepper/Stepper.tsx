@@ -33,5 +33,4 @@ const Stepper = (props: StepperProps) => {
   );
 };
 
-export type { StepperProps };
 export default Stepper;

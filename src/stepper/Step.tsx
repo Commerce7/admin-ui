@@ -59,8 +59,6 @@ export interface StepProps {
    * Icon for the step
    */
   icon?: string;
-
-  [key: string]: any;
 }
 
 const Step = (props: StepProps) => {
@@ -108,7 +106,7 @@ const Step = (props: StepProps) => {
         {...customComponentProps}
       >
         <StyledStepCircle>
-          <StyledStepIcon icon={icon} />
+          {icon && <StyledStepIcon icon={icon} />}
         </StyledStepCircle>
         <StyledStepLabelWrapper>
           <StyledStepText small>Step {step}</StyledStepText>
@@ -120,5 +118,4 @@ const Step = (props: StepProps) => {
   );
 };
 
-export type { StepProps };
 export default Step;

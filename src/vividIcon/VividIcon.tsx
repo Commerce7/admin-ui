@@ -6,7 +6,7 @@ import { StyledIconContainer, StyledIcon } from './VividIcon.styles';
 
 type VividIconColor = 'pink' | 'blue' | 'green' | 'teal' | 'orange' | 'purple';
 
-interface VividIconProps {
+export interface VividIconProps {
   /**
    * Add className to the outermost element.
    */

@@ -149,5 +149,4 @@ const SelectButton = forwardRef<HTMLButtonElement, SelectButtonProps>(
 
 SelectButton.displayName = 'SelectButton';
 
-export type { ButtonSize, ButtonType, SelectButtonProps };
 export default SelectButton;

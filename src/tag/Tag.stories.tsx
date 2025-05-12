@@ -58,37 +58,37 @@ export const Icon: Story = {
     <>
       <h5>Start Icon</h5>
       <div>
-        <Tag variant="default" startIcon="closeCircle" size={12}>
+        <Tag variant="default" startIcon="closeCircle">
           Default
         </Tag>
-        <Tag variant="info" startIcon="infoCircle" size={12}>
+        <Tag variant="info" startIcon="infoCircle">
           Info
         </Tag>
-        <Tag variant="warning" startIcon="warning" size={12}>
+        <Tag variant="warning" startIcon="warning">
           Warning
         </Tag>
-        <Tag variant="error" startIcon="warning" size={12}>
+        <Tag variant="error" startIcon="warning">
           Error
         </Tag>
-        <Tag variant="success" startIcon="closeCircle" size={12}>
+        <Tag variant="success" startIcon="closeCircle">
           Success
         </Tag>
       </div>
       <h5>End Icon</h5>
       <div>
-        <Tag variant="default" endIcon="closeCircle" size={12}>
+        <Tag variant="default" endIcon="closeCircle">
           Default
         </Tag>
-        <Tag variant="info" endIcon="infoCircle" size={12}>
+        <Tag variant="info" endIcon="infoCircle">
           Info
         </Tag>
-        <Tag variant="warning" endIcon="warning" size={12}>
+        <Tag variant="warning" endIcon="warning">
           Warning
         </Tag>
-        <Tag variant="error" endIcon="warning" size={12}>
+        <Tag variant="error" endIcon="warning">
           Error
         </Tag>
-        <Tag variant="success" endIcon="closeCircle" size={12}>
+        <Tag variant="success" endIcon="closeCircle">
           Success
         </Tag>
       </div>

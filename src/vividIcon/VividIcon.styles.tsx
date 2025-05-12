@@ -17,7 +17,11 @@ const StyledIconContainer = styled.div`
   flex: 0 0 40px;
 `;
 
-const StyledIcon = styled(Icon)`
+interface StyledIconProps {
+  color: 'pink' | 'blue' | 'green' | 'teal' | 'orange' | 'purple';
+}
+
+const StyledIcon = styled(Icon)<StyledIconProps>`
   path {
     fill: ${({ theme, color }) => colors[theme.c7__ui.mode][color].fillColor};
   }

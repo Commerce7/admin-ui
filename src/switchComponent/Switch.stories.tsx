@@ -1,5 +1,5 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState, ChangeEvent } from 'react';
+import type { Meta } from '@storybook/react';
+import React, { ChangeEvent, useState } from 'react';
 
 import Switch from '.';
 
@@ -16,7 +16,6 @@ const meta = {
 } satisfies Meta<typeof Switch>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
 
 // Create separate components for stories with state
 const BasicExample = () => {
@@ -112,20 +111,20 @@ const DescriptionExample = () => {
 
 export const Basic = {
   render: BasicExample
-} satisfies Story;
+};
 
 export const Disabled = {
   render: DisabledExample
-} satisfies Story;
+};
 
 export const Error = {
   render: ErrorExample
-} satisfies Story;
+};
 
 export const Required = {
   render: RequiredExample
-} satisfies Story;
+};
 
 export const Description = {
   render: DescriptionExample
-} satisfies Story;
+};

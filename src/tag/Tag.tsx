@@ -8,7 +8,7 @@ import {
   StyledEndIcon
 } from './Tag.styles';
 
-type TagVariant = 'default' | 'info' | 'warning' | 'error' | 'success';
+export type TagVariant = 'default' | 'info' | 'warning' | 'error' | 'success';
 
 export interface TagProps {
   /**
@@ -24,13 +24,13 @@ export interface TagProps {
   /**
    * Callback fired when the component is clicked.
    */
-  onClick?: ((event: MouseEvent<HTMLElement>) => void) | null;
+  onClick?: (event: MouseEvent<HTMLElement>) => void;
 
   /**
    * Callback fired when the component delete button is clicked.
    * Adds an 'x' button on the end of the tag.
    */
-  onDelete?: ((event: MouseEvent<HTMLButtonElement>) => void) | null;
+  onDelete?: (event: MouseEvent<HTMLButtonElement>) => void;
 
   /**
    * Set the visual property of the component.
@@ -56,8 +56,8 @@ export interface TagProps {
 const Tag = ({
   children = null,
   className = '',
-  onClick = null,
-  onDelete = null,
+  onClick,
+  onDelete,
   variant = 'default',
   dataTestId = '',
   startIcon = '',
@@ -96,8 +96,6 @@ const Tag = ({
       variant={variant}
       onClick={onClick}
       data-testid={dataTestId}
-      startIcon={startIcon}
-      endIcon={endIcon}
     >
       {startIcon && (
         <StyledStartIcon

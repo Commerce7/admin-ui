@@ -20,7 +20,11 @@ const StyledInputWrapper = styled.div.attrs({
   ${({ isButtonVariant }) => (isButtonVariant ? 'margin-bottom: 0px;' : '')}
 `;
 
-const StyledFormItem = styled.input`
+interface StyledFormItemProps {
+  hasErrorMessage?: boolean;
+}
+
+const StyledFormItem = styled.input<StyledFormItemProps>`
   height: 46px;
   padding: 0 12px;
   display: block;
@@ -187,7 +191,11 @@ const StyledFieldset = styled.fieldset`
   }
 `;
 
-const StyledHorizontalFieldset = styled.fieldset`
+interface StyledHorizontalFieldsetProps {
+  size?: string;
+}
+
+const StyledHorizontalFieldset = styled.fieldset<StyledHorizontalFieldsetProps>`
   border: none;
   padding: 0;
   margin: 0;

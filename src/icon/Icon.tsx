@@ -3,8 +3,13 @@ import React, { MouseEvent } from 'react';
 import { StyledIcon, StyledIconButton } from './Icon.styles';
 import * as Icons from './icons';
 
-type IconVariant = 'default' | 'success' | 'error' | 'text';
-
+type IconVariant =
+  | 'default'
+  | 'success'
+  | 'error'
+  | 'text'
+  | 'info'
+  | 'warning';
 export interface IconProps {
   /**
    * Add className to the outermost element.

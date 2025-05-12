@@ -56,7 +56,7 @@ export interface SelectProps {
   /**
    * Callback onChange.
    */
-  onChange: (event: ChangeEvent<HTMLSelectElement>) => void;
+  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
 
   /**
    * The options for the select field.
