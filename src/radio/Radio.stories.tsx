@@ -109,6 +109,7 @@ const DescriptionExample = () => {
       id="subscribe"
       checked={checked}
       onChange={handleOnChange}
+      value=""
       required
       description="We will never spam your email address"
     />

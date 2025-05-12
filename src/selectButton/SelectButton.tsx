@@ -83,7 +83,7 @@ const SelectButton = forwardRef<HTMLButtonElement, SelectButtonProps>(
       type = 'button',
       dataTestId = null,
       size = 'large',
-      icon = null,
+      icon,
       as
     },
     ref

@@ -116,7 +116,11 @@ const SubNavStyles = styled.div<SubNavStylesProps>`
   }
 `;
 
-const NavStyles = styled.nav`
+interface NavStylesProps {
+  isOpen: boolean;
+}
+
+const NavStyles = styled.nav<NavStylesProps>`
   background: ${({ theme }) => colors[theme.c7__ui.mode].backgroundColor};
   width: 260px;
   height: 100vh;

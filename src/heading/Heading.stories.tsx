@@ -1,9 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
+import { StoryFn } from '@storybook/react';
 import React from 'react';
 
 import Heading from '.';
 
-export const Basic = (args) => (
+export const Basic: StoryFn<typeof Heading> = (
+  args: React.ComponentProps<typeof Heading>
+) => (
   <>
     <Heading level={1} {...args}>
       Heading 1
@@ -20,7 +23,9 @@ export const Basic = (args) => (
   </>
 );
 
-export const WithCustomMarginBottom = (args) => (
+export const WithCustomMarginBottom = (
+  args: React.ComponentProps<typeof Heading>
+) => (
   <Heading level={4} marginBottom="5px" {...args}>
     Heading 4 with Custom Margin Bottom
   </Heading>

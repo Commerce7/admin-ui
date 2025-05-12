@@ -7,9 +7,14 @@ import Text from '../text';
 
 import { svgColors } from './theme';
 
+interface StyledInputProps {
+  startIcon?: string;
+  endIcon?: string;
+}
+
 const StyledInput = styled(StyledFormItem).attrs({
   as: 'input'
-})`
+})<StyledInputProps>`
   cursor: text;
 
   ${({ endIcon }) =>
@@ -36,7 +41,11 @@ const StyledIconWrapper = styled.div`
   position: relative;
 `;
 
-const StyledInputIcon = styled(Icon)`
+interface StyledInputIconProps {
+  iconPosition: 'start' | 'end';
+}
+
+const StyledInputIcon = styled(Icon)<StyledInputIconProps>`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

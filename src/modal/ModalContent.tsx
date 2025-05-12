@@ -60,7 +60,7 @@ const ModalContent = ({
   disableBodyScroll = true,
   disableFocusLock = false
 }: ModalContentProps) => {
-  useEscKeydown((e) => handleClose(e));
+  useEscKeydown((e: KeyboardEvent) => handleClose(e));
 
   useEffect(() => {
     if (disableBodyScroll) {

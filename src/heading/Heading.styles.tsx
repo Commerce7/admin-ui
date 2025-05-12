@@ -3,7 +3,12 @@ import styled from 'styled-components';
 
 import { fontSize, colors, marginBottom } from './theme';
 
-const StyledHeading = styled.h2`
+interface StyledHeadingProps {
+  as: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  customMarginBottom?: string | null;
+}
+
+const StyledHeading = styled.h2<StyledHeadingProps>`
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightHeading};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
   color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor};

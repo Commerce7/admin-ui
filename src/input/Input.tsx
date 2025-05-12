@@ -137,26 +137,26 @@ export interface InputProps {
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
     {
-      autoComplete = null,
+      autoComplete,
       autoFocus = false,
       className = '',
-      description = null,
+      description,
       disabled = false,
-      endIcon = null,
-      errorMessage = null,
+      endIcon,
+      errorMessage,
       id = Math.random().toString(36).substr(2, 9),
-      label = null,
-      inputMode = null,
-      onBlur = null,
+      label,
+      inputMode,
+      onBlur,
       onChange,
-      onFocus = null,
-      placeholder = null,
+      onFocus,
+      placeholder,
       required = false,
-      startIcon = null,
-      suffix = null,
+      startIcon,
+      suffix,
       type = 'text',
       value,
-      dataTestId = null
+      dataTestId
     },
     ref
   ) => {
@@ -268,5 +268,4 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
 
 Input.displayName = 'Input';
 
-export type { InputMode, InputProps, InputType };
 export default Input;

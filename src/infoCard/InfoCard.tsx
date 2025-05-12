@@ -1,27 +1,32 @@
 import React, { ReactNode } from 'react';
-import { useTheme } from 'styled-components';
+import {
+  DefaultTheme as DefaultThemeStyled,
+  useTheme
+} from 'styled-components';
 
 import Icon from '../icon';
 import { backgroundColors } from '../icon/theme';
 
 import {
-  StyledInfoCard,
   StyledContentWrapper,
   StyledIcon,
+  StyledImage,
+  StyledInfoCard,
   StyledLabel,
-  StyledTitle,
   StyledSubtitle,
-  StyledImage
+  StyledTitle
 } from './InfoCard.styles';
 import { colors } from './theme';
 
-type InfoCardVariant =
-  | 'default'
-  | 'success'
-  | 'error'
-  | 'warning'
-  | 'info'
-  | string;
+declare module 'styled-components' {
+  interface DefaultTheme {
+    c7__ui: {
+      mode: 'light' | 'dark';
+    };
+  }
+}
+
+type InfoCardVariant = 'default' | 'success' | 'error' | 'warning' | 'info';
 
 export interface InfoCardProps {
   /**
@@ -87,23 +92,32 @@ const InfoCard = ({
   dataTestId = '',
   iconVariant = 'default'
 }: InfoCardProps) => {
-  const theme = useTheme();
+  const theme = useTheme() as DefaultThemeStyled;
 
-  let iconVariantVar = variant;
+  let iconVariantVar:
+    | 'default'
+    | 'success'
+    | 'error'
+    | 'warning'
+    | 'info'
+    | 'text' = variant;
   if (['warning', 'default'].includes(variant)) {
     iconVariantVar = 'text';
   }
   if (['error', 'success', 'info'].includes(variant)) {
-    iconVariantVar = 'white';
+    iconVariantVar = 'text';
   }
   if (iconVariant) {
     iconVariantVar = iconVariant;
   }
 
   let iconBackgroundVariant =
-    colors[theme.c7__ui.mode].iconBackgroundColor[variant];
+    colors[theme.c7__ui.mode as 'light' | 'dark']?.iconBackgroundColor?.[
+      variant as InfoCardVariant
+    ] || '';
   if (iconVariant) {
-    iconBackgroundVariant = backgroundColors[theme.c7__ui.mode][iconVariant];
+    iconBackgroundVariant =
+      backgroundColors[theme.c7__ui.mode]?.[iconVariant] || '';
   }
 
   return (
@@ -118,7 +132,7 @@ const InfoCard = ({
             <Icon size={24} icon={icon} variant={iconVariantVar} />
           </StyledIcon>
         )}
-        {img && <StyledImage src={img} alt={title?.toString()} />}
+        {img && <StyledImage src={img} alt={title ? String(title) : ''} />}
       </div>
       <StyledContentWrapper>
         {label && <StyledLabel variant={variant}>{label}</StyledLabel>}

@@ -23,8 +23,8 @@ type Story = StoryObj<typeof DatePicker>;
 const BasicExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (
@@ -40,8 +40,8 @@ const BasicExample = () => {
 const DisabledExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (
@@ -58,8 +58,8 @@ const DisabledExample = () => {
 const PlaceholderExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (
@@ -76,8 +76,8 @@ const PlaceholderExample = () => {
 const ErrorExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   const errorMessage = !value ? 'This field is required' : '';
@@ -96,8 +96,8 @@ const ErrorExample = () => {
 const RequiredExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (
@@ -114,8 +114,8 @@ const RequiredExample = () => {
 const DisabledDatesExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   const isValidDate = (currentDate: Moment) => {
@@ -137,8 +137,8 @@ const DisabledDatesExample = () => {
 const DescriptionExample = () => {
   const [value, setValue] = useState('');
 
-  const handleOnChange = (e: Moment) => {
-    setValue(e.format('MMM D, YYYY'));
+  const handleOnChange = (e: Moment | string) => {
+    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
   };
 
   return (

@@ -3,7 +3,7 @@ import React from 'react';
 import { StyledPicture, StyledPictureWrapper } from './Picture.styles';
 
 interface PictureSource {
-  src: string;
+  src?: string;
   webp?: string;
   avif?: string;
 }
@@ -51,7 +51,7 @@ const Picture = (props: PictureProps) => {
   if (typeof src === 'object') {
     avifSrc = src.avif;
     webpSrc = src.webp;
-    origSrc = src.src;
+    origSrc = src.src || '';
   }
 
   return (

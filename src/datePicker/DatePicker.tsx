@@ -114,7 +114,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
   (
     {
       allowClear = false,
-      autoFocus = false,
+      // autoFocus = false,
       className = '',
       description = null,
       value,
@@ -125,7 +125,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       id = Math.random().toString(36).substr(2, 9),
       isValidDate = () => true,
       disabled = false,
-      placeholder = null,
+      placeholder = '',
       required = false,
       errorMessage = null,
       dataTestId = null,
@@ -148,14 +148,11 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
 
     if (inline) {
       return (
-        <StyledDatePicker inline className={className}>
+        <StyledDatePicker className={className}>
           <DateTime
             onChange={onChange}
             onOpen={onFocus}
-            onBlur={onBlur}
-            autoFocus={autoFocus}
             value={value}
-            disabled={disabled}
             timeFormat={false}
             dateFormat="MMM D, YYYY"
             initialViewMode="days"
@@ -178,10 +175,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           <DateTime
             onChange={onChange}
             onOpen={onFocus}
-            onBlur={onBlur}
-            autoFocus={autoFocus}
             value={value}
-            disabled={disabled}
             timeFormat={false}
             dateFormat="MMM D, YYYY"
             initialViewMode="days"

@@ -1,14 +1,14 @@
-import React, { forwardRef, ReactNode, ChangeEvent, MouseEvent } from 'react';
+import React, { ChangeEvent, forwardRef, MouseEvent, ReactNode } from 'react';
 
 import { getFormItemIds } from '../common/form/helpers';
 import {
-  StyledInputWrapper,
-  StyledToggleLabel,
-  StyledToggleText,
-  StyledRequiredLabel,
-  StyledHiddenInput,
   StyledDescription,
-  StyledErrorMessage
+  StyledErrorMessage,
+  StyledHiddenInput,
+  StyledInputWrapper,
+  StyledRequiredLabel,
+  StyledToggleLabel,
+  StyledToggleText
 } from '../common/form/styles';
 import SelectButton from '../selectButton';
 
@@ -66,7 +66,7 @@ export interface RadioProps {
 
   /**
    * Set the element to be required.
-   * This will show an asterik in the label and add 'required' to the DOM node.
+   * This will show an asterisk in the label and add 'required' to the DOM node.
    */
   required?: boolean;
 
@@ -112,13 +112,13 @@ const Radio = forwardRef<HTMLInputElement, RadioProps>(
       id = Math.random().toString(36).substr(2, 9),
       label = '',
       onChange,
-      onClick = null,
+      onClick,
       required = false,
       value,
       dataTestId = '',
       variant = 'default',
       size = 'medium',
-      icon = null,
+      icon,
       children
     },
     ref

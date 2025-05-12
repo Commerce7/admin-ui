@@ -6,7 +6,15 @@ import Icon from '../icon';
 
 import { sizes, colors, shadows } from './theme';
 
-const StyledButtonIcon = styled(Icon)`
+interface ButtonVariant {
+  buttonVariant: 'primary' | 'secondary' | 'tertiary' | 'link' | 'danger';
+  position: 'start' | 'end';
+  isHidden: boolean;
+  hasChildren: boolean;
+  icon: string;
+}
+
+const StyledButtonIcon = styled(Icon)<ButtonVariant>`
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
   margin: ${({ position, buttonVariant, hasChildren, icon }) => {
     if (!hasChildren && icon) return '0px';

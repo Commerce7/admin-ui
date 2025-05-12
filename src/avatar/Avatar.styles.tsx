@@ -43,7 +43,11 @@ const StyledAvatar = styled.div.withConfig({
   }
 `;
 
-const StyledAvatarIcon = styled(Icon)`
+interface StyledAvatarIconProps {
+  avatarSize: 'tiny' | 'small' | 'default' | 'large';
+}
+
+const StyledAvatarIcon = styled(Icon)<StyledAvatarIconProps>`
   background-color: transparent;
   ${({ avatarSize }) => `
     width: ${iconSizes[avatarSize]};

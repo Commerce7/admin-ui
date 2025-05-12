@@ -4,32 +4,32 @@ export interface LabelProps {
   /**
    * X-coordinate of the center
    */
-  cx: number;
+  cx?: number;
 
   /**
    * Y-coordinate of the center
    */
-  cy: number;
+  cy?: number;
 
   /**
    * Middle angle of the sector in degrees
    */
-  midAngle: number;
+  midAngle?: number;
 
   /**
    * Inner radius of the pie chart
    */
-  innerRadius: number;
+  innerRadius?: number;
 
   /**
    * Outer radius of the pie chart
    */
-  outerRadius: number;
+  outerRadius?: number;
 
   /**
    * Percentage value represented by this sector
    */
-  percent: number;
+  percent?: number;
 }
 
 /**

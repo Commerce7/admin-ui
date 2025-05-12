@@ -6,7 +6,12 @@ import * as Icons from '../icon/icons';
 import { StyledIcon } from './DisplayIcon.styles';
 import IconWrapper from './IconWrapper';
 
-export type DisplayIconVariant = 'default' | 'success' | 'warning' | 'error';
+export type DisplayIconVariant =
+  | 'default'
+  | 'success'
+  | 'warning'
+  | 'error'
+  | 'info';
 
 export interface DisplayIconProps {
   /**
