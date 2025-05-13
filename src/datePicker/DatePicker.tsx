@@ -114,7 +114,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
   (
     {
       allowClear = false,
-      // autoFocus = false,
+      autoFocus = false,
       className = '',
       description = null,
       value,
@@ -185,7 +185,8 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               id,
               placeholder,
               required,
-              value
+              value,
+              autoFocus
             }}
             closeOnSelect
             renderInput={(componentProps) => (

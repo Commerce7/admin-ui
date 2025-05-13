@@ -1,8 +1,7 @@
 import React, { ReactNode } from 'react';
-import {
-  DefaultTheme as DefaultThemeStyled,
-  useTheme
-} from 'styled-components';
+import { useTheme } from 'styled-components';
+
+import { Theme } from 'ui';
 
 import Icon from '../icon';
 import { backgroundColors } from '../icon/theme';
@@ -17,14 +16,6 @@ import {
   StyledTitle
 } from './InfoCard.styles';
 import { colors } from './theme';
-
-declare module 'styled-components' {
-  interface DefaultTheme {
-    c7__ui: {
-      mode: 'light' | 'dark';
-    };
-  }
-}
 
 type InfoCardVariant = 'default' | 'success' | 'error' | 'warning' | 'info';
 
@@ -92,7 +83,7 @@ const InfoCard = ({
   dataTestId = '',
   iconVariant = 'default'
 }: InfoCardProps) => {
-  const theme = useTheme() as DefaultThemeStyled;
+  const theme = useTheme() as Theme;
 
   let iconVariantVar:
     | 'default'

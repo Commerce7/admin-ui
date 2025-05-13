@@ -99,7 +99,7 @@ const errorColors = {
 
 export interface Theme {
   c7__ui: {
-    mode: string;
+    mode: 'light' | 'dark';
     fontFamily: string;
     fontSizeBase: string;
     fontSizeSmall: string;
