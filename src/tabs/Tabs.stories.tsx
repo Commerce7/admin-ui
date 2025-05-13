@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import type { Meta, StoryObj } from '@storybook/react';
+import React, { useState } from 'react';
 
 import Heading from '../heading';
 
@@ -6,11 +7,31 @@ import Tabs from '.';
 
 const { Tab, TabBody } = Tabs;
 
-export const Basic = () => {
+const meta: Meta<typeof Tabs> = {
+  title: 'Navigation/Tabs',
+  component: Tabs,
+  tags: ['autodocs'],
+  subcomponents: { Tab, TabBody },
+  parameters: {
+    docs: {
+      description: {
+        component:
+          "import { Tabs } from '@commerce7/admin-ui'<br/><br/>const { Tab, TabBody } = Tabs"
+      }
+    }
+  }
+};
+
+export default meta;
+type Story = StoryObj<typeof Tabs>;
+
+// Create a template component for the basic story
+const BasicTemplate = () => {
   const [currentPath, setPath] = useState('/summary');
 
   const path = currentPath.split('/')[1];
   const heading = path.charAt(0).toUpperCase() + path.slice(1);
+
   return (
     <>
       <Tabs>
@@ -41,21 +62,12 @@ export const Basic = () => {
   );
 };
 
-Basic.story = {
-  name: 'Basic'
-};
-
-const description =
-  "import { Tabs } from '@commerce7/admin-ui'<br/><br/>const { Tab, TabBody } = Tabs";
-
-export default {
-  title: 'Navigation/Tabs',
-  component: Tabs,
-  subcomponents: { Tab, TabBody },
+export const Basic: Story = {
+  render: () => <BasicTemplate />,
   parameters: {
     docs: {
       description: {
-        component: description
+        story: 'A basic example of tabs with active state management.'
       }
     }
   }
