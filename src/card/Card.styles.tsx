@@ -3,7 +3,11 @@ import styled from 'styled-components';
 
 import { colors } from './theme';
 
-const StyledCard = styled.div.withConfig({
+interface StyledCardProps {
+  variant: 'default' | 'white';
+}
+
+const StyledCard = styled.div.withConfig<StyledCardProps>({
   shouldForwardProp: (prop) => !['variant'].includes(prop)
 })`
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};

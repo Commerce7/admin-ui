@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 
 import { StyledAlert, StyledIcon } from './Alert.styles';
 
-type AlertVariant = 'default' | 'info' | 'error' | 'warning' | 'success';
+export type AlertVariant = 'default' | 'info' | 'error' | 'warning' | 'success';
 type AlertSize = 'default' | 'small';
 
 export interface AlertProps {

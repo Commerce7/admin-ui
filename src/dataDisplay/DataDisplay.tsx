@@ -41,5 +41,4 @@ const DataDisplay = ({
   </StyledInputWrapper>
 );
 
-export type { DataDisplayProps };
 export default DataDisplay;

@@ -4,17 +4,18 @@ import styled, { keyframes } from 'styled-components';
 
 import Icon from '../icon';
 
-import { sizes, colors, shadows } from './theme';
+import { ButtonSize, ButtonVariant } from './Button';
+import { colors, shadows, sizes } from './theme';
 
-interface ButtonVariant {
-  buttonVariant: 'primary' | 'secondary' | 'tertiary' | 'link' | 'danger';
-  position: 'start' | 'end';
-  isHidden: boolean;
+interface ButtonVariantProps {
+  buttonVariant: ButtonVariant;
+  position?: 'start' | 'end';
+  isHidden?: boolean;
   hasChildren: boolean;
   icon: string;
 }
 
-const StyledButtonIcon = styled(Icon)<ButtonVariant>`
+const StyledButtonIcon = styled(Icon)<ButtonVariantProps>`
   opacity: ${({ isHidden }) => (isHidden ? 0 : 1)};
   margin: ${({ position, buttonVariant, hasChildren, icon }) => {
     if (!hasChildren && icon) return '0px';
@@ -181,4 +182,4 @@ const StyledLoadingIcon = styled(Icon)`
   animation: ${rotate} 0.5s linear infinite;
 `;
 
-export { StyledButton, StyledButtonText, StyledLoadingIcon, StyledButtonIcon };
+export { StyledButton, StyledButtonIcon, StyledButtonText, StyledLoadingIcon };

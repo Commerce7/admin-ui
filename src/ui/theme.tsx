@@ -97,7 +97,39 @@ const errorColors = {
   dark: c7Colors.red200
 };
 
-export const createTheme = (mode) => ({
+export interface Theme {
+  c7__ui: {
+    mode: string;
+    fontFamily: string;
+    fontSizeBase: string;
+    fontSizeSmall: string;
+    fontWeightBase: string;
+    fontWeightStrong: string;
+    fontWeightHeading: string;
+    fontColor: string;
+    secondaryFontColor: string;
+    linkColor: string;
+    backgroundColor: string;
+    secondaryBackgroundColor: string;
+    borderColor: string;
+    errorColor: string;
+    borderRadius: string;
+    borderRadiusMedium: string;
+    boxShadow: string;
+    colors: typeof c7Colors;
+    breakpoints: {
+      smallUp: string;
+      smallOnly: string;
+      mediumUp: string;
+      mediumOnly: string;
+      largeUp: string;
+      largeOnly: string;
+      xLargeUp: string;
+    };
+  };
+}
+
+export const createTheme = (mode: 'light' | 'dark') => ({
   c7__ui: {
     mode,
     fontFamily: '"Inter", sans-serif',
@@ -129,7 +161,7 @@ export const createTheme = (mode) => ({
   }
 });
 
-export const GlobalStyles = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle<{ theme: Theme }>`
   ${styledNormalize}
 
   *,

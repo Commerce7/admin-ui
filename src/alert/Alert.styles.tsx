@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import Icon from '../icon/Icon';
 
+import { AlertVariant } from './Alert';
 import { colors, sizes } from './theme';
 
 interface StyledAlertProps {
@@ -46,7 +47,12 @@ const StyledAlert = styled.div.withConfig({
   }
 `;
 
-const StyledIcon = styled(Icon)`
+interface StyledIconProps {
+  alertVariant: AlertVariant;
+  alertSize: 'default' | 'small';
+}
+
+const StyledIcon = styled(Icon)<StyledIconProps>`
   margin-right: ${({ alertSize }) => sizes[alertSize].iconMargin};
   margin-top: 4.5px;
 

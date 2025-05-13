@@ -16,7 +16,7 @@ const StyledButtonMenuContainer = styled.div`
 const meta: Meta<typeof ButtonMenu> = {
   title: 'Button/ButtonMenu',
   component: ButtonMenu,
-  subComponents: { ButtonMenuItem },
+  subcomponents: { ButtonMenuItem },
   parameters: {
     docs: {
       description: {

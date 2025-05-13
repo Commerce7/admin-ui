@@ -75,7 +75,7 @@ const useViewportContainment = (
 
   useEffect(() => {
     const node = document.getElementById(id);
-    if (node) {
+    if (node && width !== null) {
       // Reset back to default values for proper calculation
       if (align === 'left') {
         node.style.left = `0px`;

@@ -101,7 +101,7 @@ export interface InputProps {
   /**
    * Callback onChange.
    */
-  onChange: (event: ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (event: ChangeEvent<HTMLInputElement>) => void;
 
   /**
    * Callback onFocus.
@@ -126,7 +126,7 @@ export interface InputProps {
   /**
    * The value of the element.
    */
-  value: string | number;
+  value?: string | number;
 
   /**
    * Add test attribute to the element. Used internally for testing.

@@ -193,6 +193,7 @@ const StyledFieldset = styled.fieldset`
 
 interface StyledHorizontalFieldsetProps {
   size?: string;
+  isButtonVariant?: boolean;
 }
 
 const StyledHorizontalFieldset = styled.fieldset<StyledHorizontalFieldsetProps>`

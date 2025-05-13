@@ -1,4 +1,4 @@
-import React, { ReactNode, useRef, useState, useId, MouseEvent } from 'react';
+import React, { MouseEvent, ReactNode, useId, useRef, useState } from 'react';
 
 import { StyledButton, StyledButtonIcon } from '../button/Button.styles';
 import DropdownMenu from '../common/dropdown/DropdownMenu';
@@ -6,8 +6,8 @@ import DropdownWrapper from '../common/dropdown/DropdownWrapper';
 import useEscKeydown from '../utils/hooks/useEscKeydown';
 import useOnClickOutside from '../utils/hooks/useOnClickOutside';
 
-type ButtonSize = 'default' | 'small';
-type ButtonVariant = 'primary' | 'secondary' | 'text';
+export type ButtonSize = 'default' | 'small';
+export type ButtonVariant = 'primary' | 'secondary' | 'text';
 
 export interface ButtonMenuProps {
   /**

@@ -1,7 +1,9 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryObj } from '@storybook/react';
-import React, { useState, ChangeEvent } from 'react';
+import React, { ChangeEvent, useState } from 'react';
 import styled from 'styled-components';
+
+import { Theme } from 'ui';
 
 import { Input } from '..';
 
@@ -24,7 +26,7 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof Icon>;
 
-const IconRow = styled.div`
+const IconRow = styled.div<{ theme: Theme }>`
   margin-bottom: 15px;
   display: flex;
   align-items: center;

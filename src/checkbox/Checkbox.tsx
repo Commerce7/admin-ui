@@ -61,7 +61,7 @@ export interface CheckboxProps {
 
   /**
    * Set the element to be required.
-   * This will show an asterik in the label and add 'required' to the DOM node.
+   * This will show an asterisk in the label and add 'required' to the DOM node.
    */
   required?: boolean;
 
@@ -112,7 +112,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
       dataTestId = null,
       variant = 'default',
       size = 'medium',
-      icon = null,
+      icon,
       children
     },
     ref

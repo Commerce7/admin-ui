@@ -8,7 +8,7 @@ import {
 } from './Button.styles';
 
 type ButtonSize = 'default' | 'small';
-type ButtonVariant = 'primary' | 'secondary' | 'text' | 'link';
+export type ButtonVariant = 'primary' | 'secondary' | 'text' | 'link';
 type ButtonType = 'button' | 'submit';
 
 interface ButtonProps {
