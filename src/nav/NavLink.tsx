@@ -56,7 +56,7 @@ const NavLink = ({
   component = '',
   icon = '',
   onClick = undefined,
-  href = '',
+  href,
   dataTestId = '',
   activeClassName = 'active',
   ...rest

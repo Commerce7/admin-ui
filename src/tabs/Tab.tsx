@@ -53,7 +53,7 @@ const Tab = ({
   className = '',
   component,
   onClick,
-  href = '',
+  href,
   dataTestId = '',
   ...rest
 }: TabProps) => {

@@ -50,7 +50,7 @@ const SubMenuItem = ({
   className = '',
   component = '',
   onClick = undefined,
-  href = '',
+  href,
   dataTestId = '',
   ...rest
 }: SubMenuItemProps) => {

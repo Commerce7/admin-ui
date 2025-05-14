@@ -42,13 +42,13 @@ export interface BreadcrumbProps {
 const Breadcrumb = ({
   className = '',
   component = undefined,
-  href = '',
+  href,
   children,
   dataTestId = '',
   onClick = null,
   ...rest
 }: BreadcrumbProps) => {
-  let as: ElementType | string = '';
+  let as: ElementType | string = 'span';
   if (href) {
     as = 'a';
   } else if (!href && onClick) {

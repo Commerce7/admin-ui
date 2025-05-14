@@ -36,13 +36,7 @@ export interface PictureProps {
 }
 
 const Picture = (props: PictureProps) => {
-  const {
-    src = '',
-    alt,
-    height = null,
-    className = '',
-    dataTestId = null
-  } = props;
+  const { src, alt, height = null, className = '', dataTestId = null } = props;
 
   let avifSrc: string | undefined;
   let webpSrc: string | undefined;
@@ -63,7 +57,7 @@ const Picture = (props: PictureProps) => {
       <StyledPicture height={height}>
         {avifSrc && <source srcSet={avifSrc} type="image/avif" />}
         {webpSrc && <source srcSet={webpSrc} type="image/webp" />}
-        <img src={origSrc} alt={alt} />
+        {origSrc && <img src={origSrc} alt={alt} />}
       </StyledPicture>
     </StyledPictureWrapper>
   );

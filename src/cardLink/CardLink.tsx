@@ -60,7 +60,7 @@ const CardLink = ({
   className = '',
   component = undefined,
   icon = '',
-  href = '',
+  href,
   label = '',
   dataTestId = '',
   ...rest
