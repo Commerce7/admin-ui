@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import Card from '../card';
 import LineBreak from '../lineBreak';
-import Switch from '../switch';
+import Switch from '../switchComponent';
 import Commerce7AdminUI from '../ui';
 
 const StoriesWrapper = (props) => {
