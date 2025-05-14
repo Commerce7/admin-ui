@@ -48,7 +48,7 @@ export interface InfoCardProps {
   /**
    * The title for the component.
    */
-  title?: ReactNode;
+  title?: ReactNode | string;
 
   /**
    * The subtitle for the component.
@@ -72,43 +72,35 @@ export interface InfoCardProps {
 }
 
 const InfoCard = ({
-  icon = '',
-  label = '',
-  title = '',
+  icon,
+  label = null,
+  title,
   variant = 'default',
   subtitle = null,
-  img = '',
+  img,
   children = null,
-  className = '',
-  dataTestId = '',
-  iconVariant = 'default'
+  className,
+  dataTestId,
+  iconVariant
 }: InfoCardProps) => {
   const theme = useTheme() as Theme;
 
-  let iconVariantVar:
-    | 'default'
-    | 'success'
-    | 'error'
-    | 'warning'
-    | 'info'
-    | 'text' = variant;
+  let iconVariantVar: string = variant;
   if (['warning', 'default'].includes(variant)) {
     iconVariantVar = 'text';
   }
   if (['error', 'success', 'info'].includes(variant)) {
-    iconVariantVar = 'text';
+    iconVariantVar = 'white';
   }
   if (iconVariant) {
     iconVariantVar = iconVariant;
   }
 
+  // Match the original implementation exactly
   let iconBackgroundVariant =
-    colors[theme.c7__ui.mode as 'light' | 'dark']?.iconBackgroundColor?.[
-      variant as InfoCardVariant
-    ] || '';
+    colors[theme.c7__ui.mode].iconBackgroundColor[variant];
   if (iconVariant) {
-    iconBackgroundVariant =
-      backgroundColors[theme.c7__ui.mode]?.[iconVariant] || '';
+    iconBackgroundVariant = backgroundColors[theme.c7__ui.mode][iconVariant];
   }
 
   return (
@@ -123,7 +115,12 @@ const InfoCard = ({
             <Icon size={24} icon={icon} variant={iconVariantVar} />
           </StyledIcon>
         )}
-        {img && <StyledImage src={img} alt={title ? String(title) : ''} />}
+        {img && (
+          <StyledImage
+            src={img}
+            alt={typeof title === 'string' ? title : 'Image'}
+          />
+        )}
       </div>
       <StyledContentWrapper>
         {label && <StyledLabel variant={variant}>{label}</StyledLabel>}

@@ -40,7 +40,7 @@ export interface IconProps {
   /**
    * Set the visual property of the component.
    */
-  variant?: IconVariant;
+  variant?: IconVariant | string;
 
   /**
    * Add test attribute to the element. Used internally for testing.
