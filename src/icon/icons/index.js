@@ -74,6 +74,8 @@ import Exit from './Exit';
 import Export from './Export';
 import Eye from './Eye';
 import EyeCrossed from './EyeCrossed';
+import FileExport from './FileExport';
+import FileImport from './FileImport';
 import Filter from './Filter';
 import Flag from './Flag';
 import Form from './Form';
@@ -88,6 +90,7 @@ import HeartFilled from './HeartFilled';
 import History from './History';
 import Image from './Image';
 import ImagePlaceholder from './ImagePlaceholder';
+import Import from './Import';
 import InfoCircle from './InfoCircle';
 import Inventory from './Inventory';
 import Language from './Language';
@@ -253,6 +256,8 @@ export {
   Export as export,
   Eye as eye,
   EyeCrossed as eyeCrossed,
+  FileImport as fileImport,
+  FileExport as fileExport,
   Filter as filter,
   Flag as flag,
   Form as form,
@@ -274,6 +279,7 @@ export {
   Lock as lock,
   Image as image,
   ImagePlaceholder as imagePlaceholder,
+  Import as import,
   Loading as loading,
   Location as location,
   LocationBottom as locationBottom,
