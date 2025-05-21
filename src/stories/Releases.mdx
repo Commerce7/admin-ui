@@ -6,6 +6,82 @@ import { Meta } from '@storybook/blocks';
 
 # Release Notes
 
+### 2.0.0
+
+This release represents a major milestone for the Commerce7 Admin UI component library, completing our transition to TypeScript and bringing significant improvements to type safety, developer experience, and component stability.
+
+##### Key Changes
+
+- **Complete TypeScript Migration**: All components have been converted to TypeScript, providing proper type definitions, better IDE integration, and enhanced developer experience
+- **Improved Type Safety**: Added proper interface definitions and exported types for all components
+- **Modernized Storybook Implementation**: Updated to the latest Component Story Format (CSF) syntax and added better documentation
+- **Improved Accessibility**: Fixed various accessibility issues across components
+- **Bug Fixes**: Resolved various visual and functional issues from the beta releases
+- **Performance Improvements**: Optimized component rendering and reduced unnecessary re-renders
+- **Documentation Updates**: Enhanced component documentation with more examples and clearer prop descriptions
+
+##### Breaking Changes
+
+- Default prop values are now defined in function parameters instead of using a separate `defaultProps` object
+- Some components have modified prop types for improved type safety
+- Removed deprecated features and components (see beta release notes for details)
+- The Icon component now requires proper PascalCase usage in TypeScript environments
+- Some component APIs have been standardized for consistency
+
+##### Migration Guide
+
+When upgrading from v1.x:
+
+1. Review any TypeScript errors that may appear and adjust your code accordingly
+2. Check components with significant API changes (particularly Icon, InfoCard and form components)
+
+This release includes all improvements and fixes from the previous beta versions.
+
+#### 2.0.0-beta.10
+
+- Fix InfoCard component variants.
+
+#### 2.0.0-beta.9
+
+- Update href's and src's to not be an empty string.
+- Migrate missing docs.
+
+#### 2.0.0-beta.8
+
+- Migrate missing Tab component.
+
+#### 2.0.0-beta.7
+
+- Fix all type errors for regular components.
+
+#### 2.0.0-beta.6
+
+- Update all the components to use TypeScript.
+
+#### 2.0.0-beta.5
+
+- Add support to mdx files.
+
+#### 2.0.0-beta.4
+
+- Adjust bundle to build with another styled component theme provider.
+
+#### 2.0.0-beta.3
+
+- Downgrade styled components back to 5.3.11.
+
+#### 2.0.0-beta.2
+
+- Add missing release notes for beta version.
+
+#### 2.0.0-beta.1
+
+- This beta release marks a major transition of the admin-ui package to TypeScript, laying the groundwork for improved type safety, maintainability, and developer experience.
+- Note: This beta version is intended for internal testing only. It is not officially supported for external use by partners. Full support will begin with the stable 2.0.0 release.
+- Some components are already migrated to TypeScript, like "Card", "Text", "Line Break", and "Commerce7AdminUI"; these components are using types, and we are removing default props, which are being deprecated.
+
+- Major NPM package update to webpack-cli
+
 #### 1.12.47
 
 - Adds fileExport, fileImport and import icons.
