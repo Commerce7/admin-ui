@@ -44,9 +44,7 @@ const legendDataWithoutValue: LegendItem[] = [
 
 export const Default: Story = {
   render: (args) => (
-    <div>
-      <Legend {...args} isVertical={false} data={legendDataWithoutValue} />
-    </div>
+    <Legend {...args} isVertical={false} data={legendDataWithoutValue} />
   ),
   parameters: {
     docs: {
@@ -58,11 +56,7 @@ export const Default: Story = {
 };
 
 export const Vertical: Story = {
-  render: (args) => (
-    <div>
-      <Legend {...args} data={legendData} isVertical />
-    </div>
-  ),
+  render: (args) => <Legend {...args} data={legendData} isVertical />,
   parameters: {
     docs: {
       description: {

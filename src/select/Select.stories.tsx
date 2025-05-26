@@ -6,6 +6,7 @@ import Select from '.';
 const meta: Meta<typeof Select> = {
   title: 'Form/Select',
   component: Select,
+  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -18,199 +19,240 @@ const meta: Meta<typeof Select> = {
 export default meta;
 type Story = StoryObj<typeof Select>;
 
-// Create separate components for stories with state
-const BasicExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Select
-      label="Favourite Wine"
-      id="favourite-wine"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        { label: 'Red', value: 'red' },
-        { label: 'White', value: 'white' }
-      ]}
-    />
-  );
-};
-
-const DisabledExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Select
-      label="Favourite Wine"
-      id="favourite-wine"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        { label: 'Red', value: 'red' },
-        { label: 'White', value: 'white' }
-      ]}
-      disabled
-    />
-  );
-};
-
-const PlaceholderExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Select
-      label="Favourite Wine"
-      id="favourite-wine"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        { label: 'Red', value: 'red' },
-        { label: 'White', value: 'white' }
-      ]}
-      required
-      placeholder="Select your favourite wine"
-    />
-  );
-};
-
-const ErrorExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  const errorMessage = !value ? 'This field is required' : '';
-
-  return (
-    <Select
-      label="Favourite Wine"
-      id="favourite-wine"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        { label: 'Red', value: 'red' },
-        { label: 'White', value: 'white' }
-      ]}
-      errorMessage={errorMessage}
-    />
-  );
-};
-
-const RequiredExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Select
-      label="Favourite Wine"
-      id="favourite-wine"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        { label: 'Red', value: 'red' },
-        { label: 'White', value: 'white' }
-      ]}
-      required
-    />
-  );
-};
-
-const GroupExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Select
-      label="Favourite Drink"
-      id="favourite-drink"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        {
-          label: 'Wine',
-          options: [
-            { label: 'White', value: 'white' },
-            { label: 'Red', value: 'red' }
-          ]
-        },
-        {
-          label: 'Liquor',
-          options: [
-            { label: 'Rum', value: 'rum' },
-            { label: 'Vodka', value: 'vodka' }
-          ]
-        },
-        { label: 'Beer', value: 'beer' }
-      ]}
-    />
-  );
-};
-
-const DescriptionExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Select
-      label="Favourite Wine"
-      id="favourite-wine"
-      value={value}
-      onChange={handleOnChange}
-      options={[
-        { label: 'Red', value: 'red' },
-        { label: 'White', value: 'white' }
-      ]}
-      description="Select your favourite wines from this list"
-    />
-  );
-};
-
 export const Basic: Story = {
-  render: () => <BasicExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Select
+        label="Favourite Wine"
+        id="favourite-wine"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          { label: 'Red', value: 'red' },
+          { label: 'White', value: 'white' }
+        ]}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Basic select input with label and options.'
+      }
+    }
+  }
 };
 
 export const Disabled: Story = {
-  render: () => <DisabledExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Select
+        label="Favourite Wine"
+        id="favourite-wine"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          { label: 'Red', value: 'red' },
+          { label: 'White', value: 'white' }
+        ]}
+        disabled
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Disabled select that cannot be interacted with.'
+      }
+    }
+  }
 };
 
 export const Placeholder: Story = {
-  render: () => <PlaceholderExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Select
+        label="Favourite Wine"
+        id="favourite-wine"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          { label: 'Red', value: 'red' },
+          { label: 'White', value: 'white' }
+        ]}
+        required
+        placeholder="Select your favourite wine"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Select with placeholder text shown when no option is selected.'
+      }
+    }
+  }
 };
 
 export const Error: Story = {
-  render: () => <ErrorExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    const errorMessage = !value ? 'This field is required' : '';
+
+    return (
+      <Select
+        label="Favourite Wine"
+        id="favourite-wine"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          { label: 'Red', value: 'red' },
+          { label: 'White', value: 'white' }
+        ]}
+        errorMessage={errorMessage}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Select with error state and message.'
+      }
+    }
+  }
 };
 
 export const Required: Story = {
-  render: () => <RequiredExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Select
+        label="Favourite Wine"
+        id="favourite-wine"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          { label: 'Red', value: 'red' },
+          { label: 'White', value: 'white' }
+        ]}
+        required
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Required select showing the required indicator.'
+      }
+    }
+  }
 };
 
 export const Group: Story = {
-  render: () => <GroupExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Select
+        label="Favourite Drink"
+        id="favourite-drink"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          {
+            label: 'Wine',
+            options: [
+              { label: 'White', value: 'white' },
+              { label: 'Red', value: 'red' }
+            ]
+          },
+          {
+            label: 'Liquor',
+            options: [
+              { label: 'Rum', value: 'rum' },
+              { label: 'Vodka', value: 'vodka' }
+            ]
+          },
+          { label: 'Beer', value: 'beer' }
+        ]}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Select with grouped options.'
+      }
+    }
+  }
 };
 
 export const Description: Story = {
-  render: () => <DescriptionExample />
+  render: () => {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Select
+        label="Favourite Wine"
+        id="favourite-wine"
+        value={value}
+        onChange={handleOnChange}
+        options={[
+          { label: 'Red', value: 'red' },
+          { label: 'White', value: 'white' }
+        ]}
+        description="Select your favourite wines from this list"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Select with descriptive helper text.'
+      }
+    }
+  }
 };
