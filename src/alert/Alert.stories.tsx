@@ -20,12 +20,10 @@ export default meta;
 type Story = StoryObj<typeof Alert>;
 
 export const Basic: Story = {
-  name: 'Basic',
   render: () => <Alert>This is an alert</Alert>
 };
 
 export const Variants: Story = {
-  name: 'Variants',
   render: () => (
     <>
       <Alert variant="error">This is a red error alert</Alert>
@@ -40,7 +38,6 @@ export const Variants: Story = {
 };
 
 export const Small: Story = {
-  name: 'Small',
   render: () => (
     <>
       <Alert variant="error" size="small" icon="link">

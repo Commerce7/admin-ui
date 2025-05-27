@@ -19,6 +19,5 @@ export default meta;
 type Story = StoryObj<typeof LineBreak>;
 
 export const Basic: Story = {
-  name: 'Basic',
   render: () => <LineBreak />
 };

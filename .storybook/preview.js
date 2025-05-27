@@ -7,18 +7,19 @@ export default {
       source: {
         type: 'code',
         excludeDecorators: true,
-        transform: (code) => {
-          // First replace 'render: () =>' with '() =>'
-          let transformedCode = code.replace(/render:\s*\(\)\s*=>/, '() =>');
-
-          // Remove the parameters section entirely
-          transformedCode = transformedCode.replace(
-            /,?\s*parameters:\s*{[^]*?story:\s*['"].*?['"]\s*}[^]*?}\s*}\s*/g,
-            ''
-          );
-
-          return transformedCode;
-        }
+        // format: true,
+        /**
+         * Transform the source code for better presentation in docs:
+         * - Simplify render function syntax
+         * - Remove unnecessary parameters and story sections
+         */
+        transform: (code) =>
+          code
+            .replace(/render:\s*\(\)\s*=>/, '() =>')
+            .replace(
+              /,?\s*parameters:[\s\S]*?story:[\s\S]*?}\s*}\s*}\s*$/,
+              '\n}'
+            )
       }
     }
   }
