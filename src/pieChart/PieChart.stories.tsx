@@ -48,10 +48,9 @@ const legendData = [
 
 // Basic example
 export const Basic: Story = {
-  render: (args) => (
+  render: () => (
     <div style={{ height: 300 }}>
       <PieChart
-        {...args}
         data={sampleData}
         colors={colors}
         label={<Label />}
@@ -70,10 +69,9 @@ export const Basic: Story = {
 
 // Custom legend example
 export const WithCustomLegend: Story = {
-  render: (args) => (
+  render: () => (
     <div style={{ height: 300 }}>
       <PieChart
-        {...args}
         data={sampleData}
         colors={colors}
         label={<Label />}
