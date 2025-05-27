@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import { Moment } from 'moment';
 import React, { useState } from 'react';
@@ -22,7 +23,6 @@ type Story = StoryObj<typeof DatePicker>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -49,7 +49,6 @@ export const Basic: Story = {
 
 export const Disabled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -77,7 +76,6 @@ export const Disabled: Story = {
 
 export const Placeholder: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -105,7 +103,6 @@ export const Placeholder: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -135,7 +132,6 @@ export const Error: Story = {
 
 export const Required: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -163,7 +159,6 @@ export const Required: Story = {
 
 export const DisabledDates: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -197,7 +192,6 @@ export const DisabledDates: Story = {
 
 export const Description: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -225,7 +219,6 @@ export const Description: Story = {
 
 export const Clear: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {
@@ -253,7 +246,6 @@ export const Clear: Story = {
 
 export const Inline: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: Moment | string) => {

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -21,7 +22,6 @@ type Story = StoryObj<typeof Checkbox>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState(false);
     return (
       <Checkbox
@@ -36,7 +36,6 @@ export const Basic: Story = {
 
 export const Disabled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState(false);
     return (
       <Checkbox
@@ -52,7 +51,6 @@ export const Disabled: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState(false);
     const errorMessage = !checked ? 'This field is required' : '';
     return (
@@ -69,7 +67,6 @@ export const Error: Story = {
 
 export const Required: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState(false);
     return (
       <Checkbox
@@ -85,7 +82,6 @@ export const Required: Story = {
 
 export const Description: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState(false);
     return (
       <Checkbox
@@ -102,9 +98,8 @@ export const Description: Story = {
 
 export const ButtonVariant: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked1, setChecked1] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const [checked2, setChecked2] = useState(false);
     return (
       <>
@@ -135,9 +130,8 @@ export const ButtonVariant: Story = {
 
 export const MediumButtonVariant: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked1, setChecked1] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const [checked2, setChecked2] = useState(false);
     return (
       <>
@@ -168,9 +162,8 @@ export const MediumButtonVariant: Story = {
 
 export const LargeButtonVariant: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked1, setChecked1] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const [checked2, setChecked2] = useState(false);
     return (
       <>

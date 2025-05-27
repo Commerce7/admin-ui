@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { ChangeEvent, useState } from 'react';
@@ -136,7 +137,6 @@ export const Clickable: Story = {
 
 export const AllIcons: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [searchText, setSearchText] = useState('');
 
     const handleChange = (e: ChangeEvent<HTMLInputElement>) => {

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -21,7 +22,6 @@ type Story = StoryObj<typeof Input>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -36,19 +36,11 @@ export const Basic: Story = {
         onChange={handleOnChange}
       />
     );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Basic input field with label and onChange handler.'
-      }
-    }
   }
 };
 
 export const Disabled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -76,7 +68,6 @@ export const Disabled: Story = {
 
 export const Placeholder: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -104,7 +95,6 @@ export const Placeholder: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -134,7 +124,6 @@ export const Error: Story = {
 
 export const Required: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -162,7 +151,6 @@ export const Required: Story = {
 
 export const Password: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -190,7 +178,6 @@ export const Password: Story = {
 
 export const Email: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -218,9 +205,8 @@ export const Email: Story = {
 
 export const Icon: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [tax, setTax] = useState('');
-    // eslint-disable-next-line react-hooks/rules-of-hooks
+
     const [price, setPrice] = useState('');
 
     const handleTaxChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -261,7 +247,6 @@ export const Icon: Story = {
 
 export const Description: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -289,7 +274,6 @@ export const Description: Story = {
 
 export const Color: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('#bf0000');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -318,7 +302,6 @@ export const Color: Story = {
 
 export const Suffix: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {

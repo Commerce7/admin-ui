@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -24,7 +25,6 @@ type Story = StoryObj<typeof Stepper>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [currentPath, setPath] = useState('/configure');
 
     return (

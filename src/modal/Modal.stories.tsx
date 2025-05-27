@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -26,7 +27,6 @@ type Story = StoryObj<typeof Modal>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [visible, setVisible] = useState(false);
 
     const openModal = () => {

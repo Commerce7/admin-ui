@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -21,7 +22,6 @@ type Story = StoryObj<typeof Select>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -52,7 +52,6 @@ export const Basic: Story = {
 
 export const Disabled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -84,7 +83,6 @@ export const Disabled: Story = {
 
 export const Placeholder: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -117,7 +115,6 @@ export const Placeholder: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -151,7 +148,6 @@ export const Error: Story = {
 
 export const Required: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -183,7 +179,6 @@ export const Required: Story = {
 
 export const Group: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -227,7 +222,6 @@ export const Group: Story = {
 
 export const Description: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [value, setValue] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {

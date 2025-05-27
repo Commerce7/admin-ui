@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -23,7 +24,6 @@ type Story = StoryObj<typeof RadioGroup>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -53,7 +53,6 @@ export const Basic: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -85,7 +84,6 @@ export const Error: Story = {
 
 export const Required: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -115,7 +113,6 @@ export const Required: Story = {
 
 export const ButtonGroup: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('right');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -158,7 +155,6 @@ export const ButtonGroup: Story = {
 
 export const ButtonGroupMedium: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('right');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -204,7 +200,6 @@ export const ButtonGroupMedium: Story = {
 
 export const ButtonGroupLarge: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('right');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -247,7 +242,6 @@ export const ButtonGroupLarge: Story = {
 
 export const ButtonGroupError: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('right');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -298,7 +292,6 @@ export const ButtonGroupError: Story = {
 
 export const ButtonGroupLargeError: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('right');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {

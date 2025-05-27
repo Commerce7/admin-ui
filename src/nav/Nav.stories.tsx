@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 import styled from 'styled-components';
@@ -31,7 +32,6 @@ const StyledNav = styled(Nav)`
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [currentPath, setPath] = useState('/dashboard');
 
     return (
@@ -78,7 +78,6 @@ export const Basic: Story = {
 
 export const SubNavigation: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [currentPath, setPath] = useState('/store/order');
 
     return (

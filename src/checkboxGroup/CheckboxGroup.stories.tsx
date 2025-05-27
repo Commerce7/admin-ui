@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -22,7 +23,6 @@ type Story = StoryObj<typeof CheckboxGroup>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState<string[]>([]);
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -57,7 +57,6 @@ export const Basic: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState<string[]>([]);
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {

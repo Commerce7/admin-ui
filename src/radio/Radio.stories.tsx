@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -21,7 +22,6 @@ type Story = StoryObj<typeof Radio>;
 
 export const Basic: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +49,6 @@ export const Basic: Story = {
 
 export const Disabled: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -78,7 +77,6 @@ export const Disabled: Story = {
 
 export const Error: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -109,7 +107,6 @@ export const Error: Story = {
 
 export const Required: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState('');
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -138,7 +135,6 @@ export const Required: Story = {
 
 export const Description: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [checked, setChecked] = useState(false);
 
     const handleOnChange = () => {
@@ -168,7 +164,6 @@ export const Description: Story = {
 
 export const ButtonVariant: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [selected, setSelected] = useState('');
 
     const handleSelect = (e: ChangeEvent<HTMLInputElement>) => {
@@ -222,7 +217,6 @@ export const ButtonVariant: Story = {
 
 export const MediumButtonVariant: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [selected, setSelected] = useState('');
 
     const handleSelect = (e: ChangeEvent<HTMLInputElement>) => {
@@ -277,7 +271,6 @@ export const MediumButtonVariant: Story = {
 
 export const LargeButtonVariant: Story = {
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     const [selected, setSelected] = useState('');
 
     const handleSelect = (e: ChangeEvent<HTMLInputElement>) => {
