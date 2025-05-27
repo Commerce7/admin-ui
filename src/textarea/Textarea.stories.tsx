@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState, ChangeEvent } from 'react';
 
@@ -6,6 +7,7 @@ import Textarea from '.';
 const meta: Meta<typeof Textarea> = {
   title: 'Form/Textarea',
   component: Textarea,
+  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -18,157 +20,192 @@ const meta: Meta<typeof Textarea> = {
 export default meta;
 type Story = StoryObj<typeof Textarea>;
 
-const BasicExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      onChange={handleOnChange}
-    />
-  );
-};
-
-const DisabledExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      onChange={handleOnChange}
-      disabled
-    />
-  );
-};
-
-const PlaceholderExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      onChange={handleOnChange}
-      placeholder="Comments"
-    />
-  );
-};
-
-const ErrorExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  const errorMessage = !value ? 'This field is required' : '';
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      onChange={handleOnChange}
-      errorMessage={errorMessage}
-    />
-  );
-};
-
-const RequiredExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      onChange={handleOnChange}
-      required
-    />
-  );
-};
-
-const HeightExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      height={600}
-      onChange={handleOnChange}
-    />
-  );
-};
-
-const DescriptionExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
-    setValue(e.target.value);
-  };
-
-  return (
-    <Textarea
-      label="Comments"
-      id="comments"
-      value={value}
-      onChange={handleOnChange}
-      description="Please give us some more information"
-    />
-  );
-};
-
 export const Basic: Story = {
-  render: () => <BasicExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        onChange={handleOnChange}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Basic textarea with label and onChange handler.'
+      }
+    }
+  }
 };
 
 export const Disabled: Story = {
-  render: () => <DisabledExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        onChange={handleOnChange}
+        disabled
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Disabled textarea that cannot be interacted with.'
+      }
+    }
+  }
 };
 
 export const Placeholder: Story = {
-  render: () => <PlaceholderExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        onChange={handleOnChange}
+        placeholder="Comments"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Textarea with placeholder text shown when empty.'
+      }
+    }
+  }
 };
 
 export const Error: Story = {
-  render: () => <ErrorExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    const errorMessage = !value ? 'This field is required' : '';
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        onChange={handleOnChange}
+        errorMessage={errorMessage}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Textarea with error state and message.'
+      }
+    }
+  }
 };
 
 export const Required: Story = {
-  render: () => <RequiredExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        onChange={handleOnChange}
+        required
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Required textarea showing the required indicator.'
+      }
+    }
+  }
 };
 
 export const CustomHeight: Story = {
-  render: () => <HeightExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        height={600}
+        onChange={handleOnChange}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Textarea with custom height.'
+      }
+    }
+  }
 };
 
 export const Description: Story = {
-  render: () => <DescriptionExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+      setValue(e.target.value);
+    };
+
+    return (
+      <Textarea
+        label="Comments"
+        id="comments"
+        value={value}
+        onChange={handleOnChange}
+        description="Please give us some more information"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Textarea with descriptive helper text.'
+      }
+    }
+  }
 };

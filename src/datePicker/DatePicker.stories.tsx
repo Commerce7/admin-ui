@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import { Moment } from 'moment';
 import React, { useState } from 'react';
@@ -7,6 +8,7 @@ import DatePicker from '.';
 const meta: Meta<typeof DatePicker> = {
   title: 'Form/DatePicker',
   component: DatePicker,
+  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -19,207 +21,252 @@ const meta: Meta<typeof DatePicker> = {
 export default meta;
 type Story = StoryObj<typeof DatePicker>;
 
-// Create separate components for stories with state
-const BasicExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-    />
-  );
-};
-
-const DisabledExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      disabled
-    />
-  );
-};
-
-const PlaceholderExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      placeholder="Select the date"
-    />
-  );
-};
-
-const ErrorExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  const errorMessage = !value ? 'This field is required' : '';
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      errorMessage={errorMessage}
-    />
-  );
-};
-
-const RequiredExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      required
-    />
-  );
-};
-
-const DisabledDatesExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  const isValidDate = (currentDate: Moment) => {
-    const today = new Date();
-    return !currentDate.isBefore(today, 'day');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      isValidDate={isValidDate}
-    />
-  );
-};
-
-const DescriptionExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      description="Select the date to start your campaign"
-    />
-  );
-};
-
-const ClearExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      allowClear
-    />
-  );
-};
-
-const InlineExample = () => {
-  const [value, setValue] = useState('');
-
-  const handleOnChange = (e: Moment | string) => {
-    setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
-  };
-
-  return (
-    <DatePicker
-      label="Date"
-      id="date"
-      value={value}
-      onChange={handleOnChange}
-      inline
-    />
-  );
-};
-
 export const Basic: Story = {
-  render: () => <BasicExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Basic date picker with label and onChange handler.'
+      }
+    }
+  }
 };
 
 export const Disabled: Story = {
-  render: () => <DisabledExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        disabled
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Disabled date picker that cannot be interacted with.'
+      }
+    }
+  }
 };
 
 export const Placeholder: Story = {
-  render: () => <PlaceholderExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        placeholder="Select the date"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Date picker with custom placeholder text.'
+      }
+    }
+  }
 };
 
 export const Error: Story = {
-  render: () => <ErrorExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    const errorMessage = !value ? 'This field is required' : '';
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        errorMessage={errorMessage}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Date picker displaying an error message when validation fails.'
+      }
+    }
+  }
 };
 
 export const Required: Story = {
-  render: () => <RequiredExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        required
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Required date picker showing the required indicator.'
+      }
+    }
+  }
 };
 
 export const DisabledDates: Story = {
-  render: () => <DisabledDatesExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    const isValidDate = (currentDate: Moment) => {
+      const today = new Date();
+      return !currentDate.isBefore(today, 'day');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        isValidDate={isValidDate}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Date picker with custom validation to disable dates before today.'
+      }
+    }
+  }
 };
 
 export const Description: Story = {
-  render: () => <DescriptionExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        description="Select the date to start your campaign"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Date picker with a description helper text.'
+      }
+    }
+  }
 };
 
 export const Clear: Story = {
-  render: () => <ClearExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        allowClear
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Date picker with a clear button to reset the input.'
+      }
+    }
+  }
 };
 
 export const Inline: Story = {
-  render: () => <InlineExample />
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e ? (e as Moment).format('MMM D, YYYY') : '');
+    };
+
+    return (
+      <DatePicker
+        label="Date"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        inline
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Inline date picker that always displays the calendar.'
+      }
+    }
+  }
 };

@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { ChangeEvent, useState } from 'react';
@@ -44,87 +45,12 @@ const Grid = styled.div`
   gap: 16px;
 `;
 
-// Story components
-const BasicExample = () => (
-  <Grid>
-    <Icon icon="cart" />
-  </Grid>
-);
-
-const VariantsExample = () => (
-  <Grid>
-    <Icon icon="cart" variant="default" />
-    <Icon icon="cart" variant="success" />
-    <Icon icon="cart" variant="error" />
-    <Icon icon="cart" variant="text" />
-  </Grid>
-);
-
-const SizesExample = () => (
-  <Grid>
-    <div>
-      <Icon icon="cart" />
-      <Icon icon="cart" size={24} />
-      <Icon icon="cart" size={48} />
-    </div>
-    <div>
-      <Icon icon="cart" variant="success" />
-      <Icon icon="cart" size={24} variant="success" />
-      <Icon icon="cart" size={48} variant="success" />
-    </div>
-    <div>
-      <Icon icon="cart" variant="error" />
-      <Icon icon="cart" size={24} variant="error" />
-      <Icon icon="cart" size={48} variant="error" />
-    </div>
-    <div>
-      <Icon icon="cart" variant="text" />
-      <Icon icon="cart" size={24} variant="text" />
-      <Icon icon="cart" size={48} variant="text" />
-    </div>
-  </Grid>
-);
-
-const OnClickExample = () => (
-  <Grid>
-    <Icon icon="add" onClick={action('on-click-add')} label="Add to cart" />
-    <Icon
-      icon="remove"
-      onClick={action('on-click-remove')}
-      label="Remove from cart"
-      size={48}
-    />
-  </Grid>
-);
-
-const IconListExample = () => {
-  const [searchText, setSearchText] = useState('');
-
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setSearchText(e.target.value);
-  };
-
-  const filteredIcons = Object.keys(Icons).filter(
-    (iconKey) =>
-      iconKey !== '__namedExportsOrder' &&
-      iconKey.toLowerCase().includes(searchText.toLowerCase())
-  );
-
-  return (
-    <Grid>
-      <Input value={searchText} onChange={handleChange} label="Search" />
-      {filteredIcons.map((iconKey) => (
-        <IconRow key={iconKey}>
-          <Icon icon={iconKey} /> {iconKey}
-        </IconRow>
-      ))}
-    </Grid>
-  );
-};
-
-// Story exports
 export const Basic: Story = {
-  render: () => <BasicExample />,
+  render: () => (
+    <Grid>
+      <Icon icon="cart" />
+    </Grid>
+  ),
   parameters: {
     docs: {
       description: {
@@ -135,7 +61,14 @@ export const Basic: Story = {
 };
 
 export const Variants: Story = {
-  render: () => <VariantsExample />,
+  render: () => (
+    <Grid>
+      <Icon icon="cart" variant="default" />
+      <Icon icon="cart" variant="success" />
+      <Icon icon="cart" variant="error" />
+      <Icon icon="cart" variant="text" />
+    </Grid>
+  ),
   parameters: {
     docs: {
       description: {
@@ -147,7 +80,30 @@ export const Variants: Story = {
 };
 
 export const Sizes: Story = {
-  render: () => <SizesExample />,
+  render: () => (
+    <Grid>
+      <div>
+        <Icon icon="cart" />
+        <Icon icon="cart" size={24} />
+        <Icon icon="cart" size={48} />
+      </div>
+      <div>
+        <Icon icon="cart" variant="success" />
+        <Icon icon="cart" size={24} variant="success" />
+        <Icon icon="cart" size={48} variant="success" />
+      </div>
+      <div>
+        <Icon icon="cart" variant="error" />
+        <Icon icon="cart" size={24} variant="error" />
+        <Icon icon="cart" size={48} variant="error" />
+      </div>
+      <div>
+        <Icon icon="cart" variant="text" />
+        <Icon icon="cart" size={24} variant="text" />
+        <Icon icon="cart" size={48} variant="text" />
+      </div>
+    </Grid>
+  ),
   parameters: {
     docs: {
       description: {
@@ -158,7 +114,17 @@ export const Sizes: Story = {
 };
 
 export const Clickable: Story = {
-  render: () => <OnClickExample />,
+  render: () => (
+    <Grid>
+      <Icon icon="add" onClick={action('on-click-add')} label="Add to cart" />
+      <Icon
+        icon="remove"
+        onClick={action('on-click-remove')}
+        label="Remove from cart"
+        size={48}
+      />
+    </Grid>
+  ),
   parameters: {
     docs: {
       description: {
@@ -170,7 +136,31 @@ export const Clickable: Story = {
 };
 
 export const AllIcons: Story = {
-  render: () => <IconListExample />,
+  render: () => {
+    const [searchText, setSearchText] = useState('');
+
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setSearchText(e.target.value);
+    };
+
+    const filteredIcons = Object.keys(Icons).filter(
+      (iconKey) =>
+        iconKey !== '__namedExportsOrder' &&
+        iconKey.toLowerCase().includes(searchText.toLowerCase())
+    );
+
+    return (
+      <Grid>
+        <Input value={searchText} onChange={handleChange} label="Search" />
+        {filteredIcons.map((iconKey) => (
+          <IconRow key={iconKey}>
+            <Icon icon={iconKey} />
+            {iconKey}
+          </IconRow>
+        ))}
+      </Grid>
+    );
+  },
   parameters: {
     docs: {
       description: {

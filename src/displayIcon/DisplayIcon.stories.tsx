@@ -3,11 +3,7 @@ import React from 'react';
 
 import DisplayIcon from './DisplayIcon';
 
-export const Basic = () => (
-  <>
-    <DisplayIcon icon="cart" />
-  </>
-);
+export const Basic = () => <DisplayIcon icon="cart" />;
 Basic.storyName = 'Basic';
 
 export const Variants = () => (

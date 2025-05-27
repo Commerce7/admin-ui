@@ -43,11 +43,7 @@ const legendDataWithoutValue: LegendItem[] = [
 ];
 
 export const Default: Story = {
-  render: (args) => (
-    <div>
-      <Legend {...args} isVertical={false} data={legendDataWithoutValue} />
-    </div>
-  ),
+  render: () => <Legend isVertical={false} data={legendDataWithoutValue} />,
   parameters: {
     docs: {
       description: {
@@ -58,11 +54,7 @@ export const Default: Story = {
 };
 
 export const Vertical: Story = {
-  render: (args) => (
-    <div>
-      <Legend {...args} data={legendData} isVertical />
-    </div>
-  ),
+  render: () => <Legend data={legendData} isVertical />,
   parameters: {
     docs: {
       description: {
@@ -73,17 +65,15 @@ export const Vertical: Story = {
 };
 
 export const GroupedVertical: Story = {
-  render: (args) => (
+  render: () => (
     <div style={{ display: 'flex', gap: 100 }}>
       <Legend
-        {...args}
         data={legendData}
         width="30%"
         legendHeader="By Channel"
         isVertical
       />
       <Legend
-        {...args}
         data={legendData2}
         width="30%"
         legendHeader="By Customer Type"

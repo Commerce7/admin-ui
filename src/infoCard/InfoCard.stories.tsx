@@ -23,7 +23,6 @@ export default meta;
 type Story = StoryObj<typeof InfoCard>;
 
 export const Basic: Story = {
-  name: 'Basic',
   render: () => (
     <InfoCardGrid>
       <InfoCard

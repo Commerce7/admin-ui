@@ -28,11 +28,7 @@ const Container = styled.div`
 
 // Basic example
 export const Basic: Story = {
-  render: () => (
-    <>
-      <VividIcon icon="cart" color="blue" />
-    </>
-  ),
+  render: () => <VividIcon icon="cart" color="blue" />,
   parameters: {
     docs: {
       description: {

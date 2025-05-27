@@ -19,12 +19,10 @@ export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Basic: Story = {
-  name: 'Basic',
   render: () => <Avatar label="JH" />
 };
 
 export const Sizes: Story = {
-  name: 'Sizes',
   render: () => (
     <>
       <Avatar
@@ -56,7 +54,6 @@ export const Sizes: Story = {
 };
 
 export const Image: Story = {
-  name: 'Image',
   render: () => (
     <Avatar
       imageSrc="https://randomuser.me/api/portraits/women/6.jpg"

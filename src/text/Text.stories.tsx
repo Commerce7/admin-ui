@@ -38,6 +38,5 @@ export const Basic: Story = {
       <br />
       <Text strikeThrough>$24.99</Text>
     </>
-  ),
-  storyName: 'Basic'
+  )
 };

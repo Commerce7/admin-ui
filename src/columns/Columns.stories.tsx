@@ -26,7 +26,6 @@ export default meta;
 type Story = StoryObj<typeof Columns>;
 
 export const Basic: Story = {
-  name: 'Basic',
   render: () => (
     <Columns>
       <Column span={6}>
@@ -40,7 +39,6 @@ export const Basic: Story = {
 };
 
 export const DifferentSpans: Story = {
-  name: 'Different Spans',
   render: () => (
     <Columns align="center">
       <Column span={4}>

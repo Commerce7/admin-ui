@@ -25,11 +25,11 @@ export default meta;
 type Story = StoryObj<typeof ProgressBar>;
 
 export const Basic: Story = {
-  render: (args) => <ProgressBar progress={50} {...args} />
+  render: () => <ProgressBar progress={50} />
 };
 
 export const Labelled: Story = {
-  render: (args) => (
+  render: () => (
     <div style={{ height: 50 }}>
       <ProgressBar
         progress={50}
@@ -38,7 +38,6 @@ export const Labelled: Story = {
           progress: 50,
           circleColor: '#42ACF0'
         }}
-        {...args}
       />
     </div>
   )

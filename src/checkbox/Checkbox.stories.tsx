@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { Meta, StoryObj } from '@storybook/react';
 import React, { useState } from 'react';
 
@@ -6,6 +7,7 @@ import Checkbox from '.';
 const meta: Meta<typeof Checkbox> = {
   title: 'Form/Checkbox/Checkbox',
   component: Checkbox,
+  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -18,186 +20,172 @@ const meta: Meta<typeof Checkbox> = {
 export default meta;
 type Story = StoryObj<typeof Checkbox>;
 
-// Create separate components for stories with state
-const BasicExample = () => {
-  const [checked, setChecked] = useState(false);
-  return (
-    <Checkbox
-      label="Subscribe"
-      id="subscribe"
-      checked={checked}
-      onChange={() => setChecked(!checked)}
-    />
-  );
-};
-
-const DisabledExample = () => {
-  const [checked, setChecked] = useState(false);
-  return (
-    <Checkbox
-      label="Subscribe"
-      id="subscribe"
-      checked={checked}
-      onChange={() => setChecked(!checked)}
-      disabled
-    />
-  );
-};
-
-const ErrorExample = () => {
-  const [checked, setChecked] = useState(false);
-  const errorMessage = !checked ? 'This field is required' : '';
-  return (
-    <Checkbox
-      label="Subscribe"
-      id="subscribe"
-      checked={checked}
-      onChange={() => setChecked(!checked)}
-      errorMessage={errorMessage}
-    />
-  );
-};
-
-const RequiredExample = () => {
-  const [checked, setChecked] = useState(false);
-  return (
-    <Checkbox
-      label="Subscribe"
-      id="subscribe"
-      checked={checked}
-      onChange={() => setChecked(!checked)}
-      required
-    />
-  );
-};
-
-const DescriptionExample = () => {
-  const [checked, setChecked] = useState(false);
-  return (
-    <Checkbox
-      label="Subscribe"
-      id="subscribe"
-      checked={checked}
-      onChange={() => setChecked(!checked)}
-      required
-      description="We will never spam your email address"
-    />
-  );
-};
-
-const ButtonVariantExample = () => {
-  const [checked1, setChecked1] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  return (
-    <>
+export const Basic: Story = {
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
       <Checkbox
         label="Subscribe"
         id="subscribe"
-        checked={checked1}
-        onChange={() => setChecked1(!checked1)}
-        variant="button"
-        size="small"
-        icon="carrot"
-        description="Subscription can be cancelled at any time."
+        checked={checked}
+        onChange={() => setChecked(!checked)}
       />
-      <Checkbox
-        label="I agree"
-        id="subscribe"
-        checked={checked2}
-        onChange={() => setChecked2(!checked2)}
-        variant="button"
-        size="small"
-        icon="clipboardText"
-        errorMessage="Required."
-      />
-    </>
-  );
-};
-
-const MediumButtonVariantExample = () => {
-  const [checked1, setChecked1] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  return (
-    <>
-      <Checkbox
-        id="subscribe"
-        checked={checked1}
-        onChange={() => setChecked1(!checked1)}
-        variant="button"
-        size="medium"
-        description="Subscription can be cancelled at any time."
-      >
-        Subscribe
-      </Checkbox>
-      <Checkbox
-        id="agree"
-        checked={checked2}
-        onChange={() => setChecked2(!checked2)}
-        variant="button"
-        size="medium"
-        errorMessage="Required."
-      >
-        I agree
-      </Checkbox>
-    </>
-  );
-};
-
-const LargeButtonVariantExample = () => {
-  const [checked1, setChecked1] = useState(false);
-  const [checked2, setChecked2] = useState(false);
-  return (
-    <>
-      <Checkbox
-        id="subscribe"
-        checked={checked1}
-        onChange={() => setChecked1(!checked1)}
-        variant="button"
-        description="Subscription can be cancelled at any time."
-      >
-        Subscribe
-      </Checkbox>
-      <Checkbox
-        id="agree"
-        checked={checked2}
-        onChange={() => setChecked2(!checked2)}
-        variant="button"
-        errorMessage="Required."
-      >
-        I agree
-      </Checkbox>
-    </>
-  );
-};
-
-export const Basic: Story = {
-  render: () => <BasicExample />
+    );
+  }
 };
 
 export const Disabled: Story = {
-  render: () => <DisabledExample />
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox
+        label="Subscribe"
+        id="subscribe"
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+        disabled
+      />
+    );
+  }
 };
 
 export const Error: Story = {
-  render: () => <ErrorExample />
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    const errorMessage = !checked ? 'This field is required' : '';
+    return (
+      <Checkbox
+        label="Subscribe"
+        id="subscribe"
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+        errorMessage={errorMessage}
+      />
+    );
+  }
 };
 
 export const Required: Story = {
-  render: () => <RequiredExample />
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox
+        label="Subscribe"
+        id="subscribe"
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+        required
+      />
+    );
+  }
 };
 
 export const Description: Story = {
-  render: () => <DescriptionExample />
+  render: () => {
+    const [checked, setChecked] = useState(false);
+    return (
+      <Checkbox
+        label="Subscribe"
+        id="subscribe"
+        checked={checked}
+        onChange={() => setChecked(!checked)}
+        required
+        description="We will never spam your email address"
+      />
+    );
+  }
 };
 
 export const ButtonVariant: Story = {
-  render: () => <ButtonVariantExample />
+  render: () => {
+    const [checked1, setChecked1] = useState(false);
+
+    const [checked2, setChecked2] = useState(false);
+    return (
+      <>
+        <Checkbox
+          label="Subscribe"
+          id="subscribe"
+          checked={checked1}
+          onChange={() => setChecked1(!checked1)}
+          variant="button"
+          size="small"
+          icon="carrot"
+          description="Subscription can be cancelled at any time."
+        />
+        <Checkbox
+          label="I agree"
+          id="agree"
+          checked={checked2}
+          onChange={() => setChecked2(!checked2)}
+          variant="button"
+          size="small"
+          icon="clipboardText"
+          errorMessage="Required."
+        />
+      </>
+    );
+  }
 };
 
 export const MediumButtonVariant: Story = {
-  render: () => <MediumButtonVariantExample />
+  render: () => {
+    const [checked1, setChecked1] = useState(false);
+
+    const [checked2, setChecked2] = useState(false);
+    return (
+      <>
+        <Checkbox
+          id="subscribe"
+          checked={checked1}
+          onChange={() => setChecked1(!checked1)}
+          variant="button"
+          size="medium"
+          description="Subscription can be cancelled at any time."
+        >
+          Subscribe
+        </Checkbox>
+        <Checkbox
+          id="agree"
+          checked={checked2}
+          onChange={() => setChecked2(!checked2)}
+          variant="button"
+          size="medium"
+          errorMessage="Required."
+        >
+          I agree
+        </Checkbox>
+      </>
+    );
+  }
 };
 
 export const LargeButtonVariant: Story = {
-  render: () => <LargeButtonVariantExample />
+  render: () => {
+    const [checked1, setChecked1] = useState(false);
+
+    const [checked2, setChecked2] = useState(false);
+    return (
+      <>
+        <Checkbox
+          id="subscribe"
+          checked={checked1}
+          onChange={() => setChecked1(!checked1)}
+          variant="button"
+          description="Subscription can be cancelled at any time."
+        >
+          Subscribe
+        </Checkbox>
+        <Checkbox
+          id="agree"
+          checked={checked2}
+          onChange={() => setChecked2(!checked2)}
+          variant="button"
+          errorMessage="Required."
+        >
+          I agree
+        </Checkbox>
+      </>
+    );
+  }
 };

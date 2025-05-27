@@ -22,7 +22,6 @@ export default meta;
 type Story = StoryObj<typeof Breadcrumbs>;
 
 export const Basic: Story = {
-  name: 'Basic',
   render: () => (
     <Breadcrumbs>
       <Breadcrumb href="https://commerce7.com">Settings</Breadcrumb>
@@ -33,7 +32,6 @@ export const Basic: Story = {
 };
 
 export const Click: Story = {
-  name: 'Click',
   render: () => (
     <Breadcrumbs>
       <Breadcrumb onClick={action('on-click-settings')}>Settings</Breadcrumb>
