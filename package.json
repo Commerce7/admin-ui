@@ -1,6 +1,6 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "2.0.5",
+  "version": "2.0.6",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
@@ -82,7 +82,7 @@
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.1",
     "eslint-plugin-no-only-tests": "^3.3.0",
-    "eslint-plugin-cypress": "^4.3.0",
+    "eslint-plugin-cypress": "^5.0.1",
     "@storybook/addon-styling-webpack": "^1.0.1",
     "@storybook/manager-api": "^8.3.6",
     "@storybook/preview-api": "^8.3.6",
