@@ -81,3 +81,5 @@ RUN npm run build-storybook
 RUN aws s3 sync storybook-static/ s3://admin-ui-docs.commerce7.com --delete
 RUN aws s3 cp s3://admin-ui-docs.commerce7.com/index.html s3://admin-ui-docs.commerce7.com/index.html --metadata-directive REPLACE --cache-control no-cache,must-revalidate --expires -1 --content-type text/html
 
+# Invalidate cache
+RUN aws cloudfront create-invalidation --distribution-id E1C99L42ZK1GHQ --paths '/*'
