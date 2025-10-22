@@ -131,6 +131,7 @@ import Pound from './Pound';
 import Print from './Print';
 import Process from './Process';
 import Product from './Product';
+import Qr from './Qr';
 import QuestionCircle from './QuestionCircle';
 import Rand from './Rand';
 import Receipt from './Receipt';
@@ -311,6 +312,7 @@ export {
   PosProfile as posProfile,
   Pound as pound,
   Product as product,
+  Qr as qr,
   QuestionCircle as questionCircle,
   Process as process,
   Print as print,
