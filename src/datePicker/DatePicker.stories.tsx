@@ -2,7 +2,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Moment } from 'moment';
 import React, { useState } from 'react';
-
+import moment from 'moment-timezone';
 import DatePicker from '.';
 
 const meta: Meta<typeof DatePicker> = {
@@ -266,6 +266,44 @@ export const Inline: Story = {
     docs: {
       description: {
         story: 'Inline date picker that always displays the calendar.'
+      }
+    }
+  }
+};
+
+export const AustraliaTimezone: Story = {
+  render: () => {
+    const [value, setValue] = useState('');
+    const dateFormat = 'ddd, MMM D, YYYY';
+    const timeZone = 'Australia/Sydney';
+
+    const handleOnChange = (e: Moment | string) => {
+      if (e) {
+        // Convert to Australia timezone when setting value
+        const australiaMoment = moment.tz(e as Moment, timeZone);
+        console.log('🚀 ~ australiaMoment:', australiaMoment);
+        setValue(australiaMoment.format(dateFormat));
+      } else {
+        setValue('');
+      }
+    };
+
+    return (
+      <DatePicker
+        label="Date (Australia Timezone)"
+        id="date"
+        value={value || moment.tz(timeZone).format(dateFormat)}
+        onChange={handleOnChange}
+        // timezone={timeZone}
+        dateFormat={dateFormat}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Date picker configured for Australia timezone (Sydney). Date format is customized to "ddd, MMM D, YYYY".'
       }
     }
   }

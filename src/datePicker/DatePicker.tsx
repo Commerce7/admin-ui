@@ -1,7 +1,8 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { Moment } from 'moment';
-import React, { FocusEvent, forwardRef } from 'react';
+import React, { FocusEvent, forwardRef, useMemo } from 'react';
 import DateTime from 'react-datetime';
+import moment from 'moment-timezone';
 
 import { getFormItemIds } from '../common/form/helpers';
 import {
@@ -108,6 +109,17 @@ export interface DatePickerProps {
    * Add test attribute to the element. Used internally for testing.
    */
   dataTestId?: string;
+
+  /**
+   * Timezone to use for the date picker (e.g., 'Australia/Sydney', 'America/New_York')
+   * If provided, all dates will be in this timezone
+   */
+  timezone?: string;
+
+  /**
+   * Date format to display (e.g., 'MMM D, YYYY' or 'ddd, MMM D, YYYY')
+   */
+  dateFormat?: string;
 }
 
 const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
@@ -129,7 +141,9 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       required = false,
       errorMessage = null,
       dataTestId = null,
-      inline = false
+      inline = false,
+      timezone = null,
+      dateFormat = 'MMM D, YYYY'
     },
     ref
   ) => {
@@ -140,25 +154,37 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       onChange('');
     };
 
+    const handleDateChange = (date: Moment | string) => {
+      if (timezone && date && typeof date !== 'string') {
+        // Convert the selected date to the specified timezone
+        const timezoneAwareDate = moment.tz(date, timezone);
+        onChange(timezoneAwareDate);
+      } else {
+        onChange(date);
+      }
+    };
+
     const { descriptionId, describedById, errorId, labelId } = getFormItemIds(
       id,
       hasDescription,
       hasErrorMessage
     );
 
+    // Common DateTime props
+    const dateTimeProps = {
+      onChange: handleDateChange,
+      onOpen: onFocus,
+      value: value,
+      timeFormat: false,
+      dateFormat: dateFormat,
+      initialViewMode: 'days' as const,
+      isValidDate: isValidDate
+    };
+
     if (inline) {
       return (
         <StyledDatePicker className={className}>
-          <DateTime
-            onChange={onChange}
-            onOpen={onFocus}
-            value={value}
-            timeFormat={false}
-            dateFormat="MMM D, YYYY"
-            initialViewMode="days"
-            isValidDate={isValidDate}
-            input={false}
-          />
+          <DateTime {...dateTimeProps} input={false} />
         </StyledDatePicker>
       );
     }
@@ -173,13 +199,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             </StyledLabel>
           )}
           <DateTime
-            onChange={onChange}
-            onOpen={onFocus}
-            value={value}
-            timeFormat={false}
-            dateFormat="MMM D, YYYY"
-            initialViewMode="days"
-            isValidDate={isValidDate}
+            {...dateTimeProps}
             inputProps={{
               disabled,
               id,
