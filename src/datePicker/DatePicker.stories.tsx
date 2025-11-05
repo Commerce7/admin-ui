@@ -271,30 +271,50 @@ export const Inline: Story = {
   }
 };
 
-export const AustraliaTimezone: Story = {
+export const Timezone: Story = {
   render: () => {
     const [value, setValue] = useState('');
-    const dateFormat = 'ddd, MMM D, YYYY';
     const timeZone = 'Australia/Sydney';
 
     const handleOnChange = (e: Moment | string) => {
-      if (e) {
-        // Convert to Australia timezone when setting value
-        const australiaMoment = moment.tz(e as Moment, timeZone);
-        console.log('🚀 ~ australiaMoment:', australiaMoment);
-        setValue(australiaMoment.format(dateFormat));
-      } else {
-        setValue('');
-      }
+      setValue(e as string);
     };
 
     return (
       <DatePicker
         label="Date (Australia Timezone)"
         id="date"
-        value={value || moment.tz(timeZone).format(dateFormat)}
+        value={value}
         onChange={handleOnChange}
-        // timezone={timeZone}
+        timezone={timeZone}
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Date picker configured for Australia timezone (Sydney). Date format is customized to "ddd, MMM D, YYYY" and automatically defaults to today in Australia timezone.'
+      }
+    }
+  }
+};
+
+export const DateFormat: Story = {
+  render: () => {
+    const [value, setValue] = useState('');
+    const dateFormat = 'ddd, MMM D, YYYY';
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e as string);
+    };
+
+    return (
+      <DatePicker
+        label="Date Formats"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
         dateFormat={dateFormat}
       />
     );
@@ -303,7 +323,7 @@ export const AustraliaTimezone: Story = {
     docs: {
       description: {
         story:
-          'Date picker configured for Australia timezone (Sydney). Date format is customized to "ddd, MMM D, YYYY".'
+          'Date picker configured for Australia timezone (Sydney). Date format is customized to "ddd, MMM D, YYYY" and automatically defaults to today in Australia timezone.'
       }
     }
   }

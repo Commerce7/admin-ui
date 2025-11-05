@@ -101,7 +101,8 @@ export interface DatePickerProps {
 
   /**
    * The value of the element.
-   * This should be a date with format MMM D, YYYY.
+   * Can be a formatted date string, empty string, or moment object.
+   * If timezone is provided and value is empty, defaults to today in that timezone.
    */
   value: string;
 
@@ -112,12 +113,12 @@ export interface DatePickerProps {
 
   /**
    * Timezone to use for the date picker (e.g., 'Australia/Sydney', 'America/New_York')
-   * If provided, all dates will be in this timezone
+   * If provided, all dates will be in this timezone and empty values default to today in this timezone
    */
   timezone?: string;
 
   /**
-   * Date format to display (e.g., 'MMM D, YYYY' or 'ddd, MMM D, YYYY')
+   * Date format to display (e.g., 'MMM D, YYYY' or 'ddd, MMM D, YYYY'). Will always return a formatted string if specified.
    */
   dateFormat?: string;
 }
@@ -150,15 +151,40 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const hasErrorMessage = !!errorMessage;
     const hasDescription = !!description;
 
+    // Calculate the display value based on timezone and format
+    const displayValue = useMemo(() => {
+      if (value) {
+        return value; // Use provided value if it exists
+      }
+
+      if (timezone) {
+        // If timezone is provided and no value, default to today in that timezone
+        return moment.tz(timezone).format(dateFormat);
+      }
+
+      return ''; // No value and no timezone, return empty
+    }, [value, timezone, dateFormat]);
+
     const handleClearValue = () => {
       onChange('');
     };
 
     const handleDateChange = (date: Moment | string) => {
       if (timezone && date && typeof date !== 'string') {
-        // Convert the selected date to the specified timezone
+        // Convert the selected date to the specified timezone and format
         const timezoneAwareDate = moment.tz(date, timezone);
-        onChange(timezoneAwareDate);
+        onChange(timezoneAwareDate.format(dateFormat));
+      } else if (
+        dateFormat &&
+        dateFormat !== 'MMM D, YYYY' &&
+        date &&
+        typeof date !== 'string'
+      ) {
+        // Custom dateFormat specified (but no timezone), format the date
+        onChange(date.format(dateFormat));
+      } else if (date && typeof date !== 'string') {
+        // No timezone or custom format specified, return the Moment object
+        onChange(date);
       } else {
         onChange(date);
       }
@@ -174,10 +200,9 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
     const dateTimeProps = {
       onChange: handleDateChange,
       onOpen: onFocus,
-      value: value,
+      value: displayValue,
       timeFormat: false,
       dateFormat: dateFormat,
-      initialViewMode: 'days' as const,
       isValidDate: isValidDate
     };
 
@@ -205,7 +230,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               id,
               placeholder,
               required,
-              value,
+              value: displayValue,
               autoFocus
             }}
             closeOnSelect
@@ -221,7 +246,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
                   disabled={disabled}
                   placeholder={placeholder}
                   id={id}
-                  value={value}
+                  value={displayValue}
                   onBlur={onBlur}
                   onChange={onChange}
                   onFocus={onFocus}
@@ -233,7 +258,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
               </StyledIconWrapper>
             )}
           />
-          {allowClear && value && (
+          {allowClear && displayValue && (
             <StyledClearButton
               onClick={handleClearValue}
               type="button"
