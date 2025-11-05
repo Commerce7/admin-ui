@@ -3,7 +3,6 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Moment } from 'moment';
 import React, { useState } from 'react';
 import DatePicker from '.';
-import { DayDatePicker } from '.';
 
 const meta: Meta<typeof DatePicker> = {
   title: 'Form/DatePicker',
