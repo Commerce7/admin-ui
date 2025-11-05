@@ -2,8 +2,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Moment } from 'moment';
 import React, { useState } from 'react';
-import moment from 'moment-timezone';
 import DatePicker from '.';
+import { DayDatePicker } from '.';
 
 const meta: Meta<typeof DatePicker> = {
   title: 'Form/DatePicker',
@@ -270,11 +270,9 @@ export const Inline: Story = {
     }
   }
 };
-
-export const Timezone: Story = {
+export const DayFormat: Story = {
   render: () => {
     const [value, setValue] = useState('');
-    const timeZone = 'Australia/Sydney';
 
     const handleOnChange = (e: Moment | string) => {
       setValue(e as string);
@@ -282,11 +280,11 @@ export const Timezone: Story = {
 
     return (
       <DatePicker
-        label="Date (Australia Timezone)"
+        label="Day Format Date Picker"
         id="date"
         value={value}
         onChange={handleOnChange}
-        timezone={timeZone}
+        variant={'dayFormat'}
       />
     );
   },
@@ -294,36 +292,7 @@ export const Timezone: Story = {
     docs: {
       description: {
         story:
-          'Date picker configured for Australia timezone (Sydney). Date format is customized to "ddd, MMM D, YYYY" and automatically defaults to today in Australia timezone.'
-      }
-    }
-  }
-};
-
-export const DateFormat: Story = {
-  render: () => {
-    const [value, setValue] = useState('');
-    const dateFormat = 'ddd, MMM D, YYYY';
-
-    const handleOnChange = (e: Moment | string) => {
-      setValue(e as string);
-    };
-
-    return (
-      <DatePicker
-        label="Date Formats"
-        id="date"
-        value={value}
-        onChange={handleOnChange}
-        dateFormat={dateFormat}
-      />
-    );
-  },
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Date picker configured for Australia timezone (Sydney). Date format is customized to "ddd, MMM D, YYYY" and automatically defaults to today in Australia timezone.'
+          'Day Format Date Picker variant which returns formatted string in "ddd, MMM D, YYYY" format.'
       }
     }
   }

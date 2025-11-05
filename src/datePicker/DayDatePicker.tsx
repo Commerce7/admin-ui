@@ -2,7 +2,7 @@
 import { Moment } from 'moment';
 import React, { FocusEvent, forwardRef } from 'react';
 import DateTime from 'react-datetime';
-import DayDatePicker from './DayDatePicker';
+
 import { getFormItemIds } from '../common/form/helpers';
 import {
   StyledDescription,
@@ -20,7 +20,7 @@ import {
 
 import { StyledClearButton, StyledDatePicker } from './DatePicker.styles';
 
-export interface DatePickerProps {
+export interface DayDatePickerProps {
   /**
    * Show a clear value button in the input.
    */
@@ -75,8 +75,9 @@ export interface DatePickerProps {
 
   /**
    * Callback onChange.
+   * Returns formatted string in 'ddd, MMM D, YYYY' format.
    */
-  onChange: (date: Moment | string) => void;
+  onChange: (date: string) => void;
 
   /**
    * Callback onBlur.
@@ -100,7 +101,7 @@ export interface DatePickerProps {
 
   /**
    * The value of the element.
-   * This should be a date with format MMM D, YYYY.
+   * Should be a formatted date string in 'ddd, MMM D, YYYY' format.
    */
   value: string;
 
@@ -108,14 +109,9 @@ export interface DatePickerProps {
    * Add test attribute to the element. Used internally for testing.
    */
   dataTestId?: string;
-
-  /**
-   * Variant of the date picker
-   */
-  variant?: 'default' | 'dayFormat';
 }
 
-const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
+const DayDatePicker = forwardRef<HTMLInputElement, DayDatePickerProps>(
   (
     {
       allowClear = false,
@@ -134,16 +130,25 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       required = false,
       errorMessage = null,
       dataTestId = null,
-      inline = false,
-      variant = 'default'
+      inline = false
     },
     ref
   ) => {
     const hasErrorMessage = !!errorMessage;
     const hasDescription = !!description;
+    const dateFormat = 'ddd, MMM D, YYYY';
 
     const handleClearValue = () => {
       onChange('');
+    };
+
+    const handleDateChange = (date: Moment | string) => {
+      if (date && typeof date !== 'string') {
+        // Always return formatted string in the day format
+        onChange(date.format(dateFormat));
+      } else {
+        onChange(date as string);
+      }
     };
 
     const { descriptionId, describedById, errorId, labelId } = getFormItemIds(
@@ -152,45 +157,20 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       hasErrorMessage
     );
 
-    // If variant is dayDatePicker, pass everything through to DayDatePicker
-    if (variant === 'dayFormat') {
-      return (
-        <DayDatePicker
-          allowClear={allowClear}
-          autoFocus={autoFocus}
-          className={className}
-          description={description}
-          value={value}
-          onChange={onChange as (date: string) => void}
-          onFocus={onFocus}
-          onBlur={onBlur}
-          label={label}
-          id={id}
-          isValidDate={isValidDate}
-          disabled={disabled}
-          placeholder={placeholder}
-          required={required}
-          errorMessage={errorMessage}
-          dataTestId={dataTestId}
-          inline={inline}
-        />
-      );
-    }
+    // Common DateTime props
+    const dateTimeProps = {
+      onChange: handleDateChange,
+      onOpen: onFocus,
+      value: value,
+      timeFormat: false,
+      dateFormat: dateFormat,
+      isValidDate: isValidDate
+    };
 
-    // Default DatePicker behavior
     if (inline) {
       return (
         <StyledDatePicker className={className}>
-          <DateTime
-            onChange={onChange}
-            onOpen={onFocus}
-            value={value}
-            timeFormat={false}
-            dateFormat="MMM D, YYYY"
-            initialViewMode="days"
-            isValidDate={isValidDate}
-            input={false}
-          />
+          <DateTime {...dateTimeProps} input={false} />
         </StyledDatePicker>
       );
     }
@@ -205,19 +185,13 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
             </StyledLabel>
           )}
           <DateTime
-            onChange={onChange}
-            onOpen={onFocus}
-            value={value}
-            timeFormat={false}
-            dateFormat="MMM D, YYYY"
-            initialViewMode="days"
-            isValidDate={isValidDate}
+            {...dateTimeProps}
             inputProps={{
               disabled,
               id,
               placeholder,
               required,
-              value,
+              value: value,
               autoFocus
             }}
             closeOnSelect
@@ -271,6 +245,6 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
   }
 );
 
-DatePicker.displayName = 'DatePicker';
+DayDatePicker.displayName = 'DayDatePicker';
 
-export default DatePicker;
+export default DayDatePicker;
