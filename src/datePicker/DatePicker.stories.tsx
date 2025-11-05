@@ -283,7 +283,7 @@ export const DayFormat: Story = {
         id="date"
         value={value}
         onChange={handleOnChange}
-        variant={'dayFormat'}
+        variant="dayFormat"
       />
     );
   },
