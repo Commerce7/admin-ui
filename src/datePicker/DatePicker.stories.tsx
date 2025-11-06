@@ -2,7 +2,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Moment } from 'moment';
 import React, { useState } from 'react';
-
 import DatePicker from '.';
 
 const meta: Meta<typeof DatePicker> = {
@@ -266,6 +265,33 @@ export const Inline: Story = {
     docs: {
       description: {
         story: 'Inline date picker that always displays the calendar.'
+      }
+    }
+  }
+};
+export const DayFormat: Story = {
+  render: () => {
+    const [value, setValue] = useState('');
+
+    const handleOnChange = (e: Moment | string) => {
+      setValue(e as string);
+    };
+
+    return (
+      <DatePicker
+        label="Day Format Date Picker"
+        id="date"
+        value={value}
+        onChange={handleOnChange}
+        variant="dayFormat"
+      />
+    );
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Day Format Date Picker variant which returns formatted string in "ddd, MMM D, YYYY" format.'
       }
     }
   }
