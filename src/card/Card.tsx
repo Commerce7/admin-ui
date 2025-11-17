@@ -24,15 +24,20 @@ export interface CardProps {
   variant?: 'default' | 'white';
 }
 
-const Card: React.FC<CardProps> = ({
-  children,
-  className = undefined,
-  dataTestId = null,
-  variant = 'default'
-}) => (
-  <StyledCard className={className} data-testid={dataTestId} variant={variant}>
-    {children}
-  </StyledCard>
+const Card = React.forwardRef<HTMLDivElement, CardProps>(
+  (
+    { children, className = undefined, dataTestId = null, variant = 'default' },
+    ref
+  ) => (
+    <StyledCard
+      ref={ref}
+      className={className}
+      data-testid={dataTestId}
+      variant={variant}
+    >
+      {children}
+    </StyledCard>
+  )
 );
 
 export default Card;
