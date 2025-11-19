@@ -92,7 +92,7 @@ const StyledDatePicker = styled.div`
   .rdtPicker td.rdtDisabled,
   .rdtPicker td.rdtDisabled:hover {
     background: none;
-    color: #999999;
+    color: ${({ theme }) => colors[theme.c7__ui.mode].fontColor.disabled};
     cursor: not-allowed;
   }
 

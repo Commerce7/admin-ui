@@ -9,7 +9,7 @@ const colors = {
       active: c7Colors.white,
       inactive: c7Colors.gray500,
       hover: c7Colors.white,
-      disabled: c7Colors.gray400
+      disabled: c7Colors.gray500
     }
   },
   dark: {
@@ -20,7 +20,7 @@ const colors = {
       active: c7Colors.white,
       inactive: c7Colors.gray500,
       hover: c7Colors.white,
-      disabled: c7Colors.gray700
+      disabled: c7Colors.gray600
     }
   }
 };
