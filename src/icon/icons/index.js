@@ -25,6 +25,7 @@ import Button from './Button';
 import ButtonLine from './ButtonLine';
 import Cake from './Cake';
 import Calendar from './Calendar';
+import CalenderAdd from './CalenderAdd';
 import CalenderCross from './CalenderCross';
 import Car from './Car';
 import Carrot from './Carrot';
@@ -207,6 +208,7 @@ export {
   Button as button,
   ButtonLine as buttonLine,
   Calendar as calendar,
+  CalenderAdd as calenderAdd,
   CalenderCross as calenderCross,
   Cake as cake,
   Car as car,
