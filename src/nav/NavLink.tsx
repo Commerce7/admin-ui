@@ -91,7 +91,7 @@ const NavLink = ({
       $activeClassName={activeClassName}
       {...customComponentProps}
     >
-      {icon && <NavLinkIconStyles icon={icon} size={20} />}
+      {icon && <NavLinkIconStyles icon={icon} size={18} />}
       {children}
     </NavLinkStyles>
   );

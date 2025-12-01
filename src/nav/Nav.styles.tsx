@@ -20,7 +20,6 @@ const NavLinkStyles = styled.a`
   align-items: center;
   padding: 12px 10px;
 
-  margin-bottom: 2px;
   transition: ${baseTransition};
   border: none;
   background: transparent;
@@ -34,7 +33,7 @@ const NavLinkStyles = styled.a`
     color: ${colors[theme.c7__ui.mode].primaryLink.fontColor.default};
 
     ${NavLinkIconStyles} {
-      margin: 0 10px 0 5px;
+      margin: 0 10px 0 0;
       path {
         fill: ${colors[theme.c7__ui.mode].primaryLink.svgColor.default};
       }
@@ -69,7 +68,6 @@ const SubNavLinkStyles = styled.a`
   display: flex;
   align-items: center;
   padding: 8px 10px;
-  margin-bottom: 2px;
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   transition: ${baseTransition};
   border: none;
@@ -103,7 +101,7 @@ interface SubNavStylesProps {
 
 const SubNavStyles = styled.div<SubNavStylesProps>`
   transition: ${baseTransition};
-  padding-left: 35px;
+  padding-left: 30px;
 
   ${({ isOpen }) => `
     max-height: ${isOpen ? '1000px' : '0px'};
