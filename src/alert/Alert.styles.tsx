@@ -67,4 +67,28 @@ const StyledIcon = styled(Icon)<StyledIconProps>`
   }
 `;
 
-export { StyledAlert, StyledIcon };
+const StyledAlertLink = styled.a`
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:focus {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  &:active {
+    color: inherit;
+  }
+`;
+
+export { StyledAlert, StyledIcon, StyledAlertLink };

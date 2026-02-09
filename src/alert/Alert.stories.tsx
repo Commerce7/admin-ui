@@ -55,3 +55,25 @@ export const Small: Story = {
     </>
   )
 };
+
+export const Link: Story = {
+  render: () => (
+    <>
+      <Alert href="https://www.commerce7.com/" variant="error">
+        This is error alert with an href prop passed
+      </Alert>
+      <Alert href="https://www.commerce7.com/" variant="info">
+        This is error info with an href prop passed
+      </Alert>
+      <Alert href="https://www.commerce7.com/" variant="warning" icon="warning">
+        This is warning alert with an href prop passed
+      </Alert>
+      <Alert href="https://www.commerce7.com/" variant="default">
+        This is default alert with an href prop passed
+      </Alert>
+      <Alert href="https://www.commerce7.com/" variant="success">
+        This is success alert with an href prop passed
+      </Alert>
+    </>
+  )
+};
