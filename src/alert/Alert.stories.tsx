@@ -63,7 +63,7 @@ export const Link: Story = {
         This is error alert with an href prop passed
       </Alert>
       <Alert href="https://www.commerce7.com/" variant="info">
-        This is error info with an href prop passed
+        This is info alert with an href prop passed
       </Alert>
       <Alert href="https://www.commerce7.com/" variant="warning" icon="warning">
         This is warning alert with an href prop passed
