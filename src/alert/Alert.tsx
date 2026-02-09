@@ -49,7 +49,7 @@ const Alert = ({
   children = null,
   className = '',
   dataTestId = '',
-  href = 'www.test.com'
+  href = ''
 }: AlertProps) => {
   if (href) {
     return (
