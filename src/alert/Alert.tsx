@@ -53,13 +53,12 @@ const Alert = ({
 }: AlertProps) => {
   if (href) {
     return (
-      <StyledAlertLink href={href}>
-        <StyledAlert
-          className={className}
-          variant={variant}
-          data-testid={dataTestId}
-          size={size}
-        >
+      <StyledAlertLink
+        href={href}
+        data-testid={dataTestId}
+        className={className}
+      >
+        <StyledAlert variant={variant} size={size}>
           <StyledIcon icon={icon} alertVariant={variant} alertSize={size} />
           <div>{children}</div>
         </StyledAlert>
