@@ -55,3 +55,37 @@ export const Small: Story = {
     </>
   )
 };
+
+export const Link: Story = {
+  render: () => {
+    // Mock router component for demonstration
+    const MockRouterLink = ({ to, children, ...props }: any) => (
+      <a {...props} href={to}>
+        {children}
+      </a>
+    );
+
+    return (
+      <>
+        <Alert href="https://www.commerce7.com/" variant="error">
+          Regular link with href prop
+        </Alert>
+        <Alert
+          component={MockRouterLink}
+          to="/dashboard"
+          variant="warning"
+          icon="warning"
+        >
+          Router link using component prop
+        </Alert>
+        <Alert
+          component="a"
+          href="mailto:support@commerce7.com"
+          variant="success"
+        >
+          Email link using component prop
+        </Alert>
+      </>
+    );
+  }
+};
