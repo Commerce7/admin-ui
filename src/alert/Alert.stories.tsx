@@ -57,23 +57,35 @@ export const Small: Story = {
 };
 
 export const Link: Story = {
-  render: () => (
-    <>
-      <Alert href="https://www.commerce7.com/" variant="error">
-        This is error alert with an href prop passed
-      </Alert>
-      <Alert href="https://www.commerce7.com/" variant="info">
-        This is info alert with an href prop passed
-      </Alert>
-      <Alert href="https://www.commerce7.com/" variant="warning" icon="warning">
-        This is warning alert with an href prop passed
-      </Alert>
-      <Alert href="https://www.commerce7.com/" variant="default">
-        This is default alert with an href prop passed
-      </Alert>
-      <Alert href="https://www.commerce7.com/" variant="success">
-        This is success alert with an href prop passed
-      </Alert>
-    </>
-  )
+  render: () => {
+    // Mock router component for demonstration
+    const MockRouterLink = ({ to, children, ...props }: any) => (
+      <a {...props} href={to}>
+        {children}
+      </a>
+    );
+
+    return (
+      <>
+        <Alert href="https://www.commerce7.com/" variant="error">
+          Regular link with href prop
+        </Alert>
+        <Alert
+          component={MockRouterLink}
+          to="/dashboard"
+          variant="warning"
+          icon="warning"
+        >
+          Router link using component prop
+        </Alert>
+        <Alert
+          component="a"
+          href="mailto:support@commerce7.com"
+          variant="success"
+        >
+          Email link using component prop
+        </Alert>
+      </>
+    );
+  }
 };
