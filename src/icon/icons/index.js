@@ -175,6 +175,7 @@ import Undo from './Undo';
 import UndoLarge from './UndoLarge';
 import Upload from './Upload';
 import User from './User';
+import Users from './Users';
 import Video from './Video';
 import Wallet from './Wallet';
 import Wand from './Wand';
@@ -358,6 +359,7 @@ export {
   Undo as undo,
   UndoLarge as undoLarge,
   User as user,
+  Users as users,
   Video as video,
   Wallet as wallet,
   Wand as wand,
