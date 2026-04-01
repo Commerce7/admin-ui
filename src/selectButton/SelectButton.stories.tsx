@@ -65,64 +65,63 @@ export const SmallText: Story = {
   )
 };
 
-const SelectManyExample = () => {
-  const [cheese, setCheese] = useState(true);
-  const [bacon, setBacon] = useState(true);
-  const [noTomato, setNoTomato] = useState(false);
-
-  return (
-    <Container>
-      <SelectButton selected={cheese} onClick={() => setCheese(!cheese)}>
-        Add Cheese
-        <Text>$1.00</Text>
-      </SelectButton>
-      <SelectButton selected={bacon} onClick={() => setBacon(!bacon)}>
-        Add Bacon
-        <Text>$1.50</Text>
-      </SelectButton>
-      <SelectButton selected={noTomato} onClick={() => setNoTomato(!noTomato)}>
-        No Tomato
-      </SelectButton>
-    </Container>
-  );
-};
-
 export const SelectMany: Story = {
-  render: () => <SelectManyExample />
-};
+  render: () => {
+    const [cheese, setCheese] = useState(true);
+    const [bacon, setBacon] = useState(true);
+    const [noTomato, setNoTomato] = useState(false);
 
-const SelectOneExample = () => {
-  const [tender, setTender] = useState('visa');
-
-  return (
-    <Container>
-      <SelectButton
-        selected={tender === 'visa'}
-        onClick={() => setTender('visa')}
-      >
-        Visa
-        <Text>$58.37</Text>
-      </SelectButton>
-      <SelectButton
-        selected={tender === 'mastercard'}
-        onClick={() => setTender('mastercard')}
-      >
-        Mastercard
-        <Text>$58.37</Text>
-      </SelectButton>
-      <SelectButton
-        selected={tender === 'cash'}
-        onClick={() => setTender('cash')}
-      >
-        Cash
-        <Text>$58.37</Text>
-      </SelectButton>
-    </Container>
-  );
+    return (
+      <Container>
+        <SelectButton selected={cheese} onClick={() => setCheese(!cheese)}>
+          Add Cheese
+          <Text>$1.00</Text>
+        </SelectButton>
+        <SelectButton selected={bacon} onClick={() => setBacon(!bacon)}>
+          Add Bacon
+          <Text>$1.50</Text>
+        </SelectButton>
+        <SelectButton
+          selected={noTomato}
+          onClick={() => setNoTomato(!noTomato)}
+        >
+          No Tomato
+        </SelectButton>
+      </Container>
+    );
+  }
 };
 
 export const SelectOne: Story = {
-  render: () => <SelectOneExample />
+  render: () => {
+    const [tender, setTender] = useState('visa');
+
+    return (
+      <Container>
+        <SelectButton
+          selected={tender === 'visa'}
+          onClick={() => setTender('visa')}
+        >
+          Visa
+          <Text>$58.37</Text>
+        </SelectButton>
+        <SelectButton
+          selected={tender === 'mastercard'}
+          onClick={() => setTender('mastercard')}
+        >
+          Mastercard
+          <Text>$58.37</Text>
+        </SelectButton>
+        <SelectButton
+          selected={tender === 'cash'}
+          onClick={() => setTender('cash')}
+        >
+          Cash
+          <Text>$58.37</Text>
+        </SelectButton>
+      </Container>
+    );
+  }
 };
 
 export const Medium: Story = {
