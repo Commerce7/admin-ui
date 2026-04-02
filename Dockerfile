@@ -74,11 +74,6 @@ RUN echo 'echo -en "\e]0;api\a"' >> /root/.bashrc
 # Run NPM Publish
 RUN npm config set '//registry.npmjs.org/:_authToken="${NPM_TOKEN}"'
 RUN npm run build
-RUN test -n "$NPM_TOKEN" && echo "NPM_TOKEN is set" || (echo "NPM_TOKEN is missing" && exit 1)
-RUN npm config set //registry.npmjs.org/:_authToken="$NPM_TOKEN"
-RUN npm config get registry
-RUN npm whoami
-RUN npm ping
 RUN npm publish --access public
 
 # Run Storybook Docs build and sync to S3
