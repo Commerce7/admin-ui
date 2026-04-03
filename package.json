@@ -90,8 +90,8 @@
     "moment-timezone": "^0.6.0",
     "react-datetime": "^3.3.1",
     "react-focus-lock": "^2.13.7",
-    "recharts": "^2.15.4",
-    "styled-components": "^5.3.11",
+    "recharts": "^3.0.0",
+    "styled-components": "^6.0.0",
     "styled-normalize": "^8.1.1",
     "webpack-node-externals": "^3.0.0"
   },
