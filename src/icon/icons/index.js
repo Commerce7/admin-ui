@@ -165,6 +165,8 @@ import TextBold from './TextBold';
 import TextCase from './TextCase';
 import TextItalic from './TextItalic';
 import TextSize from './TextSize';
+import ThumbsDown from './ThumbsDown';
+import ThumbsUp from './ThumbsUp';
 import Ticket from './Ticket';
 import Time from './Time';
 import Title from './Title';
@@ -361,6 +363,8 @@ export {
   User as user,
   Users as users,
   Video as video,
+  ThumbsDown as thumbsDown,
+  ThumbsUp as thumbsUp,
   Wallet as wallet,
   Wand as wand,
   Warning as warning,
