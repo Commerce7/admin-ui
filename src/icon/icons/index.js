@@ -17,6 +17,7 @@ import ArrowSpace from './ArrowSpace';
 import ArrowUp from './ArrowUp';
 import Availability from './Availability';
 import Bag from './Bag';
+import Balloon from './Balloon';
 import Bell from './Bell';
 import Book from './Book';
 import Brush from './Brush';
@@ -121,6 +122,7 @@ import Notification from './Notification';
 import Onboarding from './Onboarding';
 import Package from './Package';
 import PaperPlane from './PaperPlane';
+import PauseCircle from './PauseCircle';
 import Percent from './Percent';
 import Phone from './Phone';
 import Platter from './Platter';
@@ -129,6 +131,7 @@ import Pointer from './Pointer';
 import Pos from './Pos';
 import PosProfile from './PosProfile';
 import Pound from './Pound';
+import Power from './Power';
 import Print from './Print';
 import Process from './Process';
 import Product from './Product';
@@ -204,6 +207,7 @@ export {
   ArrowSpace as arrowSpace,
   Availability as availability,
   Bag as bag,
+  Balloon as balloon,
   Bell as bell,
   Book as book,
   Brush as brush,
@@ -308,6 +312,7 @@ export {
   Onboarding as onboarding,
   Package as package,
   PaperPlane as paperPlane,
+  PauseCircle as pauseCircle,
   Percent as percent,
   Phone as phone,
   Platter as platter,
@@ -320,6 +325,7 @@ export {
   Qr as qr,
   QuestionCircle as questionCircle,
   Process as process,
+  Power as power,
   Print as print,
   Rand as rand,
   Receipt as receipt,
