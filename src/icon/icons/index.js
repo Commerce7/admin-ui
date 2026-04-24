@@ -20,6 +20,7 @@ import Bag from './Bag';
 import Balloon from './Balloon';
 import Bell from './Bell';
 import Book from './Book';
+import Bounce from './Bounce';
 import Brush from './Brush';
 import Bundle from './Bundle';
 import Button from './Button';
@@ -114,6 +115,7 @@ import MegaAdmin from './MegaAdmin';
 import Menu from './Menu';
 import Merge from './Merge';
 import Minus from './Minus';
+import Moon from './Moon';
 import MoreActions from './MoreActions';
 import Move from './Move';
 import NewTab from './NewTab';
@@ -149,6 +151,7 @@ import Rocket from './Rocket';
 import Screen from './Screen';
 import Search from './Search';
 import Security from './Security';
+import Send from './Send';
 import Setting from './Setting';
 import Shuffle from './Shuffle';
 import Smartphone from './Smartphone';
@@ -186,6 +189,7 @@ import Wallet from './Wallet';
 import Wand from './Wand';
 import Warning from './Warning';
 import Wine from './Wine';
+import Write from './Write';
 
 export {
   Add as add,
@@ -210,6 +214,7 @@ export {
   Balloon as balloon,
   Bell as bell,
   Book as book,
+  Bounce as bounce,
   Brush as brush,
   Bundle as bundle,
   Button as button,
@@ -303,6 +308,7 @@ export {
   Menu as menu,
   Merge as merge,
   Minus as minus,
+  Moon as moon,
   MegaAdmin as megaAdmin,
   MoreActions as moreActions,
   Move as move,
@@ -339,6 +345,7 @@ export {
   Screen as screen,
   Search as search,
   Security as security,
+  Send as send,
   Setting as setting,
   Shuffle as shuffle,
   Smartphone as smartphone,
@@ -375,5 +382,6 @@ export {
   Wand as wand,
   Warning as warning,
   Wine as wine,
-  Upload as upload
+  Upload as upload,
+  Write as write
 };
