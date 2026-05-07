@@ -4,7 +4,14 @@ import { StyledIconButton } from '../icon/Icon.styles';
 
 import { StyledIconContainer, StyledIcon } from './VividIcon.styles';
 
-type VividIconColor = 'pink' | 'blue' | 'green' | 'teal' | 'orange' | 'purple';
+type VividIconColor =
+  | 'pink'
+  | 'blue'
+  | 'green'
+  | 'teal'
+  | 'orange'
+  | 'purple'
+  | 'gray';
 
 export interface VividIconProps {
   /**
