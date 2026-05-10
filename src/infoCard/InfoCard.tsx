@@ -17,7 +17,13 @@ import {
 } from './InfoCard.styles';
 import { colors } from './theme';
 
-type InfoCardVariant = 'default' | 'success' | 'error' | 'warning' | 'info';
+type InfoCardVariant =
+  | 'default'
+  | 'success'
+  | 'error'
+  | 'warning'
+  | 'info'
+  | 'tip';
 
 export interface InfoCardProps {
   /**
@@ -89,7 +95,7 @@ const InfoCard = ({
   if (['warning', 'default'].includes(variant)) {
     iconVariantVar = 'text';
   }
-  if (['error', 'success', 'info'].includes(variant)) {
+  if (['error', 'success', 'info', 'tip'].includes(variant)) {
     iconVariantVar = 'white';
   }
   if (iconVariant) {
