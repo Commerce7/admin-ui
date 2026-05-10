@@ -118,6 +118,7 @@ import Minus from './Minus';
 import Moon from './Moon';
 import MoreActions from './MoreActions';
 import Move from './Move';
+import Network from './Network';
 import NewTab from './NewTab';
 import Note from './Note';
 import Notification from './Notification';
@@ -312,6 +313,7 @@ export {
   MegaAdmin as megaAdmin,
   MoreActions as moreActions,
   Move as move,
+  Network as network,
   NewTab as newTab,
   Note as note,
   Notification as notification,
