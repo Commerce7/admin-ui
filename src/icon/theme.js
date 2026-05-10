@@ -7,6 +7,7 @@ const colors = {
     warning: c7Colors.white,
     error: c7Colors.white,
     info: c7Colors.white,
+    tip: c7Colors.white,
     text: fontColors.dark,
     white: c7Colors.white
   },
@@ -16,6 +17,7 @@ const colors = {
     warning: c7Colors.orange300,
     error: c7Colors.red300,
     info: c7Colors.blue400,
+    tip: c7Colors.purple300,
     text: fontColors.light,
     white: c7Colors.white
   }
@@ -27,14 +29,16 @@ const backgroundColors = {
     success: c7Colors.green300,
     warning: c7Colors.orange300,
     error: c7Colors.red300,
-    info: c7Colors.blue300
+    info: c7Colors.blue300,
+    tip: c7Colors.purple300
   },
   light: {
     default: c7Colors.gray200,
     success: c7Colors.green100,
     warning: c7Colors.orange100,
     error: c7Colors.red100,
-    info: c7Colors.blue100
+    info: c7Colors.blue100,
+    tip: c7Colors.purple100
   }
 };
 

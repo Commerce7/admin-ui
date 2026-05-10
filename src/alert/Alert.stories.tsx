@@ -28,6 +28,7 @@ export const Variants: Story = {
     <>
       <Alert variant="error">This is a red error alert</Alert>
       <Alert variant="info">This is a blue info alert</Alert>
+      <Alert variant="tip">This is a purple tip alert</Alert>
       <Alert variant="warning" icon="warning">
         This is an orange warning alert
       </Alert>
@@ -46,11 +47,17 @@ export const Small: Story = {
       <Alert variant="info" size="small">
         This is a blue info alert
       </Alert>
+      <Alert variant="tip" size="small">
+        This is a purple tip alert
+      </Alert>
       <Alert variant="warning" size="small" icon="warning">
         This is an orange warning alert
       </Alert>
       <Alert variant="default" size="small">
         This is a grey default alert
+      </Alert>
+      <Alert variant="success" size="small">
+        This is a green success alert
       </Alert>
     </>
   )

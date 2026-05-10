@@ -29,6 +29,7 @@ export const Variants: Story = {
       <DisplayIcon icon="search" variant="default" />
       <DisplayIcon icon="checkCircle" variant="success" />
       <DisplayIcon icon="warning" variant="warning" />
+      <DisplayIcon icon="network" variant="tip" />
       <DisplayIcon icon="closeCircle" variant="error" />
     </>
   )

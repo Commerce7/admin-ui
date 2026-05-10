@@ -5,6 +5,7 @@ const colors = {
     backgroundColor: {
       error: c7Colors.red300,
       info: c7Colors.blue600,
+      tip: c7Colors.purple300,
       warning: c7Colors.orange300,
       default: c7Colors.gray800,
       success: c7Colors.green300
@@ -12,6 +13,7 @@ const colors = {
     borderBackground: {
       error: c7Colors.red200,
       info: c7Colors.blue500,
+      tip: c7Colors.purple200,
       warning: c7Colors.orange200,
       default: c7Colors.gray700,
       success: c7Colors.green200
@@ -19,6 +21,7 @@ const colors = {
     iconColor: {
       error: c7Colors.white,
       info: c7Colors.white,
+      tip: c7Colors.white,
       warning: c7Colors.white,
       default: c7Colors.white,
       success: c7Colors.white
@@ -28,6 +31,7 @@ const colors = {
     backgroundColor: {
       error: c7Colors.red100,
       info: c7Colors.blue100,
+      tip: c7Colors.purple100,
       warning: c7Colors.orange100,
       default: c7Colors.gray100,
       success: c7Colors.green100
@@ -35,6 +39,7 @@ const colors = {
     borderBackground: {
       error: c7Colors.red300,
       info: c7Colors.blue500,
+      tip: c7Colors.purple300,
       warning: c7Colors.orange200,
       default: c7Colors.gray400,
       success: c7Colors.green300
@@ -42,6 +47,7 @@ const colors = {
     iconColor: {
       error: c7Colors.red300,
       info: c7Colors.blue500,
+      tip: c7Colors.purple300,
       warning: c7Colors.orange300,
       default: c7Colors.gray500,
       success: c7Colors.green300

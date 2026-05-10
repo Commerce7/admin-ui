@@ -11,6 +11,7 @@ export type DisplayIconVariant =
   | 'success'
   | 'warning'
   | 'error'
+  | 'tip'
   | 'info';
 
 export interface DisplayIconProps {
