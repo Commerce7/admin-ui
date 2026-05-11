@@ -21,6 +21,10 @@ const colors = {
     success: {
       color: c7Colors.white,
       backgroundColor: c7Colors.green200
+    },
+    tip: {
+      color: c7Colors.white,
+      backgroundColor: c7Colors.purple300
     }
   },
   dark: {
@@ -43,6 +47,10 @@ const colors = {
     success: {
       color: c7Colors.white,
       backgroundColor: c7Colors.green200
+    },
+    tip: {
+      color: c7Colors.white,
+      backgroundColor: c7Colors.purple300
     }
   }
 };

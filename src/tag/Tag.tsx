@@ -8,7 +8,13 @@ import {
   StyledEndIcon
 } from './Tag.styles';
 
-export type TagVariant = 'default' | 'info' | 'warning' | 'error' | 'success';
+export type TagVariant =
+  | 'default'
+  | 'info'
+  | 'warning'
+  | 'error'
+  | 'success'
+  | 'tip';
 
 export interface TagProps {
   /**

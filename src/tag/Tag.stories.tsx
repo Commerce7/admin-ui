@@ -27,6 +27,7 @@ export const Basic: Story = {
       <Tag variant="warning">Warning</Tag>
       <Tag variant="error">Error</Tag>
       <Tag variant="success">Success</Tag>
+      <Tag variant="tip">Tip</Tag>
     </>
   )
 };
@@ -48,6 +49,9 @@ export const Click: Story = {
       </Tag>
       <Tag variant="success" onClick={action('click')}>
         Success
+      </Tag>
+      <Tag variant="tip" onClick={action('click')}>
+        Tip
       </Tag>
     </>
   )
@@ -73,6 +77,9 @@ export const Icon: Story = {
         <Tag variant="success" startIcon="closeCircle">
           Success
         </Tag>
+        <Tag variant="tip" startIcon="network">
+          Tip
+        </Tag>
       </div>
       <h5>End Icon</h5>
       <div>
@@ -90,6 +97,9 @@ export const Icon: Story = {
         </Tag>
         <Tag variant="success" endIcon="closeCircle">
           Success
+        </Tag>
+        <Tag variant="tip" endIcon="network">
+          Tip
         </Tag>
       </div>
     </>
@@ -113,6 +123,9 @@ export const Delete: Story = {
       </Tag>
       <Tag variant="success" onDelete={action('delete click')}>
         Success
+      </Tag>
+      <Tag variant="tip" onDelete={action('delete click')}>
+        Tip
       </Tag>
     </>
   )

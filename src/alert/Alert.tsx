@@ -2,7 +2,13 @@ import React, { ComponentType, ReactNode } from 'react';
 
 import { StyledAlert, StyledIcon, StyledAlertLink } from './Alert.styles';
 
-export type AlertVariant = 'default' | 'info' | 'error' | 'warning' | 'success';
+export type AlertVariant =
+  | 'default'
+  | 'info'
+  | 'error'
+  | 'warning'
+  | 'success'
+  | 'tip';
 type AlertSize = 'default' | 'small';
 
 export interface AlertProps {

@@ -7,7 +7,7 @@ import { AlertVariant } from './Alert';
 import { colors, sizes } from './theme';
 
 interface StyledAlertProps {
-  variant: 'default' | 'info' | 'error' | 'warning' | 'success';
+  variant: 'default' | 'info' | 'error' | 'warning' | 'success' | 'tip';
   size: 'default' | 'small';
 }
 

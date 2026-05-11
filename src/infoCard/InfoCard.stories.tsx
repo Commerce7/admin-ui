@@ -50,6 +50,12 @@ export const Basic: Story = {
         title="Received"
         variant="success"
       />
+      <InfoCard
+        icon="network"
+        label="Tip"
+        title="Have a great day!"
+        variant="tip"
+      />
       <InfoCard icon="wine" iconVariant="success">
         iconVariant
       </InfoCard>

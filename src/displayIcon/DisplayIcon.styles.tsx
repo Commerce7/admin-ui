@@ -12,7 +12,7 @@ const StyledIcon = styled(UIStyledIcon)`
 `;
 
 interface StyledDisplayIconProps {
-  variant: 'default' | 'success' | 'warning' | 'error' | 'info';
+  variant: 'default' | 'success' | 'warning' | 'error' | 'info' | 'tip';
 }
 
 const StyledDisplayIcon = styled.div<StyledDisplayIconProps>`
