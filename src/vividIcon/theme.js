@@ -25,6 +25,10 @@ const colors = {
     purple: {
       backgroundColor: c7Colors.purple100,
       fillColor: c7Colors.purple200
+    },
+    gray: {
+      backgroundColor: c7Colors.gray100,
+      fillColor: c7Colors.gray600
     }
   },
   dark: {
@@ -50,6 +54,10 @@ const colors = {
     },
     purple: {
       backgroundColor: c7Colors.purple200,
+      fillColor: c7Colors.white
+    },
+    gray: {
+      backgroundColor: c7Colors.gray600,
       fillColor: c7Colors.white
     }
   }
