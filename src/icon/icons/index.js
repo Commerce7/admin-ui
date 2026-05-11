@@ -152,10 +152,12 @@ import Rocket from './Rocket';
 import Screen from './Screen';
 import Search from './Search';
 import Security from './Security';
+import Seedling from './Seedling';
 import Send from './Send';
 import Setting from './Setting';
 import Shuffle from './Shuffle';
 import Smartphone from './Smartphone';
+import Sparkle from './Sparkle';
 import Split from './Split';
 import Star from './Star';
 import Store from './Store';
@@ -348,10 +350,12 @@ export {
   Screen as screen,
   Search as search,
   Security as security,
+  Seedling as seedling,
   Send as send,
   Setting as setting,
   Shuffle as shuffle,
   Smartphone as smartphone,
+  Sparkle as sparkle,
   Split as split,
   Star as star,
   Store as store,
