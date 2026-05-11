@@ -159,6 +159,7 @@ import Smartphone from './Smartphone';
 import Split from './Split';
 import Star from './Star';
 import Store from './Store';
+import Sun from './Sun';
 import Support from './Support';
 import SwitchUser from './SwitchUser';
 import Sync from './Sync';
@@ -354,6 +355,7 @@ export {
   Split as split,
   Star as star,
   Store as store,
+  Sun as sun,
   Support as support,
   SwitchUser as switchUser,
   Sync as sync,
