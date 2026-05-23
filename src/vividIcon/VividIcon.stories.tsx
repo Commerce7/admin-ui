@@ -49,13 +49,14 @@ export const Colors: Story = {
       <VividIcon icon="carrot" color="orange" />
       <VividIcon icon="bag" color="purple" />
       <VividIcon icon="balloon" color="gray" />
+      <VividIcon icon="club" color="yellow" />
     </Container>
   ),
   parameters: {
     docs: {
       description: {
         story:
-          'VividIcon supports seven different colors: pink, blue, green, teal, orange, purple, and gray.'
+          'VividIcon supports eight different colors: pink, blue, green, teal, orange, purple, gray, and yellow.'
       }
     }
   }

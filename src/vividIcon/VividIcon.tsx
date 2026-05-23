@@ -11,6 +11,7 @@ type VividIconColor =
   | 'teal'
   | 'orange'
   | 'purple'
+  | 'yellow'
   | 'gray';
 
 export interface VividIconProps {
