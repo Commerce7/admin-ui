@@ -29,6 +29,10 @@ const colors = {
     gray: {
       backgroundColor: c7Colors.gray100,
       fillColor: c7Colors.gray600
+    },
+    yellow: {
+      backgroundColor: c7Colors.yellow100,
+      fillColor: c7Colors.yellow300
     }
   },
   dark: {
@@ -58,6 +62,10 @@ const colors = {
     },
     gray: {
       backgroundColor: c7Colors.gray600,
+      fillColor: c7Colors.white
+    },
+    yellow: {
+      backgroundColor: c7Colors.yellow300,
       fillColor: c7Colors.white
     }
   }

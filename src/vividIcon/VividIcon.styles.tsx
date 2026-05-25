@@ -18,7 +18,15 @@ const StyledIconContainer = styled.div`
 `;
 
 interface StyledIconProps {
-  color: 'pink' | 'blue' | 'green' | 'teal' | 'orange' | 'purple' | 'gray';
+  color:
+    | 'pink'
+    | 'blue'
+    | 'green'
+    | 'teal'
+    | 'orange'
+    | 'purple'
+    | 'gray'
+    | 'yellow';
 }
 
 const StyledIcon = styled(Icon)<StyledIconProps>`
