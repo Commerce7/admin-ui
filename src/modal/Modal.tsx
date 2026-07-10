@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, useEffect, useState } from 'react';
 
 import ModalContent from './ModalContent';
 
@@ -44,6 +44,16 @@ export interface ModalProps {
    * Disable focus lock on modal
    */
   disableFocusLock?: boolean;
+
+  /**
+   * Enable or disable the open/close animation.
+   */
+  animate?: boolean;
+
+  /**
+   * Duration of the open/close animation in milliseconds.
+   */
+  animationDuration?: number;
 }
 
 const Modal = ({
@@ -54,9 +64,32 @@ const Modal = ({
   visible = false,
   title = '',
   dataTestId = '',
-  disableFocusLock = false
+  disableFocusLock = false,
+  animate = true,
+  animationDuration = 300
 }: ModalProps) => {
-  if (!visible) {
+  const [isVisible, setIsVisible] = useState(visible);
+  const [isClosing, setIsClosing] = useState(false);
+
+  useEffect(() => {
+    if (visible) {
+      setIsVisible(true);
+      setIsClosing(false);
+    } else if (isVisible) {
+      if (!animate) {
+        setIsVisible(false);
+        return;
+      }
+      setIsClosing(true);
+      const timer = setTimeout(() => {
+        setIsVisible(false);
+        setIsClosing(false);
+      }, animationDuration);
+      return () => clearTimeout(timer);
+    }
+  }, [visible]);
+
+  if (!isVisible) {
     return null;
   }
 
@@ -68,6 +101,8 @@ const Modal = ({
       dataTestId={dataTestId}
       disableBodyScroll={disableBodyScroll}
       disableFocusLock={disableFocusLock}
+      closing={isClosing}
+      animate={animate}
     >
       {children}
     </ModalContent>

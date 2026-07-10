@@ -49,6 +49,16 @@ export interface ModalContentProps {
    * Disable focus lock on modal
    */
   disableFocusLock?: boolean;
+
+  /**
+   * Whether the modal is in its closing animation state.
+   */
+  closing?: boolean;
+
+  /**
+   * Enable or disable the animation.
+   */
+  animate?: boolean;
 }
 
 const ModalContent = ({
@@ -58,7 +68,9 @@ const ModalContent = ({
   title = '',
   dataTestId = '',
   disableBodyScroll = true,
-  disableFocusLock = false
+  disableFocusLock = false,
+  closing = false,
+  animate = true
 }: ModalContentProps) => {
   useEscKeydown((e: KeyboardEvent) => handleClose(e));
 
@@ -87,8 +99,14 @@ const ModalContent = ({
       <StyledModalBackground
         onClick={handleBackgroundClick}
         className={className}
+        closing={closing}
+        animate={animate}
       >
-        <StyledModalContent data-testid={dataTestId}>
+        <StyledModalContent
+          data-testid={dataTestId}
+          closing={closing}
+          animate={animate}
+        >
           {title && (
             <StyledModalHeader>
               <StyledModalTitle>{title}</StyledModalTitle>
