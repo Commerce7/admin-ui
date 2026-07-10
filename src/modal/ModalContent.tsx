@@ -59,6 +59,11 @@ export interface ModalContentProps {
    * Enable or disable the animation.
    */
   animate?: boolean;
+
+  /**
+   * Duration of the animation in milliseconds.
+   */
+  animationDuration?: number;
 }
 
 const ModalContent = ({
@@ -70,7 +75,8 @@ const ModalContent = ({
   disableBodyScroll = true,
   disableFocusLock = false,
   closing = false,
-  animate = true
+  animate = true,
+  animationDuration
 }: ModalContentProps) => {
   useEscKeydown((e: KeyboardEvent) => handleClose(e));
 
@@ -101,11 +107,13 @@ const ModalContent = ({
         className={className}
         closing={closing}
         animate={animate}
+        animationDuration={animationDuration}
       >
         <StyledModalContent
           data-testid={dataTestId}
           closing={closing}
           animate={animate}
+          animationDuration={animationDuration}
         >
           {title && (
             <StyledModalHeader>

@@ -66,7 +66,7 @@ const Modal = ({
   dataTestId = '',
   disableFocusLock = false,
   animate = true,
-  animationDuration = 300
+  animationDuration = 100
 }: ModalProps) => {
   const [isVisible, setIsVisible] = useState(visible);
   const [isClosing, setIsClosing] = useState(false);
@@ -103,6 +103,7 @@ const Modal = ({
       disableFocusLock={disableFocusLock}
       closing={isClosing}
       animate={animate}
+      animationDuration={animationDuration}
     >
       {children}
     </ModalContent>

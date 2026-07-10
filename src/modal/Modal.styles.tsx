@@ -6,7 +6,7 @@ import { colors } from './theme';
 // Animation for modal sliding up from bottom
 const slideUpFromBottom = keyframes`
   from {
-    transform: translateY(100%);
+    transform: translateY(25%);
     opacity: 0;
   }
   to {
@@ -22,7 +22,7 @@ const slideDownToBottom = keyframes`
     opacity: 1;
   }
   to {
-    transform: translateY(100%);
+    transform: translateY(25%);
     opacity: 0;
   }
 `;
@@ -50,6 +50,7 @@ const fadeOut = keyframes`
 interface AnimationProps {
   closing?: boolean;
   animate?: boolean;
+  animationDuration?: number;
 }
 
 const StyledModalBackground = styled.div<AnimationProps>`
@@ -64,15 +65,15 @@ const StyledModalBackground = styled.div<AnimationProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ${({ closing, animate }) =>
+  animation: ${({ closing, animate, animationDuration = 200 }) =>
     !animate
       ? 'none'
       : closing
         ? css`
-            ${fadeOut} 0.2s ease-in forwards
+            ${fadeOut} ${animationDuration}ms ease-in forwards
           `
         : css`
-            ${fadeIn} 0.2s ease-out
+            ${fadeIn} ${animationDuration}ms ease-out
           `};
 `;
 
@@ -91,15 +92,15 @@ const StyledModalContent = styled.div<AnimationProps>`
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
   color: ${({ theme }) => theme.c7__ui.fontColor};
 
-  animation: ${({ closing, animate }) =>
+  animation: ${({ closing, animate, animationDuration = 300 }) =>
     !animate
       ? 'none'
       : closing
         ? css`
-            ${slideDownToBottom} 0.3s ease-in forwards
+            ${slideDownToBottom} ${animationDuration}ms ease-in forwards
           `
         : css`
-            ${slideUpFromBottom} 0.3s ease-out
+            ${slideUpFromBottom} ${animationDuration}ms ease-out
           `};
 `;
 
