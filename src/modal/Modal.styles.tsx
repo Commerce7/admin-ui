@@ -6,11 +6,11 @@ import { colors } from './theme';
 // Animation for modal sliding up from bottom
 const slideUpFromBottom = keyframes`
   from {
-    transform: translateY(25%);
+    transform: scale(0.96);
     opacity: 0;
   }
   to {
-    transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
 `;
@@ -18,11 +18,11 @@ const slideUpFromBottom = keyframes`
 // Animation for modal sliding down to bottom
 const slideDownToBottom = keyframes`
   from {
-    transform: translateY(0);
+    transform: scale(1);
     opacity: 1;
   }
   to {
-    transform: translateY(25%);
+    transform: scale(0.96);
     opacity: 0;
   }
 `;
