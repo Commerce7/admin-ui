@@ -65,7 +65,7 @@ const StyledModalBackground = styled.div<AnimationProps>`
   display: flex;
   align-items: center;
   justify-content: center;
-  animation: ${({ closing, animate, animationDuration }) =>
+  animation: ${({ closing, animate, animationDuration = 300 }) =>
     !animate
       ? 'none'
       : closing
