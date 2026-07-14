@@ -71,11 +71,13 @@ const Modal = ({
   const [isVisible, setIsVisible] = useState(visible);
   const [isClosing, setIsClosing] = useState(false);
 
-  useEffect(() => {
+  const handleVisibilityChange = () => {
     if (visible) {
       setIsVisible(true);
       setIsClosing(false);
-    } else if (isVisible) {
+      return;
+    }
+    if (isVisible) {
       if (!animate) {
         setIsVisible(false);
         return;
@@ -87,7 +89,9 @@ const Modal = ({
       }, animationDuration);
       return () => clearTimeout(timer);
     }
-  }, [visible]);
+  };
+
+  useEffect(handleVisibilityChange, [visible, animate, animationDuration]);
 
   if (!isVisible) {
     return null;
