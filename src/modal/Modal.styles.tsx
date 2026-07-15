@@ -1,9 +1,59 @@
 // @ts-nocheck
-import styled from 'styled-components';
+import styled, { css, keyframes } from 'styled-components';
 
 import { colors } from './theme';
 
-const StyledModalBackground = styled.div`
+// Animation for modal sliding up from bottom
+const slideUpFromBottom = keyframes`
+  from {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+`;
+
+// Animation for modal sliding down to bottom
+const slideDownToBottom = keyframes`
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+`;
+
+// Animation for background fade in
+const fadeIn = keyframes`
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+`;
+
+// Animation for background fade out
+const fadeOut = keyframes`
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+`;
+
+interface AnimationProps {
+  closing?: boolean;
+  animate?: boolean;
+  animationDuration?: number;
+}
+
+const StyledModalBackground = styled.div<AnimationProps>`
   position: fixed;
   top: 0;
   left: 0;
@@ -15,9 +65,19 @@ const StyledModalBackground = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  animation: ${({ closing, animate, animationDuration = 300 }) =>
+    !animate
+      ? 'none'
+      : closing
+        ? css`
+            ${fadeOut} ${animationDuration}ms ease-in forwards
+          `
+        : css`
+            ${fadeIn} ${animationDuration}ms ease-out
+          `};
 `;
 
-const StyledModalContent = styled.div`
+const StyledModalContent = styled.div<AnimationProps>`
   box-shadow:
     0 16px 28px 0 rgba(0, 0, 0, 0.22),
     0 25px 55px 0 rgba(0, 0, 0, 0.21);
@@ -31,6 +91,17 @@ const StyledModalContent = styled.div`
   font-size: ${({ theme }) => theme.c7__ui.fontSizeBase};
   font-family: ${({ theme }) => theme.c7__ui.fontFamily};
   color: ${({ theme }) => theme.c7__ui.fontColor};
+
+  animation: ${({ closing, animate, animationDuration = 300 }) =>
+    !animate
+      ? 'none'
+      : closing
+        ? css`
+            ${slideDownToBottom} ${animationDuration}ms ease-in forwards
+          `
+        : css`
+            ${slideUpFromBottom} ${animationDuration}ms ease-out
+          `};
 `;
 
 const StyledModalHeader = styled.div`
