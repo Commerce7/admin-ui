@@ -7,11 +7,11 @@ import {
   StyledButtonIcon
 } from './Button.styles';
 
-type ButtonSize = 'default' | 'small';
+export type ButtonSize = 'default' | 'small';
 export type ButtonVariant = 'primary' | 'secondary' | 'text' | 'link';
-type ButtonType = 'button' | 'submit';
+export type ButtonType = 'button' | 'submit';
 
-interface ButtonProps {
+export interface ButtonProps {
   /**
    * The content of the component.
    */

@@ -9,5 +9,5 @@
     "outDir": "./lib/types"
   },
   "include": ["src"],
-  "exclude": ["node_modules", "**/*.stories.ts", "**/*.stories.tsx"]
+  "exclude": ["node_modules", "src/stories/**/*", "**/*.stories.ts", "**/*.stories.tsx"]
 }

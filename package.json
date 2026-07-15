@@ -11,7 +11,7 @@
   "scripts": {
     "build": "npm run build:js && npm run build:types",
     "build:js": "webpack",
-    "build:types": "tsc -p tsconfig.build.json",
+    "build:types": "rm -rf lib/types && tsc -p tsconfig.build.json",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "pre-commit": "lint-staged",

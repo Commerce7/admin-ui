@@ -1,5 +1,5 @@
-import Tag, { TagProps } from './Tag';
+import Tag, { TagProps, TagVariant } from './Tag';
 
-export type { TagProps };
+export type { TagProps, TagVariant };
 
 export default Tag;
