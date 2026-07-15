@@ -159,19 +159,19 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
           allowClear={allowClear}
           autoFocus={autoFocus}
           className={className}
-          description={description}
+          description={description ?? undefined}
           value={value}
           onChange={onChange as (date: string) => void}
           onFocus={onFocus}
           onBlur={onBlur}
-          label={label}
+          label={label ?? undefined}
           id={id}
           isValidDate={isValidDate}
           disabled={disabled}
           placeholder={placeholder}
           required={required}
-          errorMessage={errorMessage}
-          dataTestId={dataTestId}
+          errorMessage={errorMessage ?? undefined}
+          dataTestId={dataTestId ?? undefined}
           inline={inline}
         />
       );

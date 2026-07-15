@@ -1,14 +1,17 @@
 {
   "name": "@commerce7/admin-ui",
-  "version": "2.0.46",
+  "version": "2.0.47",
   "description": "Commerce7 Admin UI Component Library",
   "keywords": [
     "Commerce7"
   ],
   "main": "./lib/build.js",
+  "types": "./lib/types/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build": "webpack",
+    "build": "npm run build:js && npm run build:types",
+    "build:js": "webpack",
+    "build:types": "tsc -p tsconfig.build.json",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "pre-commit": "lint-staged",
