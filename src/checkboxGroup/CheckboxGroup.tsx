@@ -8,10 +8,10 @@ import {
   StyledFieldsetLabel
 } from '../common/form/styles';
 
-type CheckboxGroupVariant = 'button' | null;
-type CheckboxGroupSize = 'small' | 'medium' | 'large';
+export type CheckboxGroupVariant = 'button' | null;
+export type CheckboxGroupSize = 'small' | 'medium' | 'large';
 
-interface CheckboxGroupProps {
+export interface CheckboxGroupProps {
   /**
    * The content of the component.
    */

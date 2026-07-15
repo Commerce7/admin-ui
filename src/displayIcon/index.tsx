@@ -1,5 +1,8 @@
-import DisplayIcon, { DisplayIconProps } from './DisplayIcon';
+import DisplayIcon, {
+  DisplayIconProps,
+  DisplayIconVariant
+} from './DisplayIcon';
 
-export type { DisplayIconProps };
+export type { DisplayIconProps, DisplayIconVariant };
 
 export default DisplayIcon;

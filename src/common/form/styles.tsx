@@ -20,7 +20,7 @@ const StyledInputWrapper = styled.div.attrs({
   ${({ isButtonVariant }) => (isButtonVariant ? 'margin-bottom: 0px;' : '')}
 `;
 
-interface StyledFormItemProps {
+export interface StyledFormItemProps {
   hasErrorMessage?: boolean;
 }
 
