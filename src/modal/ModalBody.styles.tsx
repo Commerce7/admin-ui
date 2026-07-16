@@ -4,10 +4,10 @@ import styled from 'styled-components';
 
 import { colors } from './theme';
 
-const StyledModalBody = styled.div`
+const StyledModalBody = styled.div<{ overflow?: string }>`
   padding: 15px;
   max-height: 65vh;
-  overflow-y: auto;
+  overflow: ${({ overflow }) => overflow || 'visible'};
 
   color: ${({ theme }) => theme.c7__ui.fontColor};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};

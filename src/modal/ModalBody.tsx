@@ -12,10 +12,21 @@ export interface ModalBodyProps {
    * Add className to the outermost element.
    */
   className?: string;
+
+  /**
+   * Set the overflow behavior. Defaults to 'visible'.
+   */
+  overflow?: 'visible' | 'auto' | 'hidden' | 'scroll';
 }
 
-const ModalBody = ({ children, className = '' }: ModalBodyProps) => (
-  <StyledModalBody className={className}>{children}</StyledModalBody>
+const ModalBody = ({
+  children,
+  className = '',
+  overflow = 'visible'
+}: ModalBodyProps) => (
+  <StyledModalBody className={className} overflow={overflow}>
+    {children}
+  </StyledModalBody>
 );
 
 export default ModalBody;
