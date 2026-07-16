@@ -8,7 +8,7 @@ import { Meta } from '@storybook/blocks';
 
 ### 2.0.48
 
-- Defaulted overflow prop on modal to "visible" to fix clipping on date selectors when they would appear inside of a modal.
+- Defaulted the `ModalBody` overflow to "visible" to prevent clipping (e.g., date selector popovers) inside modals. Use `<ModalBody overflow="auto" />` to restore the previous scrolling behavior.
 
 ### 2.0.47
 

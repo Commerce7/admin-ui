@@ -4,7 +4,9 @@ import styled from 'styled-components';
 
 import { colors } from './theme';
 
-const StyledModalBody = styled.div<{ overflow?: string }>`
+const StyledModalBody = styled.div.withConfig({
+  shouldForwardProp: (prop) => !['overflow'].includes(prop)
+})<{ overflow?: string }>`
   padding: 15px;
   max-height: 65vh;
   overflow: ${({ overflow }) => overflow || 'visible'};
