@@ -176,7 +176,9 @@ import TextCase from './TextCase';
 import TextItalic from './TextItalic';
 import TextSize from './TextSize';
 import ThumbsDown from './ThumbsDown';
+import ThumbsDownFilled from './ThumbsDownFilled';
 import ThumbsUp from './ThumbsUp';
+import ThumbsUpFilled from './ThumbsUpFilled';
 import Ticket from './Ticket';
 import Time from './Time';
 import Title from './Title';
@@ -385,7 +387,9 @@ export {
   Users as users,
   Video as video,
   ThumbsDown as thumbsDown,
+  ThumbsDownFilled as thumbsDownFilled,
   ThumbsUp as thumbsUp,
+  ThumbsUpFilled as thumbsUpFilled,
   Wallet as wallet,
   Wand as wand,
   Warning as warning,
