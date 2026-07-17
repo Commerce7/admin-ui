@@ -14,7 +14,7 @@ export interface ModalBodyProps {
   className?: string;
 
   /**
-   * Set the overflow behavior. Defaults to 'visible'.
+   * Set the overflow behavior. Defaults to 'auto'.
    */
   overflow?: 'visible' | 'auto' | 'hidden' | 'scroll';
 }
