@@ -22,7 +22,7 @@ export interface ModalBodyProps {
 const ModalBody = ({
   children,
   className = '',
-  overflow = 'visible'
+  overflow = 'auto'
 }: ModalBodyProps) => (
   <StyledModalBody className={className} overflow={overflow}>
     {children}

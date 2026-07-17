@@ -9,7 +9,7 @@ const StyledModalBody = styled.div.withConfig({
 })<{ overflow?: string }>`
   padding: 15px;
   max-height: 65vh;
-  overflow: ${({ overflow }) => overflow || 'visible'};
+  overflow: ${({ overflow }) => overflow || 'auto'};
 
   color: ${({ theme }) => theme.c7__ui.fontColor};
   font-weight: ${({ theme }) => theme.c7__ui.fontWeightBase};
