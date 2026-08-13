@@ -1,5 +1,6 @@
 import Alert from './alert';
 import Avatar from './avatar';
+import BarChart from './barChart';
 import Breadcrumbs from './breadcrumbs';
 import Button from './button';
 import ButtonMenu from './buttonMenu';
@@ -46,6 +47,7 @@ import VividIcon from './vividIcon';
 export {
   Avatar,
   Alert,
+  BarChart,
   Breadcrumbs,
   Button,
   ButtonMenu,
@@ -92,6 +94,7 @@ export {
 
 export type { AlertProps, AlertVariant } from './alert';
 export type { AvatarProps } from './avatar';
+export type { BarChartProps, BarChartSeries } from './barChart';
 export type { BreadcrumbProps, BreadcrumbsProps } from './breadcrumbs';
 export type { ButtonProps, ButtonSize, ButtonVariant } from './button';
 export type {
