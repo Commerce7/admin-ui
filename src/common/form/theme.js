@@ -23,7 +23,7 @@ const colors = {
       default: c7Colors.slate300
     },
     borderColor: {
-      default: c7Colors.gray400,
+      default: c7Colors.gray550,
       focus: c7Colors.blue400,
       error: c7Colors.red300
     },

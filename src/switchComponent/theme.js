@@ -12,7 +12,7 @@ const colors = {
   },
   light: {
     backgroundColor: {
-      default: c7Colors.gray300,
+      default: c7Colors.gray550,
       checked: c7Colors.blue400
     },
     boxShadow: {
