@@ -50,6 +50,7 @@ export const c7Colors = {
   gray300: '#DDDFE4',
   gray400: '#CDD0D6',
   gray500: '#9DA3AE',
+  gray550: '#8D93A0',
   gray600: '#6B7280',
   gray700: '#4D5361',
   gray750: '#3F4452',

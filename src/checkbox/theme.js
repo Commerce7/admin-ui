@@ -23,7 +23,7 @@ const colors = {
       checked: c7Colors.blue400
     },
     borderColor: {
-      default: c7Colors.gray500,
+      default: c7Colors.gray550,
       disabled: c7Colors.gray500,
       hover: c7Colors.blue400,
       focus: c7Colors.blue400,

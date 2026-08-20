@@ -62,6 +62,7 @@ const StyledButton = styled.button<StyledButtonProps>`
       ? `
     height: auto;
     padding: 0;
+    text-decoration: underline;
     `
       : ''}
 
