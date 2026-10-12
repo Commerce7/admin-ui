@@ -2,9 +2,8 @@
 import styled from 'styled-components';
 
 import { StyledFormItem } from '../common/form/styles';
-import { placeholderColors } from '../common/form/theme';
+import { colors, placeholderColors } from '../common/form/theme';
 import Icon from '../icon';
-import { svgColors } from '../input/theme';
 
 const StyledSelect = styled(StyledFormItem).attrs({
   as: 'select'
@@ -16,7 +15,11 @@ const StyledSelect = styled(StyledFormItem).attrs({
   }
 `;
 
-const StyledSelectArrow = styled(Icon)`
+export interface StyledSelectArrowProps {
+  hasErrorMessage?: boolean;
+}
+
+const StyledSelectArrow = styled(Icon)<StyledSelectArrowProps>`
   position: absolute;
   right: 15px;
   bottom: 15px;
@@ -26,9 +29,20 @@ const StyledSelectArrow = styled(Icon)`
   min-height: 12px;
   pointer-events: none;
 
+  fill: ${({ theme, hasErrorMessage }) =>
+    hasErrorMessage
+      ? colors[theme.c7__ui.mode].borderColor.error
+      : colors[theme.c7__ui.mode].borderColor.default};
+
   path {
-    fill: ${({ theme }) => svgColors[theme.c7__ui.mode].fill};
-    stroke: ${({ theme }) => svgColors[theme.c7__ui.mode].stroke};
+    fill: ${({ theme, hasErrorMessage }) =>
+      hasErrorMessage
+        ? colors[theme.c7__ui.mode].borderColor.error
+        : colors[theme.c7__ui.mode].borderColor.default};
+    stroke: ${({ theme, hasErrorMessage }) =>
+      hasErrorMessage
+        ? colors[theme.c7__ui.mode].borderColor.error
+        : colors[theme.c7__ui.mode].borderColor.default};
     stroke-width: 0.5px;
   }
 `;

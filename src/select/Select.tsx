@@ -134,7 +134,10 @@ const Select = ({
         >
           <Options options={options} placeholder={placeholder} />
         </StyledSelect>
-        <StyledSelectArrow icon="chevronDown" />
+        <StyledSelectArrow
+          icon="chevronDown"
+          hasErrorMessage={hasErrorMessage}
+        />
       </StyledSelectWrapper>
       {hasDescription && (
         <StyledDescription id={descriptionId}>{description}</StyledDescription>

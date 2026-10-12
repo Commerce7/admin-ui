@@ -24,7 +24,7 @@ const colors = {
   },
   light: {
     borderColor: {
-      default: c7Colors.gray400,
+      default: c7Colors.gray550,
       hover: c7Colors.blue400,
       focus: c7Colors.blue400,
       disabled: c7Colors.gray300
