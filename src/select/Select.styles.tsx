@@ -25,6 +25,8 @@ const StyledSelectArrow = styled(Icon)`
   min-height: 12px;
   pointer-events: none;
 
+  fill: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.default};
+
   path {
     fill: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.default};
     stroke: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.default};
