@@ -2,9 +2,8 @@
 import styled from 'styled-components';
 
 import { StyledFormItem } from '../common/form/styles';
-import { placeholderColors } from '../common/form/theme';
+import { colors, placeholderColors } from '../common/form/theme';
 import Icon from '../icon';
-import { svgColors } from '../input/theme';
 
 const StyledSelect = styled(StyledFormItem).attrs({
   as: 'select'
@@ -27,8 +26,8 @@ const StyledSelectArrow = styled(Icon)`
   pointer-events: none;
 
   path {
-    fill: ${({ theme }) => svgColors[theme.c7__ui.mode].fill};
-    stroke: ${({ theme }) => svgColors[theme.c7__ui.mode].stroke};
+    fill: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.default};
+    stroke: ${({ theme }) => colors[theme.c7__ui.mode].borderColor.default};
     stroke-width: 0.5px;
   }
 `;
