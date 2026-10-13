@@ -199,7 +199,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
       <StyledInputWrapper className={className} data-testid={dataTestId}>
         <StyledDatePicker>
           {label && (
-            <StyledLabel htmlFor={id}>
+            <StyledLabel htmlFor={id} id={labelId}>
               {label}
               {required && <StyledRequiredLabel />}
             </StyledLabel>
@@ -226,7 +226,7 @@ const DatePicker = forwardRef<HTMLInputElement, DatePickerProps>(
                 <StyledInputIcon icon="reservation" iconPosition="start" />
                 <StyledInput
                   aria-describedby={describedById}
-                  aria-labelledby={labelId}
+                  aria-labelledby={label ? labelId : undefined}
                   aria-invalid={hasErrorMessage}
                   aria-required={required}
                   ref={ref}
