@@ -1,7 +1,9 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
+
+import Button from '../button';
 
 import ButtonMenu from '.';
 
@@ -91,4 +93,26 @@ export const Disabled: Story = {
       </ButtonMenuItem>
     </ButtonMenu>
   )
+};
+
+const ControlledExample = () => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <StyledButtonMenuContainer>
+      <Button onClick={() => setOpen(!open)}>Toggle menu</Button>
+      <ButtonMenu open={open} onOpenChange={setOpen}>
+        <ButtonMenuItem icon="export" onClick={action('clicked')}>
+          Export
+        </ButtonMenuItem>
+        <ButtonMenuItem icon="trash" onClick={action('clicked')}>
+          Delete
+        </ButtonMenuItem>
+      </ButtonMenu>
+    </StyledButtonMenuContainer>
+  );
+};
+
+export const Controlled: Story = {
+  render: () => <ControlledExample />
 };
