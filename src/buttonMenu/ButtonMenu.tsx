@@ -49,6 +49,8 @@ export interface ButtonMenuProps {
    * Allows passing in a onClick function to be executed when the ButtonMenu is clicked.
    */
   onClick?: (event: MouseEvent<HTMLButtonElement>) => void;
+  open?: boolean;
+  onOpenChange?: (open: boolean) => void;
 }
 
 const ButtonMenu = ({
@@ -59,11 +61,21 @@ const ButtonMenu = ({
   variant = 'secondary',
   size = 'default',
   dataTestId = '',
-  onClick = undefined
+  onClick = undefined,
+  open,
+  onOpenChange
 }: ButtonMenuProps) => {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const id = useId();
-  const [isDropdownVisible, setDropdownVisible] = useState(false);
+  const [internalOpen, setInternalOpen] = useState(false);
+  const isDropdownVisible = open ?? internalOpen;
+
+  const setDropdownVisible = (nextOpen: boolean) => {
+    if (open === undefined) {
+      setInternalOpen(nextOpen);
+    }
+    onOpenChange?.(nextOpen);
+  };
 
   useOnClickOutside(wrapperRef, () => handleCloseDropdown());
   useEscKeydown(() => handleCloseDropdown());
@@ -104,6 +116,7 @@ const ButtonMenu = ({
           size={size}
           id={buttonId}
           aria-haspopup="true"
+          aria-expanded={isDropdownVisible}
           aria-controls={dropdownId}
           disabled={disabled}
         >
