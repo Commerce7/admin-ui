@@ -114,6 +114,7 @@ import Marketing from './Marketing';
 import MegaAdmin from './MegaAdmin';
 import Menu from './Menu';
 import Merge from './Merge';
+import Mic from './Mic';
 import Minus from './Minus';
 import Moon from './Moon';
 import MoreActions from './MoreActions';
@@ -313,6 +314,7 @@ export {
   Marketing as marketing,
   Menu as menu,
   Merge as merge,
+  Mic as mic,
   Minus as minus,
   Moon as moon,
   MegaAdmin as megaAdmin,
