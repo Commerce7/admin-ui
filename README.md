@@ -139,6 +139,10 @@ In VS code in admin project
 
 After restarting the arrow icon should be removed. This means the project has successfully be unlinked from the local version of admin ui.
 
+## Release Notes
+
+When changing the package version, add a matching entry at the top of `src/stories/Releases.mdx`. Explain why the package is being updated and follow the existing format.
+
 ## Instructions for Updating packages
 
 Dont update the following:
