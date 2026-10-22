@@ -131,6 +131,7 @@ import Percent from './Percent';
 import Phone from './Phone';
 import Platter from './Platter';
 import PlayCircle from './PlayCircle';
+import PlusBorderless from './PlusBorderless';
 import Pointer from './Pointer';
 import Pos from './Pos';
 import PosProfile from './PosProfile';
@@ -332,6 +333,7 @@ export {
   Phone as phone,
   Platter as platter,
   PlayCircle as playCircle,
+  PlusBorderless as 'plus-borderless',
   Pointer as pointer,
   Pos as pos,
   PosProfile as posProfile,
