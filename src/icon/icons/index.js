@@ -333,7 +333,7 @@ export {
   Phone as phone,
   Platter as platter,
   PlayCircle as playCircle,
-  PlusBorderless as 'plus-borderless',
+  PlusBorderless as plusBorderless,
   Pointer as pointer,
   Pos as pos,
   PosProfile as posProfile,
