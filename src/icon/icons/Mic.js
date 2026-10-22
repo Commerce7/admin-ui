@@ -9,7 +9,6 @@ const Mic = (props) => {
       className={className}
       data-testid={dataTestId}
     >
-      <title>Icons/mic</title>
       <path
         fill="#000000"
         fillRule="nonzero"
