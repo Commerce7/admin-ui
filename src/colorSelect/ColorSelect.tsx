@@ -71,7 +71,7 @@ export interface ColorSelectProps {
   errorMessage?: string;
 
   /**
-   * Set the id of the element. Also used as the base for the radio group name.
+   * Set the id of the fieldset. Also used as the base for the radio group name and option ids.
    */
   id?: string;
 
@@ -119,6 +119,7 @@ const ColorSelect = ({
 
   return (
     <StyledColorSelect
+      id={baseId}
       className={className}
       data-testid={dataTestId}
       disabled={disabled}
@@ -133,7 +134,7 @@ const ColorSelect = ({
       )}
       <StyledSwatchList>
         {options.map((option) => {
-          const optionId = `${baseId}-${option.value}`;
+          const optionId = `${baseId}-option-${option.value}`;
           const isSelected = value === option.value;
 
           return (
