@@ -7,7 +7,7 @@ import ColorSelect, { ColorSelectOption } from '.';
 
 const options: ColorSelectOption[] = [
   { value: 'purple', color: c7Colors.purple200, label: 'Purple' },
-  { value: 'pink', color: '#E65C9C', label: 'Pink' },
+  { value: 'pink', color: c7Colors.pink200, label: 'Pink' },
   { value: 'green', color: c7Colors.green200, label: 'Green' },
   { value: 'yellow', color: c7Colors.yellow200, label: 'Yellow' },
   { value: 'blue', color: c7Colors.blueberry200, label: 'Blue' }
