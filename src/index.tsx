@@ -8,6 +8,7 @@ import Card from './card';
 import CardLink from './cardLink';
 import Checkbox from './checkbox';
 import CheckboxGroup from './checkboxGroup';
+import ColorSelect from './colorSelect';
 import Columns from './columns';
 import ContextMenu from './contextMenu';
 import DataDisplay from './dataDisplay';
@@ -55,6 +56,7 @@ export {
   Commerce7AdminUI,
   Checkbox,
   CheckboxGroup,
+  ColorSelect,
   Columns,
   ContextMenu,
   DataDisplay,
@@ -111,6 +113,7 @@ export type {
   CheckboxGroupSize,
   CheckboxGroupVariant
 } from './checkboxGroup';
+export type { ColorSelectOption, ColorSelectProps } from './colorSelect';
 export type { ColumnProps, ColumnsProps } from './columns';
 export type {
   ContextMenuItemProps,
