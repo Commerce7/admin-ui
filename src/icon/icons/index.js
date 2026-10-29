@@ -53,6 +53,7 @@ import Comment from './Comment';
 import ComplianceCheck from './ComplianceCheck';
 import Construction from './Construction';
 import Copy from './Copy';
+import CreditCard from './CreditCard';
 import Customer from './Customer';
 import Dashboard from './Dashboard';
 import Database from './Database';
@@ -260,6 +261,7 @@ export {
   Combine as combine,
   Comment as comment,
   ComplianceCheck as complianceCheck,
+  CreditCard as creditCard,
   Customer as customer,
   Dashboard as dashboard,
   Database as database,
