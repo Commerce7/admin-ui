@@ -110,6 +110,7 @@ import LogOut from './LogOut';
 import Loyalty from './Loyalty';
 import Map from './Map';
 import MapMarker from './MapMarker';
+import MapMarkerAdd from './MapMarkerAdd';
 import Marketing from './Marketing';
 import MegaAdmin from './MegaAdmin';
 import Menu from './Menu';
@@ -157,10 +158,13 @@ import Security from './Security';
 import Seedling from './Seedling';
 import Send from './Send';
 import Setting from './Setting';
+import ShapeCircle from './ShapeCircle';
+import ShapeSquare from './ShapeSquare';
 import Shuffle from './Shuffle';
 import Smartphone from './Smartphone';
 import Sparkle from './Sparkle';
 import Split from './Split';
+import Squares from './Squares';
 import Star from './Star';
 import Store from './Store';
 import Sun from './Sun';
@@ -168,6 +172,7 @@ import Support from './Support';
 import SwitchUser from './SwitchUser';
 import Sync from './Sync';
 import Table from './Table';
+import Tables from './Tables';
 import Tag from './Tag';
 import Tasting from './Tasting';
 import TextAlignCenter from './TextAlignCenter';
@@ -312,6 +317,7 @@ export {
   Loyalty as loyalty,
   Map as map,
   MapMarker as mapMarker,
+  MapMarkerAdd as mapMarkerAdd,
   Marketing as marketing,
   Menu as menu,
   Merge as merge,
@@ -359,17 +365,21 @@ export {
   Seedling as seedling,
   Send as send,
   Setting as setting,
+  ShapeCircle as shapeCircle,
+  ShapeSquare as shapeSquare,
   Shuffle as shuffle,
   Smartphone as smartphone,
   Sparkle as sparkle,
   Split as split,
   Star as star,
   Store as store,
+  Squares as squares,
   Sun as sun,
   Support as support,
   SwitchUser as switchUser,
   Sync as sync,
   Table as table,
+  Tables as tables,
   Tag as tag,
   Tasting as tasting,
   TextAlignCenter as textAlignCenter,
