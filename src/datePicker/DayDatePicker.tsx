@@ -179,7 +179,7 @@ const DayDatePicker = forwardRef<HTMLInputElement, DayDatePickerProps>(
       <StyledInputWrapper className={className} data-testid={dataTestId}>
         <StyledDatePicker>
           {label && (
-            <StyledLabel htmlFor={id}>
+            <StyledLabel htmlFor={id} id={labelId}>
               {label}
               {required && <StyledRequiredLabel />}
             </StyledLabel>
@@ -200,7 +200,7 @@ const DayDatePicker = forwardRef<HTMLInputElement, DayDatePickerProps>(
                 <StyledInputIcon icon="reservation" iconPosition="start" />
                 <StyledInput
                   aria-describedby={describedById}
-                  aria-labelledby={labelId}
+                  aria-labelledby={label ? labelId : undefined}
                   aria-invalid={hasErrorMessage}
                   aria-required={required}
                   ref={ref}

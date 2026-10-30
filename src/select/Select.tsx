@@ -121,7 +121,7 @@ const Select = ({
       <StyledSelectWrapper>
         <StyledSelect
           aria-describedby={describedById}
-          aria-labelledby={labelId}
+          aria-labelledby={label ? labelId : undefined}
           aria-invalid={hasErrorMessage}
           aria-required={required}
           autoFocus={autoFocus}

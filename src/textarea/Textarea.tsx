@@ -131,7 +131,7 @@ const Textarea = forwardRef<HTMLTextAreaElement, TextareaProps>(
         <StyledTextarea
           as="textarea"
           aria-describedby={describedById}
-          aria-labelledby={labelId}
+          aria-labelledby={label ? labelId : undefined}
           aria-invalid={hasErrorMessage}
           aria-required={required}
           ref={ref}
