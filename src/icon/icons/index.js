@@ -198,6 +198,7 @@ import Upload from './Upload';
 import User from './User';
 import Users from './Users';
 import Video from './Video';
+import Walk from './Walk';
 import Wallet from './Wallet';
 import Wand from './Wand';
 import Warning from './Warning';
@@ -400,6 +401,7 @@ export {
   User as user,
   Users as users,
   Video as video,
+  Walk as walk,
   ThumbsDown as thumbsDown,
   ThumbsDownFilled as thumbsDownFilled,
   ThumbsUp as thumbsUp,
