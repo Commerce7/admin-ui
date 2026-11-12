@@ -40,6 +40,8 @@ import Check from './Check';
 import CheckCircle from './CheckCircle';
 import CheckIn from './CheckIn';
 import ChevronDown from './ChevronDown';
+import ChevronLeft from './ChevronLeft';
+import ChevronRight from './ChevronRight';
 import ChevronUp from './ChevronUp';
 import City from './City';
 import ClipboardText from './ClipboardText';
@@ -248,6 +250,8 @@ export {
   CheckCircle as checkCircle,
   CheckIn as checkIn,
   ChevronDown as chevronDown,
+  ChevronRight as chevronRight,
+  ChevronLeft as chevronLeft,
   ChevronUp as chevronUp,
   City as city,
   ClipboardText as clipboardText,
