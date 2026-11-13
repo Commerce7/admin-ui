@@ -173,14 +173,14 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       return (
         <StyledInputWrapper className={className} data-testid={dataTestId}>
           {label && (
-            <StyledLabel htmlFor={id}>
+            <StyledLabel htmlFor={id} id={labelId}>
               {label}
               {required && <StyledRequiredLabel />}
             </StyledLabel>
           )}
           <StyledInput
             aria-describedby={describedById}
-            aria-labelledby={labelId}
+            aria-labelledby={label ? labelId : undefined}
             aria-invalid={hasErrorMessage}
             aria-required={required}
             ref={ref}
@@ -215,7 +215,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
     return (
       <StyledInputWrapper className={className} data-testid={dataTestId}>
         {label && (
-          <StyledLabel htmlFor={id}>
+          <StyledLabel htmlFor={id} id={labelId}>
             {label}
             {required && <StyledRequiredLabel />}
           </StyledLabel>
@@ -226,7 +226,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           )}
           <StyledInput
             aria-describedby={describedById}
-            aria-labelledby={labelId}
+            aria-labelledby={label ? labelId : undefined}
             aria-invalid={hasErrorMessage}
             aria-required={required}
             ref={ref}
